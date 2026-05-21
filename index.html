@@ -106,7 +106,7 @@ body {
 .pdf-btn {
   background: var(--ink);
   color: var(--paper);
-  border: none;
+  border: 1px solid var(--ink);
   padding: 9px 16px;
   font-family: 'Geist Mono', ui-monospace, monospace;
   font-size: 11px;
@@ -119,14 +119,31 @@ body {
   align-items: center;
   gap: 8px;
   border-radius: 0;
+  text-decoration: none;
 }
 .pdf-btn:hover {
   background: var(--amber);
   color: var(--ink);
+  border-color: var(--amber);
+}
+.pdf-btn.outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--hair-strong);
+}
+.pdf-btn.outline:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
 }
 .pdf-btn svg {
   width: 13px; height: 13px;
   stroke-width: 1.6;
+}
+.header-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 /* Layout */
@@ -937,15 +954,18 @@ section.level2 > section.level3:first-of-type > h3 {
 <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
 
 <div class="header">
-  <div class="header-meta"><b>HU<i>·</i>PA</b> &nbsp; Physical AI Daily &nbsp;·&nbsp; Signal Digest</div>
-  <a class="pdf-btn" href="papers.html" style="text-decoration:none;margin-right:8px;" title="Open Papers DB">
-    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2.5 3.5h11v9h-11z"/><path d="M2.5 6.5h11M5.5 3.5v9M10 3.5v9"/></svg>
-    Papers DB
-  </a>
-  <button class="pdf-btn" onclick="window.print()" title="Save as PDF via browser print dialog">
-    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 1.5h6L13.5 5v9.5h-9.5z"/><path d="M9.5 1.5V5h4"/><path d="M5.5 8.5h5M5.5 11h5"/></svg>
-    Export PDF
-  </button>
+  <div class="header-meta"><b>HU<i>·</i>PA</b> &nbsp; Physical AI Daily</div>
+  <div class="header-nav">
+    <a class="pdf-btn" href="index.html" title="Latest brief">Latest brief</a>
+    <a class="pdf-btn outline" href="papers.html" title="Open Papers DB">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2.5 3.5h11v9h-11z"/><path d="M2.5 6.5h11M5.5 3.5v9M10 3.5v9"/></svg>
+      Papers DB
+    </a>
+    <button class="pdf-btn outline" onclick="window.print()" title="Save as PDF via browser print dialog">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 1.5h6L13.5 5v9.5h-9.5z"/><path d="M9.5 1.5V5h4"/><path d="M5.5 8.5h5M5.5 11h5"/></svg>
+      Export PDF
+    </button>
+  </div>
 </div>
 
 <button class="mobile-toc-trigger" id="mobileTocTrigger" aria-label="Open contents menu">
@@ -956,20 +976,6 @@ section.level2 > section.level3:first-of-type > h3 {
 
 <div class="layout">
   <aside class="sidebar">
-    <div class="brand-mark">HU<span>·</span>PA</div>
-    <div class="brand-sub">Physical AI Daily · Rolling Digest</div>
-
-    <div class="sidebar-actions">
-      <a class="pdf-btn" href="papers.html" style="text-decoration:none;display:inline-flex;align-items:center;gap:8px;margin-bottom:8px;" title="Open Papers DB">
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2.5 3.5h11v9h-11z"/><path d="M2.5 6.5h11M5.5 3.5v9M10 3.5v9"/></svg>
-        Papers DB
-      </a>
-      <button class="pdf-btn" onclick="window.print()" title="Save as PDF via browser print dialog">
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 1.5h6L13.5 5v9.5h-9.5z"/><path d="M9.5 1.5V5h4"/><path d="M5.5 8.5h5M5.5 11h5"/></svg>
-        Export as PDF
-      </button>
-    </div>
-
     <div id="sitenav" class="sitenav"></div>
 
     <div class="toc">
