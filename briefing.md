@@ -1,6 +1,6 @@
 # HuPa Physical AI Daily
 
-*Rolling intelligence digest. Newest day on top. Maintained by Claude on Ashish's behalf. Signal only — no hype, no re-announcements, every claim linked.*
+*Rolling intelligence digest. Newest day on top. Signal only, no hype, no re-announcements, every claim linked.*
 
 ---
 
