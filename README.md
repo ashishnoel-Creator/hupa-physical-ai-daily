@@ -21,3 +21,4 @@ Signal only. An item makes it in if it shows: a new capability, real money moved
 - `_shell_head.html` / `_shell_foot.html` — HuPa-branded HTML shell (deep indigo + amber + cream, Geist fonts)
 - `build.sh` — pandoc render pipeline
 - `.gitignore` — keeps secrets and build artifacts out
+
