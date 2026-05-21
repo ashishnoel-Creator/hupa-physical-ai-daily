@@ -10,6 +10,7 @@
 
 - Singapore stood up its first physical-AI testbed in Punggol and Nvidia announced a Singapore research hub the same day. Grab, DHL, Certis and Quikbot are first pilots. SEA just became a real venue for embodied data deals. [CNBC](https://www.cnbc.com/2026/05/20/nvidia-to-launch-singapore-research-hub-as-city-state-boosts-ai-plans.html)
 - Figure pushed past 119 consecutive hours and 149,000 packages on the Helix-02 24/7 livestream. The narrative shifted from "cool demo" to "uptime on a real workcell". [Brett Adcock](https://x.com/adcock_brett), [TechRepublic](https://www.techrepublic.com/article/news-figure-robot-demo-tests-24-7-humanoid-fleet-work/)
+- Scale Labs published its dense-video-captioning playbook (May 19). The big result is that hand-cropped past/present/future collages beat raw video for VLM annotation, and 82% of failures are wrong-object/destination, not wrong-action. Phase 2 calls for bbox overlays. This is the spec conversation we should be having with them. [Scale Labs](https://labs.scale.com/blog/path-to-large-scale-dense-video-captioning)
 - Keymakr launched an egocentric + robotics data service on May 19. Thats now a second well-resourced annotation incumbent moving directly into our category, after Build AIs Egocentric-1M dump in April. [Keymakr release](https://www.einpresswire.com/article/913615082/keymakr-launches-egocentric-and-robotics-training-data-solutions-for-physical-ai-systems)
 
 ### Data collection
@@ -20,8 +21,8 @@
 
 ### Data annotation & validation
 
+- **Scale Labs — "The Path to Large Scale Dense Video Captioning" (May 19).** Substantial. Scale runs 1,000+ hours of new manipulation data through their platform daily and has now published the production-annotation playbook. Headline results: (1) hand-cropped past/present/future collages beat raw video by 32pp on rubric-acceptable rate, video-as-input actually hurts on Flash-class models, (2) 82% of failure mass is wrong-object-or-destination grounding, only 37% is wrong-verb, (3) best config (Gemini 3.1 Pro + collage + Stack rule + mini-CoT) tops out at 63.7%, with theoretical ceiling ~85% only if visual grounding is fixed via bbox overlays. Phase 2 priorities they listed: bbox overlays from a reliable detector, negative-framed sub-goal context, and middle-clip trimming for directional verbs. The capture-side implication for us is direct: high-res hand-region focus matters more than wider FOV, and our rig spec discussion with Scale should start from this post. [Scale Labs](https://labs.scale.com/blog/path-to-large-scale-dense-video-captioning), [Jade Choghari announcement](https://x.com/jadechoghari/status/2056813589101715748)
 - **Annotation incumbents drifting toward egocentric.** Scale AI is bleeding flagship clients after the Meta deal (OpenAI, Google reportedly moved off). Surge AI, Mercor, and now Keymakr are filling the white space. The implication for us: validation contracts for egocentric data are increasingly winnable as a standalone product, not just a bolt-on to capture. [Lemon.io comparison](https://lemon.io/blog/rlhf-platforms/)
-- *No new annotation-specific paper hit arXiv overnight worth flagging.*
 
 ### Embedded AI systems
 
@@ -50,6 +51,7 @@
 
 - **ALAM: Algebraically Consistent Latent Action Model for VLAs** (arXiv 2605.10819, May 11). Raises MetaWorld MT50 success from 47.9% to 85.0% and LIBERO from 94.1% to 98.1%. The trick is enforcing algebraic consistency on the latent action structure. Useful primer on where the VLA modeling frontier is moving. [arXiv](https://arxiv.org/abs/2605.10819)
 - **AoE: Always-on Egocentric Human Video Collection for Embodied AI** (arXiv 2602.23893). Direct positioning paper on the always-on capture thesis our hardware deploys. Read for the failure modes section. [arXiv](https://arxiv.org/abs/2602.23893)
+- **Process note: this is also available as a sortable papers DB.** Filterable by type and category. [papers.html](papers.html)
 
 ### Money & moves
 

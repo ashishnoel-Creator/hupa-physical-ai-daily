@@ -814,6 +814,10 @@ section.level2 > section.level3:first-of-type > h3 {
 
 <div class="header">
   <div class="header-meta"><b>HU<i>·</i>PA</b> &nbsp; Physical AI Daily &nbsp;·&nbsp; Signal Digest</div>
+  <a class="pdf-btn" href="papers.html" style="text-decoration:none;margin-right:8px;" title="Open Papers DB">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2.5 3.5h11v9h-11z"/><path d="M2.5 6.5h11M5.5 3.5v9M10 3.5v9"/></svg>
+    Papers DB
+  </a>
   <button class="pdf-btn" onclick="window.print()" title="Save as PDF via browser print dialog">
     <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 1.5h6L13.5 5v9.5h-9.5z"/><path d="M9.5 1.5V5h4"/><path d="M5.5 8.5h5M5.5 11h5"/></svg>
     Export PDF
@@ -832,6 +836,10 @@ section.level2 > section.level3:first-of-type > h3 {
     <div class="brand-sub">Physical AI Daily · Rolling Digest</div>
 
     <div class="sidebar-actions">
+      <a class="pdf-btn" href="papers.html" style="text-decoration:none;display:inline-flex;align-items:center;gap:8px;margin-bottom:8px;" title="Open Papers DB">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2.5 3.5h11v9h-11z"/><path d="M2.5 6.5h11M5.5 3.5v9M10 3.5v9"/></svg>
+        Papers DB
+      </a>
       <button class="pdf-btn" onclick="window.print()" title="Save as PDF via browser print dialog">
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 1.5h6L13.5 5v9.5h-9.5z"/><path d="M9.5 1.5V5h4"/><path d="M5.5 8.5h5M5.5 11h5"/></svg>
         Export as PDF
@@ -857,6 +865,7 @@ section.level2 > section.level3:first-of-type > h3 {
 <ul>
 <li>Singapore stood up its first physical-AI testbed in Punggol and Nvidia announced a Singapore research hub the same day. Grab, DHL, Certis and Quikbot are first pilots. SEA just became a real venue for embodied data deals. <a href="https://www.cnbc.com/2026/05/20/nvidia-to-launch-singapore-research-hub-as-city-state-boosts-ai-plans.html">CNBC</a></li>
 <li>Figure pushed past 119 consecutive hours and 149,000 packages on the Helix-02 24/7 livestream. The narrative shifted from “cool demo” to “uptime on a real workcell”. <a href="https://x.com/adcock_brett">Brett Adcock</a>, <a href="https://www.techrepublic.com/article/news-figure-robot-demo-tests-24-7-humanoid-fleet-work/">TechRepublic</a></li>
+<li>Scale Labs published its dense-video-captioning playbook (May 19). The big result is that hand-cropped past/present/future collages beat raw video for VLM annotation, and 82% of failures are wrong-object/destination, not wrong-action. Phase 2 calls for bbox overlays. This is the spec conversation we should be having with them. <a href="https://labs.scale.com/blog/path-to-large-scale-dense-video-captioning">Scale Labs</a></li>
 <li>Keymakr launched an egocentric + robotics data service on May 19. Thats now a second well-resourced annotation incumbent moving directly into our category, after Build AIs Egocentric-1M dump in April. <a href="https://www.einpresswire.com/article/913615082/keymakr-launches-egocentric-and-robotics-training-data-solutions-for-physical-ai-systems">Keymakr release</a></li>
 </ul>
 </section>
@@ -871,8 +880,8 @@ section.level2 > section.level3:first-of-type > h3 {
 <section id="data-annotation-validation" class="level3">
 <h3>Data annotation &amp; validation</h3>
 <ul>
+<li><strong>Scale Labs — “The Path to Large Scale Dense Video Captioning” (May 19).</strong> Substantial. Scale runs 1,000+ hours of new manipulation data through their platform daily and has now published the production-annotation playbook. Headline results: (1) hand-cropped past/present/future collages beat raw video by 32pp on rubric-acceptable rate, video-as-input actually hurts on Flash-class models, (2) 82% of failure mass is wrong-object-or-destination grounding, only 37% is wrong-verb, (3) best config (Gemini 3.1 Pro + collage + Stack rule + mini-CoT) tops out at 63.7%, with theoretical ceiling ~85% only if visual grounding is fixed via bbox overlays. Phase 2 priorities they listed: bbox overlays from a reliable detector, negative-framed sub-goal context, and middle-clip trimming for directional verbs. The capture-side implication for us is direct: high-res hand-region focus matters more than wider FOV, and our rig spec discussion with Scale should start from this post. <a href="https://labs.scale.com/blog/path-to-large-scale-dense-video-captioning">Scale Labs</a>, <a href="https://x.com/jadechoghari/status/2056813589101715748">Jade Choghari announcement</a></li>
 <li><strong>Annotation incumbents drifting toward egocentric.</strong> Scale AI is bleeding flagship clients after the Meta deal (OpenAI, Google reportedly moved off). Surge AI, Mercor, and now Keymakr are filling the white space. The implication for us: validation contracts for egocentric data are increasingly winnable as a standalone product, not just a bolt-on to capture. <a href="https://lemon.io/blog/rlhf-platforms/">Lemon.io comparison</a></li>
-<li><em>No new annotation-specific paper hit arXiv overnight worth flagging.</em></li>
 </ul>
 </section>
 <section id="embedded-ai-systems" class="level3">
@@ -911,6 +920,7 @@ section.level2 > section.level3:first-of-type > h3 {
 <ul>
 <li><strong>ALAM: Algebraically Consistent Latent Action Model for VLAs</strong> (arXiv 2605.10819, May 11). Raises MetaWorld MT50 success from 47.9% to 85.0% and LIBERO from 94.1% to 98.1%. The trick is enforcing algebraic consistency on the latent action structure. Useful primer on where the VLA modeling frontier is moving. <a href="https://arxiv.org/abs/2605.10819">arXiv</a></li>
 <li><strong>AoE: Always-on Egocentric Human Video Collection for Embodied AI</strong> (arXiv 2602.23893). Direct positioning paper on the always-on capture thesis our hardware deploys. Read for the failure modes section. <a href="https://arxiv.org/abs/2602.23893">arXiv</a></li>
+<li><strong>Process note: this is also available as a sortable papers DB.</strong> Filterable by type and category. <a href="papers.html">papers.html</a></li>
 </ul>
 </section>
 <section id="money-moves" class="level3">
