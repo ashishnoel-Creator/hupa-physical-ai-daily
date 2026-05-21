@@ -3,6 +3,16 @@
 </div>
 
 <script>
+// Load sidebar JS with depth-aware path
+(function(){
+  var depth = /\/(days|monthly)\//.test(location.pathname) ? '../' : './';
+  var s = document.createElement('script');
+  s.src = depth + '_sidebar.js';
+  s.defer = true;
+  document.body.appendChild(s);
+})();
+</script>
+<script>
 // Build TOC from h2/h3 inside main
 (function() {
   const tocList = document.getElementById('tocList');

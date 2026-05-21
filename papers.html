@@ -287,6 +287,101 @@ footer.foot {
 }
 footer.foot a { color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--mute); }
 
+/* Layout with left sidebar (matches the brief shell) */
+.layout-wrap {
+  display: flex;
+  align-items: flex-start;
+  min-height: calc(100vh - var(--header-h));
+}
+.layout-sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--hair);
+  padding: 24px 16px 60px;
+  position: sticky;
+  top: var(--header-h);
+  align-self: flex-start;
+  max-height: calc(100vh - var(--header-h));
+  overflow-y: auto;
+  background: var(--paper);
+}
+.layout-main { flex: 1; min-width: 0; }
+
+/* Site nav (shared with day pages, kept in sync visually) */
+.sitenav { margin: 0; }
+.sitenav-block { margin-bottom: 16px; }
+.sitenav-label {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--mute);
+  margin-bottom: 8px; padding-bottom: 8px;
+  border-bottom: 1px solid var(--hair);
+}
+.sitenav-label .count { font-weight: 500; color: var(--mute-2); margin-left: 4px; }
+.sitenav-list { list-style: none; padding: 0; margin: 0; font-size: 13px; line-height: 1.45; }
+.sitenav-list > li { margin-bottom: 3px; }
+.sitenav-list a {
+  display: block; color: var(--ink-2); text-decoration: none;
+  padding: 4px 8px; border-left: 2px solid transparent;
+  transition: all 0.12s ease;
+}
+.sitenav-list a:hover { background: var(--paper-2); color: var(--ink); }
+.sitenav-list a.active {
+  background: var(--amber-soft); color: var(--ink);
+  border-left-color: var(--amber); font-weight: 500;
+}
+.sitenav-list .count {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px; color: var(--mute-2); margin-left: 4px;
+}
+.sitenav-list details { margin: 0; }
+.sitenav-list summary {
+  cursor: pointer; padding: 4px 8px; font-size: 12.5px;
+  color: var(--ink); font-weight: 500; list-style: none; user-select: none;
+  border-left: 2px solid transparent;
+}
+.sitenav-list summary::-webkit-details-marker { display: none; }
+.sitenav-list summary::before {
+  content: '▸'; color: var(--mute-2); font-size: 9px;
+  margin-right: 6px; transition: transform 0.12s ease; display: inline-block;
+}
+.sitenav-list details[open] > summary::before { transform: rotate(90deg); }
+.sitenav-list summary:hover { background: var(--paper-2); }
+.sitenav-list ul.sub {
+  list-style: none; padding: 2px 0 4px 14px; margin: 0;
+  border-left: 1px solid var(--hair); margin-left: 12px;
+}
+.sitenav-list ul.sub a { font-size: 12.5px; padding: 3px 8px; }
+.day-item .day-date { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11.5px; }
+.sitenav-list li.muted span { display: block; padding: 4px 8px; color: var(--mute); font-size: 12.5px; }
+.sitenav-list li.muted small { color: var(--mute-2); font-size: 10.5px; }
+
+#sitenavSearch {
+  width: 100%; font-family: 'Geist', sans-serif; font-size: 12.5px;
+  padding: 6px 8px; background: var(--paper); color: var(--ink);
+  border: 1px solid var(--hair-strong); border-radius: 0; outline: none;
+}
+#sitenavSearch:focus { border-color: var(--ink); }
+.search-results { margin-top: 8px; max-height: 280px; overflow-y: auto; }
+.search-hit {
+  display: block; padding: 6px 8px; margin-bottom: 4px;
+  text-decoration: none; color: var(--ink-2);
+  border-left: 2px solid var(--hair); background: var(--paper-2);
+  transition: all 0.1s ease;
+}
+.search-hit:hover { border-left-color: var(--amber); background: var(--paper-3); }
+.search-hit .hit-date {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10.5px; color: var(--mute); margin-bottom: 2px;
+}
+.search-hit .hit-snippet { font-size: 12px; line-height: 1.35; color: var(--ink-2); }
+.search-empty { padding: 6px 8px; color: var(--mute); font-size: 12px; }
+.sitenav-error { padding: 8px; color: var(--red); font-size: 12px; }
+
+@media (max-width: 1024px) {
+  .layout-sidebar { display: none; }
+}
 @media (max-width: 760px) {
   .page-hd h1 { font-size: 30px; }
   .field input { min-width: 0; width: 100%; }
@@ -304,6 +399,12 @@ footer.foot a { color: var(--ink); text-decoration: none; border-bottom: 1px dot
     <a href="papers.html" class="active">Papers</a>
   </nav>
 </header>
+
+<div class="layout-wrap">
+<aside class="layout-sidebar">
+  <div id="sitenav"></div>
+</aside>
+<div class="layout-main">
 
 <section class="page-hd">
   <h1>Papers &amp; findings database</h1>
@@ -350,6 +451,10 @@ footer.foot a { color: var(--ink); text-decoration: none; border-bottom: 1px dot
   Source of truth: <a href="https://github.com/ashishnoel-Creator/hupa-physical-ai-daily/blob/main/papers.html">papers.html on GitHub</a> · Edit the PAPERS array in this file to add a new entry
 </footer>
 
+</div><!-- /layout-main -->
+</div><!-- /layout-wrap -->
+
+<script src="_sidebar.js" defer></script>
 <script>
 // =======================================================================
 // PAPERS DATA — add new entries to the top of this array.

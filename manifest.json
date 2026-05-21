@@ -1,0 +1,17 @@
+{
+  "days": [
+    {
+      "date": "2026-05-21",
+      "slug": "2026-05-21",
+      "title": "Thursday, May 21, 2026",
+      "tldr": [
+        "Singapore stood up its first physical-AI testbed in Punggol and Nvidia announced a Singapore research hub the same day. Grab, DHL, Certis and Quikbot are first pilots. SEA just became a real venue for embodied data deals. CNBC",
+        "Figure pushed past 119 consecutive hours and 149,000 packages on the Helix-02 24/7 livestream. The narrative shifted from \"cool demo\" to \"uptime on a real workcell\". Brett Adcock, TechRepublic",
+        "Scale Labs published its dense-video-captioning playbook (May 19). The big result is that hand-cropped past/present/future collages beat raw video for VLM annotation, and 82% of failures are wrong-object/destination, not wrong-action. Phase 2 calls for bbox overlays. This is the spec conversation we should be having with them. Scale Labs"
+      ]
+    }
+  ],
+  "monthly_reviews": [],
+  "papers_count": 20,
+  "updated_at": "2026-05-21T03:02:46Z"
+}
