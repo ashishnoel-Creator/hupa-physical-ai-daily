@@ -887,6 +887,21 @@ function setupFilters() {
   });
 }
 
+// Measure rendered heights of sticky stack members and feed them back into CSS vars
+// so the controls + table header land at the right offsets regardless of content.
+function syncStickyOffsets() {
+  const hd = document.querySelector('.page-hd');
+  const ct = document.querySelector('.controls');
+  if (hd) document.documentElement.style.setProperty('--pagehd-h', hd.offsetHeight + 'px');
+  if (ct) document.documentElement.style.setProperty('--controls-h', ct.offsetHeight + 'px');
+}
+window.addEventListener('resize', syncStickyOffsets);
+// Run after fonts load (text height can change once Geist is applied)
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(syncStickyOffsets);
+}
+syncStickyOffsets();
+
 populateFilters();
 setupSorting();
 setupFilters();
