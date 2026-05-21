@@ -218,12 +218,16 @@ body {
 }
 .btn-reset:hover { background: var(--ink); color: var(--paper); }
 
-/* Table */
+/* Table.
+   NOTE: do NOT set overflow on .table-wrap. Any overflow:auto/scroll/hidden
+   makes it a containing block for sticky positioning, which breaks the
+   thead's viewport-relative sticking. If the table overflows, we want the
+   page-level horizontal scroll to handle it.
+*/
 .table-wrap {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 36px 60px;
-  overflow-x: auto;
 }
 table.papers {
   width: 100%;
