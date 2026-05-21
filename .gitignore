@@ -1,0 +1,16 @@
+# Secrets — never push these to GitHub
+.env
+.env.local
+
+# Build artifacts
+_body.html
+*.bak
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor junk
+.vscode/
+.idea/
+*.swp
