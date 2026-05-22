@@ -750,6 +750,54 @@ const PAPERS = [
     category: 'Embedded AI',
     why: '2,070 FP4 TFLOPS in 130W envelope. 7.5x compute, 3.5x energy efficiency vs Orin. Can run single models up to ~120B params on-device. The default edge SoC for any humanoid that wants on-device VLA inference.',
     tags: ['Jetson', 'NVIDIA', 'edge', 'Blackwell', 'SoC']
+  },
+  {
+    id: 'world-model-survey-2026-05',
+    dateAdded: '2026-05-22',
+    pubDate: '2026-04-30',
+    title: 'World Model for Robot Learning: A Comprehensive Survey',
+    url: 'https://arxiv.org/abs/2605.00080',
+    source: 'arXiv 2605.00080 (NTU MARS)',
+    type: 'Survey',
+    category: 'World model',
+    why: 'One-doc map of how world models are getting wired into robot policy, learned simulators for RL eval, video generation, and data generation. Covers up to March 31, 2026. The reading-list anchor for the next quarter of any "should we buy or build sim?" debate. Useful for framing the trade between Genie-style real-world video sim and bespoke physics-based sim.',
+    tags: ['world model', 'survey', 'robot learning', 'simulation', 'NTU MARS']
+  },
+  {
+    id: 'egoverse-2026-04',
+    dateAdded: '2026-05-22',
+    pubDate: '2026-04-02',
+    title: 'EgoVerse: An Egocentric Human Dataset for Robot Learning from Around the World',
+    url: 'https://arxiv.org/abs/2604.07607',
+    source: 'arXiv 2604.07607 (Georgia Tech, Stanford, UCSD, ETH, MIT, Meta Reality Labs, Mecka AI, Scale AI)',
+    type: 'Dataset',
+    category: 'Collection',
+    why: '~1,400 hours, ~2,000 tasks, 240 scenes, custom stereoscopic head-mounted rigs at 1920x1200 30fps with depth + IMU SLAM for 6DoF head pose. The academic anchor every head-mount-school capture company is now benchmarked against. Read for: their Aria-based EgoVerse-A subset, the rig spec (1920x1200, 30fps, stereo fisheye is the new baseline), and the hand-pose annotation density. Our wedge is workplace + 1000-rig scale, not the academic spec.',
+    tags: ['egocentric', 'dataset', 'Aria', 'head-mounted', 'hand pose', 'Scale AI', 'Meta']
+  },
+  {
+    id: 'cosmos-reason2-2026',
+    dateAdded: '2026-05-22',
+    pubDate: '2026-05-19',
+    title: 'Cosmos Reason 2 brings advanced reasoning to Physical AI',
+    url: 'https://huggingface.co/blog/nvidia/nvidia-cosmos-reason-2-brings-advanced-reasoning',
+    source: 'NVIDIA via Hugging Face',
+    type: 'Open release',
+    category: 'VLA',
+    why: 'Open reasoning VLM under the Cosmos 3 unified world foundation model. Now the VLM backbone inside GR00T N1.7 EA, paired with Cosmos-Reason2-2B / Qwen3-VL. Read for the backbone architecture and the inference profile on Jetson Thor. If you are picking a default open VLM for on-rig reasoning, this is the one the GR00T ecosystem will assume.',
+    tags: ['Cosmos', 'VLM', 'NVIDIA', 'GR00T', 'reasoning', 'Qwen3-VL']
+  },
+  {
+    id: 'genesis-gene-26-5-2026',
+    dateAdded: '2026-05-22',
+    pubDate: '2026-05-06',
+    title: 'GENE-26.5: Full-stack VLA + custom dexterous hand + $200 capture glove',
+    url: 'https://www.prnewswire.com/news-releases/genesis-ai-unveils-gene-26-5--the-first-ai-brain-to-enable-robots-with-human-level-physical-manipulation-capabilities-302763638.html',
+    source: 'Genesis AI ($105M seed, Khosla / Eclipse / Bpifrance / HSG)',
+    type: 'Open release',
+    category: 'VLA',
+    why: 'Full-stack play: VLA + custom robotic hand (with Wuji Tech) + $200 sensor-equipped data glove, with claimed 1:1:1 mapping between human, glove, and robot hand. Genesis claims 100x cheaper than teleop and 5x more usable data per hour. Combined with Sunday Robotics Skill Capture Glove, the gloves-vs-headcams split in capture-modality is now well funded on both sides. Our head-mount wedge case is the workplace + outdoor + multi-person context the glove cannot reach.',
+    tags: ['Genesis AI', 'VLA', 'dexterous hand', 'capture glove', 'Khosla']
   }
 ];
 
