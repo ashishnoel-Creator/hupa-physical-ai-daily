@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-05-22",
+      "slug": "2026-05-22",
+      "title": "Friday, May 22, 2026",
+      "tldr": [
+        "Singapore-based Doozy Robotics broke cover with a seed round, a $200M+ qualified pipeline and a $144M MOU with a major industrial conglomerate, plus a humanoid pilot live at a US pharma customer. SEA now has a second name (after Quikbot) being talked about as a real industrial humanoid play. TNGlobal, Morningstar release",
+        "India's Technology Development Board released the first cheques under the ₹1 lakh crore RDI scheme on May 13. Five deeptech firms in cohort 1, including Noccarc Robotics (IIT Kanpur founders) and Dhruva Space (₹105 Cr for a 500kg satellite platform). 3-4% loans, 15yr repayment. The structural unlock for Indian hardware finally has money behind it. YourStory, Inc42 on EndureAir",
+        "Humanoid (UK) signed a binding phased deployment with Schaeffler on May 13 for 1,000 to 2,000 wheeled humanoids by 2032, plus a 5-year supply agreement for actuators going the other way. RaaS model. First go-live in Germany before end of 2026. The first real production-side RaaS contract at this scale. RoboticsTomorrow, DC Velocity"
+      ]
+    },
+    {
       "date": "2026-05-21",
       "slug": "2026-05-21",
       "title": "Thursday, May 21, 2026",
@@ -13,5 +23,5 @@
   ],
   "monthly_reviews": [],
   "papers_count": 20,
-  "updated_at": "2026-05-21T04:48:24Z"
+  "updated_at": "2026-05-22T01:37:33Z"
 }
