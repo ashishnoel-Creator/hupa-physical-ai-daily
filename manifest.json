@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-05-23",
+      "slug": "2026-05-23",
+      "title": "Saturday, May 23, 2026",
+      "tldr": [
+        "Hyundai disclosed at a JPMorgan investor session on May 19 that it intends to deploy 25,000+ Atlas humanoids across its US Hyundai + Kia plants, absorbing 83% of the 30,000/yr capacity it is targeting by 2028. The Korean Metal Workers' Union then publicly blocked it, \"not a single robot can enter the workplace without labor-management agreement.\" This is the first humanoid order that has triggered an actual labor-relations standoff, and the union answer here will set the template for every western auto OEM running a humanoid program. Korea Herald, Interesting Engineering, TechTimes (union block, May 22)",
+        "Figure closed the 24/7 livestream last night at 6pm PT, on plan, at 200 hours. The 9-day uptime number is now in the record, and it is the humanoid datapoint every Q3 deck is going to anchor on. Yesterday Adcock was at 191hr / 238k packages, the final close-out tape is the new benchmark for the rest of 2026. Brett Adcock (close-out call), Figure — Helix Logistics",
+        "Brett Adcock's other company, Hark, closed a $700M Series A at a $6B post-money on May 21. Parkway VC lead, with NVIDIA, AMD Ventures, Intel Capital, Qualcomm Ventures and ARK in. AI-native consumer hardware play, models shipping this summer, then devices. He has now stood up two $6B+ vehicles in the same calendar quarter. Bloomberg, TechCrunch, BusinessWire"
+      ]
+    },
+    {
       "date": "2026-05-22",
       "slug": "2026-05-22",
       "title": "Friday, May 22, 2026",
@@ -23,5 +33,5 @@
   ],
   "monthly_reviews": [],
   "papers_count": 24,
-  "updated_at": "2026-05-22T02:18:41Z"
+  "updated_at": "2026-05-23T02:50:18Z"
 }
