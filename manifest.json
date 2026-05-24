@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-05-24",
+      "slug": "2026-05-24",
+      "title": "Sunday, May 24, 2026",
+      "tldr": [
+        "**Hugging Face shipped LeRobot Humanoid on May 21**, a $2,500 open-source bipedal platform with the full stack: 3D-printable parts, BOM, wiring, runtime, identification tools, sim environments. This is the first credible open hardware reference for the humanoid stack. Distinct from HopeJR / Reachy Mini (which are higher and lower price-points, respectively). Every academic group that wanted to publish on a humanoid now has a build target. HF blog, Robots Digest",
+        "**The Korean Metal Workers' Union has put a price on the Atlas standoff**. Internal calc pegs each Atlas at roughly ₩200M / ~$145K, framed explicitly as direct labor-cost displacement. The union has nominated the 2026 summer wage talks as the escalation window. First time a humanoid order has a public per-unit price attached by an organized counterparty, and the number every other auto OEM running a humanoid program is now going to be asked about. TechTimes",
+        "**Boston Dynamics is still under interim CEO Amanda McMaster** (CFO promoted to interim Feb 2026 after Rob Playter stepped down). She presented the 25K Atlas Hyundai commitment at JPMorgan Boston on May 19. No permanent CEO has been named at the three-month mark, which is the question every Atlas counterparty should be asking right now. Robot Report, The AI Insider"
+      ]
+    },
+    {
       "date": "2026-05-23",
       "slug": "2026-05-23",
       "title": "Saturday, May 23, 2026",
@@ -33,5 +43,5 @@
   ],
   "monthly_reviews": [],
   "papers_count": 24,
-  "updated_at": "2026-05-23T02:54:08Z"
+  "updated_at": "2026-05-24T04:41:56Z"
 }
