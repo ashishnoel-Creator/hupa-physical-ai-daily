@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-05-25",
+      "slug": "2026-05-25",
+      "title": "Monday, May 25, 2026",
+      "tldr": [
+        "**Robotera (China) closed $200M+ on May 8 led by SF Group, HSG and IDG Capital.** The cap table is the real story. Alongside the financial leads, the round pulled in Alibaba, Lenovo, Geely Capital, BAIC, Dongfeng, Haier, Singtel Innov8, China Unicom-affiliated funds and Woori Venture Partners. That is half the Chinese industrial economy on a single humanoid line item, plus a Singapore strategic and a Korean strategic. Robotera is the only Chinese humanoid maker with a PMF claim across 10+ logistics centres (China Post + SF Group), and it began thousand-unit deliveries in Q2. Quietest large round of the quarter, and the most important one for understanding who the Chinese state apparatus has actually picked. PRNewswire, AI Insider",
+        "**WIRobotics (Korea) closed a $68M Series B on May 14 and pivoted from wearables to humanoids.** ALLEX is the first humanoid claiming arms-fingers-waist force compliance without force sensors. JB Investment lead, with InterVest, Hana Ventures, Smilegate, SBVA, NH Investment, Company K, GU Investment and FuturePlay in. Revenue jumped from 0.56 → 1.3 → 2.79 billion KRW across 2023-2025 and Q1 2026 alone beat the full 2024 number. They are now joint NVIDIA + AWS partners on the physical-AI side. ALLEX is the Korean alternative to Atlas if Boston Dynamics inventory stays locked to Hyundai for the rest of the decade. PRNewswire, AI Insider",
+        "**Pelican-Unified 1.0 paper (arXiv 2605.15153) drops a unified embodied foundation model.** Single VLM serves as the understanding module, reasoning module, and conditioning signal into a Unified Future Generator that jointly denoises future video + future actions. Language, video and action losses all backprop into the shared representation. This is the academic counter-architecture to the modular VLA stack that Pi-0.7, Helix-02, and GR00T-N1.6 are converging on. Worth a careful read before the next investor conversation on model-side competitive dynamics. arXiv"
+      ]
+    },
+    {
       "date": "2026-05-24",
       "slug": "2026-05-24",
       "title": "Sunday, May 24, 2026",
@@ -43,5 +53,5 @@
   ],
   "monthly_reviews": [],
   "papers_count": 24,
-  "updated_at": "2026-05-24T04:41:56Z"
+  "updated_at": "2026-05-25T01:46:23Z"
 }
