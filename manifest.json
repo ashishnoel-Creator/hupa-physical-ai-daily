@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-05-26",
+      "slug": "2026-05-26",
+      "title": "Tuesday, May 26, 2026",
+      "tldr": [
+        "**Robotics Summit & Expo opens in Boston tomorrow at 10am ET.** Alberto Rodriguez (Director of Robot Behavior for Atlas, Boston Dynamics) headlines the \"State of Humanoid Robotics\" keynote alongside Agility, ASTM, RealSense, Schaeffler. 6,000 attendees on the floor. This is the first public stage where Rodriguez can be asked about Hyundai 25K, the Korean union veto, and the BD interim-CEO situation in the same hour. Buyside Q&A from this session sets the August-September pitch deck cycle. Agenda, Robot Report preview",
+        "**Jensen Huang reframed Vera CPU as a $200B physical-AI + agentic-AI TAM on the Q1 earnings call.** $20B in Vera revenue already booked this year. The framing matters because the rest of the humanoid stack (NEURA / Qualcomm Dragonwing, D-Robotics RDK S600, Black Sesame) just got measured against a single SKU NVIDIA is now positioning as the default. Vera + Jetson Thor + Cosmos + GR00T is the consolidating partner stack. Vera + Rubin NVL72 is the data-centre version. Computex / GTC Taipei keynote on June 1 will set the actual rollout numbers. TechCrunch, CNBC analyst reaction, NVIDIA Vera CPU",
+        "**Tesla Optimus Gen 3 reveal pushed again to mid-year. Fremont conversion line begins production \"late July or August\" with output Musk called \"literally impossible to predict\".** This is the third Gen 3 slip since Q4 2025. Tesla originally promised 1,000 productive units by end-2025, hit zero. The Optimus benchmark every pitch deck has been using (\"Tesla scale, Tesla cost, Tesla timeline\") is now visibly slipping by a quarter every quarter, and the western humanoid bloc (Figure, Apptronik, NEURA, BD) is filling that vacuum. Electrek, Teslarati"
+      ]
+    },
+    {
       "date": "2026-05-25",
       "slug": "2026-05-25",
       "title": "Monday, May 25, 2026",
@@ -53,5 +63,5 @@
   ],
   "monthly_reviews": [],
   "papers_count": 24,
-  "updated_at": "2026-05-25T01:46:23Z"
+  "updated_at": "2026-05-26T03:01:36Z"
 }
