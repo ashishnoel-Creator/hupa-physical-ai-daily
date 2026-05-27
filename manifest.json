@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-05-27",
+      "slug": "2026-05-27",
+      "title": "Wednesday, May 27, 2026",
+      "tldr": [
+        "**Figure signed a commercial humanoid deal with Catalyst Brands (May 26).** Catalyst operates JCPenney, Aéropostale, Brooks Brothers, Lucky Brand and Nautica across 1,800 stores. Initial deployment is Catalyst's Reno, Nevada distribution centre, working the Joey Pouch sorting system. This is the first western humanoid customer announcement outside automotive / logistics-pure-play / hyperscaler. Department-store apparel supply chains are now a live humanoid SOW. JCPenney Newsroom, Figure announcement, Figure on X",
+        "**Hark closed a $700M Series A at $6B post-money (May 21).** Parkway VC led. Cap table: NVIDIA, AMD Ventures, ARK Invest, Brookfield, Greycroft, Intel Capital, Prime Movers Lab, Qualcomm Ventures, Salesforce Ventures, Tamarack. Brett Adcock is running Hark while staying CEO of Figure. NVIDIA + AMD + Intel + Qualcomm on the same cap table is the structural read. Hark is \"AI body\" Figure's complement on the \"AI brain\" side. First multimodal models ship this summer, hardware later. TechCrunch, Business Wire, Brett Adcock on X",
+        "**Robotics Summit & Expo opens in Boston today at 10am ET.** State of Humanoids panel with Alberto Rodriguez (Boston Dynamics, Atlas director of robot behavior), Pras Velagapudi (Agility CTO), Aaron Prather (ASTM), plus Schaeffler and RealSense. 6,000 attendees on the floor. First public stage where Rodriguez can be asked about the Hyundai 25K commitment, the Korean Metal Workers Union veto, and the missing permanent CEO at the three-month mark, all in one hour. The framing he lands on today sets the August-September buyside pitch deck cycle. Robotics Summit agenda, Robot Report panel preview, Alberto Rodriguez speaker page"
+      ]
+    },
+    {
       "date": "2026-05-26",
       "slug": "2026-05-26",
       "title": "Tuesday, May 26, 2026",
@@ -63,5 +73,5 @@
   ],
   "monthly_reviews": [],
   "papers_count": 24,
-  "updated_at": "2026-05-26T03:01:36Z"
+  "updated_at": "2026-05-27T01:41:31Z"
 }
