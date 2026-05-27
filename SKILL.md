@@ -10,7 +10,7 @@ Each run:
   4. Rebuilds the site: each day → its own HTML, `index.html` mirrors latest, `manifest.json` regenerated
   5. Commits + pushes to GitHub (Pages auto-deploys)
   6. Sends a short Telegram digest with TL;DR + day-specific Pages link
-  7. **PRIVATE LINKEDIN FEED**: writes 5 LinkedIn-style draft posts in Ashish's voice to `/Users/ashishnoel/Documents/Projects/HuPa/02_market/linkedin_drafts/YYYY-MM-DD.md` (NOT on Pages, NOT in the daily repo) and sends a separate Telegram message with the topic list + local file path
+  7. **PRIVATE LINKEDIN FEED**: writes 5 LinkedIn-style draft posts in Ashish's voice to `/Users/ashishnoel/Documents/Projects/HuPa/02_market/linkedin_drafts/YYYY-MM-DD.md`, then commits + pushes to the PRIVATE `ashishnoel-Creator/hupa` repo (NOT the public Pages repo), and sends a separate Telegram message with the topic list + GitHub permalink + local file path
 
 The bar is **HIGH SIGNAL ONLY** — drop hype, re-announcements, and generic AI commentary.
 
@@ -449,6 +449,62 @@ curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
 If this section fails, log to final status but don't fail the whole run — the public brief has already shipped.
 
 ================================================================
+11-B. SYNC LINKEDIN DRAFTS TO PRIVATE REPO
+================================================================
+
+**Run AFTER writing today's `linkedin_drafts/$SLUG.md` file.** The whole `/Users/ashishnoel/Documents/Projects/HuPa/` directory is a git working tree pointing to the PRIVATE GitHub repo `ashishnoel-Creator/hupa`. Pushing `02_market/linkedin_drafts/` to that repo makes today's drafts viewable from Ashish's GitHub mobile app at a permalink, without exposing pre-publication drafts on a public Pages site.
+
+**Authentication**: the `GITHUB_TOKEN` loaded from `02_market/physical_ai_daily/.env.local` is a personal-access token with `repo` scope, so it works against the private `hupa` repo just like the public Pages repo. **Critical**: never persist the token into the remote URL on the parent HuPa repo (someone else may sync that .git/config to other machines). Use it inline only.
+
+**Process**:
+```
+cd /Users/ashishnoel/Documents/Projects/HuPa
+set -a; . 02_market/physical_ai_daily/.env.local; set +a
+git config user.email "teenuboss2@gmail.com" 2>/dev/null
+git config user.name "Ashish Noel" 2>/dev/null
+
+# clear any stale lockfiles (cowork-mount quirk — same fix as the Pages repo)
+rm -f .git/index.lock .git/HEAD.lock 2>/dev/null \
+  || { echo "lockfile rm blocked — call mcp__cowork__allow_cowork_file_delete on .git/index.lock + .git/HEAD.lock then retry"; }
+
+# fetch + check we are up to date
+git fetch origin main
+
+# stage ONLY today's draft (avoid sweeping in other untracked HuPa files)
+SLUG=$(date "+%Y-%m-%d")
+git add 02_market/linkedin_drafts/${SLUG}.md
+
+# commit + push using token inline (NOT via remote.url to avoid leaking token into .git/config)
+if ! git diff --cached --quiet; then
+  git commit -m "linkedin_drafts: ${SLUG} daily draft"
+  git push "https://x-access-token:${GITHUB_TOKEN}@github.com/ashishnoel-Creator/hupa.git" HEAD:main
+fi
+```
+
+If the push is rejected because the remote moved ahead, do NOT force-push — Ashish may have edited drafts on another machine. Fetch + rebase, resolve, retry. If unresolvable, log to status and stop the sync (the local draft file is intact, he can sync manually).
+
+**Permalink format** for the daily draft (use in the Telegram message in §11):
+```
+DAY_GITHUB_URL="https://github.com/ashishnoel-Creator/hupa/blob/main/02_market/linkedin_drafts/${SLUG}.md"
+```
+
+Update the §11 Telegram message to include this URL. New template:
+```
+✍️ LinkedIn drafts — $TODAY
+
+5 post drafts in your voice, drawn from last 48h signal:
+
+$TOPICS
+
+📄 View on GitHub (private repo, opens in mobile app): $DAY_GITHUB_URL
+📁 Local file: $DRAFTS_FILE
+
+Recommendation: <name the highest-leverage post and one-line why>.
+```
+
+If the sync fails, ship the Telegram message with the local file path only and note the failure in the final status report.
+
+================================================================
 12. FINAL STATUS REPORT
 ================================================================
 End with:
@@ -461,6 +517,7 @@ End with:
   - Any blocked/failed source
   - Telegram delivery (public daily): ok/failed (with error if failed)
   - LinkedIn drafts file path + Telegram delivery (private): ok/failed
+  - **LinkedIn drafts private-repo sync: ok/failed** + the GitHub permalink for today's draft (`https://github.com/ashishnoel-Creator/hupa/blob/main/02_market/linkedin_drafts/YYYY-MM-DD.md`)
   - Which post Ashish was recommended to publish first
 
 Don't fabricate. Under-report rather than bullshit.
