@@ -798,6 +798,126 @@ const PAPERS = [
     category: 'VLA',
     why: 'Full-stack play: VLA + custom robotic hand (with Wuji Tech) + $200 sensor-equipped data glove, with claimed 1:1:1 mapping between human, glove, and robot hand. Genesis claims 100x cheaper than teleop and 5x more usable data per hour. Combined with Sunday Robotics Skill Capture Glove, the gloves-vs-headcams split in capture-modality is now well funded on both sides. Our head-mount wedge case is the workplace + outdoor + multi-person context the glove cannot reach.',
     tags: ['Genesis AI', 'VLA', 'dexterous hand', 'capture glove', 'Khosla']
+  },
+  {
+    id: 'avp-action-visual-primitives-2026',
+    dateAdded: '2026-05-24',
+    pubDate: '2026-05-21',
+    title: 'Action with Visual Primitives',
+    url: 'https://arxiv.org/html/2605.22183v1',
+    source: 'arXiv 2605.22183',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Frames manipulation as composition over a learned visual primitive set, rather than direct action prediction. Alternative to the dense-action-decoding path the headline VLAs (pi-0.7, Helix-02) are on. Worth reading for the architectural counter-argument before committing to a decoder design.',
+    tags: ['VLA', 'visual primitives', 'manipulation', 'composition']
+  },
+  {
+    id: 'bc-active-perception-egocentric-2026',
+    dateAdded: '2026-05-24',
+    pubDate: '2026-05-19',
+    title: 'Behavior Cloning for Active Perception with Low-Resolution Egocentric Vision',
+    url: 'https://arxiv.org/abs/2605.14106',
+    source: 'arXiv 2605.14106',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'Active-perception task where a wrist-mounted egocentric RGB camera repositions to centre a partially visible plant before grasp. Cheap rig, cheap camera, useful failure-mode reference for low-res egocentric capture. Read the resolution-vs-success-rate plots before sizing the next sensor pick.',
+    tags: ['egocentric', 'active perception', 'behavior cloning', 'low-res']
+  },
+  {
+    id: 'pelican-unified-1-2026',
+    dateAdded: '2026-05-25',
+    pubDate: '2026-05-14',
+    title: 'Pelican-Unified 1.0: A Unified Embodied Foundation Model',
+    url: 'https://arxiv.org/abs/2605.15153',
+    source: 'arXiv 2605.15153',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'First embodied foundation model trained under a strict unification principle. Single VLM as understanding + reasoning module, plus a Unified Future Generator that jointly denoises future video and future actions through two modality-specific output heads in the same denoising process. Language, video and action losses all backprop into the shared representation. Direct architectural counter-thesis to the modular VLA stack (pi-0.7, Helix-02, GR00T N1.6).',
+    tags: ['VLA', 'unified', 'world model', 'foundation model', 'diffusion']
+  },
+  {
+    id: 'egoexo-wm-2026',
+    dateAdded: '2026-05-25',
+    pubDate: '2026-05-14',
+    title: 'EgoExo-WM: From Exocentric to Egocentric World Models',
+    url: 'https://arxiv.org/abs/2605.15477',
+    source: 'arXiv 2605.15477',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'Extracts structured body pose from exocentric (third-person) video and transforms it to egocentric (first-person) video, unlocking in-the-wild exocentric data as training fuel for egocentric world models. Direct counter to the head-mount-only data thesis. If the conversion holds up at benchmark scale, the captured-data competition gets meaningfully harder for any headcam-first pitch.',
+    tags: ['egocentric', 'world model', 'exocentric', 'data conversion']
+  },
+  {
+    id: 'being-h-0-7-2026',
+    dateAdded: '2026-05-25',
+    pubDate: '2026-04-30',
+    title: 'Being-H0.7: Latent World-Action Model from Egocentric Video',
+    url: 'https://arxiv.org/abs/2605.00078',
+    source: 'arXiv 2605.00078',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Latent world-action model pretrained on large-scale egocentric videos, with strong cross-task performance claims. Companion to EgoExo-WM in the broader "egocentric video as the new ImageNet" thesis. Read with EgoExo-WM and DreamDojo as the three-paper bear case against headcam-first capture wedges.',
+    tags: ['egocentric', 'latent world model', 'pretraining']
+  },
+  {
+    id: 'sae-wc-embodied-ai-2026',
+    dateAdded: '2026-05-25',
+    pubDate: '2026-05-12',
+    title: 'SAE World Congress 2026 — Embodied AI in Action',
+    url: 'https://arxiv.org/abs/2605.10653',
+    source: 'arXiv 2605.10653',
+    type: 'White paper',
+    category: 'Governance',
+    why: 'Cross-industry panel on lifecycle governance, human-centered design and standards for embodied AI in automotive contexts. The "where is the governance framework" question now has a real industry document attached. Worth skimming before OEM-facing pitches.',
+    tags: ['governance', 'standards', 'embodied AI', 'automotive']
+  },
+  {
+    id: 'gesvla-2026',
+    dateAdded: '2026-05-26',
+    pubDate: '2026-05-21',
+    title: 'GesVLA: Gesture-Aware Vision-Language-Action Model',
+    url: 'https://arxiv.org/abs/2605.22812v1',
+    source: 'arXiv 2605.22812',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Two-stage training strategy that adds gesture perception to a VLA backbone. Gesture conditioning consistently improves target-grounding accuracy and human-robot interaction efficiency on multiple real-world manipulation tasks. For HuPa capture, any data that includes the operator pointing / handing / showing is now training fuel for a new loss term. The "what should we capture" rubric just got one bullet wider.',
+    tags: ['VLA', 'gesture', 'HRI', 'manipulation']
+  },
+  {
+    id: 'any2any-2026',
+    dateAdded: '2026-05-27',
+    pubDate: '2026-05-25',
+    title: 'Any2Any: Efficient Cross-Embodiment Transfer for Humanoid Whole-Body Tracking',
+    url: 'https://arxiv.org/abs/2605.23733',
+    source: 'arXiv 2605.23733',
+    type: 'Research paper',
+    category: 'Humanoid',
+    why: 'Transfers Gear-Sonic policies from Unitree G1 to LimX Oli and Luna with only 1% compute / data via SONIC + LoRA adapters. If this holds at field scale, every per-embodiment data-collection program just got measured against the LoRA adapter cost curve. Any captured dataset that is portable across embodiments via SONIC + LoRA is more defensible than one that locks to a single OEM. Direct relevance to our wedge.',
+    tags: ['humanoid', 'cross-embodiment', 'LoRA', 'SONIC', 'whole-body tracking']
+  },
+  {
+    id: 'humanego-2026',
+    dateAdded: '2026-05-27',
+    pubDate: '2026-05-26',
+    title: 'HumanEgo: Zero-Shot Robot Learning from Minutes of Human Egocentric Videos',
+    url: 'https://arxiv.org/html/2605.24934',
+    source: 'arXiv 2605.24934',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'Hardware-agnostic, robot-data-free pipeline that learns robot manipulation policies from minutes of raw human egocentric videos. Companion to EgoExo-WM and Being-H0.7 in the broader egocentric-video-as-pretraining thesis. Read the failure-mode section before the next investor pitch on rig spec.',
+    tags: ['egocentric', 'zero-shot', 'manipulation', 'hardware-agnostic']
+  },
+  {
+    id: 'egoaction-2026',
+    dateAdded: '2026-05-27',
+    pubDate: '2026-05-26',
+    title: 'EgoAction: Egocentric Action Composition with Reliability-Aware Temporal Fusion',
+    url: 'https://arxiv.org/abs/2605.24496',
+    source: 'arXiv 2605.24496',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'EPIC-KITCHENS action-detection challenge winner at CVPR 2026. Cleaner published baseline on egocentric action-detection metrics that any HuPa-captured kitchen / household dataset can be measured against. Useful as a benchmark anchor in capture-rig conversations.',
+    tags: ['egocentric', 'action detection', 'CVPR', 'EPIC-KITCHENS']
   }
 ];
 
