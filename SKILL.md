@@ -408,14 +408,56 @@ Source: <publication, date>.
 - Mark which post is the highest-leverage one to publish first and why.
 ```
 
-**Voice rules** (stricter than the public brief):
-  - ashish-writing skill applied at full strictness. Zero em dashes. No "I'd be happy to". No "delve" / "robust" / "navigate" / "underscore" / "in conclusion" / "It's worth noting". No "Not X, but Y". No three-item parallel structures.
-  - Direct, builder-not-analyst voice. State the news as a fact in the first line.
-  - Specific named companies and $ / unit numbers in every post.
-  - Casual contractions OK (`thats`, `dont`, `cant`, `lets` no apostrophe).
-  - End on a forward line or a confident assertion. Never a summary line.
-  - Each post should be readable in one screen on mobile LinkedIn — ~6-12 lines, no formatting beyond paragraph breaks.
-  - **NO HASHTAGS.** Ashish doesn't use them. Don't add them.
+**Voice rules** (stricter than the public brief — read every word before drafting):
+
+The most common failure mode on this task is news-reader voice. Facts about who-did-what-yesterday with strategic commentary stapled on top, no personal stakes, no named friends, no conversation hook. That is an analyst post. Ashish does not write analyst posts. If you find yourself writing "The pitch decks that built X valuations are about to need a footnote" — stop. That is Bloomberg voice.
+
+**Every post MUST have at least three of the following five elements (and ideally four):**
+
+1. **A personal anecdote from Ashish's actual lived experience.** Examples that work because they are true: "When I was running Physical AI at Humyn Labs we used to..."; "Six months back a few friends and I almost started a robotics lab and shelved it because..."; "At HuPa our rigs in Indian hospitals / F&B / factories see..."; "I just resigned from Humyn Labs"; "I vibe-code Checkin on weekends and it forced me to learn..."; "Talking to <named friend> last week about <X> and they said...". Use the SESSION_ANCHOR.md and `_claude_toolkit/skills/ashish-writing/SKILL.md` for the lived-context library. Never invent specifics he hasn't actually done.
+
+2. **A named friend, colleague, or specific Indian company.** Tarun, Shashank, Build AI, Sarvam AI, Krutrim, IIT Madras, Humyn Labs, Objectways, Awign Robotech. Or a named buyer / partner if mentioned in `06_outreach/`. Generic "a few friends" or "an investor I spoke to" is acceptable if the alternative is fabricating a name — but specific is always stronger.
+
+3. **A discussion question or DM-bait at the end.** Not a rhetorical question. A real one Ashish wants an answer to. "Anyone here who has shipped data to Scale, Mercor or Surge in 2026, what is the reject rate you saw on the receiving side"; "DM me names"; "Curious whether the X math survives 10x lower wages"; "Reply if you have a model on this". The post should feel like an open conversation, not a closed take.
+
+4. **A connection back to HuPa's actual work or thesis.** What HuPa is building (validated raw ego data + audit-trailed QC + Indian-distribution coverage), the three-phase Indian-pharma arc, the 50% Objectways reject rate as a benchmark, captured-hours vs validated-hours, the Banayan "third door" framing, the shelved robotics lab. Not generic "this matters to physical AI" framing. Specific to what Ashish is doing.
+
+5. **A casual Ashish-isms hit.** `ofcourse`, `atleast`, `infact`, `very very`, `etc etc`, `lets` (no apostrophe), missing apostrophes on `thats / dont / cant / didnt / wont / hes / shes`, `literally` as emphasis adverb, `actually` as emphasis. At least one per post.
+
+**Hard rejects on draft review** (if any of these appear, rewrite the post from scratch):
+
+  - Em dashes. Anywhere. Even one is an instant rewrite.
+  - "I'd be happy to". "Hope this helps". "Great question". "It's worth noting that". "From a X perspective". "When we think about". "Bottom line:". "In short:". "To sum up:".
+  - Vocabulary blacklist: `delve`, `tapestry`, `robust`, `navigate` (as a verb), `embark`, `streamline`, `underscore`, `garner`, `facilitate`, `myriad`, `realm`, `pivotal`, `nuanced`, `multifaceted`, `paradigm`, `holistic`, `seamlessly`, `unparalleled`, `meticulously`, `landscape` (as in "the X landscape"), `foster`, `elevate`, `harness`, `bespoke`, `uniquely positioned`, `cutting-edge`, `at the end of the day`, `furthermore`, `moreover`. `leverage` is OK in moderation.
+  - "Not X, but Y" construction. "It's not just A, it's B". Both banned.
+  - Triplet parallel structure. "Collects, validates, and owns." "BMW. Mercedes. Hyundai." (a list of three things named is OK; the structural-triplet "A, B, and C" with parallel grammar is not.) Cut to two, vary the grammar, or break the parallel.
+  - Tidy AI summary line at the end ("The X bloc just consolidated", "The market is about to reprice", "The pitch decks that built X valuations are about to need a footnote"). End on a question or a confident builder-voice assertion ("We are doing X. Lets see who else is."), never on summary.
+  - Three-item bullet sequences with bold lead-ins on every bullet. Vary the format.
+  - "Source: <publication>, <date>" is acceptable as a footer but keep it to one line. Never expand.
+
+**Length**: each post 6-12 lines on mobile LinkedIn. Some paragraphs can be one sentence. Some can be three. Vary aggressively. Do not let the rhythm settle into 12-18-word sentences for the whole post.
+
+**Format**: paragraph breaks only. No bullets inside a post. No bold inside a post. No italics. No emoji. No hashtags. The post is prose.
+
+**Casual contractions**: thats, dont, cant, didnt, wont, hes, shes, lets (no apostrophe). Use throughout when the sentence is conversational.
+
+**Worked example of right vs wrong** (from the actual 2026-05-27 rewrite cycle — first draft was rejected by Ashish as news-reader voice):
+
+Wrong (news-reader, analyst tone, no personal stakes):
+> Figure announced yesterday that Catalyst Brands has signed a commercial agreement to deploy humanoid robots at scale. Catalyst runs JCPenney, Aéropostale, Brooks Brothers, Lucky Brand and Nautica across 1,800 stores. Initial deployment is the Reno NV distribution centre.
+>
+> The humanoid market spent two years being a story about car factories. BMW Spartanburg, Mercedes Berlin, Hyundai 25K. The narrative was "high-margin manufacturing in regulated geographies pays the early bill."
+>
+> That narrative just broke.
+
+Right (personal stakes, lived experience, discussion hook):
+> Figure signed a commercial agreement with Catalyst Brands yesterday. Catalyst runs JCPenney, Aéropostale, Brooks Brothers, Lucky Brand, Nautica. Initial deployment is their Reno NV distribution centre, sorting Joey Pouch packages.
+>
+> When I was running Physical AI at Humyn Labs we used to run our rigs in Indian apparel warehouses for benchmarking. The wage stack, the throughput per square foot, the unit-pick economics. Apparel logistics is structurally less forgiving than auto. A humanoid doing 2.6 second per package basically lines up with the human floor. The Reno deal is the first time anyone has written that math down with a named retail customer attached.
+>
+> Has anyone on this feed run the unit-pick numbers on humanoid vs warehouse labor in Indian apparel logistics. I am curious whether the Reno math survives 10x lower wages. Reply or DM if you have a model.
+
+Difference: the second version has personal lived experience (Humyn Labs rigs in apparel warehouses), specific technical anchor (2.6 second per package), and an open discussion question at the end. It reads like a builder noticing something in his own market. The first reads like a wire-service rephrase.
 
 **Then send a separate Telegram message** with the topic list (chat_id same as the public daily):
 
