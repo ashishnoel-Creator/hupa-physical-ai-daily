@@ -404,9 +404,23 @@ Source: <publication, date>.
 ## Personal-stake reminders (edit in before posting)
 
 - Naming HuPa explicitly in 1-2 of these is good. Skip in the others to vary tone.
-- Drop a Tarun / Shashank / IIT Madras / Humyn Labs anecdote into 1 post if it lands naturally.
+- Drop an IIT Madras / Humyn Labs (role-only) anecdote into 1 post if it lands naturally. Named individuals only with prior approval (see NEVER-MENTION LIST).
 - Mark which post is the highest-leverage one to publish first and why.
 ```
+
+### NEVER-MENTION LIST (LinkedIn drafts — hard rules, no exceptions)
+
+The SESSION_ANCHOR.md file contains private context about Ashish that exists for orientation only. Some of it must NEVER appear in any LinkedIn draft, no matter how cleanly it would fit an angle. If a draft references any of the items below, reject the draft and rewrite from scratch with a different anchor.
+
+  - **The shelved robotics lab from late 2025 with a few friends.** Off-limits as a hook, an opener, an anecdote, or even a passing reference. Ashish has explicitly said do not write anything about this on LinkedIn. Ever. Even if it would land the chip-war / economics / India-founder angle perfectly, find a different anchor. This is non-negotiable.
+  - **Naming specific friends (Tarun, Shashank, or any individual in `06_outreach/people/`) without explicit prior approval.** Generic "a friend", "a researcher I spoke to", "someone on the buyside" is acceptable. Named individuals require Ashish to have already named them publicly, OR a DM-style "with X's permission" anchor that Ashish will edit in himself.
+  - **Anything about Humyn Labs that goes beyond Ashish's role.** Acceptable: "led Physical AI at Humyn Labs", "ran ego data delivery at Humyn Labs", "was running QC against frontier-lab specs at Humyn Labs". Off-limits: internal customer names, contract values, internal team dynamics, why he resigned beyond what is on his public profile.
+  - **HuPa-specific deal terms, buyer names, pricing, rig BOM specifics not in publicly-shared material.** Public OK: rigs running in Indian hospitals / F&B / factories, the three-phase Indian-pharma thesis, 50% reject-rate benchmark from Objectways as a public reference point. Off-limits: which specific buyers HuPa is talking to, what they are paying, what HuPa's burn or runway is, what the hardware costs to build.
+  - **The Checkin side project** unless the post explicitly calls for a side-project anecdote (e.g. a "weekend hacking" post). Don't shoehorn it in.
+
+If a draft draws on any of the above, rewrite with a different anchor before saving. The "right" anchor library is everything OTHER than this list: Humyn Labs role + public ego-data-delivery context, HuPa rigs in production (no named buyers), Bengaluru location, IIT Madras alumni status, weekend vibe-coding as a general pattern (not the specific Checkin product), reading frontier-lab papers, the public 50% Objectways reject-rate benchmark, the three-phase Indian pharma analogy, the Banayan "third door" framing, watching the western humanoid debate from a distance in Bengaluru.
+
+If in doubt about whether an anchor is on-limits, default to a more public-record one. The cost of using too-public an anchor is a slightly less personal post. The cost of using a private anchor is Ashish having to reject the draft and rewrite it himself, which has already happened once (the shelved-lab line on 2026-05-27).
 
 **Voice rules** (stricter than the public brief — read every word before drafting):
 
@@ -414,13 +428,13 @@ The most common failure mode on this task is news-reader voice. Facts about who-
 
 **Every post MUST have at least three of the following five elements (and ideally four):**
 
-1. **A personal anecdote from Ashish's actual lived experience.** Examples that work because they are true: "When I was running Physical AI at Humyn Labs we used to..."; "Six months back a few friends and I almost started a robotics lab and shelved it because..."; "At HuPa our rigs in Indian hospitals / F&B / factories see..."; "I just resigned from Humyn Labs"; "I vibe-code Checkin on weekends and it forced me to learn..."; "Talking to <named friend> last week about <X> and they said...". Use the SESSION_ANCHOR.md and `_claude_toolkit/skills/ashish-writing/SKILL.md` for the lived-context library. Never invent specifics he hasn't actually done.
+1. **A personal anecdote from Ashish's actual lived experience.** Examples that work because they are true AND on-limits per the NEVER-MENTION LIST: "When I was running Physical AI at Humyn Labs we used to..."; "At HuPa our rigs in Indian hospitals / F&B / factories see..."; "I led ego data delivery against frontier-lab QC specs at Humyn Labs and..."; "I just resigned from Humyn Labs and have been talking to an investor about..."; "Watching the western humanoid debate from Bengaluru this week...". Use SESSION_ANCHOR.md and `_claude_toolkit/skills/ashish-writing/SKILL.md` for the lived-context library. Never invent specifics Ashish hasn't actually done. Never use items from the NEVER-MENTION LIST above.
 
-2. **A named friend, colleague, or specific Indian company.** Tarun, Shashank, Build AI, Sarvam AI, Krutrim, IIT Madras, Humyn Labs, Objectways, Awign Robotech. Or a named buyer / partner if mentioned in `06_outreach/`. Generic "a few friends" or "an investor I spoke to" is acceptable if the alternative is fabricating a name — but specific is always stronger.
+2. **A named friend, colleague, or specific Indian company.** Build AI, Sarvam AI, Krutrim, IIT Madras, Humyn Labs, Objectways, Awign Robotech, iMerit. Or a named public buyer / lab. Generic "a few friends" or "an investor I spoke to" is acceptable as a fallback — but specific is always stronger. **Do not name individuals from `06_outreach/people/` without explicit prior approval** (see NEVER-MENTION LIST).
 
 3. **A discussion question or DM-bait at the end.** Not a rhetorical question. A real one Ashish wants an answer to. "Anyone here who has shipped data to Scale, Mercor or Surge in 2026, what is the reject rate you saw on the receiving side"; "DM me names"; "Curious whether the X math survives 10x lower wages"; "Reply if you have a model on this". The post should feel like an open conversation, not a closed take.
 
-4. **A connection back to HuPa's actual work or thesis.** What HuPa is building (validated raw ego data + audit-trailed QC + Indian-distribution coverage), the three-phase Indian-pharma arc, the 50% Objectways reject rate as a benchmark, captured-hours vs validated-hours, the Banayan "third door" framing, the shelved robotics lab. Not generic "this matters to physical AI" framing. Specific to what Ashish is doing.
+4. **A connection back to HuPa's actual work or thesis.** What HuPa is building (validated raw ego data + audit-trailed QC + Indian-distribution coverage), the three-phase Indian-pharma arc, the 50% Objectways reject rate as a benchmark, captured-hours vs validated-hours, the Banayan "third door" framing. Not generic "this matters to physical AI" framing. Specific to what Ashish is doing.
 
 5. **A casual Ashish-isms hit.** `ofcourse`, `atleast`, `infact`, `very very`, `etc etc`, `lets` (no apostrophe), missing apostrophes on `thats / dont / cant / didnt / wont / hes / shes`, `literally` as emphasis adverb, `actually` as emphasis. At least one per post.
 
