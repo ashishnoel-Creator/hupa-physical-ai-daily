@@ -918,6 +918,30 @@ const PAPERS = [
     category: 'Collection',
     why: 'EPIC-KITCHENS action-detection challenge winner at CVPR 2026. Cleaner published baseline on egocentric action-detection metrics that any HuPa-captured kitchen / household dataset can be measured against. Useful as a benchmark anchor in capture-rig conversations.',
     tags: ['egocentric', 'action detection', 'CVPR', 'EPIC-KITCHENS']
+  },
+  {
+    id: 'egohumanoid-2026',
+    dateAdded: '2026-05-29',
+    pubDate: '2026-02-13',
+    title: 'EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration',
+    url: 'https://arxiv.org/abs/2602.10106',
+    source: 'arXiv 2602.10106',
+    type: 'Research paper',
+    category: 'Humanoid',
+    why: 'Argues egocentric human data is a scalable pathway toward generalizable humanoid control. Robot-free demonstration pipeline that transfers human behaviors to complex loco-manipulation skills. Companion to EgoExo-WM, HumanEgo, Being-H0.7 in the broader egocentric-video-as-pretraining thesis. The data argument that any first-person human video becomes training fuel for humanoid loco-manipulation continues to harden through the published literature. Reinforces our captured-data wedge thesis.',
+    tags: ['egocentric', 'humanoid', 'loco-manipulation', 'robot-free']
+  },
+  {
+    id: 'health-conditioned-vla-2026',
+    dateAdded: '2026-05-29',
+    pubDate: '2026-05-15',
+    title: 'Health-Conditioned Vision-Language-Action Models for Malfunction-Aware Robot Control',
+    url: 'https://arxiv.org/abs/2605.16056',
+    source: 'arXiv 2605.16056',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Adds a health-vector input to a VLA backbone giving the policy joint operation angle and torque capability information so it can adapt predictions to degraded joints. Every fielded humanoid program will eventually have to ship malfunction-aware control. Most published VLA baselines do not handle it. Worth tracking as a candidate inclusion in any capture-and-validate spec that targets long-running fielded units.',
+    tags: ['VLA', 'malfunction-aware', 'robot health', 'joint degradation']
   }
 ];
 

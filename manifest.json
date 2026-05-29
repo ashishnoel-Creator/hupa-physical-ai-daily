@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-05-29",
+      "slug": "2026-05-29",
+      "title": "Friday, May 29, 2026",
+      "tldr": [
+        "**Unitree Robotics filed its STAR Market listing-committee hearing for June 1, with Q1 2026 adjusted net profit down 52% on revenue up 68%.** Target raise ¥4.2B ($619M) at a ¥42B ($6.2B) valuation. 73 days from formal application to review. Q1 revenue 422.8M yuan, adjusted net excluding non-recurring 40.3M yuan vs 84.8M a year ago. Q1 humanoid sales 1,200 units. Company attributed the profit pressure to surging R&D plus a sales price war. First-half 2026 guide is +35.6% to +45.4% revenue growth, with profit decline narrowing to between -6.4% and -22%. This is the first listed-pure-play humanoid robotics IPO benchmark, and it lands Monday morning with the bear case already on the front page. Caixin, SCMP, TrendForce, Pandaily",
+        "**Robotics Summit Boston wrapped May 28.** State of Humanoids panel at 10am ET landed the framing that humanoid feasibility is no longer the question, standards and deployment architecture are. Confirmed line-up on stage: Alberto Rodriguez (Atlas director of robot behavior, Boston Dynamics), Pras Velagapudi (Agility CTO), Aaron Prather (ASTM), plus Schaeffler and RealSense. The Robot Report's wrap confirms electric Atlas is now \"in commercial shipment to Hyundai and Google DeepMind\", which is the cleanest public confirmation that the Hyundai 25K commitment has begun. Amazon Vulcan named RBR50 Robot of the Year. Show closed with Noland Arbaugh, the first human Neuralink BCI recipient, moving physical chess pieces by thought on stage to a standing ovation from 5,000+ attendees. Robot Report Day 1 guide, Robot Report Day 2 guide, TechTimes wrap, TechTimes Arbaugh detail",
+        "**NVIDIA GTC Taipei keynote is in 3 days, Mon June 1 at 11am Taipei time (8:30am IST).** Jensen Huang at the Taipei Music Center, day before Computex floor opens. Vera CPU + Jetson Thor + GR00T N1.6 / N1.7 + Cosmos Reason 2 rollout numbers are what every series-A robotics deck dated after June 2 will quote. The keynote also lands the same morning as the Unitree STAR Market hearing, which means two of the most-watched physical-AI events in 2026 happen on the same day. NVIDIA GTC Taipei keynote page, NVIDIA blog preview, Computex blog"
+      ]
+    },
+    {
       "date": "2026-05-27",
       "slug": "2026-05-27",
       "title": "Wednesday, May 27, 2026",
@@ -72,6 +82,6 @@
     }
   ],
   "monthly_reviews": [],
-  "papers_count": 34,
-  "updated_at": "2026-05-27T05:46:35Z"
+  "papers_count": 36,
+  "updated_at": "2026-05-29T03:32:02Z"
 }
