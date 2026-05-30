@@ -942,6 +942,30 @@ const PAPERS = [
     category: 'VLA',
     why: 'Adds a health-vector input to a VLA backbone giving the policy joint operation angle and torque capability information so it can adapt predictions to degraded joints. Every fielded humanoid program will eventually have to ship malfunction-aware control. Most published VLA baselines do not handle it. Worth tracking as a candidate inclusion in any capture-and-validate spec that targets long-running fielded units.',
     tags: ['VLA', 'malfunction-aware', 'robot health', 'joint degradation']
+  },
+  {
+    id: 'pointworld-2026',
+    dateAdded: '2026-05-30',
+    pubDate: '2026-01-06',
+    title: 'PointWorld: Scaling 3D World Models for In-The-Wild Robotic Manipulation',
+    url: 'https://arxiv.org/abs/2601.03782',
+    source: 'arXiv 2601.03782',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'Pre-trained 3D world model that unifies state and action as 3D point flows in a shared 3D space, conditioning directly on robot geometry so a single checkpoint transfers across embodiments. Trained on only ~2M trajectories / 500 hours across one Franka and one bimanual humanoid, real-time 0.1s MPC, doing pushing, deformable and articulated manipulation and tool use zero-shot from a single in-the-wild RGB-D image with no demos or post-training. Direct bear signal for any pitch resting on raw captured hours. If single-image-to-action holds at field scale, the defensible asset becomes cross-embodiment portability and validated yield, not the hour count. CVPR 2026 highlight.',
+    tags: ['world model', '3D point flow', 'cross-embodiment', 'zero-shot manipulation', 'MPC']
+  },
+  {
+    id: 'vla-data-engines-survey-2026',
+    dateAdded: '2026-05-30',
+    pubDate: '2026-04-30',
+    title: 'Vision-Language-Action in Robotics: A Survey of Datasets, Benchmarks, and Data Engines',
+    url: 'https://arxiv.org/html/2604.23001v1',
+    source: 'arXiv 2604.23001',
+    type: 'Survey',
+    category: 'Collection',
+    why: 'Comprehensive survey of the VLA stack from the data side, mapping datasets, benchmarks and the data engines that feed them. A single reference for which corpora and collection pipelines the field actually trains on and where the gaps are. Useful before any buyside conversation that needs the lay of the data land in one document.',
+    tags: ['VLA', 'survey', 'datasets', 'benchmarks', 'data engines']
   }
 ];
 

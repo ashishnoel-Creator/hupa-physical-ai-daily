@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-05-30",
+      "slug": "2026-05-30",
+      "title": "Saturday, May 30, 2026",
+      "tldr": [
+        "**NVIDIA GTC Taipei is in 2 days (Mon June 1, 11am Taipei / 8:30am IST), and the lead expected reveal is now the N1X ARM laptop SoC.** Jensen at the Taipei Music Center the day before Computex floor opens. The N1X is NVIDIA's first chip designed to live inside a laptop instead of a rack, sitting alongside Vera Rubin NVL72 partner news and the physical-AI block (Jetson Thor deep-dives, GR00T / Cosmos Reason 2 rollout). For HuPa the embedded read is unchanged but sharpening: every robotics deck dated after June 2 quotes whatever Jensen lands on Jetson Thor + GR00T, and the same keynote morning is the Unitree listing hearing. Two of the most-watched physical-AI events of Q2 happen inside the same 12 hours. NVIDIA GTC Taipei keynote, VideoCardz, ChatForest preview",
+        "**PointWorld lands as the most relevant paper of the weekend, and it is a direct bear signal for raw captured-hours pitches.** A pre-trained 3D world model that represents actions as 3D point flows instead of per-embodiment joint commands, trained on ~2M trajectories / 500 hours across a Franka and a bimanual humanoid, running real-time MPC at 0.1s. The headline claim: a real Franka does rigid-body pushing, deformable and articulated manipulation, and tool use zero-shot from a single in-the-wild RGB-D image, no demos, no post-training. CVPR 2026 highlight. Chris Paxton flagged it 11h ago on the spatial-understanding angle. If single-image-to-action holds at field scale, the value of a captured dataset shifts from hours-collected toward cross-embodiment portability and validated yield, which is exactly the HuPa wedge. arXiv 2601.03782, project page, Chris Paxton on X",
+        "**Unitree IPO hearing confirmed for Monday June 1, the 31st STAR Market listing-review meeting of 2026.** ¥4.2B ($619M) target raise at ~¥42B ($6.2B) valuation, 73 days from formal acceptance to review. Q1 2026 adjusted net profit -52% YoY to ¥40.3M on revenue +68%. New wrinkle this week: Shoucheng Holdings (697.HK) holds a 3.8% stake, so a clean clearance opens a public revaluation window for a listed proxy on Unitree before the IPO itself prices. First listed-pure-play humanoid benchmark in China sets Monday morning, same keynote slot as Jensen. Global Times, Caixin, SCMP"
+      ]
+    },
+    {
       "date": "2026-05-29",
       "slug": "2026-05-29",
       "title": "Friday, May 29, 2026",
@@ -82,6 +92,6 @@
     }
   ],
   "monthly_reviews": [],
-  "papers_count": 36,
-  "updated_at": "2026-05-29T03:32:02Z"
+  "papers_count": 38,
+  "updated_at": "2026-05-30T02:03:06Z"
 }
