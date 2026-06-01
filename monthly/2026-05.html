@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HuPa Physical AI Daily — Signal Digest</title>
+<meta name="description" content="HuPa daily intelligence digest on Physical AI: data, annotation, embedded systems, robotics, humanoids. Signal only.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1A2D5C;        /* deep indigo - primary */
+  --ink-2: #4A4438;      /* warm body text */
+  --mute: #7A7466;       /* warm muted */
+  --mute-2: #9A958C;     /* lighter muted */
+  --paper: #F8F3E9;      /* warm cream background */
+  --paper-2: #F0EBDF;    /* warmer card */
+  --paper-3: #EAE2D0;    /* slightly stronger */
+  --hair: rgba(26, 45, 92, 0.12);
+  --hair-strong: rgba(26, 45, 92, 0.22);
+  --amber: #F4A300;      /* HuPa saffron */
+  --amber-soft: rgba(244, 163, 0, 0.12);
+  --amber-strong: rgba(244, 163, 0, 0.22);
+  --green: #0F5132;
+  --red: #B7402A;
+
+  --sidebar-w: 232px;
+  --header-h: 56px;
+  --content-w: 820px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  background: var(--paper);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink-2);
+  font-family: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16.5px;
+  line-height: 1.7;
+  font-feature-settings: "kern" 1, "liga" 1, "ss01" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Progress bar */
+.progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: transparent;
+  z-index: 200;
+}
+.progress-bar {
+  height: 100%;
+  background: var(--amber);
+  width: 0;
+  transition: width 0.08s linear;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-w);
+  right: 0;
+  height: var(--header-h);
+  background: rgba(248, 243, 233, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--hair);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 36px;
+}
+.header-meta {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mute);
+}
+.header-meta b {
+  color: var(--ink);
+  font-weight: 600;
+}
+.header-meta i {
+  color: var(--amber);
+  font-style: normal;
+  padding: 0 4px;
+}
+.pdf-btn {
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--ink);
+  padding: 9px 16px;
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 0;
+  text-decoration: none;
+}
+.pdf-btn:hover {
+  background: var(--amber);
+  color: var(--ink);
+  border-color: var(--amber);
+}
+.pdf-btn.outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--hair-strong);
+}
+.pdf-btn.outline:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.pdf-btn svg {
+  width: 13px; height: 13px;
+  stroke-width: 1.6;
+}
+.header-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Layout */
+.layout {
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 28px 22px 28px 28px;
+  border-right: 1px solid var(--hair);
+  overflow-y: auto;
+  background: var(--paper);
+}
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-track { background: transparent; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--hair-strong); border-radius: 2px; }
+
+.brand-mark {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.18em;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.brand-mark span {
+  color: var(--amber);
+  padding: 0 2px;
+}
+.brand-sub {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--mute);
+  margin-bottom: 36px;
+}
+
+/* Site nav (rendered from manifest.json by _sidebar.js) */
+.sitenav { margin-bottom: 24px; }
+.sitenav-block { margin-bottom: 16px; }
+.sitenav-label {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--mute);
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--hair);
+}
+.sitenav-label .count {
+  font-weight: 500;
+  color: var(--mute-2);
+  margin-left: 4px;
+}
+.sitenav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.sitenav-list > li { margin-bottom: 3px; }
+.sitenav-list a {
+  display: block;
+  color: var(--ink-2);
+  text-decoration: none;
+  padding: 4px 8px;
+  border-left: 2px solid transparent;
+  transition: all 0.12s ease;
+}
+.sitenav-list a:hover { background: var(--paper-2); color: var(--ink); }
+.sitenav-list a.active {
+  background: var(--amber-soft);
+  color: var(--ink);
+  border-left-color: var(--amber);
+  font-weight: 500;
+}
+.sitenav-list .count {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px;
+  color: var(--mute-2);
+  margin-left: 4px;
+}
+.sitenav-list details { margin: 0; }
+.sitenav-list summary {
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 12.5px;
+  color: var(--ink);
+  font-weight: 500;
+  list-style: none;
+  user-select: none;
+  border-left: 2px solid transparent;
+}
+.sitenav-list summary::-webkit-details-marker { display: none; }
+.sitenav-list summary::before {
+  content: '▸';
+  color: var(--mute-2);
+  font-size: 9px;
+  margin-right: 6px;
+  transition: transform 0.12s ease;
+  display: inline-block;
+}
+.sitenav-list details[open] > summary::before { transform: rotate(90deg); }
+.sitenav-list summary:hover { background: var(--paper-2); }
+.sitenav-list ul.sub {
+  list-style: none;
+  padding: 2px 0 4px 14px;
+  margin: 0;
+  border-left: 1px solid var(--hair);
+  margin-left: 12px;
+}
+.sitenav-list ul.sub a { font-size: 12.5px; padding: 3px 8px; }
+.day-item .day-date {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 11.5px;
+}
+.sitenav-list li.muted span {
+  display: block;
+  padding: 4px 8px;
+  color: var(--mute);
+  font-size: 12.5px;
+}
+.sitenav-list li.muted small { color: var(--mute-2); font-size: 10.5px; }
+
+#sitenavSearch {
+  width: 100%;
+  font-family: 'Geist', sans-serif;
+  font-size: 12.5px;
+  padding: 6px 8px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--hair-strong);
+  border-radius: 0;
+  outline: none;
+}
+#sitenavSearch:focus { border-color: var(--ink); }
+.search-results { margin-top: 8px; max-height: 280px; overflow-y: auto; }
+.search-hit {
+  display: block;
+  padding: 6px 8px;
+  margin-bottom: 4px;
+  text-decoration: none;
+  color: var(--ink-2);
+  border-left: 2px solid var(--hair);
+  background: var(--paper-2);
+  transition: all 0.1s ease;
+}
+.search-hit:hover { border-left-color: var(--amber); background: var(--paper-3); }
+.search-hit .hit-date {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10.5px;
+  color: var(--mute);
+  margin-bottom: 2px;
+}
+.search-hit .hit-snippet { font-size: 12px; line-height: 1.35; color: var(--ink-2); }
+.search-empty { padding: 6px 8px; color: var(--mute); font-size: 12px; }
+.sitenav-error { padding: 8px; color: var(--red); font-size: 12px; }
+
+.toc-label {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--mute);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--hair);
+}
+
+.toc nav ul {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.toc > nav > ul > li {
+  margin-bottom: 1px;
+}
+
+.toc a {
+  display: block;
+  font-family: 'Geist', sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: var(--ink-2);
+  text-decoration: none;
+  padding: 6px 8px 6px 10px;
+  border-left: 2px solid transparent;
+  border-bottom: none;
+  transition: all 0.12s ease;
+  line-height: 1.35;
+}
+.toc a:hover {
+  color: var(--ink);
+  background: var(--paper-2);
+}
+.toc a.active {
+  color: var(--ink);
+  border-left-color: var(--amber);
+  background: var(--amber-soft);
+  font-weight: 500;
+}
+
+/* Sub-list — collapsed by default, expand only under active parent */
+.toc > nav > ul > li > ul {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.28s ease, margin 0.28s ease;
+  margin: 0;
+  padding-left: 14px;
+  border-left: 1px solid var(--hair);
+  margin-left: 6px;
+}
+.toc > nav > ul > li.active > ul,
+.toc > nav > ul > li:hover > ul {
+  max-height: 800px;
+  margin-top: 2px;
+  margin-bottom: 8px;
+}
+.toc ul ul a {
+  font-size: 12px;
+  color: var(--mute);
+  padding: 4px 8px 4px 10px;
+  font-weight: 400;
+}
+.toc ul ul a:hover {
+  color: var(--ink-2);
+  background: transparent;
+}
+.toc ul ul a.active {
+  color: var(--ink);
+  background: transparent;
+  border-left-color: var(--amber);
+  font-weight: 500;
+}
+
+/* Main */
+.main-wrap {
+  padding-top: var(--header-h);
+}
+.main {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 56px 40px 120px;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin: 0 0 24px;
+}
+h1 + p {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 11.5px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mute);
+  line-height: 1.9;
+  margin-bottom: 8px;
+}
+h1 + p strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+h2 {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 72px 0 24px;
+  padding-top: 36px;
+  border-top: 1px solid var(--hair);
+  scroll-margin-top: 80px;
+}
+
+h3 {
+  font-family: 'Geist', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 44px 0 14px;
+  scroll-margin-top: 80px;
+}
+
+h4 {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin: 28px 0 10px;
+}
+
+p {
+  margin-bottom: 18px;
+  color: var(--ink-2);
+}
+
+p > strong:first-child {
+  color: var(--ink);
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+}
+
+strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+em {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink);
+  font-size: 1.08em;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--amber);
+  transition: all 0.12s;
+  padding-bottom: 1px;
+}
+a:hover {
+  color: var(--amber);
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 24px;
+  margin: 0 0 22px;
+}
+ul li, ol li {
+  margin-bottom: 8px;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+ul li::marker {
+  color: var(--amber);
+}
+ol li::marker {
+  color: var(--amber);
+  font-family: 'Geist Mono', monospace;
+  font-weight: 500;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 28px 0 32px;
+  font-family: 'Geist', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.5;
+  background: var(--paper);
+  border: 1px solid var(--hair-strong);
+}
+thead {
+  background: var(--paper-2);
+  border-bottom: 1.5px solid var(--ink);
+}
+th {
+  text-align: left;
+  padding: 11px 13px;
+  color: var(--ink);
+  font-family: 'Geist Mono', monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 10.5px;
+  vertical-align: bottom;
+}
+td {
+  padding: 11px 13px;
+  border-bottom: 1px solid var(--hair);
+  vertical-align: top;
+  color: var(--ink-2);
+}
+td strong { color: var(--ink); }
+td a {
+  border-bottom-color: var(--amber);
+}
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: var(--paper-2); }
+
+/* Code */
+code {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.88em;
+  background: var(--paper-2);
+  padding: 1px 6px;
+  border: 1px solid var(--hair);
+  color: var(--ink);
+}
+pre {
+  background: var(--paper-2);
+  border: 1px solid var(--hair);
+  border-left: 3px solid var(--amber);
+  padding: 18px 22px;
+  overflow-x: auto;
+  margin: 24px 0;
+  font-size: 12px;
+  line-height: 1.7;
+  font-family: 'Geist Mono', ui-monospace, monospace;
+}
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--ink-2);
+  font-size: inherit;
+}
+
+/* Blockquote */
+blockquote {
+  border-left: 3px solid var(--amber);
+  padding: 4px 0 4px 18px;
+  margin: 22px 0;
+  color: var(--mute);
+}
+blockquote em {
+  color: var(--ink-2);
+}
+
+/* HR — restrained */
+hr {
+  border: none;
+  border-top: 1px solid var(--hair);
+  margin: 44px 0;
+  position: relative;
+}
+hr::before {
+  content: '✦';
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+  background: var(--paper);
+  color: var(--mute-2);
+  font-size: 12px;
+  padding: 0 12px;
+}
+
+/* Tighter spacing for first section */
+section.level1 > h1 {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+section.level2:first-of-type > h2 {
+  margin-top: 28px;
+  padding-top: 0;
+  border-top: none;
+}
+section.level2 > section.level3:first-of-type > h3 {
+  margin-top: 24px;
+}
+
+/* Mobile-only elements hidden on desktop */
+.mobile-toc-trigger,
+.mobile-toc-scrim,
+.sidebar-actions { display: none; }
+
+/* Responsive — tablet down */
+@media (max-width: 980px) {
+  /* Hide the desktop top bar entirely on mobile — let the content breathe */
+  .header { display: none; }
+  .main-wrap { padding-top: 0; }
+  .layout { grid-template-columns: 1fr; }
+
+  body { font-size: 17px; line-height: 1.7; -webkit-text-size-adjust: 100%; }
+  .main { padding: 36px 22px 110px; max-width: 100%; }
+
+  h1 { font-size: 36px; line-height: 1.08; }
+  h1 + p { font-size: 11px; line-height: 1.8; margin-bottom: 6px; }
+  h2 { font-size: 26px; margin-top: 56px; padding-top: 28px; }
+  h3 { font-size: 19px; margin-top: 40px; }
+
+  /* Sidebar morphs into bottom sheet */
+  .sidebar {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    max-height: 82vh;
+    border-right: none;
+    border-top: 2px solid var(--ink);
+    box-shadow: 0 -12px 44px rgba(26, 45, 92, 0.28);
+    transform: translateY(100%);
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 10px 22px 32px;
+    z-index: 200;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .sidebar.open { transform: translateY(0); }
+  .sidebar::before {
+    content: '';
+    display: block;
+    width: 44px;
+    height: 4px;
+    background: var(--hair-strong);
+    border-radius: 2px;
+    margin: 0 auto 14px;
+  }
+  .brand-mark { font-size: 18px; margin-bottom: 2px; }
+  .brand-sub { margin-bottom: 16px; font-size: 9.5px; }
+
+  /* PDF action shows inside the bottom sheet on mobile */
+  .sidebar-actions {
+    display: flex;
+    margin: 0 0 18px;
+    padding: 0 0 16px;
+    border-bottom: 1px solid var(--hair);
+  }
+  .sidebar-actions .pdf-btn {
+    display: inline-flex;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    padding: 12px 18px;
+    font-family: 'Geist Mono', ui-monospace, monospace;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    border-radius: 0;
+  }
+  .sidebar-actions .pdf-btn svg {
+    width: 14px;
+    height: 14px;
+    stroke-width: 1.6;
+  }
+
+  /* Floating contents trigger — bottom-right pill */
+  .mobile-toc-trigger {
+    display: inline-flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    left: auto;
+    transform: none;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    padding: 13px 20px;
+    font-family: 'Geist Mono', ui-monospace, monospace;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 150;
+    box-shadow: 0 10px 32px rgba(26, 45, 92, 0.38), 0 2px 8px rgba(26, 45, 92, 0.18);
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    transition: opacity 0.2s ease, transform 0.2s ease, background 0.15s ease, color 0.15s ease;
+  }
+  .mobile-toc-trigger:active {
+    background: var(--amber);
+    color: var(--ink);
+  }
+  .mobile-toc-trigger svg {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+    stroke-width: 1.6;
+  }
+  .mobile-toc-trigger.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+  }
+
+  /* Scrim */
+  .mobile-toc-scrim {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 45, 92, 0.48);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 180;
+    transition: opacity 0.32s ease;
+  }
+  .mobile-toc-scrim.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Horizontally-scrollable tables on small screens */
+  .main table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 13.5px;
+  }
+  .main table tbody td,
+  .main table thead th {
+    min-width: 130px;
+    padding: 11px 12px;
+  }
+
+  /* Code blocks can scroll */
+  pre { font-size: 12px; padding: 14px 18px; }
+}
+
+@media (max-width: 540px) {
+  body { font-size: 16.5px; line-height: 1.68; }
+  h1 { font-size: 30px; line-height: 1.1; }
+  h1 + p { font-size: 10.5px; line-height: 1.7; }
+  h2 { font-size: 23px; margin-top: 46px; padding-top: 22px; }
+  h3 { font-size: 18px; margin-top: 34px; }
+  h4 { font-size: 10px; }
+  .main { padding: 28px 18px 110px; }
+  .main table { font-size: 12.5px; }
+  .main th, .main td { padding: 9px 10px; }
+  .main pre { font-size: 11.5px; padding: 12px 14px; }
+  ul, ol { padding-left: 22px; }
+
+  .mobile-toc-trigger {
+    padding: 11px 16px;
+    font-size: 10.5px;
+    bottom: 16px;
+    right: 16px;
+  }
+  .mobile-toc-trigger svg { width: 13px; height: 13px; }
+}
+
+/* Print → PDF */
+@media print {
+  @page {
+    size: A4;
+    margin: 18mm 16mm 18mm 16mm;
+  }
+  html { scroll-behavior: auto; }
+  body {
+    background: #FFFFFF;
+    color: #1A2D5C;
+    font-family: 'Geist', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.5;
+  }
+  ::selection { background: transparent; }
+  .progress, .header, .sidebar { display: none !important; }
+  .layout { display: block; }
+  .main-wrap { padding-top: 0; }
+  .main {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  h1 {
+    font-size: 24pt;
+    color: #1A2D5C;
+    margin: 0 0 12pt;
+    page-break-after: avoid;
+  }
+  h1 + p {
+    font-size: 8pt;
+    color: #7A7466;
+    margin-bottom: 18pt;
+  }
+  h1 + p strong { color: #1A2D5C; }
+  h2 {
+    font-size: 16pt;
+    color: #1A2D5C;
+    margin: 22pt 0 10pt;
+    padding-top: 14pt;
+    page-break-before: always;
+    page-break-after: avoid;
+    border-top: 1px solid #D8D4CA;
+  }
+  section.level2:first-of-type > h2 {
+    page-break-before: avoid;
+  }
+  h3 {
+    font-size: 12pt;
+    color: #1A2D5C;
+    margin: 16pt 0 8pt;
+    page-break-after: avoid;
+  }
+  h4 {
+    font-size: 9pt;
+    color: #B8810C;
+    font-family: 'Geist Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 12pt 0 6pt;
+    page-break-after: avoid;
+  }
+  p {
+    margin-bottom: 9pt;
+    color: #4A4438;
+    orphans: 3;
+    widows: 3;
+  }
+  p > strong:first-child {
+    color: #1A2D5C;
+  }
+  strong { color: #1A2D5C; }
+  em { color: #1A2D5C; font-family: 'Instrument Serif', serif; }
+  a {
+    color: #1A2D5C;
+    border-bottom: 1px solid #F4A300;
+    text-decoration: none;
+  }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 7.5pt;
+    color: #999;
+    font-family: 'Geist Mono', monospace;
+    word-break: break-all;
+    border-bottom: none;
+  }
+  a[href^="#"]::after { content: ""; }
+  table {
+    font-size: 8.5pt;
+    background: #FFF;
+    border: 1px solid #C8C0B0;
+    page-break-inside: avoid;
+    margin: 12pt 0;
+  }
+  thead {
+    background: #F4ECDA;
+    border-bottom: 1.5px solid #1A2D5C;
+  }
+  th {
+    color: #1A2D5C;
+    font-size: 8pt;
+    padding: 6pt 8pt;
+  }
+  td {
+    border-bottom: 1px solid #E0DCD0;
+    color: #4A4438;
+    padding: 6pt 8pt;
+  }
+  tbody tr:hover { background: none; }
+  td strong { color: #1A2D5C; }
+  code {
+    background: #F4ECDA;
+    color: #1A2D5C;
+    border: 1px solid #D8D0BC;
+    font-size: 0.88em;
+  }
+  pre {
+    background: #FAF6EC;
+    border: 1px solid #D8D0BC;
+    border-left: 2pt solid #F4A300;
+    padding: 9pt 11pt;
+    font-size: 8pt;
+    page-break-inside: avoid;
+    margin: 9pt 0;
+  }
+  pre code { color: #4A4438; }
+  ul li, ol li { margin-bottom: 4pt; color: #4A4438; }
+  ul li::marker, ol li::marker { color: #F4A300; }
+  hr {
+    border-top: 1px solid #D8D4CA;
+    margin: 14pt 0;
+  }
+  hr::before {
+    background: #FFF;
+    color: #999;
+  }
+  blockquote {
+    border-left: 2pt solid #F4A300;
+    color: #7A7466;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="header">
+  <div class="header-meta"><b>HU<i>·</i>PA</b> &nbsp; Physical AI Daily</div>
+  <div class="header-nav">
+    <a class="pdf-btn" href="index.html" title="Latest brief">Latest brief</a>
+    <a class="pdf-btn outline" href="papers.html" title="Open Papers DB">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2.5 3.5h11v9h-11z"/><path d="M2.5 6.5h11M5.5 3.5v9M10 3.5v9"/></svg>
+      Papers DB
+    </a>
+    <button class="pdf-btn outline" onclick="window.print()" title="Save as PDF via browser print dialog">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 1.5h6L13.5 5v9.5h-9.5z"/><path d="M9.5 1.5V5h4"/><path d="M5.5 8.5h5M5.5 11h5"/></svg>
+      Export PDF
+    </button>
+  </div>
+</div>
+
+<button class="mobile-toc-trigger" id="mobileTocTrigger" aria-label="Open contents menu">
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2.5 4h11M2.5 8h11M2.5 12h11" stroke-linecap="round"/></svg>
+  Contents
+</button>
+<div class="mobile-toc-scrim" id="mobileTocScrim" aria-hidden="true"></div>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div id="sitenav" class="sitenav"></div>
+
+    <div class="toc">
+      <div class="toc-label">On this page</div>
+      <nav><ul id="tocList"></ul></nav>
+    </div>
+  </aside>
+
+  <div class="main-wrap">
+  <main class="main">
+<section id="may-2026-review" class="level1">
+<h1>May 2026 review</h1>
+<p>May was the month the captured-hours pitch stopped working. NVIDIA’s DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale reframed itself as a capture-plus-label engine running 100,000 production hours with named frontier customers. The raw hour count is no longer the moat. What survives is distribution coverage nobody else can reach and validated yield against a published spec. That is the wedge the month handed us.</p>
+<p><em>Coverage note: the daily site launched May 21, so this first monthly review synthesizes 9 day briefs (May 21 to May 30, no May 28 file) rather than a full month. Treat it as a partial-month read.</em></p>
+<section id="tldr" class="level2">
+<h2>TL;DR</h2>
+<ul>
+<li>Scale AI named Physical Intelligence, Generalist AI and Cobot as customers and put a number on its capture wedge: 100,000+ production hours at its SF lab, roughly 20x the combined DROID + Open X-Embodiment open baseline. The incumbent annotation tier is now a vertically integrated capture-plus-label engine sitting on our exact turf. <a href="https://scale.com/blog/physical-ai">Scale AI</a></li>
+<li>DreamDojo (44,711 hours, open weights) and PointWorld (zero-shot manipulation from a single RGB-D image off ~500 hours across two embodiments) hardened the consensus that captured demonstration hours are not the defensible asset. <a href="https://arxiv.org/abs/2601.03782">PointWorld</a></li>
+<li>Capital kept splitting by geography: China concentrated (Robotera $200M+, Linkerbot chasing a $6B valuation, Unitree’s STAR Market IPO hearing landing June 1) while the West printed Hark’s $700M Series A and Genesis AI’s $105M glove-first seed. <a href="https://news.crunchbase.com/robotics/embodied-ai-fuels-record-funding-china-ipo-momentum-builds/">Crunchbase</a></li>
+<li>What should change in our plan: retire “we collect more hours” from the front of the deck. Lead on India and SEA distribution coverage Scale’s SF lab cannot generate, plus an audited validated-yield annotation layer priced against an expert base 4-6x cheaper than the breach-exposed incumbents. <a href="https://blog.mean.ceo/ai-data-labeling-startup-statistics/">data-labeling sizing</a></li>
+<li>Watch in June: NVIDIA GTC Taipei (June 1 keynote) and Unitree’s STAR Market hearing (June 1), the Singapore Punggol testbed and who writes its egocentric SOW, and whether Physical Intelligence’s rumored $1B at $11B+ finally closes.</li>
+</ul>
+</section>
+<section id="biggest-moves-by-theme" class="level2">
+<h2>Biggest moves by theme</h2>
+<section id="data-collection" class="level3">
+<h3>Data collection</h3>
+<p>The capture-modality fight became a two-front war in May, and neither front was about collecting more hours. On the glove side, Genesis AI emerged from stealth with a $105M Khosla-led seed and a $200 sensor glove claiming a 1:1:1 mapping from human hand to glove to robot hand, 100x cheaper than a teleop rig and 5x more usable data per hour (<a href="../days/2026-05-22.html">May 22</a>, <a href="https://techcrunch.com/2026/05/06/khosla-backed-robotics-startup-genesis-ai-has-gone-full-stack-demo-shows/">TechCrunch</a>). On the smartphone side, MobileEgo Anywhere put 200 hours of long-form egocentric data on commodity phone sensors with an open STERA pipeline, the cleanest published version of the “a phone is good enough” thesis (<a href="../days/2026-05-23.html">May 23</a>, <a href="https://arxiv.org/abs/2605.05945">arXiv</a>). Both are bear cases against a custom head-mounted rig, and both are now funded or open-sourced.</p>
+<p>The incumbents moved onto the wedge directly. Keymakr launched egocentric and robotics data services, the second annotation incumbent after Build AI to do so this year, and Cortex AI (YC F25) is openly writing the egocentric-workplace SOW with hand and body pose, depth and subtask labels across industries (<a href="../days/2026-05-21.html">May 21</a>, <a href="../days/2026-05-22.html">May 22</a>). Build AI’s Egocentric-1M (1M hours, 14,228 SEA factory workers, 10.8B frames) re-verified at scale. The academic head-mount baseline is now EgoVerse: roughly 1,400 hours, 2,000 tasks, custom stereo rigs at 1920x1200 30fps with depth and IMU SLAM, a joint output of Georgia Tech, Stanford, UCSD, ETH, MIT, Meta Reality Labs, Mecka AI and Scale AI (<a href="https://www.labellerr.com/blog/egoverse-egocentric-robot-learning-dataset/">Labellerr</a>).</p>
+<p>The read for us is that the spec war is settled enough to stop arguing about it. Stereo 1920x1200, 30fps, depth and 6DoF head pose is the table-stakes rig. The differentiation is not the rig, it is the environments. Build AI has SEA factories, Scale has its SF lab, EgoVerse has academic scenes. Nobody has Indian household, hospital, F&amp;B and small-factory coverage at rig scale, and the published literature (Emergence of Human to Robot Transfer, EgoHumanoid, HumanEgo) keeps confirming that distinct human egocentric data lifts policy performance as robot pretraining scales. Our job is coverage and yield, not hours.</p>
+</section>
+<section id="data-annotation-validation" class="level3">
+<h3>Data annotation &amp; validation</h3>
+<p>Scale spent the month converting its annotation business into a vertically integrated product, and that is the single most important competitive fact of May for our annotation thesis. Its Physical AI page now quotes 100,000+ production hours captured at the SF prototyping lab plus a global contributor network, frames DROID plus Open X-Embodiment as a combined ~5,000 hours so Scale is 20x the open baseline, and names Physical Intelligence, Generalist AI and Cobot as customers (<a href="../days/2026-05-27.html">May 27</a>, <a href="../days/2026-05-29.html">May 29</a>, <a href="https://scale.com/blog/physical-ai">Scale AI</a>). This is no longer label-the-data-you-are-given. It is capture, enrich, validate and continuously fine-tune SOTA models to grade quality, sold as one engine.</p>
+<p>The Scale Labs dense-captioning playbook from mid-May remains the most useful published reference for any validation SOW. Hand-cropped past/present/future collages beat raw video by 32 percentage points on rubric-acceptable rate, 82% of failure mass is wrong-object-or-destination grounding rather than wrong-verb, and the best config tops out at 63.7% with a ~85% ceiling only if visual grounding is fixed with bbox overlays (<a href="https://labs.scale.com/blog/path-to-large-scale-dense-video-captioning">Scale Labs</a>). The capture-side implication is concrete: high-resolution hand-region focus matters more than wider field of view.</p>
+<p>Two cracks in the incumbent wall are worth pressing. First, Mercor’s late-March Lapsus$ breach (4TB, including source code, user DB, video interview recordings and identity documents) means annotation contracts now carry data-residency and breach-disclosure terms, and Mercor is the firm pitching SME annotation hardest to humanoid labs (<a href="../days/2026-05-22.html">May 22</a>, <a href="https://sacra.com/c/mercor/">Sacra</a>). Second, the market sizing: AI data-labeling is pegged at $2.32B in 2026 rising to $6.53B by 2031, and Surge, Mercor and Scale have all shifted toward expert human judgment, the part most exposed to a 4-6x cheaper expert tier in India (<a href="../days/2026-05-30.html">May 30</a>, <a href="https://blog.mean.ceo/ai-data-labeling-startup-statistics/">sizing</a>). The defensible counter we keep landing on is audited, validated yield against a published spec, not raw captured hours.</p>
+</section>
+<section id="embedded-ai-systems" class="level3">
+<h3>Embedded AI systems</h3>
+<p>The on-device stack consolidated around NVIDIA and bifurcated along US-China lines. Jetson Thor went GA (2,070 FP4 TFLOPS, 128GB, 7.5x compute and 3.5x energy efficiency over Orin) with Agility, Amazon Robotics, Boston Dynamics, Caterpillar, Figure, Hexagon, Medtronic and Meta as launch customers, and Physical Intelligence, 1X, John Deere and OpenAI in evaluation (<a href="../days/2026-05-22.html">May 22</a>, <a href="../days/2026-05-23.html">May 23</a>, <a href="https://nvidianews.nvidia.com/news/nvidia-blackwell-powered-jetson-thor-now-available-accelerating-the-age-of-general-robotics">NVIDIA</a>). Cosmos Reason 2 became the open VLM backbone inside GR00T N1.7, ROS 2 Lyrical Luth shipped as a six-year LTS release, and Jensen Huang reframed the Vera CPU as a $200B physical-AI and agentic-AI TAM with $20B already booked this year (<a href="../days/2026-05-25.html">May 25</a>, <a href="../days/2026-05-26.html">May 26</a>).</p>
+<p>The Chinese answer is real and cheaper. Spirit AI’s open-source v1.5 runs end-to-end on D-Robotics RDK S600 (560 TOPS, single SoC), ranked #1 on RoboChallenge ahead of Pi0.5, with Bosch China, CATL, JD and Huawei already deployed (<a href="../days/2026-05-25.html">May 25</a>, <a href="https://autonews.gasgoo.com/articles/news/d-robotics-spirit-ai-team-up-on-embodied-ai-deployment-solutions-2057077921083219968">Gasgoo</a>). The silicon blocs barely overlap: the US bloc (NVIDIA, AMD, Intel, Qualcomm, all four on Hark’s cap table) cross-invests into US robotics software, while the China-domestic bloc (Black Sesame, Cambricon, D-Robotics, Huawei Ascend) feeds China-domestic OEMs (<a href="../days/2026-05-27.html">May 27</a>).</p>
+<p>For us the embedded layer is an integration constraint, not a place to compete. LeRobot v0.5.0 hit humanoid scale (Unitree G1 whole-body control, Pi0-FAST, Real-Time Chunking, IsaacLab-Arena, Annotation Studio on HF Spaces) and is the most likely default for community VLA work. The action item stands: our captured data must load cleanly into the LeRobot and Cosmos pipelines, because that is where the open ecosystem is converging.</p>
+</section>
+<section id="robotics-humanoids" class="level3">
+<h3>Robotics &amp; humanoids</h3>
+<p>The West produced uptime theater that matured into real commercial deals. Figure ran its Helix-02 livestream from 119 hours / 149,000 packages on May 21 to a planned close at 200 consecutive hours with zero claimed downtime, F.03 fully autonomous, per-package latency around 2.6-2.8 seconds at roughly human parity (<a href="../days/2026-05-21.html">May 21</a> through <a href="../days/2026-05-25.html">May 25</a>, <a href="https://www.figure.ai/news/helix-logistics">Figure</a>). The narrative then shifted from uptime to commerce: Figure signed Catalyst Brands (JCPenney, Aéropostale, Brooks Brothers, Lucky Brand, Nautica, 1,800 stores), its first western customer outside automotive, logistics-pure-play and hyperscalers, with a Reno distribution center as the first site (<a href="../days/2026-05-27.html">May 27</a>, <a href="https://corporate.jcpenney.com/2026/05/26/catalyst-brands-taps-figure-ai-for-humanoid-automation/">JCPenney</a>). Figure 03 production ramped from one unit per day to one per hour inside 120 days.</p>
+<p>China produced volume and a whole-supply-chain lock-in. State Grid placed the single largest embodied-AI order of the year at ¥6.8B for 8,500 units (5,000 inspection dogs plus humanoid and dual-arm live-line robots), UBTech’s Walker S2 entered mass production with 800M+ yuan in orders across Foxconn, BYD, Geely and others, and Morgan Stanley pegged ~28,000 humanoids delivered in China in 2026, implying the rest of the world ships under 10,000 combined (<a href="../days/2026-05-23.html">May 23</a>, <a href="../days/2026-05-26.html">May 26</a>, <a href="../days/2026-05-27.html">May 27</a>).</p>
+<p>Two structural signals stood out. First, the Atlas order: Hyundai committed 25,000+ units (83% of Boston Dynamics’ planned 30K/yr capacity), confirmed at the Boston Robotics Summit as “in commercial shipment to Hyundai and Google DeepMind,” while the Korean Metal Workers’ Union blocked deployment in Korean plants without a labor agreement and put the per-unit price at ~$145K, the first documented union veto on a humanoid order (<a href="../days/2026-05-23.html">May 23</a>, <a href="../days/2026-05-29.html">May 29</a>). Second, in-house programs (Amazon Vulcan, named RBR50 Robot of the Year; Tesla Optimus; Catalyst-internal) are now serious competitors to vendor-supplied humanoids. Tesla, for its part, slipped Optimus Gen 3 a third time, with Fremont production pushed to late July or August.</p>
+</section>
+<section id="india-sea-spotlight" class="level3">
+<h3>India &amp; SEA spotlight</h3>
+<p>The region went from backdrop to venue. Singapore stood up its first physical-AI testbed at Punggol (Grab, DHL, Certis, Quikbot as first deployers) on the same day NVIDIA announced a Singapore research hub, with a state-backed Center for Intelligent Robotics pulling in Slamtec, Unitree and Quikbot (<a href="../days/2026-05-21.html">May 21</a>, <a href="https://www.cnbc.com/2026/05/20/nvidia-to-launch-singapore-research-hub-as-city-state-boosts-ai-plans.html">CNBC</a>). Singapore now has compute and a state-blessed collection ground. Doozy Robotics broke cover the same week with an Industrial Super Humanoid plus AMR and forklift fleet under “Eywa-OS,” a $144M signed MOU and a $200M+ pipeline (<a href="../days/2026-05-22.html">May 22</a>). We should be on a flight before someone else writes the egocentric SOW for Punggol.</p>
+<p>India’s money finally moved. The ₹1 lakh crore RDI Fund cut its first cheques (Dhruva Space ₹105 Cr, Noccarc Robotics, EndureAir ₹30 Cr) at 3-4% over 15 years, and Indian robotics startups raised $45M+ in early-stage funding in H1, up 120% year over year (<a href="../days/2026-05-22.html">May 22</a>, <a href="../days/2026-05-30.html">May 30</a>). General Autonomy’s ₹32 Cr seed at ₹280 Cr stood out for its team: ex-ShareChat co-founders Farid Ahsan and Bhanu Pratap Singh out of IIT Kanpur (<a href="https://inc42.com/buzz/exclusive-robotics-startup-general-autonomy-raises-%E2%82%B932-cr-at-%E2%82%B9280-cr-valuation/">Inc42</a>).</p>
+<p>The gap is the opening. The Bengaluru AI circuit (Inc42 AI Summit, May 28) still priced applications and infra, with zero named humanoid OEM founders on its public list, and India’s humanoid profile is forming on the Delhi NCR / IIT Kanpur / IIT Madras axis instead (<a href="../days/2026-05-29.html">May 29</a>). None of these teams have Indian-environment egocentric corpora to train on. The data-and-distribution layer underneath the Indian humanoid wave is open, and that is precisely the layer we are building.</p>
+</section>
+</section>
+<section id="money-moves" class="level2">
+<h2>Money &amp; moves</h2>
+<p>Named rounds, deals and leadership moves surfaced in May, reverse-chronological by event date.</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Date</th>
+<th>Entity</th>
+<th>Move</th>
+<th>$ / context</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>May 26</td>
+<td>Figure × Catalyst Brands</td>
+<td>Commercial humanoid deal</td>
+<td>Terms undisclosed; Reno DC first site, 1,800 stores</td>
+<td><a href="https://corporate.jcpenney.com/2026/05/26/catalyst-brands-taps-figure-ai-for-humanoid-automation/">JCPenney</a></td>
+</tr>
+<tr class="even">
+<td>May 21</td>
+<td>Hark (Brett Adcock)</td>
+<td>Series A</td>
+<td>$700M at $6B post; NVIDIA, AMD, Intel, Qualcomm in</td>
+<td><a href="https://techcrunch.com/2026/05/21/hark-raises-700m-series-a-for-its-secretive-universal-ai-interface/">TechCrunch</a></td>
+</tr>
+<tr class="odd">
+<td>May 21</td>
+<td>Doozy Robotics (Singapore)</td>
+<td>Seed close</td>
+<td>Size undisclosed; Cocoon Capital</td>
+<td><a href="https://www.morningstar.com/news/accesswire/1168564msn/doozy-robotics-announces-global-expansion-with-seed-funding-to-scale-physical-ai-industrial-workforce">Morningstar</a></td>
+</tr>
+<tr class="even">
+<td>May 14</td>
+<td>WIRobotics (Korea)</td>
+<td>Series B</td>
+<td>KRW 95B (~$68M); JB Investment lead</td>
+<td><a href="https://www.prnewswire.com/news-releases/wirobotics-secures-approximately-krw-100-billion-usd-68-million-series-b-funding-302772164.html">PRNewswire</a></td>
+</tr>
+<tr class="odd">
+<td>May 13</td>
+<td>Mind Robotics (Rivian spinoff)</td>
+<td>Follow-on</td>
+<td>$400M at $3.4B; Kleiner lead, $1B+ in 9 weeks</td>
+<td><a href="https://techcrunch.com/2026/05/13/rivian-spinoff-mind-robotics-raises-another-400m/">TechCrunch</a></td>
+</tr>
+<tr class="even">
+<td>May 13</td>
+<td>Humanoid × Schaeffler</td>
+<td>RaaS + actuator supply</td>
+<td>Schaeffler &gt;50% of actuator demand through 2031</td>
+<td><a href="https://www.eweek.com/news/humanoid-schaeffler-factory-robot-deployment/">eWeek</a></td>
+</tr>
+<tr class="odd">
+<td>May 8</td>
+<td>Robotera (China)</td>
+<td>New round</td>
+<td>$200M+; SF Group, HSG, IDG lead</td>
+<td><a href="https://www.prnewswire.com/news-releases/robotera-raises-over-usd-200-million-in-new-round-led-by-sf-group-hsg-and-idg-capital-302766752.html">PRNewswire</a></td>
+</tr>
+<tr class="even">
+<td>May 6</td>
+<td>Genesis AI</td>
+<td>Seed (stealth exit)</td>
+<td>$105M; Khosla lead; $200 capture glove</td>
+<td><a href="https://techcrunch.com/2026/05/06/khosla-backed-robotics-startup-genesis-ai-has-gone-full-stack-demo-shows/">TechCrunch</a></td>
+</tr>
+<tr class="odd">
+<td>May (mid)</td>
+<td>Apptronik</td>
+<td>Series A extension</td>
+<td>+$53M to $403M; $935M+ total; Mercedes, John Deere in</td>
+<td><a href="https://news.crunchbase.com/venture/ai-humanoid-robot-funding-apptronik/">Crunchbase</a></td>
+</tr>
+<tr class="even">
+<td>May</td>
+<td>Skild AI</td>
+<td>Series C</td>
+<td>$1.4B at $14B; SoftBank lead, NVIDIA + Bezos</td>
+<td><a href="https://news.crunchbase.com/venture/robotics-startup-skild-ai-triples-valuation/">Crunchbase</a></td>
+</tr>
+<tr class="odd">
+<td>May</td>
+<td>General Autonomy (India)</td>
+<td>Seed</td>
+<td>₹32 Cr ($3.3M) at ₹280 Cr ($29M); Elevation, India Quotient</td>
+<td><a href="https://inc42.com/buzz/exclusive-robotics-startup-general-autonomy-raises-%E2%82%B932-cr-at-%E2%82%B9280-cr-valuation/">Inc42</a></td>
+</tr>
+<tr class="even">
+<td>Closing</td>
+<td>NEURA Robotics</td>
+<td>Late-stage round</td>
+<td>~€1B / $1.2B, Tether-backed, ~€4B valuation</td>
+<td><a href="https://www.bloomberg.com/news/articles/2026-03-04/neura-robotics-raising-1-billion-in-round-backed-by-tether">Bloomberg</a></td>
+</tr>
+<tr class="odd">
+<td>Rumored</td>
+<td>Physical Intelligence</td>
+<td>Round in talks</td>
+<td>~$1B at $11B+, still not closed at month end</td>
+<td><a href="https://www.bloomberg.com/news/articles/2026-03-27/ex-deepmind-staffers-robotics-startup-in-talks-for-11-billion-valuation">Bloomberg</a></td>
+</tr>
+<tr class="even">
+<td>Chasing</td>
+<td>Linkerbot (China)</td>
+<td>Next round target</td>
+<td>$6B valuation, doubling $3B Series B+</td>
+<td><a href="https://www.semafor.com/article/05/04/2026/chinese-humanoid-robot-maker-linkerbot-seeks-6b-valuation">Semafor</a></td>
+</tr>
+<tr class="odd">
+<td>IPO</td>
+<td>Unitree Robotics</td>
+<td>STAR Market listing</td>
+<td>¥4.2B ($619M) target at ~¥42B ($6.2B); hearing June 1</td>
+<td><a href="https://www.caixinglobal.com/2026-05-26/unitree-fast-tracks-shanghai-ipo-with-target-valuation-of-62-billion-102447449.html">Caixin</a></td>
+</tr>
+</tbody>
+</table>
+<p>On leadership: Boston Dynamics remained under interim CEO Amanda McMaster at the three-month mark, with no permanent appointment, even as she presented the 25K Atlas commitment to investors. John Deere and Mercedes-Benz both came in as strategic investors on Apptronik’s round, signaling agriculture and automotive demand pull.</p>
+</section>
+<section id="papers-added-this-month" class="level2">
+<h2>Papers added this month</h2>
+<p>The Papers DB launched May 21, so all 42 entries were added during the month. The single thread running through them is the bear case against captured hours, and it is worth reading as a set because it is the argument our deck now has to answer.</p>
+<p>The three-paper bear case is DreamDojo (NVIDIA, 700M params, 44,711 hours of human-egocentric video, open weights, the reference any headcam pitch is now measured against), PointWorld (zero-shot pushing, deformable and articulated manipulation and tool use from a single in-the-wild RGB-D image, trained on only ~2M trajectories / 500 hours across two embodiments, a CVPR 2026 highlight), and EgoExo-WM with Being-H0.7 and HumanEgo (any third-person or short human video becomes egocentric training fuel). Read together, they argue the defensible asset is cross-embodiment portability and validated yield, not hour count. Any2Any sharpens that point: it transfers policies across Unitree G1, LimX Oli and Luna with 1% of the compute via SONIC + LoRA, so portable datasets beat single-OEM ones.</p>
+<p>Cutting the other way, several papers reinforce our capture wedge. Emergence of Human to Robot Transfer shows human ego video as just-another-embodiment lifts pi0.5 generalization ~2x, and the gain grows as robot pretraining scales. EgoHumanoid argues egocentric human data is a scalable path to humanoid loco-manipulation. GesVLA widens the capture rubric: operator pointing, handing and showing gestures are now a training signal. On the validation side, SAM 3.1 and the Scale Labs dense-captioning playbook define the mask-and-bbox primitives that make our quality wedge concrete. The full set, filterable by type and category, lives in the <a href="../papers.html">Papers DB</a>.</p>
+</section>
+<section id="what-to-watch-in-june" class="level2">
+<h2>What to watch in June</h2>
+<ul>
+<li>NVIDIA GTC Taipei keynote on June 1 (Vera-into-Jetson commitment, GR00T N1.6 / Cosmos Reason 2 rollout, the N1X ARM laptop SoC, and the Disney / Google DeepMind Blue robot). This sets the on-device stack we integrate against for the next two quarters.</li>
+<li>Unitree’s STAR Market listing-committee hearing on June 1, against a weak Q1 (adjusted net down 52% year over year). A clean pass anchors Chinese humanoid capital; a stumble ripples through the whole China tape, including Linkerbot’s $6B chase and AgiBot’s planned ~$6B Hong Kong listing.</li>
+<li>Whether Physical Intelligence’s rumored $1B at $11B+ finally prints. It has been “not yet closed” for twelve weeks; a close at the rumored marks doubles π’s valuation in four months and re-rates the whole VLA-lab tier.</li>
+<li>The Singapore Punggol testbed and who writes its egocentric data SOW. This is the most actionable item on the list for us. The state-blessed collection ground is live and the SOW is unwritten.</li>
+<li>India humanoid follow-on rounds on the IIT Kanpur / IIT Madras axis (Axiom Robotics, General Autonomy, BharatBotics). None of these teams have Indian-environment ego corpora, which is exactly the upstream layer we should be talking to them about.</li>
+</ul>
+</section>
+</section>
+  </main>
+  </div>
+</div>
+
+<script>
+// Load sidebar JS with depth-aware path
+(function(){
+  var depth = /\/(days|monthly)\//.test(location.pathname) ? '../' : './';
+  var s = document.createElement('script');
+  s.src = depth + '_sidebar.js';
+  s.defer = true;
+  document.body.appendChild(s);
+})();
+</script>
+<script>
+// Build TOC from h2/h3 inside main
+(function() {
+  const tocList = document.getElementById('tocList');
+  const main = document.querySelector('.main');
+  const headings = main.querySelectorAll('section.level2 > h2, section.level3 > h3');
+  let currentH2Item = null;
+  let currentH2SubList = null;
+
+  headings.forEach(h => {
+    const parent = h.parentElement;
+    const id = parent.id;
+    if (!id) return;
+    let text = h.textContent.trim();
+    const isH2 = h.tagName === 'H2';
+
+    const link = document.createElement('a');
+    link.href = '#' + id;
+    link.textContent = text;
+    link.dataset.target = id;
+
+    const li = document.createElement('li');
+    li.appendChild(link);
+
+    if (isH2) {
+      tocList.appendChild(li);
+      currentH2Item = li;
+      currentH2SubList = null; // lazy-create only if H3 follows
+    } else if (currentH2Item) {
+      if (!currentH2SubList) {
+        currentH2SubList = document.createElement('ul');
+        currentH2Item.appendChild(currentH2SubList);
+      }
+      currentH2SubList.appendChild(li);
+    }
+  });
+})();
+
+// Reading progress
+(function() {
+  const bar = document.getElementById('progressBar');
+  function update() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = Math.min(100, progress) + '%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
+
+// Active section highlighting
+(function() {
+  const tocLinks = document.querySelectorAll('#tocList a');
+  const linkMap = {};
+  tocLinks.forEach(a => { linkMap[a.dataset.target] = a; });
+
+  // Map link → its parent h2 LI (so we can expand the right group)
+  const parentH2LiMap = {};
+  document.querySelectorAll('#tocList > li').forEach(h2Li => {
+    const h2Link = h2Li.querySelector(':scope > a');
+    if (!h2Link) return;
+    parentH2LiMap[h2Link.dataset.target] = h2Li;
+    h2Li.querySelectorAll(':scope > ul a').forEach(subA => {
+      parentH2LiMap[subA.dataset.target] = h2Li;
+    });
+  });
+
+  const sections = document.querySelectorAll('.main section.level2, .main section.level3');
+  if (!sections.length) return;
+
+  function clearActive() {
+    document.querySelectorAll('#tocList a.active').forEach(a => a.classList.remove('active'));
+    document.querySelectorAll('#tocList > li.active').forEach(li => li.classList.remove('active'));
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    // Pick the topmost intersecting entry
+    let topEntry = null;
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (!topEntry || entry.boundingClientRect.top < topEntry.boundingClientRect.top) {
+          topEntry = entry;
+        }
+      }
+    });
+    if (!topEntry) return;
+    const id = topEntry.target.id;
+    if (!linkMap[id]) return;
+
+    clearActive();
+    linkMap[id].classList.add('active');
+    const parentH2 = parentH2LiMap[id];
+    if (parentH2) {
+      parentH2.classList.add('active');
+      // Also mark the H2 link active if a child is active
+      const h2Link = parentH2.querySelector(':scope > a');
+      if (h2Link && h2Link.dataset.target !== id) {
+        // Keep H2 visually de-emphasized while child is active — just expand
+      }
+    }
+  }, {
+    rootMargin: '-80px 0px -65% 0px',
+    threshold: 0
+  });
+
+  sections.forEach(s => { if (s.id) observer.observe(s); });
+})();
+
+// Smooth TOC click
+document.querySelectorAll('#tocList a').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const id = a.dataset.target;
+    const target = document.getElementById(id);
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - 68;
+      window.scrollTo({ top, behavior: 'smooth' });
+      history.replaceState(null, '', '#' + id);
+    }
+  });
+});
+
+// Mobile TOC sheet open/close
+(function() {
+  const trigger = document.getElementById('mobileTocTrigger');
+  const scrim = document.getElementById('mobileTocScrim');
+  const sheet = document.querySelector('.sidebar');
+  if (!trigger || !sheet || !scrim) return;
+
+  function openSheet() {
+    sheet.classList.add('open');
+    scrim.classList.add('open');
+    trigger.classList.add('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeSheet() {
+    sheet.classList.remove('open');
+    scrim.classList.remove('open');
+    trigger.classList.remove('hidden');
+    document.body.style.overflow = '';
+  }
+
+  trigger.addEventListener('click', openSheet);
+  scrim.addEventListener('click', closeSheet);
+
+  // Close on TOC link click (after scroll kicks off)
+  document.querySelectorAll('#tocList a').forEach(a => {
+    a.addEventListener('click', () => {
+      if (sheet.classList.contains('open')) {
+        setTimeout(closeSheet, 240);
+      }
+    });
+  });
+
+  // Escape closes
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && sheet.classList.contains('open')) closeSheet();
+  });
+})();
+</script>
+
+</body>
+</html>
