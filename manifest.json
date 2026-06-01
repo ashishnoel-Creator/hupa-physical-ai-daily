@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-06-01",
+      "slug": "2026-06-01",
+      "title": "Monday, June 1, 2026",
+      "tldr": [
+        "**The NVIDIA GTC Taipei keynote lands this morning at 11am Taipei (8:30am IST), and the consensus lead is the N1X laptop SoC, not robotics.** This brief is written before Jensen takes the stage, so the outcome is not in yet. What is now firm in the previews: N1X is a 20-core ARM CPU paired with an integrated Blackwell GPU at 6,144 CUDA cores, up to 128GB LPDDR5X, 180-200 AI TOPS, the first chip NVIDIA designed to live inside a laptop instead of a rack. The physical-AI block sits behind it. Jetson Thor deep-dives (2,070 FP4 TFLOPs, 40-130W), GR00T N2, Cosmos Reason 2. Anything Jensen commits to on Jetson Thor + GR00T this morning is what every robotics deck dated after June 2 quotes. ChatForest preview, NVIDIA keynote page, VideoCardz",
+        "**Unitree's STAR Market listing-committee hearing is today, the 31st listing-review meeting of 2026, and like the keynote the result is not public at run time.** ¥4.2B ($619M) target raise at ~¥42B ($6.2B) valuation, 73 days from formal acceptance to review. The bear case is on the front page going in. Q1 2026 adjusted net profit -52% YoY to ¥40.3M on revenue +68%. Shoucheng Holdings (697.HK) holds 3.8%, so a clean clearance opens a listed-proxy revaluation window before the IPO itself prices. First listed-pure-play humanoid benchmark in China gets set this morning, same 12-hour window as Jensen. Global Times, Caixin, SCMP",
+        "**Quiet overnight on hard news, loud on narrative. Jensen's \"$40 trillion TAM for humanoid labor\" line is now the dominant institutional framing going into the keynote, with Wall Street rotating into physical-AI names on the back of it.** This is a re-announcement, he has repeated the $40T number for a year, but the buyside positioning around it the last week is the actual event. For HuPa the read is unchanged. When the TAM number gets that big and that loud, the bottleneck conversation moves from \"can the robot work\" to \"what is it trained on\", and the data tier is the part of that $40T nobody on the keynote stage is selling. 24/7 Wall St on the $40T framing"
+      ]
+    },
+    {
       "date": "2026-05-30",
       "slug": "2026-05-30",
       "title": "Saturday, May 30, 2026",
@@ -93,5 +103,5 @@
   ],
   "monthly_reviews": [],
   "papers_count": 38,
-  "updated_at": "2026-05-30T02:03:06Z"
+  "updated_at": "2026-06-01T01:45:51Z"
 }
