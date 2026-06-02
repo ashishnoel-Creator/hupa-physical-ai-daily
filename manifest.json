@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-06-02",
+      "slug": "2026-06-02",
+      "title": "Tuesday, June 2, 2026",
+      "tldr": [
+        "**NVIDIA's first open humanoid reference robot is a Chinese chassis. The Isaac GR00T Reference Humanoid Robot announced at GTC Taipei yesterday is Unitree's H2 Plus, and it ships to Stanford, ETH Zurich, UC San Diego and Ai2 in October.** The build is a Unitree H2 (6ft, 150lb, 31 DOF) plus dual Sharpa Wave five-finger tactile hands (22 DOF, 75 DOF total) running Jetson Thor and the open Isaac GR00T stack. Anyone can buy it. This is the embodiment story of the quarter. The reference robot every Western academic VLA paper trains on for the next year is now a single fixed platform, and it is Chinese hardware running US silicon. NVIDIA newsroom, Unitree PR, CNBC",
+        "**Unitree cleared its STAR Market listing review on June 1. China now has its first listed pure-play humanoid robotics company.** The Shanghai Stock Exchange listing committee passed the application, ¥4.202B ($619M) target raise at a ~¥42B ($6.2B) valuation, 73 days from formal acceptance on March 20. The clearance and the NVIDIA reference-robot reveal landed the same morning, which is not a coincidence. Every Chinese humanoid valuation in 2026 now reprices against a liquid public benchmark. Seoul Economic Daily, Caixin, Pandaily",
+        "**The US-stack-vs-China-stack framing this brief has carried for two weeks just collapsed into one hybrid stack at the research layer.** US lawmakers have a live bill that would ban federally-funded researchers from using Unitree robots over alleged government and military ties, and NVIDIA's answer is to route every software update for the robot's subsystems through its own chip for authenticity checking. So the reference humanoid for Stanford and UCSD is Chinese, the compute is American, and the security model is a US chip policing Chinese firmware. The clean bifurcation story is dead. For HuPa the read sharpens. When the academic embodiment standardizes on one chassis, the contested layer is the data that trains it, and the distribution gap (Indian hands and environments missing from every public corpus) does not care which flag the chassis flies. CNBC, 933 The Drive"
+      ]
+    },
+    {
       "date": "2026-06-01",
       "slug": "2026-06-01",
       "title": "Monday, June 1, 2026",
@@ -109,6 +119,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 38,
-  "updated_at": "2026-06-01T02:49:06Z"
+  "papers_count": 40,
+  "updated_at": "2026-06-02T04:58:33Z"
 }
