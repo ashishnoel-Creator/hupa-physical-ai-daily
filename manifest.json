@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-06-03",
+      "slug": "2026-06-03",
+      "title": "Wednesday, June 3, 2026",
+      "tldr": [
+        "**CVPR 2026 opens today in Denver and it is the most embodied conference in the event's history. 4,090 papers accepted out of 16,092 submitted, with physical AI and real-world robotics the dominant theme.** The Embodied AI Workshop runs June 4 and headlines the ManipArena competition, a real-robot manipulation challenge scoring physical reasoning and generalization across 20 real-world tasks. The egocentric world-model cluster is the part to watch this week, papers that turn internet video priors and human ego video into action-conditioned models. For a capture-side wedge this is the week the academic field tells you what a dataset now has to carry. Robotics and Automation News, Embodied AI Workshop",
+        "**Unitree's STAR Market clearance is now confirmed, and the full-year 2025 financials in the prospectus reframe the bear case the last two briefs carried.** 2025 revenue ¥1.699B, attributable net profit ¥287.6M, ¥591M after stripping non-recurring share-based-payment expense, and humanoid shipments above 5,500 units for the year, ranked first globally. The Q1 2026 -52% profit line everyone front-paged into the hearing sits against a full year that was clearly profitable. ¥4.2B ($618M) target raise at ~¥42B ($6.2B). Caixin, People's Daily",
+        "**The day after GTC Taipei is quiet on hard news, which is the honest read. Most wedges have no fresh move overnight.** The structural tape from the last 72h stands. NVIDIA's H2 Plus reference humanoid (Unitree chassis, Sharpa hands, Jetson Thor, open Isaac GR00T, shipping October to Ai2, ETH, Stanford and UCSD), the US bill to ban federally-funded labs from Unitree robots, and the Surge AI / Mercor / Scale annotation tape are all still the background everything reprices against. NVIDIA newsroom"
+      ]
+    },
+    {
       "date": "2026-06-02",
       "slug": "2026-06-02",
       "title": "Tuesday, June 2, 2026",
@@ -119,6 +129,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 40,
-  "updated_at": "2026-06-02T04:58:33Z"
+  "papers_count": 42,
+  "updated_at": "2026-06-03T05:10:47Z"
 }

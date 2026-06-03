@@ -990,6 +990,30 @@ const PAPERS = [
     category: 'Humanoid',
     why: 'First open humanoid reference design: Unitree H2 chassis (31 DOF) plus dual Sharpa Wave tactile hands (22 DOF, 75 DOF total) plus Jetson Thor plus the open Isaac GR00T stack. Available October, adopted by Ai2, ETH Zurich, Stanford Robotics Center and UCSD ARCL. This is the embodiment the next wave of academic VLA results gets benchmarked on, which standardizes the research target and shifts the contested layer onto the data that trains it. Reference humanoid is Chinese hardware on US silicon, which kills the clean US-vs-China stack story.',
     tags: ['humanoid', 'GR00T', 'Jetson Thor', 'Unitree', 'reference design']
+  },
+  {
+    id: 'walk-through-paintings-egowm-2026',
+    dateAdded: '2026-06-03',
+    pubDate: '2026-01-19',
+    title: 'Walk through Paintings: Egocentric World Models from Internet Priors',
+    url: 'https://arxiv.org/abs/2601.15284',
+    source: 'arXiv 2601.15284 (CVPR 2026)',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'Turns internet-scale video priors into an action-conditioned egocentric world model, so a model rolls out plausible first-person futures in scenes it never trained on. Another datapoint in the spring pattern: internet plus synthetic priors keep eating into the value of raw captured hours. The capture wedge survives this on validated, in-distribution, hard-to-source coverage, not volume. Read for how little real data the internet-prior approach needs to bootstrap, because that number is the one that re-prices an hours-based pitch.',
+    tags: ['world model', 'egocentric', 'internet priors', 'CVPR 2026']
+  },
+  {
+    id: 'egolive-2026',
+    dateAdded: '2026-06-03',
+    pubDate: '2026-04-30',
+    title: 'EgoLive: A Large-Scale Egocentric Dataset from Real-World Human Tasks',
+    url: 'https://arxiv.org/abs/2604.23570',
+    source: 'arXiv 2604.23570',
+    type: 'Dataset',
+    category: 'Collection',
+    why: 'Builds robot-aligned training data out of human egocentric video of real tasks, pushing the human-video-to-robot-policy transfer line that EgoScale, In-N-On and EgoVerse all sit on. The field is converging on real human task video as the substrate, which is exactly what rigs in hospitals, F&B and factories produce, as long as it is captured against a spec and validated. Read for the robot-alignment recipe, since that is the step that decides whether messy in-the-wild ego footage is usable or junk.',
+    tags: ['egocentric', 'dataset', 'collection', 'human-to-robot']
   }
 ];
 
