@@ -1014,6 +1014,18 @@ const PAPERS = [
     category: 'Collection',
     why: 'Builds robot-aligned training data out of human egocentric video of real tasks, pushing the human-video-to-robot-policy transfer line that EgoScale, In-N-On and EgoVerse all sit on. The field is converging on real human task video as the substrate, which is exactly what rigs in hospitals, F&B and factories produce, as long as it is captured against a spec and validated. Read for the robot-alignment recipe, since that is the step that decides whether messy in-the-wild ego footage is usable or junk.',
     tags: ['egocentric', 'dataset', 'collection', 'human-to-robot']
+  },
+  {
+    id: 'robodream-2026',
+    dateAdded: '2026-06-04',
+    pubDate: '2026-06-01',
+    title: 'RoboDream: Compositional World Models for Scalable Robot Data Synthesis',
+    url: 'https://arxiv.org/abs/2606.02577',
+    source: 'arXiv 2606.02577 (TRI et al.)',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'Embodiment-centric world model that synthesizes photorealistic demonstrations with novel objects, scenes and viewpoints by anchoring on rendered robot motion and conditioning on explicit scene and object priors. Two capabilities matter: retrieval and rebirth (reuse old trajectories in new contexts, no new motion data) and prop-free teleoperation (operate empty air, model fills in objects and scene, no reset time). Real-world experiments show it lifts policy performance and cuts how much real data each task needs. Another re-pricing of raw captured hours, but it still depends on real anchor trajectories and real scene priors, which is the validated in-distribution input worth owning.',
+    tags: ['world model', 'data synthesis', 'manipulation', 'synthetic data']
   }
 ];
 

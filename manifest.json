@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-06-04",
+      "slug": "2026-06-04",
+      "title": "Thursday, June 4, 2026",
+      "tldr": [
+        "**CVPR's Embodied AI Workshop runs today and ManipArena is the part that matters, a real-robot manipulation benchmark scoring physical reasoning and generalization across 20 real-world tasks.** It is run with X Square Robot as founding partner and co-initiated by Sun Yat-sen University and MBZUAI in Abu Dhabi, with top teams recognized at the workshop this week. A real-robot leaderboard, not a sim score, is the field saying out loud that the next 12 months of robotics gets decided on physical execution, not benchmark hero numbers. Embodied AI Workshop, X Square Robot launch, PR Newswire",
+        "**A fresh TRI-led paper, RoboDream, builds a world model that synthesizes photorealistic robot demonstrations in new scenes and viewpoints and shows it cuts real-world data requirements across manipulation tasks (arXiv 2606.02577, submitted June 1).** Two of its tricks are the tell. \"Retrieval and rebirth\" reuses old trajectories in entirely new contexts with no new motion data, and \"prop-free teleoperation\" lets an operator manipulate empty air while the model hallucinates the objects and scene after the fact. This is the synthetic-data line walking straight at captured hours again. arXiv 2606.02577",
+        "**Hard news is quiet overnight and the honest read is that most wedges had no fresh move.** The standing tape carries. Unitree's STAR Market clearance and FY2025 numbers, NVIDIA's H2 Plus reference humanoid shipping October, the Surge / Mercor / Scale annotation tape, and the concrete BMW Figure 02 deployment record at Spartanburg are all still the background everything reprices against. Figure at BMW"
+      ]
+    },
+    {
       "date": "2026-06-03",
       "slug": "2026-06-03",
       "title": "Wednesday, June 3, 2026",
@@ -129,6 +139,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 42,
-  "updated_at": "2026-06-03T05:10:47Z"
+  "papers_count": 43,
+  "updated_at": "2026-06-04T04:00:01Z"
 }
