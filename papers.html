@@ -1026,6 +1026,30 @@ const PAPERS = [
     category: 'World model',
     why: 'Embodiment-centric world model that synthesizes photorealistic demonstrations with novel objects, scenes and viewpoints by anchoring on rendered robot motion and conditioning on explicit scene and object priors. Two capabilities matter: retrieval and rebirth (reuse old trajectories in new contexts, no new motion data) and prop-free teleoperation (operate empty air, model fills in objects and scene, no reset time). Real-world experiments show it lifts policy performance and cuts how much real data each task needs. Another re-pricing of raw captured hours, but it still depends on real anchor trajectories and real scene priors, which is the validated in-distribution input worth owning.',
     tags: ['world model', 'data synthesis', 'manipulation', 'synthetic data']
+  },
+  {
+    id: 'human-videos-to-robot-manipulation-survey-2026',
+    dateAdded: '2026-06-05',
+    pubDate: '2026-06-01',
+    title: 'From Human Videos to Robot Manipulation: A Survey on Scalable Vision-Language-Action Learning with Human-Centric Data',
+    url: 'https://arxiv.org/abs/2606.00054',
+    source: 'arXiv 2606.00054',
+    type: 'Survey',
+    category: 'Collection',
+    why: 'Unified map of how the field turns human video into VLA training signal, sorted by the action information each method derives: latent action representations, predictive world models, explicit 2D supervision, and explicit 3D reconstruction. The thesis to carry is that robot demonstrations are costly and embodiment-locked while human video is abundant and rich, so the bottleneck is the transformation step, not the supply. Read for the taxonomy, because it tells you which capture qualities (clean hands, contacts, recoverable 3D) make footage usable for each method. That is the spec a capture business should sell against.',
+    tags: ['human video', 'VLA', 'survey', 'collection', 'human-to-robot']
+  },
+  {
+    id: 'face-vs-body-tracking-egocentric-2026',
+    dateAdded: '2026-06-05',
+    pubDate: '2026-06-03',
+    title: 'Face versus Body Tracking for Human-Robot Interaction: An Egocentric Dataset',
+    url: 'https://arxiv.org/abs/2606.03694',
+    source: 'arXiv 2606.03694 (RO-MAN 2026)',
+    type: 'Dataset',
+    category: 'Collection',
+    why: 'A smaller egocentric dataset comparing face-tracking against body-tracking for the attention problem in human-robot interaction. Narrow, but it lands the same week as the human-video survey and is another datapoint that the field treats egocentric capture as the default lens for interaction data. Worth a glance for anyone building capture rigs that have to decide what the camera should lock onto.',
+    tags: ['egocentric', 'dataset', 'HRI', 'tracking']
   }
 ];
 

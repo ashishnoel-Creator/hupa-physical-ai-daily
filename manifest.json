@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-06-05",
+      "slug": "2026-06-05",
+      "title": "Friday, June 5, 2026",
+      "tldr": [
+        "**A fresh survey, \"From Human Videos to Robot Manipulation\" (arXiv 2606.00054), maps the whole field of turning human video into VLA training signal, and it is the cleanest statement yet of why human task video is the substrate everyone is converging on.** It catalogs the four ways the field extracts action information from human video: latent action representations, predictive world models, explicit 2D supervision, and 3D reconstruction. The framing matters for a capture wedge. Robot demonstrations are costly and embodiment-locked, human video is abundant and rich, and the open problem is the transformation step, not the supply. That transformation only works on video captured well enough to recover hands, contacts and 3D structure, which is the validated-against-a-spec point we keep making. arXiv 2606.00054",
+        "**CVPR's Embodied AI Workshop ran yesterday in Denver and the real-robot leaderboard is now the field's scorecard, but detailed ManipArena standings have not surfaced publicly yet.** The ARNOLD challenge winners were recognized at the workshop on June 4. The takeaway carries from this week's reporting rather than from fresh standings. The next 12 months of robotics gets argued on real-robot execution across physical tasks, not sim hero numbers. Embodied AI Workshop, ARNOLD Challenge",
+        "**Hard news is quiet overnight, which is the honest read for the fourth day running.** The capital sentiment is the loud part. Masayoshi Son told CNBC on June 3 that physical AI and robotics is where he sees the next trillion-dollar company, and CNBC ran a humanoid-as-next-AI-trade segment the same day. The standing tape carries underneath. Unitree's STAR Market clearance, NVIDIA's H2 Plus reference humanoid shipping October, the Surge / Mercor / Scale annotation tape, and the BMW Figure 02 Spartanburg deployment record are all still the background everything reprices against. CNBC on humanoids as the next trade"
+      ]
+    },
+    {
       "date": "2026-06-04",
       "slug": "2026-06-04",
       "title": "Thursday, June 4, 2026",
@@ -139,6 +149,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 43,
-  "updated_at": "2026-06-04T04:00:01Z"
+  "papers_count": 45,
+  "updated_at": "2026-06-05T03:33:44Z"
 }
