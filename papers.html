@@ -1050,6 +1050,102 @@ const PAPERS = [
     category: 'Collection',
     why: 'A smaller egocentric dataset comparing face-tracking against body-tracking for the attention problem in human-robot interaction. Narrow, but it lands the same week as the human-video survey and is another datapoint that the field treats egocentric capture as the default lens for interaction data. Worth a glance for anyone building capture rigs that have to decide what the camera should lock onto.',
     tags: ['egocentric', 'dataset', 'HRI', 'tracking']
+  },
+  {
+    id: 'grail-loco-manipulation-2026',
+    dateAdded: '2026-06-08',
+    pubDate: '2026-06-05',
+    title: 'GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors',
+    url: 'https://arxiv.org/abs/2606.05160',
+    source: 'arXiv 2606.05160 (NVIDIA Labs)',
+    type: 'Open release',
+    category: 'Collection',
+    why: 'A digital data-generation pipeline that composes 3D assets, simulator-ready scenes and video-foundation-model priors to synthesize humanoid loco-manipulation without rebuilding physical setups or teleoperating the robot. The design choice that matters is that it fixes the full 3D configuration (object geometry, camera, metric scale, depth, a robot-proportioned character) before generating any video, then reconstructs a clean 4D human-object trajectory, retargets to the Unitree G1, and verifies on real hardware. Public dataset on Hugging Face. The clearest current statement that synthetic data scales only on top of known structure and real priors, and still has to land on a real robot. The validated anchor is the scarce input, not the volume.',
+    tags: ['synthetic data', 'loco-manipulation', 'humanoid', 'NVIDIA', 'data generation']
+  },
+  {
+    id: 'affordancevla-2026',
+    dateAdded: '2026-06-08',
+    pubDate: '2026-06-06',
+    title: 'AffordanceVLA: A Vision-Language-Action Model Empowering Action Generation through Affordance-Aware Understanding',
+    url: 'https://arxiv.org/abs/2606.06155',
+    source: 'arXiv 2606.06155',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Introduces structured affordance forecasting as a task-oriented intermediate between vision, language and action, split into Which2Act (object-centric grounding), Where2Act (2D interaction localization) and How2Act (3D geometric reasoning), inside a Mixture-of-Transformer backbone built on the open pi0 / PaliGemma stack, with a data pipeline using RexOmni, Qwen3-VL, SAM and SAM-3D. The affordance layer it forecasts (where on an object you can act, in 3D) is exactly the kind of label that capture-time annotation could supply against a spec.',
+    tags: ['VLA', 'affordance', 'manipulation', 'pi0']
+  },
+  {
+    id: 'motiondisco-2026',
+    dateAdded: '2026-06-08',
+    pubDate: '2026-06-06',
+    title: 'MotionDisco: Motion Discovery for Extreme Humanoid Loco-Manipulation',
+    url: 'https://arxiv.org/abs/2606.06139',
+    source: 'arXiv 2606.06139 (Taouil et al.)',
+    type: 'Research paper',
+    category: 'Humanoid',
+    why: 'Tackles the harder end of whole-body humanoid motion, discovering motions for extreme loco-manipulation rather than relying on a fixed demonstration set. Narrower than GRAIL, but it lands the same week and points at the same problem the field is circling, that whole-body humanoid behavior needs motion sources that scale beyond hand-collected demos.',
+    tags: ['humanoid', 'loco-manipulation', 'motion discovery', 'whole-body control']
+  },
+  {
+    id: 'lara-latent-action-alignment-2026',
+    dateAdded: '2026-06-11',
+    pubDate: '2026-06-05',
+    title: 'LARA: Latent Action Representation Alignment for Vision-Language-Action Models',
+    url: 'https://arxiv.org/abs/2606.07100',
+    source: 'arXiv 2606.07100 (Liu et al.)',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'VLA models are starved for real robot action data, so latent action models learn action representations from unlabeled human video to add supervision. LARA jointly optimizes the latent action model and the VLA via representation alignment instead of training them separately, so the LAM learns with action trajectories to avoid spurious visual change and the VLA gets regularized by the LAM forward dynamics to cut hallucinated trajectories. Reports ~10% pre-training, ~5% post-training and ~15% LAM-refinement gains across three sim and one real benchmark. Another method whose whole premise is that human video is abundant and real robot action is not, and the value sits in the conversion.',
+    tags: ['VLA', 'latent action model', 'human video', 'representation alignment']
+  },
+  {
+    id: 'cloth-keypoints-synthetic-2026',
+    dateAdded: '2026-06-11',
+    pubDate: '2026-06-04',
+    title: 'Synthetic Data Generation and Vision-based Wrinkle and Keypoint Detection for Bimanual Cloth Manipulation',
+    url: 'https://arxiv.org/abs/2606.06292',
+    source: 'arXiv 2606.06292 (Herrera et al.)',
+    type: 'Research paper',
+    category: 'Annotation',
+    why: 'Textile manipulation has no annotated real-world data because cloth deforms continuously and self-occludes. The team built a Blender pipeline that exports auto-annotated keypoints, mixed those with real data, and trained a permutation-invariant keypoint CNN plus a YOLOv8-OpenCV grasp-point extractor. The detector transfers to physical fabric with no fine-tuning (1.76 px mean position error) and beats baselines that fail under heavy occlusion. The data-business read is direct: when real labeled data does not exist, the win is synthesizing it against known structure and proving the labels survive transfer to the real object. Annotation as a validation problem.',
+    tags: ['synthetic data', 'annotation', 'keypoints', 'deformable manipulation']
+  },
+  {
+    id: 'flash-wam-2026',
+    dateAdded: '2026-06-11',
+    pubDate: '2026-06-05',
+    title: 'Flash-WAM: Modality-Aware Distillation for World Action Models',
+    url: 'https://arxiv.org/abs/2606.05254',
+    source: 'arXiv 2606.05254 (Akbari et al.)',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'Modality-aware distillation aimed at making world action models cheaper to run. Part of a visible June cluster (with C3ache and ATM) moving world models from "can we build one" to "can we run one on a robot compute budget", which is the question that decides whether this runs onboard or stays in a datacenter. Logged as a cluster, holding a full take until one breaks out.',
+    tags: ['world model', 'distillation', 'efficiency', 'inference']
+  },
+  {
+    id: 'c3ache-world-action-2026',
+    dateAdded: '2026-06-11',
+    pubDate: '2026-06-09',
+    title: 'C3ache: Accelerating World Action Models with Cross Inference Chunk Cache',
+    url: 'https://arxiv.org/abs/2606.08962',
+    source: 'arXiv 2606.08962 (Zhao et al.)',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'A cross-inference chunk cache to accelerate world action model inference. Same June cluster as Flash-WAM and ATM, all circling the onboard-compute budget for world models. The efficiency layer is what determines whether world-model-driven control is deployable on a robot rather than a server.',
+    tags: ['world model', 'inference cache', 'acceleration', 'efficiency']
+  },
+  {
+    id: 'atm-action-consistency-2026',
+    dateAdded: '2026-06-11',
+    pubDate: '2026-06-09',
+    title: 'ATM: Action-Consistency Transfer Matrix for Diagnosing and Improving Latent World Models',
+    url: 'https://arxiv.org/abs/2606.09028',
+    source: 'arXiv 2606.09028 (Chen)',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'Introduces an action-consistency transfer matrix to diagnose and improve latent world models. Rounds out the June world-action-model cluster with the diagnostics angle, how to tell whether a latent world model is actually action-consistent rather than just visually plausible. Relevant to validation: a world model that hallucinates action-inconsistent rollouts is a data-quality failure dressed as a modeling one.',
+    tags: ['world model', 'latent dynamics', 'diagnostics', 'action consistency']
   }
 ];
 

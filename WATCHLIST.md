@@ -2,6 +2,15 @@
 
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
+## 2026-06-08 (Monday)
+
+Sources / labs surfaced this run that are not yet explicitly in §4-B:
+
+- **NVIDIA DAIR lab** (research.nvidia.com/labs/dair) — the group behind GRAIL (2606.05160), a synthetic loco-manipulation data-generation pipeline with a public Hugging Face dataset. NVIDIA GEAR/GR00T is already in §4-B, but DAIR is a distinct data-generation group worth watching directly for capture/synthesis releases.
+- **Hugging Face `nvidia/PhysicalAI-Robotics-*` dataset namespace** — NVIDIA is now shipping physical-AI robotics datasets (GRAIL loco-manipulation) under a standing HF org path. Worth a direct sweep of that namespace each run, not just the HF blog.
+
+Note: browser X path was unavailable again on this unattended run (no connected browser), so no new X handles added this Monday. Re-walk the full §4-A list for new handles next Monday if the extension can be approved.
+
 ## 2026-06-01 (Monday)
 
 China embodied-AI names that showed up in the 2026 funding tape but are NOT yet in the §4-B China company list:

@@ -1,6 +1,26 @@
 {
   "days": [
     {
+      "date": "2026-06-11",
+      "slug": "2026-06-11",
+      "title": "Thursday, June 11, 2026",
+      "tldr": [
+        "**China spent the day arguing about who actually owns a humanoid, and the answer is splitting three ways: the body, the brain and the ecosystem.** Unitree's NVIDIA-backed H2 Plus, the body for NVIDIA's open GR00T reference humanoid running on Jetson Thor, has set off a domestic debate about whether a Chinese chassis carrying American compute and tooling is a win or a dependency. The framing doing the rounds is \"the Wintel of robotics\", NVIDIA as the standard-setting layer and Unitree as the hardware OEM underneath it. The part nobody in that argument is fighting over is the data the stack runs on. The body and the brain both have loud owners now. The training corpus underneath does not. DigiTimes, who controls body/brain/ecosystem, DigiTimes, the Wintel of robotics",
+        "**An Indian deep-tech robotics startup raised a round this week and named the data platform as the thing it is building, not the robot.** Bengaluru's Integra Robotics (Social Hardware International) closed $1.12M pre-Series A led by Finvolve and India Accelerator, and the use of proceeds explicitly includes \"its proprietary human-in-the-loop data platform\", with data from real-world deployments feeding back to improve the robots. This is the first Indian robotics round in months where the data layer is stated as the asset, not an afterthought bolted onto a hardware pitch. Small cheque, right idea. Indian Startup News, Integra Robotics",
+        "**Quiet research day, one consistent thread: the field keeps publishing new ways to pull usable action out of cheap data, because real robot data stays scarce.** LARA jointly trains a latent action model and a VLA so unlabeled human video does more work, and a Blender cloth-manipulation pipeline auto-annotates keypoints because real labeled textile data does not exist. Both are the same admission stated twice. The bottleneck is not models, it is data that survives the conversion into action. LARA arXiv 2606.07100, Cloth keypoints arXiv 2606.06292"
+      ]
+    },
+    {
+      "date": "2026-06-08",
+      "slug": "2026-06-08",
+      "title": "Monday, June 8, 2026",
+      "tldr": [
+        "**Figure ran three humanoids on Helix-02 for over 24 hours of continuous autonomous package sorting, no teleoperation, and crossed 28,000+ packages before stopping.** The test was scoped for 8 hours and kept running. Adcock's line was \"over 24 hours of continuous autonomous operation without a failure, this is uncharted territory.\" The network runs entirely onboard, and the robots self-trigger resets and hand off to each other for maintenance without a human stepping in. Read past the reliability headline. A 24-hour unbroken autonomous run on real packages is a training corpus being written in real time, on Figure's own robots, in Figure's own building. The reliability number is the cover story. The data flywheel is the event. Figure 24h run, Interesting Engineering, Fox News",
+        "**NVIDIA dropped GRAIL (arXiv 2606.05160), a pipeline that synthesizes humanoid loco-manipulation data from 3D assets and video foundation-model priors, then verifies it on a real Unitree G1.** It starts from fully specified 3D scenes where geometry, camera, metric scale and a robot-proportioned character are known before any video is generated, builds the interaction in Blender plus Kling AI, reconstructs the 4D human-object trajectory, retargets to the G1 skeleton, and drives a tracking policy in Isaac Lab. There is a public dataset on Hugging Face. Same lesson the spring world-model cluster keeps teaching. The synthetic pipeline only works because it anchors on known 3D structure and real video priors, and it still has to land on a real robot to count. arXiv 2606.05160, NVIDIA GRAIL page",
+        "**The American humanoid scale-up is now a manufacturing race, and the bodies are arriving faster than the data to train them.** Figure's BotQ is at one robot per hour, a 24x throughput jump in under 120 days, 350+ Figure 03 units shipped at 80%+ first-pass yield, with output allocated to R&D, data collection and home-task development. 1X's Hayward NEO line is live at 200+ staff, ramping to 10,000 units a year toward 100,000 by end 2027, first-year capacity sold out in five days. The constraint is shifting from can we build the body to can we train it, which is the only part nobody is bidding up. Figure BotQ ramp, 1X NEO Factory"
+      ]
+    },
+    {
       "date": "2026-06-05",
       "slug": "2026-06-05",
       "title": "Friday, June 5, 2026",
@@ -149,6 +169,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 45,
-  "updated_at": "2026-06-05T03:33:44Z"
+  "papers_count": 53,
+  "updated_at": "2026-06-11T03:04:17Z"
 }
