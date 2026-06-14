@@ -1146,6 +1146,42 @@ const PAPERS = [
     category: 'World model',
     why: 'Introduces an action-consistency transfer matrix to diagnose and improve latent world models. Rounds out the June world-action-model cluster with the diagnostics angle, how to tell whether a latent world model is actually action-consistent rather than just visually plausible. Relevant to validation: a world model that hallucinates action-inconsistent rollouts is a data-quality failure dressed as a modeling one.',
     tags: ['world model', 'latent dynamics', 'diagnostics', 'action consistency']
+  },
+  {
+    id: 'efficient-wam-2026',
+    dateAdded: '2026-06-14',
+    pubDate: '2026-06-10',
+    title: 'Efficient-WAM: A 1B-Parameter World-Action Model with Low-Cost Future Imagination',
+    url: 'https://arxiv.org/abs/2606.10040',
+    source: 'arXiv 2606.10040 (Li et al.)',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'A world-action model that couples future visual prediction with action generation at a 1B-parameter budget, built to cut the cost of the imagine-then-act loop. Lands in the same cluster as Flash-WAM, C3ache and ATM. The pattern is now unmistakable: the field moved from "can we build a world model" to "can we run one inside a robots compute and latency budget", which is the question the embedded layer lives or dies on.',
+    tags: ['world model', 'world-action model', 'efficiency', 'onboard compute']
+  },
+  {
+    id: 'world-model-poisoning-2026',
+    dateAdded: '2026-06-14',
+    pubDate: '2026-06-08',
+    title: 'Targeting World Models to Compromise Robot Learning Pipelines',
+    url: 'https://arxiv.org/abs/2606.09499',
+    source: 'arXiv 2606.09499 (Rathbun et al.)',
+    type: 'Research paper',
+    category: 'Governance',
+    why: 'Shows that world models open a data-poisoning entry point into the robot-learning supply chain, where corrupted training data can produce unsafe policies downstream. The security case for provenance and validation: if the corpus can be poisoned, then audit trail, source attestation and validated yield stop being nice-to-haves and become the thing that makes a dataset safe to train on. The validation business stated as a threat model.',
+    tags: ['data poisoning', 'world model', 'supply chain security', 'validation']
+  },
+  {
+    id: 'ego-pi-2026',
+    dateAdded: '2026-06-14',
+    pubDate: '2026-06-09',
+    title: 'Ego-Pi: VLA Fine-Tuning for Ego-Centric Human and Robot Data',
+    url: 'https://arxiv.org/abs/2606.08107',
+    source: 'arXiv 2606.08107',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Expanded version of a CVPR 2026 paper studying how to co-train human and robot data on a pre-trained VLA, across human and humanoid embodiments with dexterous five-finger hands, to test whether a humanoid can inherit task semantics from egocentric human video. Another method whose value lives entirely in the quality of the egocentric human capture feeding it, the same wedge China just decided to industrialize through crowdsourced ego rigs.',
+    tags: ['VLA', 'egocentric', 'co-training', 'dexterous hands']
   }
 ];
 

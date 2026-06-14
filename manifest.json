@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-06-14",
+      "slug": "2026-06-14",
+      "title": "Sunday, June 14, 2026",
+      "tldr": [
+        "**China spent the weekend turning embodied-data collection into a public utility, and the clearest move is Daimon Robotics and China Mobile building a crowdsourced capture network out of retail stores.** The two announced a partnership on June 10 to use China Mobile's hundreds of thousands of offline stores as a distributed collection grid, with the first site, billed as the world's first \"5S store\" for embodied data, opening in Chenzhou, Hunan on July 15. The plan starts with 1,000 equipment sets and targets 1 million hours of real-world data a year, with ordinary citizens wearing two-finger grippers, tactile gloves and head-mounted cameras across home, logistics and manufacturing scenes. The capture method is exactly the ego-plus-hands stack we keep saying is the scalable middle of the data pyramid. The news is that a telco is now the distribution layer for it. Gasgoo, crowdsourced data collection",
+        "**The Chinese state put its name on the data problem, jointly with two ministries, and called real-world machine data the \"oil\" of embodied intelligence.** On June 12 the Ministry of Industry and Information Technology and SASAC launched a 2026 national campaign for real-world humanoid training, mandating deployment across 10 key provinces and central SOEs, condensing 100+ high-value scenarios and driving toward 10,000-unit deployment by year-end. The document states the bottleneck plainly. Usable real-world data is short of generalization needs by \"at least two orders of magnitude\", the early training grounds \"lacked unified standards, particularly in data collection\", and fragmented data across companies is \"like people speaking different dialects\". That is the validation-and-standards gap stated by a government, not a vendor. Gasgoo, MIIT and SASAC campaign",
+        "**India has no equivalent of any of this, and the gap is the story for us.** While China runs a state plus JD.com plus China Mobile mobilization measured in millions of hours, the most on-thesis Indian robotics round this cycle was Integra's $1.12M pre-Series A, and Indian robotics raised $45M+ across all of H1 2026. Nobody in India is building a national ego-capture grid, which is both the warning and the opening. The distribution gap (Indian hands, homes, hospitals, factories) stays unfilled while China industrializes its own. Indian Startup News, Integra"
+      ]
+    },
+    {
       "date": "2026-06-11",
       "slug": "2026-06-11",
       "title": "Thursday, June 11, 2026",
@@ -169,6 +179,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 53,
-  "updated_at": "2026-06-11T03:04:17Z"
+  "papers_count": 56,
+  "updated_at": "2026-06-14T12:33:03Z"
 }
