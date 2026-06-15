@@ -1182,6 +1182,18 @@ const PAPERS = [
     category: 'VLA',
     why: 'Expanded version of a CVPR 2026 paper studying how to co-train human and robot data on a pre-trained VLA, across human and humanoid embodiments with dexterous five-finger hands, to test whether a humanoid can inherit task semantics from egocentric human video. Another method whose value lives entirely in the quality of the egocentric human capture feeding it, the same wedge China just decided to industrialize through crowdsourced ego rigs.',
     tags: ['VLA', 'egocentric', 'co-training', 'dexterous hands']
+  },
+  {
+    id: 'xrzero-g0-2026',
+    dateAdded: '2026-06-15',
+    pubDate: '2026-06-11',
+    title: 'XRZero-G0: Scalable Robot-Free Data Collection and Cross-Embodiment Transfer for Dexterous Manipulation',
+    url: 'https://arxiv.org/abs/2604.13001',
+    source: 'arXiv 2604.13001',
+    type: 'Open release',
+    category: 'Collection',
+    why: 'X Square Robot open-sourced a wearable ego-plus-dual-wrist capture rig (PICO 4 headset, two specialized grippers, mm-accurate 6-DoF pose, edge-side sync) plus a 2,000-hour G0-Dataset, claiming up to 20x reduction in real-robot data needs and that ~10 robot-free human episodes plus 1 real-robot episode matches a pure-robot dataset. The part that matters for us is the closed-loop trainability governance: three validation gates (multi-view geometric consistency, IK-constrained trajectory filtering, real-robot playback). This is the audit-trailed-yield argument written by someone else, with a benchmark attached. Capture is now an open recipe, so the moat moves to validated yield. Hardware designs, inspection pipelines and dataset all released on GitHub and HuggingFace.',
+    tags: ['data collection', 'robot-free', 'egocentric', 'validation', 'cross-embodiment']
   }
 ];
 
