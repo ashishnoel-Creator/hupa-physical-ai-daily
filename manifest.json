@@ -5,9 +5,9 @@
       "slug": "2026-06-15",
       "title": "Monday, June 15, 2026",
       "tldr": [
-        "**The biggest physical-AI round on record printed in Europe, not SF or Shenzhen, and the founder said the quiet part out loud: AI infrastructure companies no longer have to come from Silicon Valley.** Germany's NEURA Robotics is raising up to $1.4B in Series C, led by Tether with Qualcomm, Amazon, NVIDIA, Bosch, Schaeffler and the European Investment Bank in. The money goes to humanoid manufacturing, an open robot-learning ecosystem (Neuraverse), and a network of real-world training environments (NEURA Gyms). The deployment plan names Germany and India, targeting millions of robots by 2030. A non-US, non-China founder just got handed a billion dollars on the thesis that the next AI leader can be built anywhere with the talent and the data. The Robot Report, NEURA Series C",
-        "**A Chinese lab open-sourced the exact capture stack we keep describing, ego camera plus dual wrist cams, robot-free, with a quality-inspection loop bolted on, and proved 10 human episodes plus 1 robot episode matches a pure-robot dataset.** X Square Robot released XRZero-G0 and a 2,000-hour G0-Dataset on June 11, claiming up to 20x reduction in real-robot data needs. The part that matters for a validation business is that they formalized \"trainability governance\" as a closed loop of collection, inspection, training and evaluation. Robot-free human capture is now an open recipe, which means the moat moves entirely to whose captured hours survive that inspection step. The Robot Report, XRZero-G0, arXiv 2604.13001",
-        "**The Indian press started calling HuPa's thesis by name. \"Robo-BPO\" is now a category in mainstream Indian business coverage.** A Business Standard piece frames physical-AI data services, the collection, annotation and governance of real-world footage, as India's fourth outsourcing era after voice, IT and KPO. The thesis we have been writing privately for months is now being written in the national papers, which is good for legitimacy and a warning on timing. Business Standard, BPO to robo-BPO"
+        "**The biggest physical-AI round on record printed in Europe, not SF or Shenzhen, and the founder said the quiet part out loud: AI infrastructure companies no longer have to come from Silicon Valley.** Germany's NEURA Robotics is raising up to $1.4B in Series C, led by Tether with Qualcomm, Amazon, NVIDIA, Bosch, Schaeffler and the European Investment Bank in. The money goes to humanoid manufacturing, an open robot-learning ecosystem (Neuraverse), and a network of real-world training environments (NEURA Gyms). The deployment plan names Germany and India, targeting millions of robots by 2030. The Robot Report, NEURA Series C",
+        "**A Chinese lab open-sourced the exact capture stack we keep describing, ego camera plus dual wrist cams, robot-free, with a quality-inspection loop bolted on, and proved 10 human episodes plus 1 robot episode matches a pure-robot dataset.** X Square Robot released XRZero-G0 and a 2,000-hour G0-Dataset on June 11, claiming up to 20x reduction in real-robot data needs. The rig is now an open recipe, which means the moat moves entirely to whose captured hours survive the inspection step. The Robot Report, XRZero-G0, arXiv 2604.13001",
+        "**The Indian press started calling HuPa's thesis by name. \"Robo-BPO\" is now a category in mainstream Indian business coverage.** Business Standard frames physical-AI data services, the collection, annotation and governance of real-world footage, as India's fourth outsourcing era after voice, IT and KPO. Good for legitimacy, a warning on timing. Business Standard, BPO to robo-BPO"
       ]
     },
     {
@@ -190,5 +190,5 @@
     }
   ],
   "papers_count": 57,
-  "updated_at": "2026-06-15T04:38:15Z"
+  "updated_at": "2026-06-15T05:17:59Z"
 }
