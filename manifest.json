@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-06-16",
+      "slug": "2026-06-16",
+      "title": "Tuesday, June 16, 2026",
+      "tldr": [
+        "**A Chinese embodied-AI startup raised a fresh round to build a synthetic version of the exact thing we collect, Chinese home environments, and that is the sharpest signal of the day.** ACE Robotics (Daxiao Robot) closed an Angel+ round on June 15 backed by Geely Capital, Shenzhen Capital Group and SenseTime's Guoxiang Capital, putting it past \"hundreds of millions of dollars\" raised in H1 2026. The money funds its Kaiwu World Model and a \"human-centric data acquisition strategy\", and the new piece is Kairos-HomeWorld with CUHK's Multimedia Lab, a framework that generates full interactive 3D Chinese homes in one click as a training ground for embodied AI. China is moving to manufacture the environments it cannot otherwise capture at volume. Gasgoo, ACE Robotics Angel+",
+        "**Huawei put its operating system inside a humanoid, which adds a third contender to the body-brain-ecosystem fight we covered last week.** At Huawei's HDC 2026 on June 15, Noetix Robotics unveiled the N2, the first consumer humanoid running OpenHarmony, with Richard Yu framing it as the robotics face of \"OpenHarmony in every home\" and a \"Hundred People, Hundred Machines\" developer program shipping free units to 100 teams. The NVIDIA-versus-Unitree platform debate now has a software-OS entrant that is neither. Gasgoo, Noetix N2 OpenHarmony",
+        "**A self-driving company and a robotics company merged their data pipelines, which is the convergence everyone talks about actually printing as a deal.** MINIEYE and LDROBOT announced a partnership (June 11) to build one cross-platform data loop spanning vehicles and robots, a shared Physical AI foundation model, and joint demos in Shenzhen and Changsha. The interesting line is the unified data loop across indoor and outdoor, structured and unstructured scenes. The AD-to-robot data bridge is a real strategy now, not a slide. Gasgoo, MINIEYE x LDROBOT"
+      ]
+    },
+    {
       "date": "2026-06-15",
       "slug": "2026-06-15",
       "title": "Monday, June 15, 2026",
@@ -190,5 +200,5 @@
     }
   ],
   "papers_count": 57,
-  "updated_at": "2026-06-15T05:17:59Z"
+  "updated_at": "2026-06-16T04:50:38Z"
 }
