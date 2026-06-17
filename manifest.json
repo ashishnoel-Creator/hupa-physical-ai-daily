@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-06-17",
+      "slug": "2026-06-17",
+      "title": "Wednesday, June 17, 2026",
+      "tldr": [
+        "**NVIDIA's GEAR lab put frontier coding agents in charge of improving real robots, and they hit a 99% success rate with the humans mostly out of the loop. This is the autoresearch loop arriving in the physical world.** ENPIRE (NVIDIA, CMU, UC Berkeley) is a harness that hands Codex, Claude Code and Kimi Code a fleet of real robots plus an auto-reset and auto-verify interface, and lets them propose algorithms, run rollouts, read papers and refine until tasks like zip-tie cutting and GPU insertion reach 99% pass@8. The piece we care about is the verifier. The reward is a detector plus segmentation fusing per-camera binary verdicts, automated outcome QC standing in for human judgment. ENPIRE, NVIDIA GEAR",
+        "**JD turned its crowd-capture program into a physical institution, and named the data vendor underneath it.** On June 16 Yiren Technology, JD, China Machinery Engineering Group and Suqian High-tech Zone launched an Embodied AI Research Institute built around a \"large-scale data collection\" model, opening standardized capture to students, residents, factory workers and the flexible workforce, with a Suqian center that already holds nearly 10,000 concurrent operators. Yiren is described as a major China embodied-data player doing collection, annotation and simulation training. China keeps building the capture institution. Nobody local to us has one. Gasgoo, JD Suqian institute",
+        "**A VC read the Figure livestream as robotics' ChatGPT moment for capital, and said out loud where the money flows next: data collection.** Andrew Kang's post, reposted by Brett Adcock, called the FigureAI stream \"a mini ChatGPT moment for venture capital\" and predicted the new investor interest will \"flow down to data collection, supply chain build out, and a lot more.\" When the body-makers' own backers say the capital flows down to the data layer, that is the thesis stated by the other side. Andrew Kang via Brett Adcock"
+      ]
+    },
+    {
       "date": "2026-06-16",
       "slug": "2026-06-16",
       "title": "Tuesday, June 16, 2026",
@@ -199,6 +209,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 57,
-  "updated_at": "2026-06-16T04:50:38Z"
+  "papers_count": 58,
+  "updated_at": "2026-06-17T02:13:40Z"
 }
