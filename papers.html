@@ -1206,6 +1206,18 @@ const PAPERS = [
     category: 'VLA',
     why: 'A harness that drops frontier coding agents (Codex, Claude Code, Kimi Code) onto a fleet of real robots with an auto-reset and auto-verify interface, then lets them propose algorithms, run rollouts, read papers and refine until dexterous tasks (Push-T, pin and GPU insertion, zip-tie tying and cutting) reach a 99% pass@8 success rate, mostly without humans. Two things matter for a data business. The reward is automated outcome-QC, a detector plus segmentation fusing per-camera binary verdicts with no human in the scoring loop, the same machinery a capture pipeline needs pointed at outcomes instead of clips. And the limitations quantify the cost: as the robot fleet scales, Mean Robot Utilization falls while token consumption climbs, so physical autoresearch is bottlenecked by compute and coordination, not just robots. Read it as the autoresearch loop crossing into hardware, where the scarce inputs become a trustworthy reset-and-verify interface and clean data an agent can trust.',
     tags: ['autoresearch', 'coding agents', 'self-improvement', 'validation', 'real-world RL']
+  },
+  {
+    id: 'ace-ego-2026',
+    dateAdded: '2026-06-18',
+    pubDate: '2026-06-17',
+    title: 'ACE-Ego: A One-Brain Multi-Type Embodied Operation VLA Model',
+    url: 'https://autonews.gasgoo.com/articles/news/ace-robotics-teams-up-with-cuhk-to-open-source-new-model-ace-ego-2067248028954796033',
+    source: 'ACE Robotics / CUHK Multimedia Lab',
+    type: 'Open release',
+    category: 'VLA',
+    why: 'A one-brain, multi-type embodied-operation VLA model open-sourced by ACE Robotics and CUHK MMLab, reporting a 72.8% average success rate on the RoboCasa GR1 TableTop humanoid benchmark (claimed top of the leaderboard over NVIDIA GR00T, Physical Intelligence pi-0.5 and JD JoyAI-RA) and 90.62% on the dual-arm RoboTwin 2.0 under domain randomization. Built on ACE\'s Human-centric paradigm of environmental data collection feeding the Kaiwu World Model 3.0 into embodied interaction, and pitched at long-cycle, strong-contact retail tasks (bag-packing, shoe-boxing, sorting, order fulfillment). Two reasons it matters for a data business. It is a Chinese open model claiming the top of the public humanoid-manipulation benchmarks against the Western reference VLAs, and even a model this strong still rests its own story on a real-capture pipeline rather than pure synthesis. Numbers are vendor-reported on standard benchmarks, so treat as a strong claim pending independent reproduction and the code/weights drop.',
+    tags: ['VLA', 'humanoid', 'data collection', 'world model', 'benchmark']
   }
 ];
 

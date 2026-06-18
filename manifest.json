@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-06-18",
+      "slug": "2026-06-18",
+      "title": "Thursday, June 18, 2026",
+      "tldr": [
+        "**A Chinese lab open-sourced a VLA model that it claims tops NVIDIA's GR00T and Physical Intelligence's π₀.₅ on a humanoid benchmark, and the part that matters is what sits under it: a data-collection-first paradigm.** ACE Robotics and CUHK's Multimedia Lab released ACE-Ego, a \"one-brain, multi-type\" embodied operation model, reporting a 72.8% average success rate on RoboCasa GR1 TableTop (ahead of GR00T, π₀.₅ and JD's JoyAI-RA) and 90.62% on the dual-arm RoboTwin 2.0 under domain randomization. The model is built on ACE's \"environmental data collection to Kaiwu World Model 3.0 to embodied interaction\" stack, the same company whose home-generator and Angel+ round we covered two days ago. Treat the benchmark numbers as vendor-reported. Gasgoo, ACE-Ego",
+        "**A top-five humanoid maker tied itself to a domestic chip vendor and named the goal as closing the \"data-model-chip\" loop, which is the embedded wedge stated plainly.** Leju Robot (fourth globally in 2025 humanoid shipments per Omdia and Counterpoint) signed with Huaxi Intelligence to co-develop domestic high-compute main-control boards and edge deployment of embodied models. Huaxi's RISE platform runs its in-house R1 chip, in mass production since October 2025 and already inside the Zhiyuan Genie G2. China keeps wiring the silicon layer under the bodies, on domestic parts. Gasgoo, Leju x Huaxi",
+        "**A Nasdaq-listed automaker launched a four-robot product family on the same day, a reminder that the new entrants are now coming from the car industry, not the labs.** Faraday Future held its \"All-Form FFEAI Robot World\" event on June 17, launching the Futurist humanoid (2027 model), the FXNavi quadruped, and the FFMasterMini and FFNova robots, after delivering a Master humanoid to a Los Angeles dental clinic on June 5 and signing a 23-unit order with a K12 education group on May 26. Gasgoo, Faraday Future robots"
+      ]
+    },
+    {
       "date": "2026-06-17",
       "slug": "2026-06-17",
       "title": "Wednesday, June 17, 2026",
@@ -209,6 +219,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 58,
-  "updated_at": "2026-06-17T02:13:40Z"
+  "papers_count": 59,
+  "updated_at": "2026-06-18T06:00:37Z"
 }
