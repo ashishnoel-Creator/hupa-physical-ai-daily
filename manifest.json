@@ -1,6 +1,15 @@
 {
   "days": [
     {
+      "date": "2026-06-19",
+      "slug": "2026-06-19",
+      "title": "Friday, June 19, 2026",
+      "tldr": [
+        "**The sharpest research drop of the day is a manipulation policy that throws out the 2D-frame assumption every VLA and world-action model is built on, and runs 55× faster for it.** KAIST AI and ETH Zurich posted the Geometric Action Model (GAM), a language-conditioned policy that repurposes a pretrained 3D geometric foundation model as one shared substrate for perception, future prediction and action, instead of bolting action onto a 2D image backbone. It reports being more accurate, more robust and 55× faster than foundation-model-scale baselines. The interesting part for a data business is what it implies about the input: contact-rich skill needs 3D geometry captured at source, not inferred after the fact. arXiv 2606.17046, project page",
+        "**An Indian humanoid startup printed a seed round, which is the rarest line in this brief: a local datapoint to put against the daily China cluster.** General Autonomy, founded by ex-ShareChat cofounders Farid Ahsan and Bhanu Pratap Singh, raised about ₹32 Cr (~$3.3M) led by Elevation Capital and India Quotient at a ~₹280 Cr (~$33M) valuation, to build humanoids and autonomous mobile robots for labour-intensive workflows. Small money against the Chinese rounds, but it is a body-maker, not a data layer, which is the same inversion the thesis keeps flagging. Inc42, Dealroom"
+      ]
+    },
+    {
       "date": "2026-06-18",
       "slug": "2026-06-18",
       "title": "Thursday, June 18, 2026",
@@ -219,6 +228,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 59,
-  "updated_at": "2026-06-18T06:00:37Z"
+  "papers_count": 60,
+  "updated_at": "2026-06-19T03:24:48Z"
 }

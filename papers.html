@@ -1218,6 +1218,18 @@ const PAPERS = [
     category: 'VLA',
     why: 'A one-brain, multi-type embodied-operation VLA model open-sourced by ACE Robotics and CUHK MMLab, reporting a 72.8% average success rate on the RoboCasa GR1 TableTop humanoid benchmark (claimed top of the leaderboard over NVIDIA GR00T, Physical Intelligence pi-0.5 and JD JoyAI-RA) and 90.62% on the dual-arm RoboTwin 2.0 under domain randomization. Built on ACE\'s Human-centric paradigm of environmental data collection feeding the Kaiwu World Model 3.0 into embodied interaction, and pitched at long-cycle, strong-contact retail tasks (bag-packing, shoe-boxing, sorting, order fulfillment). Two reasons it matters for a data business. It is a Chinese open model claiming the top of the public humanoid-manipulation benchmarks against the Western reference VLAs, and even a model this strong still rests its own story on a real-capture pipeline rather than pure synthesis. Numbers are vendor-reported on standard benchmarks, so treat as a strong claim pending independent reproduction and the code/weights drop.',
     tags: ['VLA', 'humanoid', 'data collection', 'world model', 'benchmark']
+  },
+  {
+    id: 'geometric-action-model-2026',
+    dateAdded: '2026-06-19',
+    pubDate: '2026-06-15',
+    title: 'Geometric Action Model for Robot Policy Learning',
+    url: 'https://arxiv.org/abs/2606.17046',
+    source: 'arXiv 2606.17046',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'A language-conditioned manipulation policy from KAIST AI and ETH Zurich that repurposes a pretrained geometric foundation model (GFM) as a single shared substrate for perception, temporal prediction and action decoding, instead of bolting action onto a 2D image backbone. It splits the GFM at an intermediate layer: shallow layers act as the observation encoder, and a causal future predictor inserted at the split forecasts future latent tokens conditioned on language, proprioception and action history. Reported more accurate, more robust, and 55x faster than foundation-model-scale baselines. The argument that matters for a capture business is the premise: VLAs and video world-action models operate on 2D frames or 2D-derived latents and leave the 3D geometry required for contact-rich manipulation implicit. If geometry-native policies win, the value shifts toward whoever records real 3D geometry, depth and force at source rather than whoever logs the most flat RGB, and the 55x speedup is also an on-device-latency argument for the edge.',
+    tags: ['VLA', 'geometry', '3D', 'edge inference', 'manipulation']
   }
 ];
 
