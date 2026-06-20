@@ -1230,6 +1230,18 @@ const PAPERS = [
     category: 'VLA',
     why: 'A language-conditioned manipulation policy from KAIST AI and ETH Zurich that repurposes a pretrained geometric foundation model (GFM) as a single shared substrate for perception, temporal prediction and action decoding, instead of bolting action onto a 2D image backbone. It splits the GFM at an intermediate layer: shallow layers act as the observation encoder, and a causal future predictor inserted at the split forecasts future latent tokens conditioned on language, proprioception and action history. Reported more accurate, more robust, and 55x faster than foundation-model-scale baselines. The argument that matters for a capture business is the premise: VLAs and video world-action models operate on 2D frames or 2D-derived latents and leave the 3D geometry required for contact-rich manipulation implicit. If geometry-native policies win, the value shifts toward whoever records real 3D geometry, depth and force at source rather than whoever logs the most flat RGB, and the 55x speedup is also an on-device-latency argument for the edge.',
     tags: ['VLA', 'geometry', '3D', 'edge inference', 'manipulation']
+  },
+  {
+    id: 'sc3-eval-2026',
+    dateAdded: '2026-06-20',
+    pubDate: '2026-06-17',
+    title: 'SC3-Eval: Evaluating Robot Foundation Models via Self-Consistent Video Generation',
+    url: 'https://arxiv.org/abs/2606.18610',
+    source: 'arXiv 2606.18610',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'Physical Intelligence and the NVIDIA Cosmos team turn a pretrained video foundation model into a policy evaluator, so generalist manipulation policies can be scored by simulated rollouts instead of slow, expensive real-world runs. It enforces three forms of self-consistency: forward-inverse dynamics consistency (predict frames from actions and recover actions from frames, anchoring rollouts to a physically plausible action manifold), cross-view consistency (inpaint each camera view from the other to keep multi-camera observations coherent over long rollouts with no explicit memory), and test-time consistency (reuse the inverse-dynamics mode as a per-action-chunk uncertainty signal to terminate drifting rollouts). Reports a 0.929 closed-loop Pearson correlation and 0.119 MMRV across seven real-world VLA policies, beats three prior video-model baselines, generalizes to new tasks, and reproduces real-world failure modes for fine-grained diagnosis rather than aggregate ranking. The read for a capture business: even a video-model evaluator earns its accuracy by being anchored to real action data, so the demand does not leave real capture, it moves toward whoever owns the ground-truth rollouts to calibrate the simulator against.',
+    tags: ['evaluation', 'world model', 'VLA', 'validation', 'video generation']
   }
 ];
 

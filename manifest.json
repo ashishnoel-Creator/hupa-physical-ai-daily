@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-06-20",
+      "slug": "2026-06-20",
+      "title": "Saturday, June 20, 2026",
+      "tldr": [
+        "**Physical Intelligence and NVIDIA's Cosmos team published a way to evaluate robot policies without running them in the real world, and it is the data-validation problem stated as a research result.** SC3-Eval adapts a pretrained video foundation model into a policy evaluator by enforcing three kinds of self-consistency (forward-inverse dynamics, cross-view, and a test-time uncertainty signal), and reaches a 0.929 closed-loop Pearson correlation with real-world success across seven VLA policies. The part that matters for a capture business is that the evaluator only earns that correlation by being anchored to a physically plausible action manifold, which is bought with clean real-world data, not generated frames alone. arXiv 2606.18610, project page, Physical Intelligence",
+        "**Built Robotics is putting a purpose-built data-collection robot on construction sites to train a world foundation model, and the spec it names is exactly the capture-and-validate bundle the thesis argues for.** With Penn's xLAB, Built is fielding a sensor-rig robot to collect \"diverse personnel and environment data\" past what its working machines see, specifically edge cases like odd body poses, occlusions, weird lighting and unexpected human behavior, then \"systematically collecting and labeling\" them. A Western field operator built a dedicated rig for capture, not a body, and pointed it at validated edge-case data. The Robot Report",
+        "**After two weeks of this brief running on China, the Western signal this run is a cluster of production-validated deployments and one non-humanoid entrant.** Sanctuary AI ran physical AI to a production-ready wire-plugging task at a Tier 1 automotive supplier, Autonomique moved semi-humanoids from pilot to production at a Canadian Tier 1, and Genesis AI launched Eno, a wheeled two-armed general-purpose robot on its GENE foundation model with production targeted for end of 2026. The West's week is deployment proof and a deliberate bet against humanoid form, not a new demo. Sanctuary AI, Genesis Eno"
+      ]
+    },
+    {
       "date": "2026-06-19",
       "slug": "2026-06-19",
       "title": "Friday, June 19, 2026",
@@ -228,6 +238,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 60,
-  "updated_at": "2026-06-19T03:24:48Z"
+  "papers_count": 61,
+  "updated_at": "2026-06-20T04:03:31Z"
 }
