@@ -5,9 +5,9 @@
       "slug": "2026-06-22",
       "title": "Monday, June 22, 2026",
       "tldr": [
-        "**The brief has been wrong about one thing for weeks, and this run corrects it: there already is a funded Indian entrant running hardware-led ego capture at scale, and it is the closest thing to a direct competitor this feed has seen.** Human Archive, a YC W26 startup founded by four Berkeley and Stanford dropouts, raised $8.2M (Wing VC, NVP Capital, YC, plus angels from OpenAI, Nvidia, Google, Mercor, BAIR and SAIL) and is running 1,000+ head-mounted cameras and wearable sensors on Indian gig workers across homes, hotels, restaurants, retail, construction and industrial sites. Its HA-Multi dataset bundles vision, stereo depth, tactile gloves, body IMUs and wrist cameras, which is the same capture-and-validate stack the thesis argues for. The raise and the reporting broke in late May, so this is a catch-up, not today's news, but it is the most important thing in this brief regardless of date. TechCrunch, Inc42, YC",
-        "**The constraint on in-home Indian capture is now regulatory, not technical.** MeitY is examining consent and recording practices for startups that film home-service workers and sell the footage to robotics labs, under the DPDP Act. Urban Company and Pronto declined to partner, and Snabbit explored a proposal under NDA then walked away. The fight over who is allowed to record inside Indian households is the real moat question, and it is being decided by regulators and platforms, not by rig spec. Entrackr, CoinReporter",
-        "**The freshest India money line is Addverb planning a $100M+ raise to build humanoids and quadrupeds and, in its own words, to collect data and train AI.** Reliance controls Addverb after its 2021 round, and the company is targeting top-10 robotics by revenue in five years. It is a body-and-AI play, not a pure capture layer, but it is the largest Indian robotics raise in motion and it lists data collection as a use of funds. Business Today"
+        "**Thin day, and the brief should say so rather than pad it.** Weekend run. The arXiv cs.RO listing has not posted a new batch past June 15 (all already covered), the monitored X handles were pinned or stale across the board, China was quiet, and no net-new funding round cleared the window. Nothing below is manufactured to fill space.",
+        "**The one fresh-ish money item is Addverb planning a $100M+ raise that names data collection as a use of funds.** Reliance-backed, first raise since 2021, earmarked for humanoids, quadrupeds, in-house lidar and AI training, on ~$136M revenue and a ~$200M order book. It surfaced June 11, logged here for the first time. A body-maker reaching down into the data layer. Business Today",
+        "**Standing correction, one line: retire the \"no local capture entrant\" claim.** Human Archive has been operating since late May, so that line in earlier briefs was wrong. Noted once, not re-reported."
       ]
     },
     {
@@ -249,5 +249,5 @@
     }
   ],
   "papers_count": 61,
-  "updated_at": "2026-06-22T14:41:04Z"
+  "updated_at": "2026-06-22T15:19:05Z"
 }
