@@ -2,6 +2,16 @@
 
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
+## 2026-06-22 (Monday)
+
+The most important add this brief has had in weeks. India capture layer, directly competitive with the thesis:
+
+- **Human Archive** (YC W26; founders Rushil Agarwal, Raj Patel, Samay Maini, Shloke Patel, Berkeley/Stanford dropouts) — funded Indian ego-capture company running 1,000+ head-mounted cameras and wearable sensors on gig workers across homes, hotels, restaurants, retail, construction and industry. $8.2M seed (Wing VC, NVP Capital, YC, angels from OpenAI, Nvidia, Google, Mercor, BAIR, SAIL). Ships the HA-Multi multimodal dataset (vision, stereo depth via IR dot projection, tactile gloves, body IMUs, wrist cameras). Pays ~$1/hr. Under MeitY/DPDP scrutiny for in-home recording consent. Promote to a STANDING name in the India sweep AND treat as a direct-competitor watch. Monitor its YC page, site, and any GitHub/HuggingFace dataset drops every run. This falsifies the brief's repeated "no local capture entrant" line. ([TechCrunch](https://techcrunch.com/2026/05/26/human-archive-taps-into-indias-services-startups-to-collect-data-for-physical-ai/), [Inc42](https://inc42.com/startups/inside-human-archive-the-startup-recording-indian-workers-to-train-the-worlds-robots/), [YC](https://www.ycombinator.com/companies/human-archive))
+- **Entrackr "Physical AI in Indian homes" beat** (reporter Harsh Upadhyay) — Entrackr is now actively investigating which Indian home-services platforms are being approached for Physical-AI data partnerships (Pronto, Snabbit, Urban Company/InstaHelp). This is the single best India-specific source for the consent/capture story and is not surfacing via WebSearch reliably. Add entrackr.com/in-depth as a direct India sweep target each run. ([Entrackr](https://entrackr.com/in-depth/snabbit-confirms-exploring-physical-ai-proposal-with-human-archive-denies-home-rollout-11870375))
+- **Addverb Technologies** (Noida; Reliance-controlled) — already India-adjacent, now worth a standing §4-B India slot: planning a $100M+ raise that explicitly names data collection alongside humanoids, quadrupeds and in-house lidar. A body-maker reaching down into the data layer. ([Business Today](https://www.businesstoday.in/technology/news/story/addverb-plans-100-million-fundraise-as-it-targets-global-robotics-growth-536290-2026-06-11))
+
+Note: browser X path was up early this run (smoke test on @DrJimFan passed) but the Chrome connection dropped after 8 handles, all of which returned pinned or already-covered posts. No new X handles added this Monday. The handle list is unchanged; the real gap is source coverage (Entrackr, above), not handles.
+
 ## 2026-06-15 (Monday)
 
 Names surfaced this run not yet in §4-B:
