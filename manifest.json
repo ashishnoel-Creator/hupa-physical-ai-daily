@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-06-23",
+      "slug": "2026-06-23",
+      "title": "Tuesday, June 23, 2026",
+      "tldr": [
+        "**Bear Robotics is acquiring Kinisi Robotics, and the asset it is actually buying is a tactile-data-collection capability, not a humanoid.** A service and AMR company is folding in Kinisi's KR1 wheeled humanoid, its Bristol engineering team, its VLA and robot-foundation-model manipulation stack, and specifically its low-cost gripper and glove tech built to gather tactile training data. Founder Brennan Pierce becomes Chief Robotics Officer. A deployment company that did not have a capture pipeline just bought one rather than build it. The Robot Report, press release",
+        "**Google's Intrinsic debuted an \"Intelligence Cell\" to kill manual robot programming, which is the software-is-the-bottleneck thesis shipping as a product.** Intrinsic, now folded into Google, put out an AI-powered cell that determines tasks and runs a workcell without hand-written robot code, landing the same week QNX research named software the biggest blocker to physical AI. The Robot Report",
+        "**US robotics policy moved, with the National Commission on Robotics Act advancing through both chambers.** Bipartisan Senate and House bills (S.4686, H.R.7334) would stand up an 18-member commission under Commerce to assess US robotics competitiveness, framed squarely around dependence on foreign-built robots and supply-chain security. Governance is starting to treat the robot stack as strategic infrastructure. The Robot Report, McCormick Senate"
+      ]
+    },
+    {
       "date": "2026-06-22",
       "slug": "2026-06-22",
       "title": "Monday, June 22, 2026",
@@ -249,5 +259,5 @@
     }
   ],
   "papers_count": 61,
-  "updated_at": "2026-06-22T15:19:05Z"
+  "updated_at": "2026-06-23T01:37:13Z"
 }
