@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-06-25",
+      "slug": "2026-06-25",
+      "title": "Thursday, June 25, 2026",
+      "tldr": [
+        "**MWC Shanghai 2026 opened with humanoid robots walking the stage before any human spoke, and the GSMA's framing is the real signal: the mobile industry says its job is now enabling intelligent machines, not connecting people.** Director General Vivek Badrinath put 5G-Advanced forward as the nervous system for humanoids, drone fleets and autonomous vehicles, and the concrete deal on the floor is China Telecom working with AgiBot on a Robotics-as-a-Service model for aviation and logistics. A state telco is putting its network behind a humanoid fleet. Tech Times",
+        "**Automate 2026 closed in Chicago, and the day-three through-line was the orchestration and software layer, not the bodies.** Rockwell launched FactoryTalk Orchestration, InOrbit ran multi-vendor robot orchestration demos, and Vention shipped a digital-twin platform with FANUC and Teradyne. The hardware was settled by Tuesday. The fight on the last day was about who coordinates a mixed fleet. Robotics 24/7",
+        "**Berkeley's Abbeel and Malik group put out \"Do as I Do,\" which turns ordinary monocular RGB human videos into dexterous-hand manipulation data and ships a playbook for collecting that data.** This is the data-collection wedge stated as an algorithm: reconstruct hand-object interaction from in-the-wild egocentric and exocentric clips, retarget to a multi-fingered robot hand, get robot-complete trajectories. arXiv"
+      ]
+    },
+    {
       "date": "2026-06-24",
       "slug": "2026-06-24",
       "title": "Wednesday, June 24, 2026",
@@ -268,6 +278,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 63,
-  "updated_at": "2026-06-24T02:12:16Z"
+  "papers_count": 65,
+  "updated_at": "2026-06-25T06:08:47Z"
 }

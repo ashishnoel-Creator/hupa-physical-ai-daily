@@ -1266,6 +1266,30 @@ const PAPERS = [
     category: 'Collection',
     why: 'The dataset half of Daimon\'s Sensing-Data-Model stack that the RobOmni benchmark scores against. Released in April 2026 and billed as the largest omni-modal robotic dataset for physical AI that includes high-resolution tactile alongside vision, captured with Daimon\'s monochromatic vision-based tactile sensors. Logged here for the first time because large open datasets that pair tactile with vision are rare, and contact data is exactly the scarce, hard-to-fake input the thesis keeps flagging for dexterous manipulation.',
     tags: ['dataset', 'tactile', 'collection', 'manipulation', 'open release']
+  },
+  {
+    id: 'do-as-i-do-human-video-2026',
+    dateAdded: '2026-06-25',
+    pubDate: '2026-06-17',
+    title: 'Do as I Do: Dexterous Manipulation Data from Everyday Human Videos',
+    url: 'https://arxiv.org/abs/2606.19333',
+    source: 'arXiv 2606.19333',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'Berkeley team including Pieter Abbeel, Nur Muhammad Mahi Shafiullah and Jitendra Malik. An algorithm that reconstructs hand-object interaction from monocular RGB human video, both egocentric and exocentric in-the-wild, and retargets it to multi-fingered dexterous hands to yield robot-complete manipulation trajectories. Beats prior state of the art on hand-object estimation and trajectory extraction. The part that matters for us is the closing efficacy playbook for practitioners collecting human manipulation data. The bottleneck in human-video data was never video supply, it was the embodiment gap and reconstruction quality, and this names the collection discipline that solves it.',
+    tags: ['data collection', 'human video', 'dexterous manipulation', 'egocentric', 'retargeting']
+  },
+  {
+    id: 'ht-bench-egocentric-tactile-2026',
+    dateAdded: '2026-06-25',
+    pubDate: '2026-06-17',
+    title: 'HT-Bench: Benchmarking and Learning Dexterous Full-Hand Tactile Representations with Egocentric Vision',
+    url: 'https://arxiv.org/abs/2606.19161',
+    source: 'arXiv 2606.19161',
+    type: 'Research paper',
+    category: 'Annotation',
+    why: 'A large-scale benchmark pairing egocentric vision with full-hand tactile data: 10M RGB frames and 7.8M tactile frames across 226 tasks, grading whether a tactile representation encodes real contact geometry, aligns with vision, and generalizes. Introduces the HandTouch vision-tactile encoder, which lifts tactile retrieval Recall@5 from 74.65% to 85.23% and cuts inpainting RMSE from 0.022 to 0.010. Lands the same week as RobOmni, both pointing at the same gap: the field cannot yet measure whether touch data is any good, which is the measurement problem the audited-capture argument is built on.',
+    tags: ['benchmark', 'tactile', 'egocentric', 'evaluation', 'dexterous manipulation']
   }
 ];
 
