@@ -1242,6 +1242,30 @@ const PAPERS = [
     category: 'World model',
     why: 'Physical Intelligence and the NVIDIA Cosmos team turn a pretrained video foundation model into a policy evaluator, so generalist manipulation policies can be scored by simulated rollouts instead of slow, expensive real-world runs. It enforces three forms of self-consistency: forward-inverse dynamics consistency (predict frames from actions and recover actions from frames, anchoring rollouts to a physically plausible action manifold), cross-view consistency (inpaint each camera view from the other to keep multi-camera observations coherent over long rollouts with no explicit memory), and test-time consistency (reuse the inverse-dynamics mode as a per-action-chunk uncertainty signal to terminate drifting rollouts). Reports a 0.929 closed-loop Pearson correlation and 0.119 MMRV across seven real-world VLA policies, beats three prior video-model baselines, generalizes to new tasks, and reproduces real-world failure modes for fine-grained diagnosis rather than aggregate ranking. The read for a capture business: even a video-model evaluator earns its accuracy by being anchored to real action data, so the demand does not leave real capture, it moves toward whoever owns the ground-truth rollouts to calibrate the simulator against.',
     tags: ['evaluation', 'world model', 'VLA', 'validation', 'video generation']
+  },
+  {
+    id: 'robomni-tactile-benchmark-2026',
+    dateAdded: '2026-06-24',
+    pubDate: '2026-06-08',
+    title: 'RobOmni: An Omni-Modal Evaluation Benchmark with Tactile Sensing for Physical Interaction',
+    url: 'https://www.robotics247.com/article/daimon-robotics-galbot-launch-robomni-to-see-how-tactile-sensing-improves-robot-manipulation',
+    source: 'Daimon Robotics + Galbot (ICRA 2026)',
+    type: 'Dataset',
+    category: 'Annotation',
+    why: 'Daimon Robotics (Hong Kong) and Galbot launched the first omni-modal evaluation benchmark that puts tactile sensing in the loop for contact-rich manipulation, answering a question the field had no standard answer for: how much does touch actually improve manipulation. Built on NVIDIA Isaac Sim, it evaluates across fingertip tactile, wrist RGB, gripper state, TCP trajectories, action commands and external cameras, includes a 1:1 digital twin of Daimon\'s DM-TacClaw gripper, supports cross-embodiment comparison across arms and humanoids, and scores beyond success rate (manipulation efficiency, dexterity, failure events like slip and jam, generalization robustness). The distinguishing feature is tactile ablation: run the same model with and without touch to isolate the contribution. Daimon frames the aim as moving physical interaction from demo-driven to standard-driven. The read for a capture-and-validate business: evaluation infrastructure is becoming as important as model development, and a benchmark is only as good as the ground-truth data it scores against.',
+    tags: ['evaluation', 'tactile', 'benchmark', 'validation', 'manipulation']
+  },
+  {
+    id: 'daimon-infinity-dataset-2026',
+    dateAdded: '2026-06-24',
+    pubDate: '2026-04-01',
+    title: 'Daimon-Infinity: Largest Omni-Modal Robotic Dataset for Physical AI with High-Resolution Tactile',
+    url: 'https://modelscope.cn/datasets/daimonrobotics/Daimon-Infinity',
+    source: 'Daimon Robotics',
+    type: 'Dataset',
+    category: 'Collection',
+    why: 'The dataset half of Daimon\'s Sensing-Data-Model stack that the RobOmni benchmark scores against. Released in April 2026 and billed as the largest omni-modal robotic dataset for physical AI that includes high-resolution tactile alongside vision, captured with Daimon\'s monochromatic vision-based tactile sensors. Logged here for the first time because large open datasets that pair tactile with vision are rare, and contact data is exactly the scarce, hard-to-fake input the thesis keeps flagging for dexterous manipulation.',
+    tags: ['dataset', 'tactile', 'collection', 'manipulation', 'open release']
   }
 ];
 

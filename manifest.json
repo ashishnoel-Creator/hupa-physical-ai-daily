@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-06-24",
+      "slug": "2026-06-24",
+      "title": "Wednesday, June 24, 2026",
+      "tldr": [
+        "**Robot.com launched R-noid at Automate 2026, a general-purpose wheeled humanoid sold only as a service, and the pitch is speed-to-deploy, not the body.** Dual 7-DoF arms, a 4-DoF torso, a holonomic base, an onboard VLA model, 19 deployable tasks across five roles, and a claim of first-site-visit to autonomous operation in 8-12 weeks. Paying lighthouse deployments are already live (a Packer at a golf course, another advancing at a food manufacturer). The robot is the easy part now, the moat is the software stack plus how fast you can stand it up. Robotics 24/7",
+        "**ABB gave the first public showing of a Physical AI Toolchain, a major industrial vendor productizing the data-and-validation layer end to end.** The stack spans data generation, training and validation, deployment and optimization, sitting on top of ABB's NVIDIA-built RobotStudio HyperReality (claimed ~99% sim-to-real). The validation step being a named, sold product line is the signal: the messy capture-and-check work the thesis keeps flagging is becoming a vendor SKU. Robotics 24/7, Tech Times",
+        "**China's dexterity layer is consolidating upward: LinkerBot, the Linker Hand dexterous-hand leader, took a shareholder stake in a new Beijing embodied-AI and data-platform firm.** Zhixing Embodied (Beijing), set up in 2026, lists AI public data platforms and intelligent-robot R&D in its scope, and LinkerBot just merged with a bionic-hand team (Jingling Zhikang) in May. A hardware specialist is buying its way into models and data rather than staying a parts supplier. Gasgoo"
+      ]
+    },
+    {
       "date": "2026-06-23",
       "slug": "2026-06-23",
       "title": "Tuesday, June 23, 2026",
@@ -258,6 +268,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 61,
-  "updated_at": "2026-06-23T01:37:13Z"
+  "papers_count": 63,
+  "updated_at": "2026-06-24T02:12:16Z"
 }
