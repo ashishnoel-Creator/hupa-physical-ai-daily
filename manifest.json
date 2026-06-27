@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-06-27",
+      "slug": "2026-06-27",
+      "title": "Saturday, June 27, 2026",
+      "tldr": [
+        "**ANYVERSE DYNAMICS closed an angel round over $200M on June 26, and the tell is the architecture: it walked away from VLA in favour of a latent-space world model plus reinforcement learning.** The Chinese general-robotics firm was co-led by a JD.com-affiliated fund, C Capital and Hony Capital, is closing a separate near-$200M Pre-A, and has nearly $100M in global orders with its K15 robot in mass production. A $200M angel cheque on a non-VLA bet is the clearest sign yet that Chinese embodied-AI capital is hedging the model layer. Gasgoo",
+        "**Zhicheng AI raised a fresh round the same day and open-sourced Chengling, which it calls the first end-to-end JEPA-architecture physical world model built for robotics.** The Hangzhou startup, founded March 2024, paired the raise with TR4 Pro and TR5 Pro humanoid upgrades and claims nearly 1.5B yuan in orders. Two China rounds in one day, both backing world models over the VLA consensus, is a pattern worth naming. Gasgoo",
+        "**Alibaba launched the Qwen-Robot series, its first full embodied-model family, splitting the stack into manipulation, navigation and a world model.** Qwen-RobotManip is the VLA, Qwen-RobotNav the VLN, Qwen-RobotWorld the world model, all under the Qwen ecosystem and already in pilot with Alibaba Cloud enterprise clients. A hyperscaler productizing the embodied stack as three named models is the embedded-AI move of the week, logged here for the first time. Gasgoo"
+      ]
+    },
+    {
       "date": "2026-06-25",
       "slug": "2026-06-25",
       "title": "Thursday, June 25, 2026",
@@ -278,6 +288,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 65,
-  "updated_at": "2026-06-25T06:08:47Z"
+  "papers_count": 67,
+  "updated_at": "2026-06-27T01:42:14Z"
 }
