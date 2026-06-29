@@ -2,6 +2,14 @@
 
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
+## 2026-06-29 (Monday)
+
+Browser X path was up this run (smoke test on @DrJimFan passed). The 8 handles walked all returned already-covered posts, so the adds this Monday come from the sweeps, not the X walk:
+
+- **General Intuition** (founders' gameplay-data thesis; raised $320M at $2.3B on June 25) — turns action-labeled gameplay clips (sourced via Medal) into robot/agent training data, claims an 8-minute real-world fine-tune to transfer a game-pretrained model to a quadruped. This is the sharpest public *counter*-thesis to real-world capture and a direct intellectual competitor to the brief's argument. Add as a standing watch: their site, any model/API release, and the CoreWeave compute angle. ([TechCrunch](https://techcrunch.com/2026/06/25/general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world/), [PitchBook](https://pitchbook.com/news/articles/general-intuition-is-turning-video-game-clips-into-ai-training-data-for-robots))
+- **SENAD (赛那德)** — Chinese embodied-logistics platform, not yet in §4-B. Raised 300M yuan Series C (June 25) and shipped Insight-World V3.0, an on-device, logistics-scoped world model on a five-layer architecture co-developed with Tsinghua's Intelligent Perception Integrated Circuits and Systems Laboratory. Worth a standing China slot as a vertical-specific world-model maker. ([Gasgoo](https://autonews.gasgoo.com/articles/news/seedsembodied-logistics-platform-sainade-raises-300-million-yuan-in-series-c-2070418165413441536))
+- **@arthurallshire** and **@ritvik_singh9** (X handles) — lead authors on ABC / ABC-130K (the June 17 largest-teleop-dataset release). Surfaced via reposts on @tonyzzhao two runs straight. Add both to the §4-A egocentric/data-core handle list; they post primary dataset and eval-protocol work directly.
+
 ## 2026-06-22 (Monday)
 
 The most important add this brief has had in weeks. India capture layer, directly competitive with the thesis:
