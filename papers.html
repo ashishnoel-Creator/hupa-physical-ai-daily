@@ -1314,6 +1314,30 @@ const PAPERS = [
     category: 'World model',
     why: 'Zhicheng AI (Hangzhou) open-sourced Chengling at V0.1 in late May, billing it as the first end-to-end physical world model built on the JEPA architecture specifically for robotics. Surfaced here alongside Zhicheng\'s June 26 funding round and TR4 Pro / TR5 Pro humanoid upgrades. Worth tracking because it puts a JEPA-style robotics world model into the commons at the same moment ANYVERSE DYNAMICS is raising $200M+ on a closed latent-space world model, making the open-versus-closed world-model split a live question. A world model still has to be trained and validated against real environments, and these are grounded overwhelmingly in Chinese ones.',
     tags: ['world model', 'JEPA', 'china', 'open release', 'robotics']
+  },
+  {
+    id: 'abc-130k-behavior-cloning-2026',
+    dateAdded: '2026-06-28',
+    pubDate: '2026-06-17',
+    title: 'ABC: Scalable Behavior Cloning with Open Data, Training, and Evaluation (ABC-130K)',
+    url: 'https://abc.bot/',
+    source: 'UC Berkeley / MIT / Amazon FAR / XDOF / CMU',
+    type: 'Dataset',
+    category: 'Collection',
+    why: 'Allshire, H.G. Singh, R. Singh, Rashid, Choi, McAllister, Abbeel, Malik, Kanazawa et al. release a fully open-source bimanual-manipulation stack built around ABC-130K, the largest bimanual teleoperation dataset to date: 3,553 hours, 134,806 episodes, 195 tasks. Ships the cheap passive-leader-arm hardware, the abcdl dataloader, ABC Sim (400h sim-teleop across 20 MuJoCo scenes with a Blender re-render pipeline), 100+ hours of real-eval logs with rubrics, and two reference policies (ABC-DiT 2B, ABC-VLA 4.3B Gemma 3). Two findings carry past the release: validation loss is uncorrelated with real-world success (r=-0.04) while training loss (r=-0.84) and validation action error (r=-0.89) are strongly correlated, and sim-eval predicts real-eval at r=0.85-0.91. The largest open robot-data release of the year is lab teleop and Western, which is exactly the distribution an in-field capture layer does not cover, and the released eval rubric is the same object class as a released capture spec.',
+    tags: ['dataset', 'teleoperation', 'collection', 'behavior cloning', 'validation', 'open release']
+  },
+  {
+    id: 'motionvla-humanoid-motion-2026',
+    dateAdded: '2026-06-29',
+    pubDate: '2026-06-18',
+    title: 'MotionVLA: Vision-Language-Action Model for Humanoid Motion',
+    url: 'https://arxiv.org/abs/2606.15142',
+    source: 'arXiv 2606.15142',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Generates humanoid motion from a scene image plus text. The contribution is DSFT, a dual-stream frequency tokenizer that separates motion into a base stream and a physical stream and compresses each independently with DCT truncation and BPE, instead of forcing heterogeneous motion signals through one shared codebook. Adjacent to the core data thesis rather than on it, logged because it is a fresh cs.RO VLA result aimed at humanoid motion generation, the layer that sits on top of whatever demonstration data trains it.',
+    tags: ['VLA', 'humanoid', 'motion generation', 'tokenizer']
   }
 ];
 

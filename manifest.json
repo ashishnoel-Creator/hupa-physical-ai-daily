@@ -1,6 +1,26 @@
 {
   "days": [
     {
+      "date": "2026-06-29",
+      "slug": "2026-06-29",
+      "title": "Monday, June 29, 2026",
+      "tldr": [
+        "**General Intuition raised $320M at a $2.3B valuation on a single contrarian claim: that gameplay video, not real-world capture, is the most underrated robot training data there is.** The clips come with embedded action labels, the exact button a player pressed and when, and the company showed a model that watched 100 hours of a Fortnite-like game then drove a quadruped around an office after eight minutes of real-world fine-tuning. The round closed June 25 and went uncovered here, which is the kind of miss worth correcting because it is a direct argument against the real-capture thesis. TechCrunch",
+        "**AGIBOT rolled its 15,000th robot off the line on June 28, the milestone unit a G2 industrial task robot, and Omdia put it first in the world for humanoid shipments in 2025 at 5,168 units and 39% share.** The 10,000-to-15,000 run is the part that is new. The framing from AgiBot is explicit: the competition has moved past single-robot demos to batch delivery and real deployment. PR Newswire via Manila Times",
+        "**SENAD closed a 300M yuan Series C on June 25 for embodied logistics, paired with a new Insight-World V3.0 model built on a five-layer architecture with Tsinghua's intelligent-perception lab.** Another Chinese embodied firm funding an on-device world model grounded in a specific vertical, this time warehouse and industrial logistics. Gasgoo"
+      ]
+    },
+    {
+      "date": "2026-06-28",
+      "slug": "2026-06-28",
+      "title": "Sunday, June 28, 2026",
+      "tldr": [
+        "**The biggest open robot-data release of the year landed: ABC-130K, 3,553 hours of bimanual teleoperation across 134,806 episodes and 195 tasks, with the hardware, training code, simulator and evaluation rubrics all open-sourced.** A Berkeley, MIT, Amazon FAR and XDOF team (Allshire, H.G. Singh, R. Singh, Abbeel, Malik, Kanazawa) shipped the whole stack, not just weights. The data is teleop, lab-collected and Western, which is the part worth reading. abc.bot",
+        "**CATL took a global strategic stake in the embodied stack, pairing with Galbot to put the Galbot S1 into its own battery factories and to build what they call the first aftermarket service network for humanoids.** The body runs on CATL cells rated at parts-per-billion failure and is already doing material transport and component picking on battery-pack lines, not a demo. A battery giant is vertically integrating into robots. Gasgoo",
+        "**DaxAI Robot closed a fresh round led by GSR Ventures and Seas Capital to scale an on-device world model, and its humanoid starts at 69,800 yuan.** DaxBrain-WM runs inference on the edge with sub-50ms action latency and a perception layer that fuses vision, touch, force and proprioception. Another Chinese firm funding the world-model line over cloud VLA, this time priced for mass deployment. Gasgoo"
+      ]
+    },
+    {
       "date": "2026-06-27",
       "slug": "2026-06-27",
       "title": "Saturday, June 27, 2026",
@@ -288,6 +308,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 67,
-  "updated_at": "2026-06-27T01:42:14Z"
+  "papers_count": 69,
+  "updated_at": "2026-06-29T01:39:38Z"
 }
