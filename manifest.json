@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-06-30",
+      "slug": "2026-06-30",
+      "title": "Tuesday, June 30, 2026",
+      "tldr": [
+        "**Two Greater Bay Area embodied-AI firms crossed a 20 billion yuan post-money valuation on the same day, June 29: X Square Robot (B+/B++/C all closed) and AI² Robotics (nearly 5B yuan in fresh money).** Both claim to be the first in the region past that mark, and the more interesting half of the X Square story is the supply side: it has built its own data-collection factory with a full automated pipeline for gathering, cleaning, labelling and QC, and says its XR Zero G0 capture device cuts the data cost of model training by 95%. X Square via Gasgoo",
+        "**Gasgoo ran the clearest piece yet on the embodied-AI chip split, and the argument is that TOPS is the wrong number: robots need latency determinism, not throughput, which is forcing a \"big brain, small brain\" hardware divide.** 43.8B yuan flowed into Chinese embodied AI in H1 2026, over half into the \"embodied brain,\" while a separate cerebellum-chip race plays out on mature nodes where domestic firms can actually win. Gasgoo",
+        "**ViTai Robotics, the MIT CSAIL visuo-tactile spinout, closed a Pre-A (Redbird Navigation led) and is putting the money into a visuo-tactile data-acquisition system plus model closed-loop, so robots learn what to do the moment they touch something.** Xiaomi has backed every round and is running ViTai's fingertip sensors on its own phone production lines. Third round in a year, several hundred million yuan total. Gasgoo"
+      ]
+    },
+    {
       "date": "2026-06-29",
       "slug": "2026-06-29",
       "title": "Monday, June 29, 2026",
@@ -309,5 +319,5 @@
     }
   ],
   "papers_count": 69,
-  "updated_at": "2026-06-29T01:39:38Z"
+  "updated_at": "2026-06-30T01:37:00Z"
 }
