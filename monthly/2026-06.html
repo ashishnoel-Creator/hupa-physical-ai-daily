@@ -986,71 +986,235 @@ section.level2 > section.level3:first-of-type > h3 {
 
   <div class="main-wrap">
   <main class="main">
-<section id="wednesday-july-1-2026" class="level2">
-<h2>Wednesday, July 1, 2026</h2>
-<section id="tldr" class="level3">
-<h3>TL;DR</h3>
+<section id="june-2026-review" class="level1">
+<h1>June 2026 review</h1>
+<p>June was the month the collection layer got industrialized. Where May argued that captured hours had stopped being a moat, June answered by turning capture itself into infrastructure. Chinese players stood up crowdsourced capture networks inside retail chains and government institutes, two of the largest open teleop and robot-free datasets to date shipped with their rigs and QC loops attached, and the whole frontier tilted from egocentric vision toward tactile and contact data. Underneath it, validation stopped being a service and became a productized SKU, and one open benchmark quietly showed the field’s favorite proxy metric does not predict real-world success at all.</p>
+<p><em>Coverage note: this synthesizes 22 day briefs from June 1 to June 30. A full month.</em></p>
+<section id="tldr" class="level2">
+<h2>TL;DR</h2>
 <ul>
-<li><strong>A distributed egocentric-capture shop, TrainThemAI, surfaced running exactly the HuPa playbook from a different geography: phone-based first-person capture plus teleop, bundled annotation, policy-ready delivery, and now an ego-plus-wearable dataset it prices at roughly one-tenth the cost of robot teleoperation.</strong> Its operator base is 270-plus people across Latin America and the Philippines, and it puts MIT-licensed sample clips on HuggingFace as a shopfront. This is the clearest look yet at a direct competitor to the validated-capture layer, and the tell is where its hands are: LatAm and SEA, not India. <a href="https://www.trainthemai.com/">TrainThemAI</a>, <a href="https://huggingface.co/datasets/TrainThemAI/POV-Egocentric-Video-Robotics-FHD-Samples">dataset on HuggingFace</a></li>
-<li><strong>India got a fresh embodied entrant on the record: General Autonomy, founded by two ex-ShareChat cofounders, disclosed a roughly ₹32 Cr ($3.3M) seed at a ₹280 Cr valuation led by Elevation Capital and India Quotient.</strong> The capital itself was filed with the MCA back in February, so read this as an Inc42 disclosure landing now rather than a new round, but it is another India name and it is building humanoids and robot dogs, not the data underneath them. <a href="https://inc42.com/buzz/exclusive-robotics-startup-general-autonomy-raises-%E2%82%B932-cr-at-%E2%82%B9280-cr-valuation/">Inc42</a></li>
-<li><strong>The rest of the tape is the same China capital surge covered over the weekend, with no net-new move clearing the window, and the X harvest was a tooling gap, not a quiet feed.</strong> Chrome was not connected at run time so the handle walk fell back to web search and surfaced nothing fresh. Flagging it so a short brief is not mistaken for a lazy one.</li>
+<li>China turned data collection into physical infrastructure. Daimon and China Mobile are building a crowdsourced capture grid across hundreds of thousands of retail stores (first “5S store” opens July 15, targeting 1M hours a year), and JD stood up an Embodied AI Research Institute in Suqian with ~10,000 concurrent operators and Yiren named as the collection-plus-annotation-plus-simulation vendor. <a href="https://autonews.gasgoo.com/articles/news/tech-giants-turn-to-crowdsourced-data-collection-to-train-robots-2065729953579245569">Daimon via Gasgoo</a>, <a href="https://autonews.gasgoo.com/articles/icv/jdcom-establishes-an-embodied-ai-research-institute-in-suqian-2066890128101081088">JD via Gasgoo</a></li>
+<li>The capture frontier moved to touch. ViTai’s Xiaomi-backed Pre-A, the HT-Bench and RobOmni tactile benchmarks, Berkeley’s “Do as I Do” human-video pipeline, Bear Robotics buying Kinisi for its gripper-and-glove capture hardware, and PSYONIC pairing an amputee-sourced prosthetic hand with an ABB arm all landed in one month. Vision-only capture is now behind the frontier. <a href="https://www.therobotreport.com/bear-robotics-acquires-kinisi-robotics-to-boost-its-physical-ai-capabilities/">Bear/Kinisi</a>, <a href="https://arxiv.org/abs/2606.19161">HT-Bench</a></li>
+<li>Validation got productized and its proxy metric got broken in the same month. ABB shipped a Physical AI Toolchain with a named training-and-validation stage, NVIDIA’s ENPIRE drove tasks to 99% pass@8 through automated outcome QC, and Berkeley’s ABC release showed validation loss is uncorrelated with real-world success (r=-0.04) while training loss is (r=-0.84). The asset is audited real-robot yield, not a held-out loss curve. <a href="https://abc.bot/">ABC</a>, <a href="https://research.nvidia.com/labs/gear/enpire/">ENPIRE</a></li>
+<li>What should change in our plan: add tactile and contact capture to the spec, and lead the validation pitch on the ABC finding. Real-world eval logs against a published rubric are now demonstrably the thing that predicts performance, which is exactly the audited-yield wedge we have been building.</li>
+<li>Watch in July: the Daimon x China Mobile 5S store opening July 15 (first real data point on whether crowdsourced capture networks work), more Greater Bay Area mega-rounds after X Square and AI² both crossed 20 billion yuan on June 29, and whether any Indian entrant finally raises against the validated-capture layer as Human Archive banks tens of thousands of hours.</li>
 </ul>
 </section>
+<section id="biggest-moves-by-theme" class="level2">
+<h2>Biggest moves by theme</h2>
 <section id="data-collection" class="level3">
 <h3>Data collection</h3>
-<ul>
-<li><strong>TrainThemAI is the capture signal of the day, and it matters because it is HuPa’s exact shape built somewhere else.</strong> The company collects egocentric first-person video at scale from distributed operators recording household, kitchen and workspace activity on their phones, and separately runs teleoperation sessions on portable Quest 3 plus GELLO rigs, delivering policy-ready datasets in LeRobot, RLDS or HDF5 in weeks. It says its operator network is 270-plus people across Latin America, with capture also in the Philippines. The headline artefact is an ego-plus-wearable dataset dated June 2026: first-person video paired with hand pose and wrist trajectory tracking, pitched as action-labeled data at about one-tenth the cost of robot teleoperation, fully rights-cleared and MIT-licensed, with FHD sample clips posted on HuggingFace as a public shopfront. Read against the thesis, three things stand out. The capture-plus-bundled-annotation model is not unique to India, someone is already running it commercially from LatAm and SEA. The wrist-and-hand-pose wearable is the same instrumentation bet, recovering action labels from human demos without a robot in the loop. And the moat is not the method, which they are advertising openly, it is distribution and audit. Their hands are in Latin American kitchens and Filipino homes, not Indian hospitals, F&amp;B floors and factories, and no public spec or reject-rate audit trail ships with the free samples. The environments they cannot reach are exactly the gap. <a href="https://www.trainthemai.com/">TrainThemAI</a>, <a href="https://huggingface.co/datasets/TrainThemAI/POV-Egocentric-Video-Robotics-FHD-Samples">dataset on HuggingFace</a></li>
-</ul>
+<p>The month’s real development is that the leading players stopped treating collection as something you do and started building it as something you own at scale. Three moves define the arc. Daimon Robotics and China Mobile are turning hundreds of thousands of offline stores into a distributed capture grid, opening the first “5S store” in Chenzhou on July 15 with 1,000 equipment sets and a stated target of 1M hours a year gathered by ordinary citizens in two-finger grippers, tactile gloves and head cameras (<a href="../days/2026-06-14.html">June 14</a>, <a href="https://autonews.gasgoo.com/articles/news/tech-giants-turn-to-crowdsourced-data-collection-to-train-robots-2065729953579245569">Gasgoo</a>). JD went further and made it an institution, launching an Embodied AI Research Institute in Suqian with ~10,000 concurrent operators and 100,000+ residents expected across 100+ scenarios, with Yiren Technology named as the collection, annotation and simulation vendor underneath it (<a href="../days/2026-06-17.html">June 17</a>, <a href="https://autonews.gasgoo.com/articles/icv/jdcom-establishes-an-embodied-ai-research-institute-in-suqian-2066890128101081088">Gasgoo</a>). NEURA’s $1.4B round funded the Western mirror of the same idea, “NEURA Gyms,” a network of real-world training environments (<a href="../days/2026-06-15.html">June 15</a>, <a href="https://www.therobotreport.com/neura-robotics-raise-up-1-4b-in-series-c-funding-physical-ai/">The Robot Report</a>). A month ago the argument was whether a phone or a glove was the right capture device. This month the argument became who can stand up a nationwide collection network, and the answer so far is Chinese platforms with retail and logistics footprints.</p>
+<p>Alongside the networks, the open-dataset bar jumped twice. X Square open-sourced XRZero-G0, a robot-free ego-plus-dual-wrist-cam rig with a 2,000-hour dataset and a three-gate inspection loop, claiming ten human episodes plus one robot episode match a pure-robot dataset (<a href="../days/2026-06-15.html">June 15</a>, <a href="https://www.therobotreport.com/inside-xrzero-g0-a-new-2000-hour-open-dataset-for-robotics-research/">The Robot Report</a>). At the end of the month the Berkeley, MIT and Amazon FAR team released ABC-130K, the largest open bimanual teleop dataset to date at 3,553 hours, 134,806 episodes and 195 tasks, with a cheap passive-leader-arm rig and its method open-sourced (<a href="../days/2026-06-28.html">June 28</a>, <a href="https://abc.bot/">abc.bot</a>). Both ship the rig and the QC discipline, not just the hours, which is the tell: the field now agrees that the collection apparatus is the product.</p>
+<p>The clearest net-new direction is the pivot to touch. In May the capture debate was entirely about egocentric vision. In June the money and the papers moved to contact. ViTai closed a Pre-A on a visuo-tactile data-acquisition system, its third round in a year with Xiaomi backing every one (<a href="../days/2026-06-30.html">June 30</a>, <a href="https://autonews.gasgoo.com/articles/news/seeds-equipping-robots-with-fingertip-tactile-sensing-vitai-robotics-secures-new-funding-2071610883032535041">Gasgoo</a>). Bear Robotics bought Kinisi specifically for its low-cost gripper and glove tactile-capture hardware (<a href="../days/2026-06-23.html">June 23</a>, <a href="https://www.therobotreport.com/bear-robotics-acquires-kinisi-robotics-to-boost-its-physical-ai-capabilities/">The Robot Report</a>). HT-Bench put 10M RGB plus 7.8M tactile frames across 226 tasks into the open, and RobOmni became the first manipulation benchmark scoring with tactile in the loop (<a href="../days/2026-06-25.html">June 25</a>, <a href="../days/2026-06-24.html">June 24</a>). The read for us is direct: our capture spec can no longer be vision-only. The frontier is force and contact at the moment of touch, and that is a capture modality we should be scoping now, not next year.</p>
 </section>
 <section id="data-annotation-validation" class="level3">
 <h3>Data annotation &amp; validation</h3>
-<ul>
-<li><strong>The validation read is inside the same TrainThemAI listing, and it is a real bundled-annotation offer, not a capture-only one.</strong> The delivered datasets carry episode-level language instructions, subtask segmentation, success and failure labels, contact-state tags and trajectory quality scores. That is capture and annotation sold as one integrated product, the same collapse of the two layers the China column keeps surfacing from the buyer side, here offered by a pure data vendor. The piece still missing from the public material is the audit half. There is a trajectory quality score but no published spec, no stated reject rate, no external QC benchmark to check the score against. A quality number you generate yourself and grade yourself is the exact place the audited-capture argument lives, and it is unfilled here. <a href="https://www.trainthemai.com/">TrainThemAI</a></li>
-<li><em>No net-new dated move from the named vendors (Scale, Mercor, Surge, Labelbox, Snorkel, Sama, iMerit, Invisible, Centific, Toloka). The aggregator sweep returned only standing structure (Scale’s Physical AI Data Engine, Surge past Scale on revenue, Mercor at ~$10B). Nothing dated this run.</em></li>
-</ul>
+<p>May’s story here was Scale converting its annotation business into a capture-plus-label engine. June’s story is that validation became a named product and, in the same breath, the field’s default validation metric got exposed. ABB used Automate 2026 to launch a Physical AI Toolchain spanning data generation, a named training-and-validation stage, and deployment, which is the first time a major automation vendor has sold validation as an explicit SKU rather than an internal step (<a href="../days/2026-06-24.html">June 24</a>, <a href="https://www.robotics247.com/article/automate-2026-abb-robotics-delivers-new-industry-ready-physical-ai">Robotics 24/7</a>). NVIDIA’s ENPIRE showed automated outcome QC standing in for human judgment, using a detector-plus-segmentation verifier to drive dexterous tasks to 99% pass@8 (<a href="../days/2026-06-17.html">June 17</a>, <a href="https://research.nvidia.com/labs/gear/enpire/">ENPIRE</a>), and Physical Intelligence’s SC3-Eval turned a video foundation model into a real-world-free policy evaluator hitting 0.929 closed-loop correlation (<a href="../days/2026-06-20.html">June 20</a>, <a href="https://arxiv.org/abs/2606.18610">arXiv</a>).</p>
+<p>The single most useful finding of the month for our thesis is buried in the ABC release. Its evaluation showed training loss predicts real-world success at r=-0.84 while validation loss predicts it at r=-0.04, effectively zero, and it published a rubric plus 100+ hours of real-robot eval logs to prove it (<a href="../days/2026-06-28.html">June 28</a>, <a href="https://abc.bot/">abc.bot</a>). That is a laboratory statement of the exact argument our deck makes. The number everyone reports does not tell you whether the policy works. What tells you is audited yield measured against a published spec on real hardware. When the most-cited open release of the month says the proxy metric is broken and the real asset is graded real-world rollouts, the validated-yield wedge stops being a pitch and starts being consensus.</p>
 </section>
 <section id="embedded-ai-systems" class="level3">
 <h3>Embedded AI systems</h3>
-<ul>
-<li><em>No new signal. The brain-versus-cerebellum chip split and the in-house-silicon moves (UBTECH x Maxxiri, Li Auto M100) were covered June 30 and are unchanged.</em></li>
-</ul>
+<p>The important month-over-month change is that NVIDIA’s default-everywhere position developed real cracks. In May the on-device stack looked like Jetson with a Chinese discount tier underneath. In June the edge got contested from several sides at once. Qualcomm showed up as both an investor and the named edge-compute partner on NEURA’s $1.4B round, the first time a top-tier humanoid raise did not simply assume Jetson (<a href="../days/2026-06-15.html">June 15</a>, <a href="https://www.therobotreport.com/neura-robotics-raise-up-1-4b-in-series-c-funding-physical-ai/">The Robot Report</a>). Noetix shipped the first consumer humanoid on Huawei’s OpenHarmony, positioning an OS layer NVIDIA does not control (<a href="../days/2026-06-16.html">June 16</a>, <a href="https://autonews.gasgoo.com/articles/news/noetix-robotics-launches-first-openharmony-robot-will-select-100-developers-to-receive-free-robots-2066502386032685056">Gasgoo</a>), and domestic “data-model-chip” pacts multiplied, with Leju pairing with Huaxi’s in-house R1 silicon and SENAD running its logistics world model on Tsinghua-co-developed chips (<a href="../days/2026-06-18.html">June 18</a>, <a href="../days/2026-06-29.html">June 29</a>).</p>
+<p>By month end the argument had a frame. The Gasgoo chip piece on June 30 made the case that TOPS is the wrong number, that robots need latency determinism rather than throughput, and that this forces a “big brain, small brain” hardware split where domestic firms can actually win the real-time cerebellum layer on mature nodes (<a href="../days/2026-06-30.html">June 30</a>, <a href="https://autonews.gasgoo.com/articles/news/44-billion-yuan-floods-into-embodied-ai-yet-the-chip-sector-has-an-uncharted-territory-2071587973328846848">Gasgoo</a>). The other June shift was on-device world models going from research to shipping product. DaxAI’s DaxBrain-WM fuses vision, touch, force and proprioception at sub-50ms latency, Alibaba shipped Qwen-RobotWorld, and Zhicheng open-sourced Chengling, a JEPA-architecture world model (<a href="../days/2026-06-28.html">June 28</a>, <a href="../days/2026-06-27.html">June 27</a>). The layer where capture and contact data actually matter is the real-time one, and that is precisely the layer nobody can fake with a headline compute number.</p>
 </section>
 <section id="robotics-humanoids" class="level3">
 <h3>Robotics &amp; humanoids</h3>
-<ul>
-<li><em>No new signal. The named humanoid programs cleared nothing dated in the window.</em></li>
-<li><em>Still standing (covered earlier, no change): X Square and AI² both past 20B yuan; AgiBot past 15,000 units and first on 2025 Omdia shipments; Figure 03 at BotQ; CATL x Galbot.</em></li>
-</ul>
+<p>The humanoid tape moved on three fronts this month, and none of them was a new capability demo. First, production crossed from claims into counted units. AgiBot rolled its 15,000th robot off the line and took the Omdia 2025 global shipment lead at 5,168 units and 39% share, 1X brought its Hayward NEO line live with first-year capacity sold out in five days, and Figure’s BotQ hit one robot an hour (<a href="../days/2026-06-29.html">June 29</a>, <a href="../days/2026-06-08.html">June 8</a>). Second, the state stepped in. China’s MIIT and SASAC launched a national real-world humanoid training campaign mandating deployment across ten provinces and central SOEs, targeting 10,000 units by year-end and calling real-world data the “oil” of embodied intelligence and an “ImageNet moment” (<a href="../days/2026-06-14.html">June 14</a>, <a href="https://autonews.gasgoo.com/articles/news/two-government-agencies-move-to-accelerate-humanoid-robot-development-2065328346576302081">Gasgoo</a>), while Unitree cleared its STAR Market review to become China’s first listed pure-play humanoid company (<a href="../days/2026-06-01.html">June 1</a>). The US answered on the policy plane rather than the factory floor, with a bipartisan National Commission on Robotics Act advancing and a separate bill to ban federally funded researchers from using Unitree hardware (<a href="../days/2026-06-23.html">June 23</a>).</p>
+<p>The third and most interesting shift is that the humanoid form itself started getting challenged by the people building bodies. Genesis AI launched Eno, a wheeled two-armed general-purpose robot explicitly chosen over a humanoid (<a href="../days/2026-06-20.html">June 20</a>, <a href="https://www.therobotreport.com/genesis-ai-launches-eno-general-purpose-robot/">The Robot Report</a>), Sanctuary AI hit production-ready performance by putting its physical AI on existing arms rather than waiting for a humanoid, and Collaborative Robotics and Bear-Kinisi both pushed wheeled manipulators. Automate 2026 was the largest in its 50-year run with the first NVIDIA-sponsored Humanoid Pavilion, and yet the commercial signal underneath the show was that the winning near-term form is often not the humanoid. On the Western deployment side, the BMW Figure record (30,000+ X3s, 99%+ placement accuracy over a 10-month pilot) and CATL’s vertical integration of Galbot onto its own battery lines showed the humanoid narrative maturing from uptime theater into real line work (<a href="../days/2026-06-04.html">June 4</a>, <a href="../days/2026-06-28.html">June 28</a>).</p>
 </section>
 <section id="india-sea-spotlight" class="level3">
 <h3>India &amp; SEA spotlight</h3>
-<ul>
-<li><strong>General Autonomy is the India signal, and the honest framing is a disclosure, not a raise.</strong> Founded 2023 by former ShareChat cofounders Farid Ahsan and Bhanu Pratap Singh, it develops AI-driven humanoid robots and autonomous mobile robots for labour-intensive workflows, and Inc42 reported a roughly ₹32 Cr ($3.3M) seed at a ₹280 Cr valuation led by existing backers Elevation Capital and India Quotient, with Blue Asva Varenya Fund, FBC Venture Partners, Spearhead Capital and GIVA cofounder Ishendra Agarwal joining. The MCA filing dates the issuance to February, so the capital is not fresh, the reporting is. It fits the same India pattern the column has tracked for a week: local money and local founders funding bodies, dogs and mobile robots, and no local entrant raising specifically against the validated-capture data layer. <a href="https://inc42.com/buzz/exclusive-robotics-startup-general-autonomy-raises-%E2%82%B932-cr-at-%E2%82%B9280-cr-valuation/">Inc42</a></li>
-<li><strong>The SEA read this run comes from TrainThemAI, not from a Southeast Asian company: a foreign capture vendor is already running operators in the Philippines.</strong> That is the first concrete sign in this column of the ego-capture gold rush pulling labour out of SEA, and it is being organized from outside the region. The distribution point holds, Filipino homes are now in someone’s corpus, but the value is accruing to the vendor coordinating it, not to a local player. <a href="https://www.trainthemai.com/">TrainThemAI</a></li>
-</ul>
+<p>India’s month was defined by the category finally getting a name. Business Standard framed physical-AI data services, meaning collection, annotation and governance of real-world footage, as India’s fourth outsourcing era after voice BPO, IT and KPO, and coined “Robo-BPO” for it (<a href="../days/2026-06-15.html">June 15</a>, <a href="https://www.business-standard.com/industry/news/india-physical-ai-robotics-data-outsourcing-real-world-training-126060200580_1.html">Business Standard</a>). That is the market we are building into being described in the national business press as inevitable. The most on-thesis entrant hardened: Human Archive’s detail surfaced at $8.2M and tens of thousands of hours of Indian worker capture through downward-facing 4K rigs, and Neocambrian’s pitch for a pre-training-scale database of “human action from India” stayed on the watch list (<a href="../days/2026-06-28.html">June 28</a>, <a href="https://inc42.com/startups/inside-human-archive-the-startup-recording-indian-workers-to-train-the-worlds-robots/">Inc42</a>). NEURA named India, alongside Germany, as a manufacturing and deployment base in its Series C use of proceeds (<a href="../days/2026-06-15.html">June 15</a>).</p>
+<p>The capital kept moving but not toward our layer. General Autonomy closed its ~₹32 Cr seed at ₹280 Cr led by Elevation and India Quotient, Integra banked a $1.12M pre-Series A, and Addverb signaled a $100M+ raise that names data collection as a use of funds (<a href="../days/2026-06-19.html">June 19</a>, <a href="../days/2026-06-14.html">June 14</a>, <a href="../days/2026-06-22.html">June 22</a>). The structural gap that has held all quarter held again: the money funds bodies, AMRs and language models, and Human Archive aside, no local entrant is raising specifically against the validated-capture layer in Indian and SEA environments. SEA itself was quieter this month than May’s Punggol moment, with no net-new testbed announcement clearing the bar. The opening is the same one May identified, and it is still open.</p>
 </section>
-<section id="china-spotlight" class="level3">
-<h3>China spotlight</h3>
-<ul>
-<li><em>No new signal. The weekend surge (X Square and AI² past 20B yuan on June 29, Archon and ViTai’s rounds, the 43.8B-yuan H1 embodied-AI figure and the chip split) was covered June 30 and nothing dated past it cleared this run.</em></li>
-</ul>
 </section>
-<section id="twitter-x-signal" class="level3">
-<h3>Twitter / X signal</h3>
-<p><em>Browser path was down this run. <code>list_connected_browsers</code> returned empty, so no Chrome session was available and the X harvest fell back to web search per the runbook. The fallback (site:x.com handle queries plus name-plus-topic searches across the monitored list) surfaced no fresh original on-thesis post from the priority handles inside the window. browser: 0 of ~22 · fallback: used, no fresh item cleared · skipped: full X handle walk (browser unavailable). A short X section today is a tooling gap, not a quiet feed. The rest of the sweep (four wedges, arXiv, annotation vendors, India/SEA, China, funding trackers) ran in full.</em></p>
+<section id="money-moves" class="level2">
+<h2>Money &amp; moves</h2>
+<p>Named rounds, acquisitions, IPO moves and hires surfaced in June, reverse-chronological by event date.</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Date</th>
+<th>Entity</th>
+<th>Move</th>
+<th>$ / context</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Jun 29</td>
+<td>X Square Robot (China)</td>
+<td>B+/B++/C all closed</td>
+<td>Post-money over ¥20B; 30+ backers incl. China Mobile, Sequoia China, IDG, Xiaomi (3 rounds); owns its data factory</td>
+<td><a href="https://autonews.gasgoo.com/articles/news/seeds-x-square-closes-multiple-major-funding-rounds-valuation-exceeds-20-billion-2071592893591367681">Gasgoo</a></td>
+</tr>
+<tr class="even">
+<td>Jun 29</td>
+<td>AI² Robotics (China)</td>
+<td>Second major raise of year</td>
+<td>~¥5B, post-money over ¥20B; same-day GBA milestone as X Square</td>
+<td><a href="https://autonews.gasgoo.com/articles/news/seeds-x-square-closes-multiple-major-funding-rounds-valuation-exceeds-20-billion-2071592893591367681">Gasgoo</a></td>
+</tr>
+<tr class="odd">
+<td>Jun 29</td>
+<td>ViTai Robotics (China)</td>
+<td>Pre-A (Redbird Navigation lead)</td>
+<td>Several hundred million yuan across 4 rounds in a year; Xiaomi every round; MIT CSAIL visuo-tactile spinout</td>
+<td><a href="https://autonews.gasgoo.com/articles/news/seeds-equipping-robots-with-fingertip-tactile-sensing-vitai-robotics-secures-new-funding-2071610883032535041">Gasgoo</a></td>
+</tr>
+<tr class="even">
+<td>Jun 29</td>
+<td>Archon Robotics (China)</td>
+<td>Seed</td>
+<td>Hundreds of millions of yuan; general whole-body embodied intelligence, new entrant</td>
+<td><a href="https://autonews.gasgoo.com/articles/news/seeds-archon-robotics-a-general-whole-body-embodied-intelligence-developer-raises-hundreds-of-millions-in-seed-round-2071597085466865665">Gasgoo</a></td>
+</tr>
+<tr class="odd">
+<td>Jun 29</td>
+<td>Momenta (China)</td>
+<td>Hong Kong IPO filing</td>
+<td>Autonomous driving, adjacent to the thesis; logged for the capital-markets read</td>
+<td><a href="https://autonews.gasgoo.com/articles/news/momenta-launches-hong-kong-ipo-2071593809287630849">Gasgoo</a></td>
+</tr>
+<tr class="even">
+<td>Jun 26</td>
+<td>ANYVERSE DYNAMICS (China)</td>
+<td>Angel over $200M (+ near-$200M Pre-A)</td>
+<td>JD-affiliated fund, C Capital, Hony, Sequoia China; K15 in mass production, ~$100M orders; latent-space world model</td>
+<td><a href="https://autonews.gasgoo.com/articles/news/seeds-anyverse-dynamics-closes-over-200-million-angel-funding-round-2070507246659096576">Gasgoo</a></td>
+</tr>
+<tr class="odd">
+<td>Jun 26</td>
+<td>Zhicheng AI (China)</td>
+<td>New round (undisclosed)</td>
+<td>Plum Ventures, Xineng, Danbei; ~¥1.5B in orders; open-sourced Chengling JEPA world model</td>
+<td><a href="https://autonews.gasgoo.com/articles/news/seeds-zhicheng-ai-completes-new-round-of-financing-2070509416628404225">Gasgoo</a></td>
+</tr>
+<tr class="even">
+<td>Jun 25</td>
+<td>General Intuition (US)</td>
+<td>Round</td>
+<td>$320M at $2.3B; action-labeled gameplay clips as robot training data</td>
+<td><a href="https://techcrunch.com/2026/06/25/general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world/">TechCrunch</a></td>
+</tr>
+<tr class="odd">
+<td>Jun 25</td>
+<td>SENAD / Sainade (China)</td>
+<td>Series C</td>
+<td>¥300M; Insight-World V3.0 on-device logistics world model with Tsinghua</td>
+<td><a href="https://autonews.gasgoo.com/articles/news/seedsembodied-logistics-platform-sainade-raises-300-million-yuan-in-series-c-2070418165413441536">Gasgoo</a></td>
+</tr>
+<tr class="even">
+<td>Jun 23</td>
+<td>DaxAI Robot (China)</td>
+<td>New round (undisclosed)</td>
+<td>GSR Ventures, Seas Capital; DaxBrain-WM sub-50ms world model; humanoid from ¥69,800</td>
+<td><a href="https://autonews.gasgoo.com/articles/icv/seeds-daxai-robot-completes-new-funding-round-2069438648704262145">Gasgoo</a></td>
+</tr>
+<tr class="odd">
+<td>Jun 23</td>
+<td>LinkerBot (China)</td>
+<td>Equity stake in Zhixing Embodied</td>
+<td>Dexterity-hardware leader moving into AI-data-platform and R&amp;D</td>
+<td><a href="https://autonews.gasgoo.com/articles/news/linkerbot-takes-stake-in-an-ai-and-robotics-company-2069441607898980352">Gasgoo</a></td>
+</tr>
+<tr class="even">
+<td>Jun 22</td>
+<td>Bear Robotics x Kinisi</td>
+<td>Acquisition</td>
+<td>Terms undisclosed; prize is tactile-capture hardware; Kinisi founder → Chief Robotics Officer</td>
+<td><a href="https://www.therobotreport.com/bear-robotics-acquires-kinisi-robotics-to-boost-its-physical-ai-capabilities/">The Robot Report</a></td>
+</tr>
+<tr class="odd">
+<td>Jun 20</td>
+<td>Pegasus Tech Ventures</td>
+<td>New fund</td>
+<td>$60M for physical-AI startups, partnered with CYBERDYNE</td>
+<td><a href="https://www.therobotreport.com/pegasus-tech-ventures-launches-60m-fund-physical-ai-startups/">The Robot Report</a></td>
+</tr>
+<tr class="even">
+<td>Jun 19</td>
+<td>General Autonomy (India)</td>
+<td>Seed</td>
+<td>~₹32 Cr ($3.3M) at ~₹280 Cr; Elevation, India Quotient; ex-ShareChat founders</td>
+<td><a href="https://inc42.com/buzz/exclusive-robotics-startup-general-autonomy-raises-%E2%82%B932-cr-at-%E2%82%B9280-cr-valuation/">Inc42</a></td>
+</tr>
+<tr class="odd">
+<td>Jun 16</td>
+<td>ACE Robotics / Daxiao (China)</td>
+<td>Angel+</td>
+<td>Geely Capital, Shenzhen Capital Group, Fosun RZ, SenseTime’s Guoxiang; “hundreds of millions” in H1</td>
+<td><a href="https://autonews.gasgoo.com/articles/news/seeds-ace-robotics-completes-angel-financing-round-2066503880714854401">Gasgoo</a></td>
+</tr>
+<tr class="even">
+<td>Jun 15</td>
+<td>NEURA Robotics (Germany)</td>
+<td>Series C</td>
+<td>Up to $1.4B at ~$7B, Tether-led; Qualcomm as edge partner; India named a deployment base</td>
+<td><a href="https://www.therobotreport.com/neura-robotics-raise-up-1-4b-in-series-c-funding-physical-ai/">The Robot Report</a></td>
+</tr>
+<tr class="odd">
+<td>Jun 14</td>
+<td>Integra Robotics (India)</td>
+<td>Pre-Series A</td>
+<td>$1.12M; Finvolve, India Accelerator; funds a human-in-the-loop data platform</td>
+<td><a href="https://indianstartupnews.com/funding/integra-robotics-raises-112-million-to-scale-ai-powered-robotics-for-defence-and-industry-12017974">Indian Startup News</a></td>
+</tr>
+<tr class="even">
+<td>Jun 11</td>
+<td>Addverb (India)</td>
+<td>Raise in motion</td>
+<td>$100M+ planned, first since 2021, names data collection as a use of funds</td>
+<td><a href="https://www.businesstoday.in/technology/news/story/addverb-plans-100-million-fundraise-as-it-targets-global-robotics-growth-536290-2026-06-11">Business Today</a></td>
+</tr>
+<tr class="odd">
+<td>Jun 1</td>
+<td>Unitree Robotics (China)</td>
+<td>STAR Market IPO review cleared</td>
+<td>¥4.2B target at ~¥42B; first listed pure-play humanoid; FY2025 rev ¥1.699B, 5,500+ units</td>
+<td><a href="https://www.caixinglobal.com/2026-06-02/humanoid-robot-maker-unitree-advances-toward-618-million-shanghai-ipo-102449940.html">Caixin</a></td>
+</tr>
+<tr class="even">
+<td>Ongoing</td>
+<td>Surge AI (US)</td>
+<td>First-ever raise</td>
+<td>Up to $1B at $15B+ (talk toward $25B); bootstrapped, $1B+ 2024 revenue</td>
+<td><a href="https://finance.yahoo.com/news/surge-ai-eyes-15-billion-193751456.html">Yahoo Finance</a></td>
+</tr>
+<tr class="odd">
+<td>Rumored</td>
+<td>Physical Intelligence (US)</td>
+<td>Round in talks</td>
+<td>~$1B at $11B+, still not printed at month end, twelve-plus weeks running</td>
+<td><a href="https://sacra.com/c/physical-intelligence/">Sacra</a></td>
+</tr>
+</tbody>
+</table>
+<p>On leadership and policy: Kinisi founder Brennan Pierce becomes Chief Robotics Officer at Bear Robotics on close. In the US, the bipartisan National Commission on Robotics Act (S.4686 / H.R.7334) advanced in Congress, proposing an 18-member Commerce-housed commission, while a separate bill moved to ban federally funded researchers from using Unitree hardware. The through-line on capital is geographic concentration: two Greater Bay Area firms, X Square and AI², crossed ¥20B valuations on the same day, which is capital compounding hard in one region around vertically integrated data-plus-body plays.</p>
 </section>
-<section id="research-papers-worth-a-look" class="level3">
-<h3>Research papers worth a look</h3>
-<ul>
-<li><strong>TrainThemAI POV-Egocentric-Video-Robotics-FHD-Samples (HuggingFace, June 2026).</strong> Not a paper, an open release, logged here because it is the on-thesis artefact of the day. MIT-licensed FHD sample clips from a production egocentric-capture pipeline, first-person video with hand-pose and wrist-trajectory tracking, positioned as a low-cost alternative to robot teleoperation for training VLA and world-action models. Worth pulling to see how a commercial competitor structures its ego data and what it chooses to expose for free. <a href="https://huggingface.co/datasets/TrainThemAI/POV-Egocentric-Video-Robotics-FHD-Samples">HuggingFace</a></li>
-<li><em>No net-new arXiv cs.RO paper cleared the 24h bar this run. The standing 2026 VLA and world-model cluster already tracked (MotionVLA June 13, ABC-130K, the June 17-19 batch) is unchanged and already in the Papers DB. WEAVER (arXiv 2606.13672, June 11) surfaced in the sweep but predates the window.</em></li>
-</ul>
+<section id="papers-added-this-month" class="level2">
+<h2>Papers added this month</h2>
+<p>Thirty-one papers and open releases entered the DB in June. The set moved on from May’s “captured hours are not a moat” argument to a sharper one: the value is in what the capture apparatus encodes and whether you can validate the result on real hardware. The <a href="../papers.html">Papers DB</a> holds the full filterable set.</p>
+<p>The tactile cluster is the clearest new thread. HT-Bench put 10M RGB and 7.8M tactile frames across 226 tasks into the open and showed a HandTouch encoder lifting tactile-retrieval Recall@5 from 74.65% to 85.23%, RobOmni became the first omni-modal manipulation benchmark scoring with tactile in the loop, and “Do as I Do” reconstructs dexterous manipulation data from everyday monocular human video and ships a collection playbook. Read together they say the same thing the funding did: contact and force are the capture frontier, and the datasets that carry them are scarce.</p>
+<p>The collection-and-validation cluster is the one that most directly arms our deck. XRZero-G0 formalized robot-free capture with a three-gate trainability-governance loop, and ABC-130K paired the largest open bimanual teleop dataset with the finding that validation loss is uncorrelated with real-world success while training loss and sim-eval are strongly predictive (sim-eval to real-eval at r=0.85 to 0.91). Ego-Pi, EgoLive and the “From Human Videos to Robot Manipulation” survey kept confirming that egocentric human video is usable robot-training substrate when captured with the right qualities. On the world-model side, a dense cluster (Efficient-WAM, Flash-WAM, C3ache, Geometric Action Model at 55x speedup) worked on making these models cheap enough to run at the edge, and “Targeting World Models to Compromise Robot Learning Pipelines” made the security case that provenance and validation are not optional once world models enter the supply chain.</p>
 </section>
-<section id="money-moves" class="level3">
-<h3>Money &amp; moves</h3>
+<section id="what-to-watch-in-july" class="level2">
+<h2>What to watch in July</h2>
 <ul>
-<li><strong>General Autonomy, ~₹32 Cr ($3.3M) seed at a ₹280 Cr valuation, disclosed by Inc42 this week, MCA filing dated February 2026.</strong> Led by Elevation Capital and India Quotient, with Blue Asva Varenya Fund, FBC Venture Partners, Spearhead Capital and Ishendra Agarwal. Ex-ShareChat founders building humanoids and mobile robots. Reporting is fresh, the capital is not. <a href="https://inc42.com/buzz/exclusive-robotics-startup-general-autonomy-raises-%E2%82%B932-cr-at-%E2%82%B9280-cr-valuation/">Inc42</a></li>
-<li><em>Still standing (covered earlier, no change): X Square’s B+/B++/C past 20B yuan and AI²’s ~5B yuan, both June 29; NEURA’s up-to-$1.4B Series C at ~$7B; General Intuition’s $320M at $2.3B; ANYVERSE’s $200M+ angel plus near-$200M Pre-A; Archon and ViTai’s June 29 rounds; Physical Intelligence’s rumored $1B at $11B+ still not printed.</em></li>
+<li>The Daimon x China Mobile “5S store” opening on July 15. This is the first live test of whether a crowdsourced retail capture network actually produces trainable data at volume, and it is the most direct competitor yet to a distributed collection thesis. If it works, the network model is validated; if the yield is poor, the audited-capture argument gets stronger.</li>
+<li>More Greater Bay Area mega-rounds after X Square and AI² both crossed ¥20B on June 29, and whether X Square’s claimed 95% data-cost reduction from owning its capture device survives outside a pitch deck. The unit economics of owning the collection layer are the whole argument.</li>
+<li>Whether Physical Intelligence’s rumored $1B at $11B+ finally prints. It has been “not yet closed” since late March; a close at the rumored marks re-rates the entire VLA-lab tier.</li>
+<li>Human Archive and Neocambrian follow-on activity, and whether any Indian entrant raises specifically against the validated-capture layer now that “Robo-BPO” is a named category in the national business press. The gap we keep flagging is the one nobody has funded yet.</li>
+<li>The “big brain, small brain” chip split, specifically whether domestic cerebellum silicon (CAS Wireless, Huaxi’s R1, the Tsinghua-SENAD stack) converts the latency-determinism argument into real design wins. This is the layer where our capture and contact data matters most, and it is the layer NVIDIA does not yet own.</li>
 </ul>
 </section>
 </section>

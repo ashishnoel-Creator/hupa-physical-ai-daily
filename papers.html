@@ -1338,6 +1338,18 @@ const PAPERS = [
     category: 'VLA',
     why: 'Generates humanoid motion from a scene image plus text. The contribution is DSFT, a dual-stream frequency tokenizer that separates motion into a base stream and a physical stream and compresses each independently with DCT truncation and BPE, instead of forcing heterogeneous motion signals through one shared codebook. Adjacent to the core data thesis rather than on it, logged because it is a fresh cs.RO VLA result aimed at humanoid motion generation, the layer that sits on top of whatever demonstration data trains it.',
     tags: ['VLA', 'humanoid', 'motion generation', 'tokenizer']
+  },
+  {
+    id: 'trainthemai-pov-egocentric-2026',
+    dateAdded: '2026-07-01',
+    pubDate: '2026-06-01',
+    title: 'POV-Egocentric-Video-Robotics-FHD-Samples',
+    url: 'https://huggingface.co/datasets/TrainThemAI/POV-Egocentric-Video-Robotics-FHD-Samples',
+    source: 'TrainThemAI (HuggingFace)',
+    type: 'Open release',
+    category: 'Collection',
+    why: 'MIT-licensed FHD sample clips from a commercial egocentric-capture pipeline, first-person video paired with hand-pose and wrist-trajectory tracking, pitched as action-labeled data at roughly one-tenth the cost of robot teleoperation. This is the clearest public look at a direct competitor to the validated-capture layer, run from 270-plus operators across Latin America and the Philippines rather than India. Delivered datasets bundle language instructions, subtask segmentation, success/failure labels, contact-state tags and trajectory quality scores, the same capture-plus-annotation collapse HuPa runs. What is missing from the free material is the audit half, no published spec, no reject rate, no external QC benchmark against the self-generated quality score. Worth pulling to see how a competitor structures ego data and what it exposes as a shopfront.',
+    tags: ['egocentric', 'data collection', 'wearable', 'annotation', 'competitor']
   }
 ];
 

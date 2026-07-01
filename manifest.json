@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-07-01",
+      "slug": "2026-07-01",
+      "title": "Wednesday, July 1, 2026",
+      "tldr": [
+        "**A distributed egocentric-capture shop, TrainThemAI, surfaced running exactly the HuPa playbook from a different geography: phone-based first-person capture plus teleop, bundled annotation, policy-ready delivery, and now an ego-plus-wearable dataset it prices at roughly one-tenth the cost of robot teleoperation.** Its operator base is 270-plus people across Latin America and the Philippines, and it puts MIT-licensed sample clips on HuggingFace as a shopfront. This is the clearest look yet at a direct competitor to the validated-capture layer, and the tell is where its hands are: LatAm and SEA, not India. TrainThemAI, dataset on HuggingFace",
+        "**India got a fresh embodied entrant on the record: General Autonomy, founded by two ex-ShareChat cofounders, disclosed a roughly ₹32 Cr ($3.3M) seed at a ₹280 Cr valuation led by Elevation Capital and India Quotient.** The capital itself was filed with the MCA back in February, so read this as an Inc42 disclosure landing now rather than a new round, but it is another India name and it is building humanoids and robot dogs, not the data underneath them. Inc42",
+        "**The rest of the tape is the same China capital surge covered over the weekend, with no net-new move clearing the window, and the X harvest was a tooling gap, not a quiet feed.** Chrome was not connected at run time so the handle walk fell back to web search and surfaced nothing fresh. Flagging it so a short brief is not mistaken for a lazy one."
+      ]
+    },
+    {
       "date": "2026-06-30",
       "slug": "2026-06-30",
       "title": "Tuesday, June 30, 2026",
@@ -312,12 +322,18 @@
   ],
   "monthly_reviews": [
     {
+      "date": "2026-06",
+      "slug": "2026-06",
+      "title": "June 2026 review",
+      "summary": "June was the month the collection layer got industrialized. Where May argued that captured hours had stopped being a moat, June answered by turning capture itself into infrastructure. Chinese players stood up crowdsourced capture networks i"
+    },
+    {
       "date": "2026-05",
       "slug": "2026-05",
       "title": "May 2026 review",
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 69,
-  "updated_at": "2026-06-30T01:37:00Z"
+  "papers_count": 70,
+  "updated_at": "2026-07-01T02:39:26Z"
 }
