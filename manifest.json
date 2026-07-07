@@ -1,6 +1,46 @@
 {
   "days": [
     {
+      "date": "2026-07-07",
+      "slug": "2026-07-07",
+      "title": "Tuesday, July 7, 2026",
+      "tldr": [
+        "**X Square Robot launched the QUANXTA Zero Series on July 6, an \"embodiment-free\" data-production platform that folds capture, sync, cleaning, annotation, QC, training and evaluation into one closed loop, and put hard numbers on it: nearly 100 demonstrations per hour (2.33x conventional teleoperation), sub-1ms sensor sync at 100% frame-level alignment, and a human-AI QC stage that lifts data yield to up to 85%.** This is the clearest productized version yet of the capture-plus-bundled-annotation model, shipped by a $2.8B-valued Chinese lab as an industrial workflow rather than a rig. PR Newswire, product page",
+        "**The tell inside QUANXTA is not the hardware, it is that annotation, QC and the audit trail are now inside the product.** Automated cleaning strips pauses and failures, multimodal foundation models do action segmentation and semantic labeling, confidence-based routing sends only low-confidence samples to humans, and the platform ships face and background blurring, dynamic watermarking and short-term access controls. A robot lab is selling the exact validation-and-governance layer the independent annotation vendors were supposed to own.",
+        "**Outside QUANXTA, the July 5 to 7 window was quiet across the other wedges.** The annotation vendors, India and SEA, and the arXiv listing all returned standing structure only, and the X feed was stale on every priority handle. Flagging it so a one-item brief reads as an honest thin window, not a skipped sweep. The full site sweep ran (four wedges, arXiv cs.RO, annotation vendors, India/SEA, China, funding and industry trackers, X via browser)."
+      ]
+    },
+    {
+      "date": "2026-07-05",
+      "slug": "2026-07-05",
+      "title": "Sunday, July 5, 2026",
+      "tldr": [
+        "**SKF, the Swedish bearing giant, is taking a 60% majority in a China-headquartered joint venture with Leaderdrive to build high-precision transmission components for humanoid robot joints, and the stock jumped about 4% on the news (July 2).** A century-old Western industrial supplier is buying its way into the Chinese actuator supply chain rather than competing with it, and the JV is aimed squarely at the \"hands lagging\" bottleneck Galbot's Cang Yu named on the same stage two days earlier. PR Newswire, Gasgoo",
+        "**Ant Group led a nearly 500 million yuan Pre-A into Suzhou home-robot startup Lexiang Tech, which unveiled a consumer brand called \"Zeroth\" and disclosed 30,000-plus orders and first-half revenue up 600% year on year (July 2).** A payments-and-consumer-internet giant, not a robotics fund, is the lead check, and the pitch is explicitly that product-market fit gets found through high-frequency user testing and real-world data rather than intuition. Gasgoo",
+        "**The core data-collection and annotation wedges were quiet over the holiday weekend, and the X feed was stale across every priority handle.** No net-new capture, labeling or validation move cleared the window. Flagging it so a short brief is read as an honest quiet feed, not a skipped sweep. The full site sweep (four wedges, arXiv, annotation vendors, India/SEA, China, funding trackers) ran."
+      ]
+    },
+    {
+      "date": "2026-07-04",
+      "slug": "2026-07-04",
+      "title": "Saturday, July 4, 2026",
+      "tldr": [
+        "**Galbot's Cang Yu stood up at Gasgoo's July 3 embodied-AI conference and said the quiet part plainly: the brain is ready, the hands and the data are not, and capturing real-world data is \"the most urgent problem to solve in the embodied AI space.\"** He put numbers on it. GPT ate three decades of internet data, Tesla FSD has 7 to 8 million drivers feeding it expert data, and embodied AI has neither a legacy corpus nor a factory willing to open its process data. That is the buyer-side statement of the entire capture thesis, from a founder who has already deployed. Gasgoo",
+        "**Stanford's Marcel Torné and Chelsea Finn released Freeform Preference Learning, an annotation method that drops the single overall reward and lets labellers define natural-language axes (speed, safety, placement quality, carefulness) and give pairwise preferences along each one.** It is the clearest move yet toward multi-axis, promptable labeling of robot data, and it lands squarely in the validation layer, where a binary \"which trajectory is better\" has always thrown away most of the signal. arXiv 2606.32027, project site",
+        "**China's Gasgoo conference produced a two-round funding cluster in 48 hours: SpeedBot Robotics closed 100 million yuan on government money to build industrial world models, and joint-module maker Quanzhibo closed an A+++ with GL Ventures leading and AgiBot coming in as a strategic backer.** Money is moving into the two layers Cang Yu named as the bottleneck, the data pipeline and the hands. SpeedBot via Gasgoo, Quanzhibo via Gasgoo"
+      ]
+    },
+    {
+      "date": "2026-07-02",
+      "slug": "2026-07-02",
+      "title": "Thursday, July 2, 2026",
+      "tldr": [
+        "**UBTECH put the first full-size mass-produced humanoid on sale and booked 13,361 orders at the launch event, with the entry U1 Lite starting at 119,800 yuan (about $16.7K) and first deliveries set for September 16.** A five-figure order book before a single unit ships is the clearest sign yet that the humanoid race has crossed from demo to consumer price list, and the whole line is grounded in Chinese homes and Chinese production. PR Newswire, TechNode",
+        "**NVIDIA's GEAR lab released ASPIRE, an automated skill-discovery system that lifts a two-arm handover from a 20% baseline to 92% by having coding agents write, debug and distill robot control programs into a growing reusable skill library.** The bet is that robot intelligence compounds through accumulated skills rather than one-off task solving, and the data that feeds it is multimodal sensory traces from sim and real robots, not fresh teleop. ASPIRE / NVIDIA GEAR",
+        "**DexForce closed a 1 billion yuan Series B past a 10 billion yuan valuation the same week its DexWorldModel topped the WorldArena embodied-world-model benchmark, and Gasgoo ran a hard read on the surrounding capital: top-tier valuations doubled from 10B to 20B yuan in under six months while revenue stays negligible and most firms are, in its words, still burning cash to acquire data.** The data-acquisition cost line is the thesis stated by the other side of the table. DexForce via Gasgoo, valuation read via Gasgoo"
+      ]
+    },
+    {
       "date": "2026-07-01",
       "slug": "2026-07-01",
       "title": "Wednesday, July 1, 2026",
@@ -334,6 +374,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 70,
-  "updated_at": "2026-07-01T02:39:26Z"
+  "papers_count": 73,
+  "updated_at": "2026-07-07T08:14:43Z"
 }
