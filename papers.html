@@ -1386,6 +1386,66 @@ const PAPERS = [
     category: 'Collection',
     why: 'X Square Robot productized its data engine into a three-device matrix (Zero-G1 headband plus dual grippers with UMI-VIO, Zero-G0 PICO 4 VR plus backpack for whole-body mobile capture, Zero-E0 six-camera ego device) that captures visual, tactile and audio in one system and replays across robot embodiments. The claimed numbers are the point: nearly 100 demonstrations per hour (2.33x conventional teleoperation), sub-1ms sensor sync at 100 percent frame-level alignment. What matters for the thesis is the software half. A four-stage pipeline runs microsecond multi-source synchronization, automated cleaning plus multimodal-FM action segmentation and semantic labeling, confidence-routed human-AI QC that lifts data yield to up to 85 percent, and a training-and-eval closed loop, plus built-in face and background blurring, dynamic watermarking and short-term access controls. This is the capture, annotation, QC and data-governance layers folded into one owned product by a robot lab, which is the vertical-integration move that squeezes the independent annotation vendor. The open gap is external verifiability: an 85 percent yield computed inside your own confidence loop is not a spec an outside buyer can grade delivered data against.',
     tags: ['data collection', 'annotation', 'UMI', 'validation', 'egocentric', 'China']
+  },
+  {
+    id: 'lerobot-v060-2026-07',
+    dateAdded: '2026-07-08',
+    pubDate: '2026-07-07',
+    title: 'LeRobot v0.6.0: Imagine, Evaluate, Improve',
+    url: 'https://huggingface.co/blog/lerobot-release-v060',
+    source: 'Hugging Face',
+    type: 'Open release',
+    category: 'VLA',
+    why: 'The v0.6.0 release closes the open robot-learning loop inside one library: world-model policies (VLA-JEPA, FastWAM, LingBot-VA), a new VLA wave (GR00T N1.7, MolmoAct2, EO-1, EVO1, Multitask DiT), the Robometer reward model, six simulation benchmarks under lerobot-eval, a lerobot-rollout CLI with DAgger-style human-in-the-loop corrections, FSDP training, and dataset improvements including depth support, automatic language annotation and up to 2x faster loading. Paired with the same-week NVIDIA integration (Isaac GR00T 1.7, Isaac Teleop, Jetson Thor with Reachy 2, Cosmos 3 planned), this is the reference architecture for an open, end-to-end physical-AI pipeline in mid-2026. It cuts both ways for a capture shop: collection and scoring tooling is now free and standardized, which lowers friction to ship data to any LeRobot buyer, but also strips the pipeline of moat value and pushes it back onto validated real-world capture the framework cannot generate.',
+    tags: ['open source', 'VLA', 'world model', 'data collection', 'annotation', 'pipeline']
+  },
+  {
+    id: 'robometer-4b-2026',
+    dateAdded: '2026-07-08',
+    pubDate: '2026-07-07',
+    title: 'Robometer: A General-Purpose Reward Model for Robot Task Success',
+    url: 'https://huggingface.co/blog/lerobot-release-v060',
+    source: 'Hugging Face / RSS 2026',
+    type: 'Open release',
+    category: 'Annotation',
+    why: 'A pretrained, general-purpose reward model shipped in LeRobot v0.6.0. Point lerobot/Robometer-4B at any LeRobot dataset and it scores task progress and success from raw video plus a language instruction, with no task-specific training. Built on Qwen3-VL-4B, trained via trajectory comparisons over more than one million robot trajectories, with an RSS 2026 paper behind it. This is the validation pitch commoditized: automated "did this attempt succeed, and how well" is now a checkpoint on the Hub rather than a service. The gap it does not close is provenance. Robometer grades whether an attempt succeeded, not whether the capture matched a contracted sensor and coverage spec, which is the audit-trail question that still has no open model. Worth benchmarking directly against HuPa QC scores to map where an open success-classifier agrees and disagrees with a spec-based audit.',
+    tags: ['annotation', 'validation', 'reward model', 'QC', 'open source']
+  },
+  {
+    id: 'vla-jepa-2026',
+    dateAdded: '2026-07-08',
+    pubDate: '2026-07-07',
+    title: 'VLA-JEPA: World-Model Supervision at Zero Inference Cost',
+    url: 'https://huggingface.co/blog/lerobot-release-v060',
+    source: 'Hugging Face (LeRobot v0.6.0)',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'A compact vision-language-action model built on Qwen3-VL-2B. During training a JEPA world model anticipates upcoming frames from the model own actions, providing world-model supervision. At inference the world model is removed entirely, so the run-time cost is unchanged. The interesting bit is getting the benefit of a world model without paying for it at deployment, which matters for edge-bound policies where inference budget is the constraint.',
+    tags: ['world model', 'VLA', 'JEPA', 'representation learning']
+  },
+  {
+    id: 'evo1-edge-vla-2026',
+    dateAdded: '2026-07-08',
+    pubDate: '2026-07-07',
+    title: 'EVO1: A 0.77B On-Device Vision-Language-Action Policy',
+    url: 'https://huggingface.co/blog/lerobot-release-v060',
+    source: 'Hugging Face (LeRobot v0.6.0)',
+    type: 'Open release',
+    category: 'Embedded AI',
+    why: 'A VLA that packs its policy into 0.77B parameters on an InternVL3-1B backbone with a flow-matching action head, small enough to fine-tune and run in real time on modest GPUs. Ships with two-stage fine-tuning and Real-Time Chunking out of the box. The reference point for how small an on-device robot policy can now be, sitting in the default open library next to GR00T N1.7 and MolmoAct2. Relevant to the edge-inference and split-architecture direction the column keeps tracking.',
+    tags: ['embedded AI', 'VLA', 'edge inference', 'on-device', 'open source']
+  },
+  {
+    id: 'nvidia-isaac-teleop-2026',
+    dateAdded: '2026-07-08',
+    pubDate: '2026-07-06',
+    title: 'NVIDIA Isaac Teleop: Open Framework for Robot Data Collection in LeRobot',
+    url: 'https://blogs.nvidia.com/blog/hugging-face-lerobot-models-frameworks-open-robotics/',
+    source: 'NVIDIA',
+    type: 'Open release',
+    category: 'Collection',
+    why: 'An open-source framework for robot data collection that captures human demonstrations from external devices in standardized, interoperable formats, then lets developers expand and share those datasets directly in LeRobot. Announced with the broader NVIDIA / Hugging Face integration (GR00T 1.7, Jetson Thor with Reachy 2, Cosmos 3 planned). This is the open counterpart to the proprietary capture pipelines the column has been tracking (QUANXTA, TrainThemAI): a shared, portable demonstration-capture format lowers friction to ship data anywhere, and simultaneously stops collection tooling from being a moat, pushing the value onto validated real-world capture the framework itself cannot produce.',
+    tags: ['data collection', 'teleoperation', 'open source', 'NVIDIA', 'pipeline']
   }
 ];
 

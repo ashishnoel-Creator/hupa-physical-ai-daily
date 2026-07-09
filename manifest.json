@@ -1,6 +1,26 @@
 {
   "days": [
     {
+      "date": "2026-07-09",
+      "slug": "2026-07-09",
+      "title": "Thursday, July 9, 2026",
+      "tldr": [
+        "**HIVE raised a $15M pre-Series A on July 7 to retrofit industrial machines a customer already owns, not to build new ones.** London and Norway team, live deployments across Scandinavia, and the pitch is a \"silicon brain\" that bolts sensors and compute onto existing wheel loaders and warehouse vehicles so each machine-hour feeds one fleet-wide reinforcement loop. They claim that loop drives productive machine-hour cost down 80%. It is the brownfield version of physical AI, and it reframes where the data actually comes from. The Robot Report",
+        "**Tesollo, an Incheon robotic-hand maker, closed a Series B and started IPO prep on July 7, picking KB Securities as underwriter.** Its DG-5F-S hand runs on in-house actuators, weighs under 1kg, and ships at about 60% of the cost of its predecessor. A pure-play humanoid-hand supplier heading for public markets is the clearest sign yet that the Asian hardware supply chain, not the US model labs, is where the humanoid cost curve gets bent. Robotics & Automation News, The Robot Report",
+        "**Outside those two, the July 7 to 9 window was thin, and the full sweep ran to confirm that.** Four wedges, arXiv cs.RO, the annotation vendors, India and SEA, China, and the funding trackers all returned standing structure only, and the X feed was stale on every priority handle walked. Flagging it so a short brief reads as an honest quiet window, not a skipped one."
+      ]
+    },
+    {
+      "date": "2026-07-08",
+      "slug": "2026-07-08",
+      "title": "Wednesday, July 8, 2026",
+      "tldr": [
+        "**Hugging Face shipped LeRobot v0.6.0 on July 7 and NVIDIA plugged Isaac GR00T 1.7 plus the Isaac Teleop data-collection framework straight into it, so the full open loop, collect, annotate, validate, train, evaluate, now sits inside one library.** This is the clearest move yet to make the robot-learning pipeline a shared open standard rather than a per-lab stack, connecting NVIDIA's ~3M robotics developers to Hugging Face's ~16M AI builders. Hugging Face, NVIDIA",
+        "**The validation layer is the part to stare at. LeRobot 0.6 ships Robometer, a pretrained reward model that scores task progress and success from raw video plus a language instruction with no task-specific training, built on Qwen3-VL-4B and trained over more than a million robot trajectories.** Automated \"did this data show a successful attempt, and how good was it\" just went open source. The thing independent validation vendors were supposed to sell is now a model checkpoint anyone can point at a dataset. Hugging Face",
+        "**Remi Cadene, the ex-Tesla Optimus scientist who built LeRobot at Hugging Face, unveiled his own humanoid startup UMA and the Northstar robot at the Machina Summit on July 7, on ~$40M seed.** A 40kg body trained by real-time learning, learn a skill from a demo then improve on it, already in talks with 50 pilot customers across logistics, manufacturing and healthcare. The person who wrote the open training loop now wants to sell the body that runs on it. The Next Web, Electrek"
+      ]
+    },
+    {
       "date": "2026-07-07",
       "slug": "2026-07-07",
       "title": "Tuesday, July 7, 2026",
@@ -374,6 +394,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 73,
-  "updated_at": "2026-07-07T08:14:43Z"
+  "papers_count": 78,
+  "updated_at": "2026-07-09T01:40:20Z"
 }
