@@ -1446,6 +1446,54 @@ const PAPERS = [
     category: 'Collection',
     why: 'An open-source framework for robot data collection that captures human demonstrations from external devices in standardized, interoperable formats, then lets developers expand and share those datasets directly in LeRobot. Announced with the broader NVIDIA / Hugging Face integration (GR00T 1.7, Jetson Thor with Reachy 2, Cosmos 3 planned). This is the open counterpart to the proprietary capture pipelines the column has been tracking (QUANXTA, TrainThemAI): a shared, portable demonstration-capture format lowers friction to ship data anywhere, and simultaneously stops collection tooling from being a moat, pushing the value onto validated real-world capture the framework itself cannot produce.',
     tags: ['data collection', 'teleoperation', 'open source', 'NVIDIA', 'pipeline']
+  },
+  {
+    id: 'sieve-data-selection-2026',
+    dateAdded: '2026-07-09',
+    pubDate: '2026-07-07',
+    title: 'SIEVE: Structure-Aware Data Selection for Imitation Learning with VLA Models',
+    url: 'https://arxiv.org/abs/2607.06442',
+    source: 'arXiv 2607.06442',
+    type: 'Research paper',
+    category: 'Annotation',
+    why: 'The validation thesis written as a method. Opens by stating that more data does not necessarily yield better policies, because of redundancy, noise and uneven coverage, then selects which demonstrations to keep by discovering reusable visuo-motor primitives and retaining central, stable, imitation-friendly trajectories. Beats full-data training while using only 50% of the demonstrations and 50% of the training steps, meaning roughly half the collected data was not helping. This is the academic form of the validated-capture pitch: value is not volume, it is delivering the demonstrations that move a policy. The gap it leaves open is provenance. SIEVE selects within a dataset you already have, it does not grade whether the capture was shot to a contracted spec in the first place. Code released.',
+    tags: ['data selection', 'validation', 'imitation learning', 'VLA', 'data quality']
+  },
+  {
+    id: 'lingbot-vla-2-2026',
+    dateAdded: '2026-07-09',
+    pubDate: '2026-07-07',
+    title: 'LingBot-VLA 2.0 (From Foundation to Application: Improving VLA Models in Practice)',
+    url: 'https://arxiv.org/abs/2607.06403',
+    source: 'arXiv 2607.06403',
+    type: 'Open release',
+    category: 'VLA',
+    why: 'The top Hugging Face daily paper for July 8 (197 upvotes), with released checkpoints. Pretrains on ~60,000 hours of data, of which 10,000 hours are egocentric human videos sitting alongside 50,000 hours of robot trajectories across 20 robot configurations, and expands the action space to whole-body degrees of freedom (head, waist, mobile base, dexterous hands) with predictive-dynamics temporal reasoning. The load-bearing detail for HuPa is that a frontier open VLA treats egocentric human video as a first-class tenth of its corpus. That is the demand side of exactly the data HuPa collects, and open confirmation that human first-person video is training-grade rather than a research curiosity. From the Ling / Robbyant group.',
+    tags: ['VLA', 'egocentric', 'human video', 'pretraining', 'cross-embodiment']
+  },
+  {
+    id: 'rynnworld-teleop-2026',
+    dateAdded: '2026-07-09',
+    pubDate: '2026-07-07',
+    title: 'RynnWorld-Teleop: An Action-Conditioned World Model for Digital Teleoperation',
+    url: 'https://arxiv.org/abs/2607.06558',
+    source: 'arXiv 2607.06558',
+    type: 'Open release',
+    category: 'World model',
+    why: 'The strongest open "generate, do not collect" claim this window, from Alibaba DAMO Academy. Frames physical teleoperation as the bottleneck (every demonstration binds operator time to specific hardware and a workspace) and answers with digital teleoperation: replace the real robot with a generative world model, drive it with an operator hand-pose stream to synthesize high-fidelity egocentric video from a single reference image, and use the recorded pose stream as an embodiment-agnostic action label retargetable to any robot. Runs 40+ FPS on one H100, gets zero-shot Sim2Real on bimanual tasks, and lifts success rates when mixed into real data. The honest counter for a capture shop: a generative engine can only stretch distributions it was trained on, so it lowers the value of generic teleop capture and raises the value of capture in environments the world model cannot fake.',
+    tags: ['world model', 'teleoperation', 'synthetic data', 'sim2real', 'data engine']
+  },
+  {
+    id: 'rynnworld-4d-2026',
+    dateAdded: '2026-07-09',
+    pubDate: '2026-07-07',
+    title: 'RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation',
+    url: 'https://arxiv.org/abs/2607.06559',
+    source: 'arXiv 2607.06559',
+    type: 'Open release',
+    category: 'World model',
+    why: 'Companion release to RynnWorld-Teleop from the same Alibaba DAMO Academy team, extending the world model to 4D embodied modeling for manipulation. Read the two together as a single bet that the world model becomes the data layer, generating and augmenting robot trajectories rather than collecting them. Part of the heavily Chinese-lab July 7 arXiv wave (with LingBot-VLA 2.0 and SIEVE) that pushed data-generation and data-selection over raw capture volume.',
+    tags: ['world model', '4D', 'manipulation', 'data generation', 'open source']
   }
 ];
 

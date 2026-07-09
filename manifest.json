@@ -5,9 +5,9 @@
       "slug": "2026-07-09",
       "title": "Thursday, July 9, 2026",
       "tldr": [
-        "**HIVE raised a $15M pre-Series A on July 7 to retrofit industrial machines a customer already owns, not to build new ones.** London and Norway team, live deployments across Scandinavia, and the pitch is a \"silicon brain\" that bolts sensors and compute onto existing wheel loaders and warehouse vehicles so each machine-hour feeds one fleet-wide reinforcement loop. They claim that loop drives productive machine-hour cost down 80%. It is the brownfield version of physical AI, and it reframes where the data actually comes from. The Robot Report",
-        "**Tesollo, an Incheon robotic-hand maker, closed a Series B and started IPO prep on July 7, picking KB Securities as underwriter.** Its DG-5F-S hand runs on in-house actuators, weighs under 1kg, and ships at about 60% of the cost of its predecessor. A pure-play humanoid-hand supplier heading for public markets is the clearest sign yet that the Asian hardware supply chain, not the US model labs, is where the humanoid cost curve gets bent. Robotics & Automation News, The Robot Report",
-        "**Outside those two, the July 7 to 9 window was thin, and the full sweep ran to confirm that.** Four wedges, arXiv cs.RO, the annotation vendors, India and SEA, China, and the funding trackers all returned standing structure only, and the X feed was stale on every priority handle walked. Flagging it so a short brief reads as an honest quiet window, not a skipped one."
+        "**The July 7 arXiv drop was the real story, and it was a data-and-validation wave, not a hardware one. Three papers matter: LingBot-VLA 2.0 pretrains on 60,000 hours including 10,000 hours of egocentric human video, RynnWorld-Teleop replaces the physical robot with a generative world model to make teleoperation data without a robot, and SIEVE shows you can beat full-data training on 50% of demonstrations by selecting the right ones.** All three are Chinese-lab releases with code or checkpoints out. The through-line is that raw demonstration volume is being openly de-emphasized in favor of which data and which selection, which is the validation thesis showing up in the research itself. LingBot-VLA 2.0, RynnWorld-Teleop, SIEVE",
+        "**HIVE raised a $15M pre-Series A on July 7 to retrofit industrial machines a customer already owns, not to build new ones.** London and Norway team, live across Scandinavia, bolting sensors and a \"silicon brain\" onto existing wheel loaders so each machine-hour feeds one fleet-wide reinforcement loop. They claim that loop drives productive machine-hour cost down 80%. Brownfield physical AI, and it reframes where the data comes from. The Robot Report",
+        "**Tesollo, an Incheon robotic-hand maker, closed a Series B and opened IPO prep on July 7 with KB Securities as underwriter, on a hand that costs about 60% of its predecessor.** A pure-play humanoid-hand supplier heading public is the clearest sign that the Asian hardware supply chain, not the US model labs, is where the humanoid cost curve gets bent. Robotics & Automation News"
       ]
     },
     {
@@ -394,6 +394,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 78,
-  "updated_at": "2026-07-09T01:40:20Z"
+  "papers_count": 82,
+  "updated_at": "2026-07-09T10:31:39Z"
 }
