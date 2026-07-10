@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-07-10",
+      "slug": "2026-07-10",
+      "title": "Friday, July 10, 2026",
+      "tldr": [
+        "**Teleoperated humanoid robots performed live surgery for the first time, published in Nature on July 8.** UC San Diego's ARCLab ran seven procedures on large animal models with off-the-shelf Unitree G1 humanoids driven by motion capture and foot pedals, including a gallbladder removal by a human-robot team and a second surgery performed by two robots working side by side. Surgical teleoperation is the highest-stakes demonstration data there is, and it just worked on a $16K commodity body. UC San Diego, Nature paper on arXiv",
+        "**Orbbec productized body-less ego data collection as a hardware platform on July 8: EGO, UMI and WristCam form factors, sold with contract-manufacturing and joint-design services to model developers and data acquisition providers.** The flagship EGO RGB-D pairs Orbbec's Gemini 330 cameras and its MX6800 depth chip with Ant Lingbo's LingBot-Depth 2.0 for capture-time depth enhancement. A 3D-vision component giant with 1,000+ robotics customers is now selling the capture rig layer off the shelf. Gasgoo",
+        "**Gasgoo's H1 tally, published July 9, puts hard numbers on the China capital wave: 93.5 billion yuan across 322 disclosed embodied-AI rounds in the first half, a record 36 rounds in June alone with ten above 1 billion yuan, and seven companies now valued past 20 billion yuan.** The same piece has founders saying large-scale commercialization is still 2-3 years out and roughly 70% of raised cash is being reserved for training, not revenue. Gasgoo"
+      ]
+    },
+    {
       "date": "2026-07-09",
       "slug": "2026-07-09",
       "title": "Thursday, July 9, 2026",
@@ -394,6 +404,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 82,
-  "updated_at": "2026-07-09T10:31:39Z"
+  "papers_count": 89,
+  "updated_at": "2026-07-10T04:07:52Z"
 }

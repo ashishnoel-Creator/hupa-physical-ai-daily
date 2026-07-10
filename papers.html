@@ -1494,6 +1494,90 @@ const PAPERS = [
     category: 'World model',
     why: 'Companion release to RynnWorld-Teleop from the same Alibaba DAMO Academy team, extending the world model to 4D embodied modeling for manipulation. Read the two together as a single bet that the world model becomes the data layer, generating and augmenting robot trajectories rather than collecting them. Part of the heavily Chinese-lab July 7 arXiv wave (with LingBot-VLA 2.0 and SIEVE) that pushed data-generation and data-selection over raw capture volume.',
     tags: ['world model', '4D', 'manipulation', 'data generation', 'open source']
+  },
+  {
+    id: 'egowam-2026',
+    dateAdded: '2026-07-10',
+    pubDate: '2026-07-08',
+    title: 'EgoWAM: World Action Models Beyond Pixels with In-the-Wild Egocentric Human Data',
+    url: 'https://arxiv.org/abs/2607.08436',
+    source: 'arXiv 2607.08436',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'The ego-transfer recipe paper, from Danfei Xu\'s Georgia Tech group. Names the core problem with behavior cloning on human video: it entangles transferable content (objects, scenes, task semantics) with non-transferable factors (human morphology, head motion, behavioral style). Shows world-action co-training scales better with in-the-wild egocentric human data, and that the world target matters: pixels transfer weakly, DINO features give up to 4x out-of-distribution gains, 3D motion flow gives 20-30% in-domain. This is the buyer-side manual for extracting value from ego capture, and it quietly raises the spec bar, the video is worth more when geometry and motion are captured cleanly.',
+    tags: ['egocentric', 'world action model', 'human-to-robot transfer', 'ego data', 'co-training']
+  },
+  {
+    id: 'lingbot-va-2-native-2026',
+    dateAdded: '2026-07-10',
+    pubDate: '2026-07-09',
+    title: 'Native Video-Action Pretraining for Generalizable Robot Control (LingBot-VA 2.0)',
+    url: 'https://arxiv.org/abs/2607.08639',
+    source: 'arXiv 2607.08639',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Ant\'s video-action foundation model built from scratch for embodiment, on the argument that repurposing content-generation video models is inherently inadequate for the physical world. Four design moves: a semantic visual-action tokenizer, causal pretraining from scratch to dodge catastrophic forgetting, a sparse MoE backbone for capacity without inference cost, and asynchronous inference that predicts future latents in parallel with action execution. Note this is LingBot-VA (video-action), a different model from the LingBot-VLA 2.0 that dropped July 7. Read alongside the Orbbec EGO RGB-D launch that ships Ant Lingbo\'s depth model, the same axis now touches capture hardware and the policy.',
+    tags: ['video-action', 'foundation model', 'MoE', 'real-time inference', 'Ant Group']
+  },
+  {
+    id: 'humanoid-surgery-nature-2026',
+    dateAdded: '2026-07-10',
+    pubDate: '2026-07-08',
+    title: 'In vivo feasibility study of humanoid robots in surgery',
+    url: 'https://arxiv.org/abs/2607.07972',
+    source: 'Nature (2026) / arXiv 2607.07972',
+    type: 'Research paper',
+    category: 'Humanoid',
+    why: 'The UCSD ARCLab result: stock Unitree G1 humanoids, teleoperated via motion capture and foot pedals, completed seven procedures on live large-animal models including a gallbladder removal by a human-robot team and a second surgery by a robot-robot pair. Published in Nature. Two reads. Commodity Chinese hardware is now precise enough for surgery when a human supplies the policy. And surgical teleoperation is the highest-stakes, expert-labeled demonstration data there is, made in hospitals, which is where the most defensible capture access sits.',
+    tags: ['humanoid', 'teleoperation', 'surgery', 'Unitree G1', 'expert demonstrations']
+  },
+  {
+    id: 'wam-ttt-2026',
+    dateAdded: '2026-07-10',
+    pubDate: '2026-07-08',
+    title: 'WAM-TTT: Steering World-Action Models by Watching Human Play at Test Time',
+    url: 'https://arxiv.org/abs/2607.06988',
+    source: 'arXiv 2607.06988',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'Steers a world-action model by watching human play at test time, no retraining. Part of the same week\'s theme as EgoWAM: human video doing work beyond pretraining, as a live control and adaptation signal. Every new place human demonstration plugs into the stack is another buyer for validated human capture.',
+    tags: ['world action model', 'test-time', 'human video', 'adaptation']
+  },
+  {
+    id: 'touchworld-tactile-2026',
+    dateAdded: '2026-07-10',
+    pubDate: '2026-07-08',
+    title: 'TouchWorld: A Predictive and Reactive Tactile Foundation Model for Dexterous Manipulation',
+    url: 'https://arxiv.org/abs/2607.07287',
+    source: 'arXiv 2607.07287',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'A tactile foundation model for dexterous manipulation, predictive and reactive. Tactile is the modality every capture spec ignores and every dexterity result keeps needing, HT-Bench and DAIMON made the same point from the benchmark and dataset side. Worth tracking for when tactile channels start showing up in buyer capture specs.',
+    tags: ['tactile', 'foundation model', 'dexterous manipulation']
+  },
+  {
+    id: 'embodiedgen-v2-2026',
+    dateAdded: '2026-07-10',
+    pubDate: '2026-07-08',
+    title: 'EmbodiedGen V2: An Agentic, Simulation-Ready 3D World Engine for Embodied AI',
+    url: 'https://arxiv.org/abs/2607.07459',
+    source: 'arXiv 2607.07459',
+    type: 'Open release',
+    category: 'World model',
+    why: 'Agentic generation of simulation-ready 3D worlds for embodied AI. The sim side keeps industrializing in parallel with real capture, same trajectory as Cosmos 3 and RynnWorld. The standing counter holds: generated worlds stretch existing distributions, they do not contain the environments no corpus has captured yet.',
+    tags: ['simulation', '3D world engine', 'agentic', 'synthetic data']
+  },
+  {
+    id: 'orbbec-bodyless-platform-2026',
+    dateAdded: '2026-07-10',
+    pubDate: '2026-07-08',
+    title: 'Orbbec Body-less Data Collection Hardware Platform (EGO / UMI / WristCam)',
+    url: 'https://autonews.gasgoo.com/articles/news/orbbec-launches-hardware-platform-for-body-less-data-collection-2074842103866507265',
+    source: 'Gasgoo / Orbbec',
+    type: 'Hardware release',
+    category: 'Collection',
+    why: 'A 3D-vision components giant productized the ego capture rig. EGO for first-person observation, UMI for gripper-interface capture, WristCam for hand-object detail, sold as standard products plus CM and JDM services to model developers and data acquisition providers. The EGO RGB-D pairs Orbbec\'s Gemini 330 cameras and MX6800 depth chip with Ant Lingbo\'s LingBot-Depth 2.0 for capture-time depth enhancement on reflective and occluded surfaces. Orbbec claims 1,000+ robotics customers and humanoid orders growing 60%+ QoQ since 2025. When the rig is off the shelf, the moat moves to environments, operations and the audit trail.',
+    tags: ['capture hardware', 'egocentric', 'RGB-D', 'UMI', 'China', 'supply chain']
   }
 ];
 
