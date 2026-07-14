@@ -1,6 +1,46 @@
 {
   "days": [
     {
+      "date": "2026-07-14",
+      "slug": "2026-07-14",
+      "title": "Tuesday, July 14, 2026",
+      "tldr": [
+        "**Tactile data collection just became an industrial category. Tashan Tech, holder of over 80% of China's tactile sensor market, closed a Series B worth hundreds of millions of yuan, its third round in six months, and the proceeds story is capture infrastructure: two tactile data collection centers already running in Beijing and Hubei, plus the TS-Echo \"finger cot\" that collects tactile data body-free and migrates it across heterogeneous hands and arms.** Gasgoo",
+        "**Three brain-plus-hardware partnerships were signed in China in a single day, all timed four days ahead of WAIC: Manifold AI (world models) with UBTech, BeingBeyond (embodied foundation models) with Linkerbot, and Tashan's round alongside.** The Manifold-UBTech deal names \"world model data closed-loops\" as a core workstream; the BeingBeyond-Linkerbot deal names dataset construction. The signing wave is the tell for how dense WAIC week will be. Gasgoo, Gasgoo",
+        "**Microsoft, UW and Berkeley shipped FlowDAgger, a method that adapts frozen generative robot policies from \"a handful\" of human interventions instead of large-scale recollection, by inverting each expert correction back into the policy's latent noise.** Expert corrections, not bulk demonstrations, keep moving toward being the premium unit of robot data. arXiv"
+      ]
+    },
+    {
+      "date": "2026-07-13",
+      "slug": "2026-07-13",
+      "title": "Monday, July 13, 2026",
+      "tldr": [
+        "**The training-data market got its first credible public sizing: ~$8.5B in combined revenue and ~$100B in combined valuation across the 50+ companies selling data and RL environments to the big AI labs, with more than 75% of it concentrated in just four players, Scale, Surge, Mercor and Handshake.** Deedy Das of Menlo Ventures published the full company-by-company map on July 12. X",
+        "**Interact Analysis published supplier interviews on ISO 10218:2025 readiness, and the finding cuts against the China export wave: emerging Chinese robot suppliers entering Europe are \"notably less prepared\" for the standard that becomes mandatory for CE marking when Machinery Regulation 2023/1230 takes effect on January 20, 2027.** Established global vendors are largely ready. Compliance is about to function as a market-access moat. The Robot Report",
+        "**The week ahead is WAIC: Shanghai, July 17-20, with 1,100+ exhibitors across 100,000 square meters, 3,000+ exhibits, 300+ global debuts, and 200+ companies in the embodied AI area alone.** Expect the China sections of this brief to run heavy all next week. CGTN"
+      ]
+    },
+    {
+      "date": "2026-07-12",
+      "slug": "2026-07-12",
+      "title": "Sunday, July 12, 2026",
+      "tldr": [
+        "**China's MIIT put an official number on the humanoid ramp: annual production is expected to top 100,000 units this year, against global shipments of just 13,000 to 16,000 in all of 2025.** The supporting detail is production cadence, not promises: Unitree has built roughly 11,000 units of a single bipedal model, the Leju-Dongfang Precision line runs one robot every 30 minutes, and Engine AI's Shenzhen base does one every 15. Gasgoo",
+        "**A humanoid is now being sold explicitly as a data-acquisition platform. PNDbotics and BeingBeyond signed a partnership that positions the Adam-U half-body robot as \"a benchmark platform for embodied data acquisition and grasping training,\" with joint multi-scenario dataset construction as a named workstream.** They debut Adam-U running BeingBeyond's Being-H manipulation model at WAIC. Gasgoo",
+        "**1X unveiled next-generation hands for NEO: up to 25 degrees of freedom, tendon-driven, 45 Nm of distal flexion, IP68 waterproof, with high-resolution tactile sensing across the fingertips feeding its 1XWM video-to-action model.** It also appointed ex-Cruise and Ursa Major finance chief Bill Nash as CFO ahead of consumer shipments of the $20K robot. Humanoids Daily"
+      ]
+    },
+    {
+      "date": "2026-07-11",
+      "slug": "2026-07-11",
+      "title": "Saturday, July 11, 2026",
+      "tldr": [
+        "**China's state standards body just shipped the HuPa playbook as public infrastructure. CAICT released the Industrial Embodied AI Robot Training Dataset 2.0 on July 8, built on \"work-as-acquisition\": head-mounted, egocentric, full-body capture rigs from Deta Intelligence worn by frontline workers at real automotive workstations, collecting during actual production with no interruption, plus the industry's first trial-and-error data system that records deviation, correction and completion.** Tsinghua, Peking University, JD.com, ZTE, Estun and Hisense are co-builders. Gasgoo",
+        "**General Intuition's CEO put the strongest public number yet on the anti-collection thesis: \"you only need a few minutes.\"** The $2.3B-valued startup, fresh off a $320M Khosla-led round, says its game-video foundation model drove a quadruped zero-shot off a single front camera after fine-tuning on eight minutes of real robot data, and that people will stop collecting millions of real-world hours. TechCrunch",
+        "**State Grid became the biggest named buyer of embodied AI to date: its 2026 Embodied Intelligence Development Plan calls for roughly 8,500 devices at about 6.8 billion yuan, and UBTech partnered with Shenhao Technology on July 10 to chase it.** A state utility procuring humanoids for substation inspection and live-line work is real demand with a public price tag, not a pilot. Gasgoo"
+      ]
+    },
+    {
       "date": "2026-07-10",
       "slug": "2026-07-10",
       "title": "Friday, July 10, 2026",
@@ -404,6 +444,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 89,
-  "updated_at": "2026-07-10T04:07:52Z"
+  "papers_count": 107,
+  "updated_at": "2026-07-14T04:15:07Z"
 }

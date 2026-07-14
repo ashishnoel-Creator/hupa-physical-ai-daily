@@ -2,6 +2,13 @@
 
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
+## 2026-07-13 (Monday)
+
+Browser X path was down this run (Chrome connected, tab-group handshake timed out three times), so no handles were walked. Adds this Monday come from the fallback sweep:
+
+- **@deedydas (Deedy Das, Menlo Ventures)** — published the first credible public sizing of the training-data market on July 12 (50+ companies, ~$8.5B revenue, ~$100B valuation, >75% concentrated in Scale/Surge/Mercor/Handshake). Posts data-market structure and cap-table analysis regularly, exactly the annotation-market intelligence §4-B chases through vendor blogs. Add to the §4-A capital/analyst handle list. ([X](https://x.com/deedydas/status/2076124392711696455))
+- **Handshake** — named by the Deedy map as one of the four dominant training-data sellers, alongside Scale, Surge and Mercor, yet absent from the §4-B annotation vendor sweep list. Add as a standing annotation-sweep name (joinhandshake.com / their AI data arm) so the fourth member of the oligopoly is not a blind spot.
+
 ## 2026-06-29 (Monday)
 
 Browser X path was up this run (smoke test on @DrJimFan passed). The 8 handles walked all returned already-covered posts, so the adds this Monday come from the sweeps, not the X walk:
