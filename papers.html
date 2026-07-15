@@ -1794,6 +1794,30 @@ const PAPERS = [
     category: 'Embedded AI',
     why: 'MIT and UT Austin (Torralba, Yuke Zhu, Yilun Du) compress action trajectories into B-spline representations to speed up manipulation policies. Relevant to anyone shipping policies onto constrained edge compute, where inference budget decides what runs on the robot.',
     tags: ['action representation', 'inference speed', 'edge', 'manipulation']
+  },
+  {
+    id: 'tactile-whole-arm-control-2026',
+    dateAdded: '2026-07-15',
+    pubDate: '2026-07-13',
+    title: 'Tactile and Vision Conditioned Contact-Centric Control for Whole-Arm Manipulation',
+    url: 'https://arxiv.org/abs/2607.09218',
+    source: 'arXiv 2607.09218',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Cornell and TRI (Bhattacharjee group, RSS 2026) condition whole-arm manipulation on tactile plus vision, treating contact along the entire arm as the control primitive. Landed the same week Tashan and Xense raised for tactile capture. The models are starting to consume the modality the capture layer is racing to supply.',
+    tags: ['tactile', 'whole-arm manipulation', 'contact', 'TRI']
+  },
+  {
+    id: 'clap-vlm-to-vla-2026',
+    dateAdded: '2026-07-15',
+    pubDate: '2026-07-13',
+    title: 'CLAP: Direct VLM-to-VLA Adaptation via Language-Action Grounding',
+    url: 'https://arxiv.org/abs/2607.08974',
+    source: 'arXiv 2607.08974',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'OMRON SINIC X adapts a pretrained VLM directly into a VLA through language-action grounding instead of full retraining on action data. Every shortcut from VLM to deployable VLA changes what kind of data the conversion step needs, which moves the demand curve for demonstration data.',
+    tags: ['VLA', 'VLM adaptation', 'language-action grounding', 'OMRON']
   }
 ];
 
