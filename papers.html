@@ -1818,6 +1818,42 @@ const PAPERS = [
     category: 'VLA',
     why: 'OMRON SINIC X adapts a pretrained VLM directly into a VLA through language-action grounding instead of full retraining on action data. Every shortcut from VLM to deployable VLA changes what kind of data the conversion step needs, which moves the demand curve for demonstration data.',
     tags: ['VLA', 'VLM adaptation', 'language-action grounding', 'OMRON']
+  },
+  {
+    id: 'diffusion-policy-2023',
+    dateAdded: '2026-07-16',
+    pubDate: '2023-03-07',
+    title: 'Diffusion Policy: Visuomotor Policy Learning via Action Diffusion',
+    url: 'https://arxiv.org/abs/2303.04137',
+    source: 'arXiv 2303.04137',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Back-filled the day Walden Robotics launched at $1.1B on this lineage. The RSS 2023 paper (Chi, Song, Tedrake et al) made denoising diffusion the default action head for imitation learning, 46.9% average improvement across 12 tasks. Every diffusion-based policy consuming demonstration data today traces back here.',
+    tags: ['diffusion policy', 'imitation learning', 'TRI', 'foundational']
+  },
+  {
+    id: 'tri-lbm-careful-examination-2025',
+    dateAdded: '2026-07-16',
+    pubDate: '2025-07-07',
+    title: 'A Careful Examination of Large Behavior Models for Multitask Dexterous Manipulation',
+    url: 'https://arxiv.org/abs/2507.05331',
+    source: 'arXiv 2507.05331',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'The TRI LBM tech report, Tedrake senior author, now the model class behind Walden Robotics. Blind randomized trials show multi-task pretraining teaches new tasks with a fraction of the data of single-task baselines, and performance scales predictably with pretraining diversity. The cleanest published argument that pretraining corpora are worth paying for.',
+    tags: ['LBM', 'multitask pretraining', 'TRI', 'evaluation', 'Walden']
+  },
+  {
+    id: 'nvidia-robolab-isaac-lab-arena-2026',
+    dateAdded: '2026-07-16',
+    pubDate: '2026-07-14',
+    title: 'How to Evaluate General-Purpose Robot Policies for Real-World Deployment (RoboLab / Isaac Lab-Arena)',
+    url: 'https://developer.nvidia.com/blog/how-to-evaluate-general-purpose-robot-policies-for-real-world-deployment/',
+    source: 'NVIDIA Seattle Research Lab',
+    type: 'Research blog',
+    category: 'Annotation',
+    why: 'NVIDIA puts numbers on how statistically weak robot evals are: a 90% success rate over 70 rollouts carries a 15.4-point confidence interval, and tightening it to 2 points takes roughly 1,030 rollouts. RoboLab-120 ships graded task scores, frame-level failure event logging and sensitivity analysis via posterior estimation. Graded scoring plus failure attribution is the exact QC language we sell, now standardized by the biggest vendor in the room.',
+    tags: ['evaluation', 'benchmarking', 'Isaac Lab-Arena', 'statistical rigor', 'NVIDIA']
   }
 ];
 

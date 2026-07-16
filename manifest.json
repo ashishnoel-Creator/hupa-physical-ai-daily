@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-07-16",
+      "slug": "2026-07-16",
+      "title": "Thursday, July 16, 2026",
+      "tldr": [
+        "**Russ Tedrake left MIT-adjacent research royalty status at Toyota Research Institute and launched Walden Robotics with a $300M seed at a $1.1B valuation, co-led by Toyota and Deviation Capital with NVIDIA, Boeing, Samsung Ventures, Prologis and CoreWeave on the cap table.** Wheeled base, no legs, powered by the Large Behavior Models line of work, and already doing production work in a North American Toyota plant since February. The pitch is robots that \"continuously learn and improve while performing real work,\" which makes the deployment data loop the product. BusinessWire, Bloomberg",
+        "**CATL wrote its first direct humanoid check: the battery giant exclusively led RoboParty's Pre-A, part of nearly 500 million yuan raised across two back-to-back rounds, with the stated logic that RoboParty's open-source stack gets \"real-world task feedback within CATL's manufacturing and energy scenarios, creating a closed data loop.\"** The money funds the RP1 open-source humanoid, the Party OS toolchain and a Humanoid Foundation Model. Gasgoo",
+        "**Five automaker and robotics executives (Changan, SAIC-GM, FAW, Galaxy General, FMC³) put the demand-side data requirements on the record at a Gasgoo panel: data stays on-premise, collection and training move to the edge, and datasets get defined by scenario with quality explicitly prioritized over volume.** Changan's deputy chief engineer: \"Define datasets by scenario, then use high-quality datasets to boost model capability.\" That is buyers writing our spec sheet for us. Gasgoo"
+      ]
+    },
+    {
       "date": "2026-07-15",
       "slug": "2026-07-15",
       "title": "Wednesday, July 15, 2026",
@@ -454,6 +464,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 109,
-  "updated_at": "2026-07-15T01:45:20Z"
+  "papers_count": 112,
+  "updated_at": "2026-07-16T08:32:50Z"
 }
