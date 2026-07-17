@@ -1854,6 +1854,30 @@ const PAPERS = [
     category: 'Annotation',
     why: 'NVIDIA puts numbers on how statistically weak robot evals are: a 90% success rate over 70 rollouts carries a 15.4-point confidence interval, and tightening it to 2 points takes roughly 1,030 rollouts. RoboLab-120 ships graded task scores, frame-level failure event logging and sensitivity analysis via posterior estimation. Graded scoring plus failure attribution is the exact QC language we sell, now standardized by the biggest vendor in the room.',
     tags: ['evaluation', 'benchmarking', 'Isaac Lab-Arena', 'statistical rigor', 'NVIDIA']
+  },
+  {
+    id: 'gigaworld-policy-05-2026',
+    dateAdded: '2026-07-17',
+    pubDate: '2026-07-15',
+    title: 'GigaWorld-Policy-0.5: A Faster and Stronger WAM Empowered by AutoResearch',
+    url: 'https://arxiv.org/abs/2607.13960',
+    source: 'arXiv 2607.13960',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'GigaAI gets world-action-model policies to 85 ms closed-loop inference on a single RTX 4090 by keeping future visual dynamics in training as dense supervision and decoding action-only at inference through a Mixture-of-Transformers. An agent-based AutoResearch pipeline searched the training configs instead of humans. The read for us: inference cost drops but the appetite for real paired video-action data does not, the supervision still has to come from somewhere.',
+    tags: ['world action model', 'edge inference', 'Mixture-of-Transformers', 'GigaAI', 'real-time control']
+  },
+  {
+    id: 'onboard-vlm-multi-agent-2026',
+    dateAdded: '2026-07-17',
+    pubDate: '2026-07-09',
+    title: 'Multi-Agent Robotic Control with Onboard Vision-Language Models',
+    url: 'https://arxiv.org/abs/2607.07403',
+    source: 'arXiv 2607.07403',
+    type: 'Research paper',
+    category: 'Embedded AI',
+    why: 'Back-fill from the July 10 brief. A multi-agent architecture running compact 3-20B VLMs fully on onboard hardware, no external compute, controlling a mobile manipulator across five warehouse task categories, with a Megamind orchestration agent patching the context limits of small models. Accepted at PAAMS 2026. Small clean datapoint that the policy keeps migrating onto the robot.',
+    tags: ['on-device VLM', 'multi-agent', 'edge compute', 'warehouse', 'PAAMS 2026']
   }
 ];
 
