@@ -1878,6 +1878,30 @@ const PAPERS = [
     category: 'Embedded AI',
     why: 'Back-fill from the July 10 brief. A multi-agent architecture running compact 3-20B VLMs fully on onboard hardware, no external compute, controlling a mobile manipulator across five warehouse task categories, with a Megamind orchestration agent patching the context limits of small models. Accepted at PAAMS 2026. Small clean datapoint that the policy keeps migrating onto the robot.',
     tags: ['on-device VLM', 'multi-agent', 'edge compute', 'warehouse', 'PAAMS 2026']
+  },
+  {
+    id: 'robottt-context-scaling-2026',
+    dateAdded: '2026-07-19',
+    pubDate: '2026-07-16',
+    title: 'RoboTTT: Context Scaling for Robot Policies',
+    url: 'https://arxiv.org/abs/2607.15275',
+    source: 'arXiv 2607.15275',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'NVIDIA GEAR (Jim Fan senior author, with Li Fei-Fei and Yuke Zhu) scales visuomotor context to 8K timesteps via test-time-training fast weights, three orders of magnitude past current policies, at flat inference latency. 87% over single-step baselines, and 8K-context pretraining beats 1K by 62%, so context length is a new scaling axis. The part that matters for us: one-shot in-context imitation directly from human video, which turns human demonstrations into a runtime input every deployed robot can consume, not just a pretraining corpus.',
+    tags: ['test-time training', 'context scaling', 'NVIDIA GEAR', 'human video', 'in-context imitation']
+  },
+  {
+    id: 'badwam-drift-attacks-2026',
+    dateAdded: '2026-07-19',
+    pubDate: '2026-07-16',
+    title: 'BadWAM: When World-Action Models Dream Right but Act Wrong',
+    url: 'https://arxiv.org/abs/2607.15207',
+    source: 'arXiv 2607.15207',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'NUS shows small visual perturbations can decouple what a world-action model imagines from what it executes: 96.5% task success drops to 43.1% under an action-only attack, and a stealth variant keeps the predicted future looking clean while the action goes wrong. Kills the assumption that checking the action against the dream is a safety net. Dream-versus-action consistency auditing is a validation job someone will have to sell.',
+    tags: ['world action model', 'adversarial attack', 'safety', 'evaluation', 'NUS']
   }
 ];
 

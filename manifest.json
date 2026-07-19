@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-07-19",
+      "slug": "2026-07-19",
+      "title": "Sunday, July 19, 2026",
+      "tldr": [
+        "**NVIDIA GEAR dropped RoboTTT, and it names a new scaling axis for robot policies: context length.** The Jim Fan, Li Fei-Fei and Yuke Zhu team scales visuomotor context to 8K timesteps, three orders of magnitude beyond current policies, with no added inference latency. What that unlocks is the headline for the data business: one-shot in-context imitation directly from human video demonstrations, on-the-fly policy improvement, and an 87% jump over single-step baselines on real-robot tasks. arXiv",
+        "**AGIBOT launched four products at WAIC and buried the real number in the deployment annex: its G2 robots were integrated into a live tablet production line at Longcheer in 36 hours, now running ~3,000 units per shift with downtime loss under 4%.** The launches: A3 Ultra full-size humanoid on NVIDIA Thor, X2 Edu, G2 Max heavy-payload, and the OmniHand 3 Ultra-M dexterous hand pitched explicitly for demonstration capture. Overseas business is already 30%+ of revenue. AGIBOT, Global Times",
+        "**China's humanoid output numbers went official at WAIC: ~20,000 units produced in 2025, 40,000+ in H1 2026 alone, 100,000+ expected for the full year.** And the chief scientist of the national humanoid innovation center said the quiet part on the record: \"In embodied intelligence, China is already ahead of the US in smart manufacturing, datasets and training grounds,\" with overseas research institutions now buying Chinese humanoids specifically for data collection. Global Times"
+      ]
+    },
+    {
       "date": "2026-07-17",
       "slug": "2026-07-17",
       "title": "Friday, July 17, 2026",
@@ -474,6 +484,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 114,
-  "updated_at": "2026-07-17T01:42:10Z"
+  "papers_count": 116,
+  "updated_at": "2026-07-19T01:42:22Z"
 }
