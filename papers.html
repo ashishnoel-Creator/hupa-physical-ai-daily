@@ -1902,6 +1902,78 @@ const PAPERS = [
     category: 'World model',
     why: 'NUS shows small visual perturbations can decouple what a world-action model imagines from what it executes: 96.5% task success drops to 43.1% under an action-only attack, and a stealth variant keeps the predicted future looking clean while the action goes wrong. Kills the assumption that checking the action against the dream is a safety net. Dream-versus-action consistency auditing is a validation job someone will have to sell.',
     tags: ['world action model', 'adversarial attack', 'safety', 'evaluation', 'NUS']
+  },
+  {
+    id: 'egohtr-terrain-4d-2026',
+    dateAdded: '2026-07-20',
+    pubDate: '2026-07-15',
+    title: 'EgoHTR: Egocentric 4D Demonstrations of Human Terrain Traversal',
+    url: 'https://arxiv.org/abs/2607.13472',
+    source: 'arXiv 2607.13472',
+    type: 'Dataset',
+    category: 'Collection',
+    why: 'ETH Zurich, Stanford, Berkeley and TUM open-source a capture pipeline that pairs egocentric wearables with a portable 3D scanner: 55 scene-aligned 4D human motion sequences, 150k+ frames of terrain traversal in complex environments, aimed at humanoid locomotion. The spec signal for anyone building rigs: ego video registered against scanned scene geometry at collection time, not annotation time, is becoming the expected deliverable for locomotion data.',
+    tags: ['egocentric', 'terrain traversal', '4D capture', 'humanoid locomotion', 'capture spec']
+  },
+  {
+    id: 'act2-preview-sunday-2026',
+    dateAdded: '2026-07-20',
+    pubDate: '2026-07-16',
+    title: 'ACT-2 Preview: Generalizing Reliability',
+    url: 'https://www.sunday.ai/blog/act-2-preview',
+    source: 'Sunday Robotics',
+    type: 'Research blog',
+    category: 'VLA',
+    why: 'Tony Zhao\'s Sunday Robotics claims the first model to unify broad generalization with high reliability: 99.1% success on 778 of 785 autonomous laundry folds in unseen homes, zero adaptation, and one fine-tuning demonstration teaches Memo a new behavior that generalizes. Task breadth is still one family, but nobody else has published a 785-rollout in-the-wild evaluation. The disclosure format, success rate with its denominator, is the QC standard the rest of the market now has to match.',
+    tags: ['home robots', 'reliability', 'evaluation', 'one-shot fine-tuning', 'Sunday Robotics']
+  },
+  {
+    id: 'hy-embodied-vlm-1-2026',
+    dateAdded: '2026-07-20',
+    pubDate: '2026-07-15',
+    title: 'Hy-Embodied-VLM-1.0',
+    url: 'https://huggingface.co/tencent/Hy-Embodied-VLM-1.0',
+    source: 'Tencent (Hugging Face)',
+    type: 'Open release',
+    category: 'Embedded AI',
+    why: 'Tencent releases a ~30B Mixture-of-Experts vision-language foundation model for embodied agents that activates only ~3B parameters per token. MoE routing as the way to fit embodied VLM reasoning into edge compute budgets, from the same stack that shipped 2,000+ hours of UMI data with HY-VLA. Open weights make it a candidate base for anyone building capture-side auto-annotation.',
+    tags: ['Tencent', 'MoE', 'embodied VLM', 'open weights', 'edge inference']
+  },
+  {
+    id: 'cosmos-3-edge-2026',
+    dateAdded: '2026-07-20',
+    pubDate: '2026-07-16',
+    title: 'Cosmos 3 Edge: 4B World Foundation Model for Jetson Thor',
+    url: 'https://blogs.nvidia.com/blog/jetson-thor-robotics-edge-ai-agent/',
+    source: 'NVIDIA',
+    type: 'Open release',
+    category: 'World model',
+    why: 'NVIDIA adds a 4B-parameter member to the Cosmos 3 world-foundation-model family, sized specifically for the Thor architecture and launched alongside the new Jetson T2000 (400 TFLOPS at 40W) and T3000 (865 TFLOPS at 70W) modules. A world model that runs on a 40W module prices WFM inference into mid-tier robots. The deployment-side answer to the WAM latency debate GigaWorld-Policy-0.5 opened.',
+    tags: ['NVIDIA', 'world model', 'edge compute', 'Jetson Thor', 'Cosmos']
+  },
+  {
+    id: 'let-body-follow-teleop-2026',
+    dateAdded: '2026-07-21',
+    pubDate: '2026-07-20',
+    title: 'Let the Body Follow: Coupled Egocentric Control for Whole-Body Robot Teleoperation',
+    url: 'https://arxiv.org/abs/2607.16095',
+    source: 'arXiv 2607.16095',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'Johns Hopkins work submitted to Humanoids 2026 that couples the operator\'s egocentric view to whole-body teleoperation, so the robot body follows where the head and hands lead. Teleop interfaces standardizing on the ego viewpoint validates head-mounted capture as the interface layer for control, not just for training data. Every ego rig spec decision gets easier when the same viewpoint drives both.',
+    tags: ['teleoperation', 'egocentric', 'whole-body control', 'humanoid']
+  },
+  {
+    id: 'minicpm-robot-2026',
+    dateAdded: '2026-07-21',
+    pubDate: '2026-07-20',
+    title: 'MiniCPM-Robot: On-Device Embodied AI Model Series (RobotManip 1.5B VLA + RobotTrack)',
+    url: 'https://github.com/OpenBMB/MiniCPM-Robot',
+    source: 'ModelBest / OpenBMB',
+    type: 'Open release',
+    category: 'Embedded AI',
+    why: 'ModelBest\'s WAIC release: a 1.5B vision-language-action model claiming one set of weights across all downstream manipulation tasks, plus an embodied target-tracking model. The proof point was a venue-guide agent on a Leju humanoid running fully offline on edge compute. A 1.5B VLA that ships usable moves the on-device conversation from paper specs to deployments, and it comes from the family with 38M cumulative downloads.',
+    tags: ['VLA', 'on-device', 'open source', 'ModelBest', 'edge compute']
   }
 ];
 

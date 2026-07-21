@@ -1,6 +1,26 @@
 {
   "days": [
     {
+      "date": "2026-07-21",
+      "slug": "2026-07-21",
+      "title": "Tuesday, July 21, 2026",
+      "tldr": [
+        "**RoboSense and GenRobot.AI signed a strategic partnership at WAIC to industrialize egocentric data collection, and the numbers GenRobot disclosed are the story: first-person human-action capture deployed across 10,000+ real-world settings with a cumulative pool of more than one million hours of human activity.** The deal pairs RoboSense's 3D sensing with GenRobot's stack covering capture, hand-pose reconstruction, 3D ground-truth annotation and standardized multimodal delivery. Gasgoo",
+        "**ModelBest open-released MiniCPM-Robot at WAIC: a 1.5B-parameter VLA (RobotManip) that claims to cover all downstream manipulation tasks with one set of weights, plus an embodied tracking model, with a live venue-guide agent on a Leju humanoid running entirely offline on the edge.** The MiniCPM family it extends has 38M cumulative downloads. Gasgoo, GitHub",
+        "**Xiaomi published its factory \"report card\": a humanoid ran 3 hours fully autonomous at a self-tapping nut loading station on a live auto line, 90.2% simultaneous bilateral installation success, inside the line's 76-second cycle time.** Dual-sided operation success at the station has climbed to 98%, one point behind human precision. Gasgoo, TechNode"
+      ]
+    },
+    {
+      "date": "2026-07-20",
+      "slug": "2026-07-20",
+      "title": "Monday, July 20, 2026",
+      "tldr": [
+        "**Sunday Robotics dropped ACT-2 Preview and the WAIC noise buried it: 99.1% autonomous success across 785 live laundry folds in real homes the robot had never seen, and a single fine-tuning demonstration teaches Memo a new behavior that generalizes.** Tony Zhao posted it Thursday, calling it the first robotics model to unify broad generalization with high reliability. The strongest reliability-in-the-wild claim any home robot has published, with the rollout count attached. Sunday Robotics, X",
+        "**Embodied AI robots entered high-end optical module manufacturing for the first time: PsiBot, fiber giant YOFC and Changzhi are running the full workflow, insertion, inspection, quality sorting and packaging, on PsiBot's Psi-R2 model with sub-millimeter positioning.** Estimated ~10% cut in production loss rates. After tablets (Longcheer, covered Saturday), precision optics is the second live production line China's embodied stack claimed this week. Gasgoo",
+        "**MagicLab signed an exclusive partnership with AliExpress's \"Brand+\" export program, and its MagicDog Pro quadrupeds are already live for immediate delivery in Japan, South Korea and the US.** Chinese embodied hardware now ships through a consumer e-commerce channel, not just OEM and integrator deals. Gasgoo calls it the first shot in embodied intelligence's global consumer expansion. Gasgoo"
+      ]
+    },
+    {
       "date": "2026-07-19",
       "slug": "2026-07-19",
       "title": "Sunday, July 19, 2026",
@@ -484,6 +504,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 116,
-  "updated_at": "2026-07-19T01:42:22Z"
+  "papers_count": 122,
+  "updated_at": "2026-07-21T10:42:55Z"
 }

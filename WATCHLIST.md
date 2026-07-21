@@ -2,6 +2,14 @@
 
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
+## 2026-07-20 (Monday)
+
+Browser X path failed again this run (extension connected, tab-group handshake timed out three times), so adds come from the fallback sweep:
+
+- **Lightwheel** (lightwheel.ai) — showed a four-component Physical AI data and evaluation stack at WAIC: SimFoundry (sim), EgoSuite (human ego behavior data), RoboFinals (standardized policy evaluation) and RoboStack (deployment), after booking $100M in Q1 orders. A human-ego-data product plus a third-party eval product inside one Real2Sim2Real loop is the closest public analogue to the capture-plus-validation pipeline this brief argues for. Add to §4-B as a standing sweep target (their blog + Gasgoo coverage). ([Gasgoo](https://autonews.gasgoo.com/articles/market-industry/waic-2026-lightwheel-demonstrates-physical-ai-infrastructure-2078079009186357249))
+- **PsiBot (灵初智能)** — its Psi-R2 embodied model is now running a full high-end optical module production workflow with YOFC and Changzhi, sub-millimeter positioning plus long-horizon planning, projected ~10% cut in production loss. First embodied entry into precision optics manufacturing. Add to the §4-B China company list. ([Gasgoo](https://autonews.gasgoo.com/articles/news/waic-2026-embodied-ai-robots-enter-high-end-optical-module-manufacturing-for-the-first-time-2078345564298125313))
+- **Sunday Robotics** (sunday.ai) — @tonyzzhao is already a monitored handle, but the company's release channel now matters independently: ACT-2 Preview shipped with a published 785-rollout in-the-wild evaluation, the most rigorous public reliability disclosure by any home robot maker. Add sunday.ai/blog to the §4-B lab-blog sweep. ([Sunday Robotics](https://www.sunday.ai/blog/act-2-preview))
+
 ## 2026-07-13 (Monday)
 
 Browser X path was down this run (Chrome connected, tab-group handshake timed out three times), so no handles were walked. Adds this Monday come from the fallback sweep:
