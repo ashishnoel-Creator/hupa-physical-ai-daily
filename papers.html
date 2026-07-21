@@ -1974,6 +1974,18 @@ const PAPERS = [
     category: 'Embedded AI',
     why: 'ModelBest\'s WAIC release: a 1.5B vision-language-action model claiming one set of weights across all downstream manipulation tasks, plus an embodied target-tracking model. The proof point was a venue-guide agent on a Leju humanoid running fully offline on edge compute. A 1.5B VLA that ships usable moves the on-device conversation from paper specs to deployments, and it comes from the family with 38M cumulative downloads.',
     tags: ['VLA', 'on-device', 'open source', 'ModelBest', 'edge compute']
+  },
+  {
+    id: 'chord-contact-wrench-2026',
+    dateAdded: '2026-07-21',
+    pubDate: '2026-06-22',
+    title: 'CHORD: Learning Dexterous Manipulation Using Contact Wrench Guidance From Human Demonstration',
+    url: 'https://arxiv.org/abs/2607.00033',
+    source: 'arXiv 2607.00033',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'NVIDIA (Xinghao Zhu, Yan Chang team), part of the Video to Data pipeline that turns human demonstration video into physics-grounded robot training data. The idea: represent human and robot motion by the forces and torques they induce on the object, so similarity lives in contact wrench space. 82.12% average success across 1,831 benchmark tasks, 90.77% on whole-body manipulation learned from hand-only and third-person demos, real-world transfer shown, plus a 4,739-task bimanual benchmark. Force as the supervision signal is the modality missing from every public ego corpus. Back-filled Jul 21: announced on X around Jul 1 while the browser path was down and the fallback sweep missed it.',
+    tags: ['dexterous manipulation', 'human video', 'NVIDIA', 'contact wrench', 'video-to-data']
   }
 ];
 
