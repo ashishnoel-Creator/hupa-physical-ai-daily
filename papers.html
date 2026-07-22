@@ -2034,6 +2034,90 @@ const PAPERS = [
     category: 'Embedded AI',
     why: 'One vision transformer, trained on 850M image-text pairs, serving both the driving stack and the Iron humanoid. Claimed numbers: TuringViT-18L at 3.04x the throughput of ByteDance Seed1.5-ViT and 2.16x SigLIP2-ViT-L at 1536x1536. An automaker amortizing one perception backbone across car and robot is the embodiment-agnostic bet showing up in silicon budgets.',
     tags: ['vision backbone', 'XPENG', 'humanoid', 'edge inference']
+  },
+  {
+    id: 'foundationgeo-metric-depth-2026',
+    dateAdded: '2026-07-22',
+    pubDate: '2026-07-13',
+    title: 'FoundationGeo: Learning Spatial Pixel-Wise Fields for Monocular Metric Geometry',
+    url: 'https://arxiv.org/abs/2607.11588',
+    source: 'arXiv 2607.11588',
+    type: 'Research paper',
+    category: 'Annotation',
+    why: 'HKU and DiDi Voyager. Two-stage monocular metric depth: a DINOv3-initialized affine-invariant geometry model trained on 10.2M curated samples, then lightweight pixel-wise scale and ray-direction calibration fields to recover metric scale. Metric depth is one of the labels we produce, so a foundation-grade estimator sets the accuracy bar our annotation pipeline has to clear. This is the estimation-layer research the press-driven sweep keeps missing.',
+    tags: ['depth', 'metric depth', 'monocular', 'annotation', 'estimation']
+  },
+  {
+    id: 'zipdepth-edge-depth-2026',
+    dateAdded: '2026-07-22',
+    pubDate: '2026-07-09',
+    title: 'ZipDepth: Lightweight Zero-Shot Monocular Depth Anywhere, on Any Device',
+    url: 'https://arxiv.org/abs/2607.08771',
+    source: 'arXiv 2607.08771',
+    type: 'Research paper',
+    category: 'Annotation',
+    why: 'University of Bologna. A 6.1M-parameter reparameterizable encoder-decoder distilled from a depth foundation model, real-time on edge and roughly 50x smaller than the foundation baselines. Edge-bound depth at capture time is the later-generation rig spec: depth computed on the head puck instead of labeled after the fact.',
+    tags: ['depth', 'edge inference', 'distillation', 'capture-time annotation']
+  },
+  {
+    id: 'vocadet-openvocab-seg-2026',
+    dateAdded: '2026-07-22',
+    pubDate: '2026-07-09',
+    title: 'VocaDet: Sample-Driven Open-Vocabulary Object Detection and Segmentation via Visual Tokenization and Vector Database Retrieval',
+    url: 'https://arxiv.org/abs/2607.08541',
+    source: 'arXiv 2607.08541',
+    type: 'Research paper',
+    category: 'Annotation',
+    why: 'Open-vocabulary detect-and-segment via visual tokens plus vector-DB retrieval, so new object classes are added by example with no retrain. Auto-labeling that scales to a new object taxonomy without a training cycle is the difference between a fixed label schema and one that grows with each buyer spec. Directly relevant to the automated-annotation pipelines we run (SAM 2 + Grounding DINO lineage).',
+    tags: ['segmentation', 'open-vocabulary', 'auto-labeling', 'annotation']
+  },
+  {
+    id: 'voca-codec-aware-odometry-2026',
+    dateAdded: '2026-07-22',
+    pubDate: '2026-07-01',
+    title: 'VOCA: Visual Odometry with Codec Awareness',
+    url: 'https://arxiv.org/abs/2607.00189',
+    source: 'arXiv 2607.00189',
+    type: 'Research paper',
+    category: 'Annotation',
+    why: 'Camera-pose and visual odometry made robust to lossy video compression artifacts. Ego capture is almost always compressed before it reaches the pipeline, so head and camera-pose estimation that survives codec loss is a direct capture-spec concern for us, not an academic one. Head-pose is a label we ship and this is the pose-estimation research the sweep normally misses.',
+    tags: ['camera pose', 'visual odometry', 'compression', 'head pose', 'estimation']
+  },
+  {
+    id: 'autospeed-annotation-free-2026',
+    dateAdded: '2026-07-22',
+    pubDate: '2026-07-01',
+    title: 'AutoSpeed: Annotation-Free Stage-Adaptive Motion Speed Learning',
+    url: 'https://arxiv.org/abs/2607.01051',
+    source: 'arXiv 2607.01051',
+    type: 'Research paper',
+    category: 'Annotation',
+    why: 'Learns manipulation motion speed with zero speed or stage annotation. Part of the window pattern of pushing manual labeling into the pipeline. The counter-read for a validation business: auto-curated data still needs someone to grade the curator, so removing a label upstream creates a QC job downstream.',
+    tags: ['annotation-free', 'manipulation', 'data curation', 'labeling']
+  },
+  {
+    id: 'simple-to-complex-vla-curation-2026',
+    dateAdded: '2026-07-22',
+    pubDate: '2026-07-06',
+    title: 'Simple-to-Complex Structured Demonstrations for Vision-Language-Action Learning',
+    url: 'https://arxiv.org/abs/2607.04591',
+    source: 'arXiv 2607.04591',
+    type: 'Research paper',
+    category: 'Annotation',
+    why: 'Curates VLA training data by decomposing demonstrations into skills and standardizing the environment rather than hand-labeling each clip. Demonstration curation as a method, not a manual service, is the direction our capture-plus-validation pipeline is built around.',
+    tags: ['data curation', 'VLA', 'demonstration', 'imitation learning']
+  },
+  {
+    id: 'prism-personalized-dataset-2026',
+    dateAdded: '2026-07-22',
+    pubDate: '2026-07-06',
+    title: 'PRISM: Personalized Robotic Dataset Generation via Image-based Scene and Motion Synthesis',
+    url: 'https://arxiv.org/abs/2607.04880',
+    source: 'arXiv 2607.04880',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'Synthesizes personalized robot datasets from images by generating scenes and motions. Synthetic dataset generation as a substitute for some real capture is a competitive vector worth tracking: it lowers the floor on generic data and raises the premium on the distribution-specific real capture that synthesis cannot fake.',
+    tags: ['synthetic data', 'dataset generation', 'collection', 'VLA']
   }
 ];
 
