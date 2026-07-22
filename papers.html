@@ -1986,6 +1986,54 @@ const PAPERS = [
     category: 'Collection',
     why: 'NVIDIA (Xinghao Zhu, Yan Chang team), part of the Video to Data pipeline that turns human demonstration video into physics-grounded robot training data. The idea: represent human and robot motion by the forces and torques they induce on the object, so similarity lives in contact wrench space. 82.12% average success across 1,831 benchmark tasks, 90.77% on whole-body manipulation learned from hand-only and third-person demos, real-world transfer shown, plus a 4,739-task bimanual benchmark. Force as the supervision signal is the modality missing from every public ego corpus. Back-filled Jul 21: announced on X around Jul 1 while the browser path was down and the fallback sweep missed it.',
     tags: ['dexterous manipulation', 'human video', 'NVIDIA', 'contact wrench', 'video-to-data']
+  },
+  {
+    id: 'xiaomi-robotics-1-2026',
+    dateAdded: '2026-07-22',
+    pubDate: '2026-07-16',
+    title: 'Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories',
+    url: 'https://arxiv.org/abs/2607.15330',
+    source: 'arXiv 2607.15330',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'The largest publicly described real-world manipulation corpus on record: 100K+ hours of trajectories collected with UMI handheld grippers, feeding a generalist VLA that claims out-of-the-box mobile manipulation in unseen homes. The read for us is the collection method. Commodity handheld capture plus large human data ops beat teleop cells to the biggest disclosed corpus, and nothing in the paper says what fraction of collected hours survived curation. Same Xiaomi that published the factory takt-time report card last week.',
+    tags: ['VLA', 'UMI', 'data scale', 'Xiaomi', 'mobile manipulation']
+  },
+  {
+    id: 'open-vocab-shared-autonomy-2026',
+    dateAdded: '2026-07-22',
+    pubDate: '2026-07-19',
+    title: 'From Perception to Assistance: Open-Vocabulary Shared Autonomy for Robotic Manipulation',
+    url: 'https://arxiv.org/abs/2607.17323',
+    source: 'arXiv 2607.17323',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'Wearable-free teleoperation from USP Sao Carlos and Tohoku: one RGB-D camera tracks the operator arm and hand, a VLM grounds the target from a text prompt, GPU MPC executes with collision avoidance. No exoskeleton, no calibration step. Every paper like this drops the cost per demonstrator for teleop capture, which is the curve capture operations live or die on.',
+    tags: ['teleoperation', 'shared autonomy', 'VLM grounding', 'capture cost']
+  },
+  {
+    id: 'ac-vla-compositional-ood-2026',
+    dateAdded: '2026-07-22',
+    pubDate: '2026-07-17',
+    title: 'AC-VLA: Robust Out-of-Distribution Action Execution via Compositional Learning',
+    url: 'https://arxiv.org/abs/2607.15714',
+    source: 'arXiv 2607.15714',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Shenzhen Technology University work on keeping VLA action execution stable out of distribution via compositional learning. Matters to the validation side of the house: OOD failure taxonomy is exactly what QC and annotation pipelines get paid to label, and methods papers that formalize the taxonomy feed the grading spec directly.',
+    tags: ['VLA', 'out-of-distribution', 'compositional learning', 'QC']
+  },
+  {
+    id: 'turingvit-xpeng-2026',
+    dateAdded: '2026-07-22',
+    pubDate: '2026-07-21',
+    title: 'TuringViT: XPENG vision backbone shared across smart driving and the Iron humanoid',
+    url: 'https://technode.com/2026/07/21/xpeng-releases-turingvit-for-smart-driving-and-humanoid-robots/',
+    source: 'XPENG',
+    type: 'Technical writeup',
+    category: 'Embedded AI',
+    why: 'One vision transformer, trained on 850M image-text pairs, serving both the driving stack and the Iron humanoid. Claimed numbers: TuringViT-18L at 3.04x the throughput of ByteDance Seed1.5-ViT and 2.16x SigLIP2-ViT-L at 1536x1536. An automaker amortizing one perception backbone across car and robot is the embodiment-agnostic bet showing up in silicon budgets.',
+    tags: ['vision backbone', 'XPENG', 'humanoid', 'edge inference']
   }
 ];
 

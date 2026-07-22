@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-07-22",
+      "slug": "2026-07-22",
+      "title": "Wednesday, July 22, 2026",
+      "tldr": [
+        "**Xiaomi published Xiaomi-Robotics-1, a foundation VLA trained on more than 100K hours of real-world manipulation trajectories collected with UMI handheld grippers, and that corpus is the largest publicly described real-world manipulation dataset anywhere.** Out-of-the-box mobile manipulation in unseen environments, and the collection rig was commodity handheld hardware, not teleop cells. arXiv",
+        "**UBTech signed an MoU with Korea's Duksan JM Robotics and AJIN Industrial to put Cruzr Y1 and Walker S2 humanoids on Korea's first auto-parts production line for humanoids, POC launching at AJIN's Manufacturing Innovation Factory in August.** A Chinese humanoid maker's first beachhead in Korean auto manufacturing. Gasgoo",
+        "**Catch-up the WAIC noise buried: Mercor is in talks to raise $500M at a $20B valuation, double its price from ten months ago, on a disclosed $2B gross annualized run-rate, and it bought RL-environments startup Deeptune the same week.** The close was expected within the month, so the print could land any day. Forbes"
+      ]
+    },
+    {
       "date": "2026-07-21",
       "slug": "2026-07-21",
       "title": "Tuesday, July 21, 2026",
@@ -504,6 +514,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 123,
-  "updated_at": "2026-07-21T13:53:56Z"
+  "papers_count": 127,
+  "updated_at": "2026-07-22T03:09:56Z"
 }
