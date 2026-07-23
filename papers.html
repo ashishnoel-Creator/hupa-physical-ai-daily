@@ -2118,6 +2118,66 @@ const PAPERS = [
     category: 'Collection',
     why: 'Synthesizes personalized robot datasets from images by generating scenes and motions. Synthetic dataset generation as a substitute for some real capture is a competitive vector worth tracking: it lowers the floor on generic data and raises the premium on the distribution-specific real capture that synthesis cannot fake.',
     tags: ['synthetic data', 'dataset generation', 'collection', 'VLA']
+  },
+  {
+    id: 'taco-tactile-world-model-2026',
+    dateAdded: '2026-07-23',
+    pubDate: '2026-07-02',
+    title: 'TACO: TActile World Model as a Self-COrrector for Scalable VLA Post-Training',
+    url: 'https://arxiv.org/abs/2607.02840',
+    source: 'arXiv 2607.02840',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Uses a tactile world model to self-correct VLA policies during post-training, catching contact-rich failures via predicted touch instead of a human grader. Touch keeps moving from sensor demo to training-loop infrastructure. Every step in that direction adds a modality the capture spec eventually has to carry.',
+    tags: ['tactile', 'world model', 'VLA', 'post-training']
+  },
+  {
+    id: 'cortex-bidirectional-agent-2026',
+    dateAdded: '2026-07-23',
+    pubDate: '2026-07-06',
+    title: 'Cortex: A Bidirectionally Aligned Embodied Agent Framework for Long-horizon Manipulation',
+    url: 'https://arxiv.org/abs/2607.05377',
+    source: 'arXiv 2607.05377',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Aligns high-level agentic planning and low-level control in both directions for long-horizon manipulation. Long-horizon is where demonstration data gets expensive, so frameworks that stretch further per demo bend the data economics every buyer prices against.',
+    tags: ['long-horizon', 'embodied agent', 'manipulation', 'planning']
+  },
+  {
+    id: 'abot-m05-wam-2026',
+    dateAdded: '2026-07-23',
+    pubDate: '2026-07-01',
+    title: 'ABot-M0.5: Unified Mobility-and-Manipulation World Action Model',
+    url: 'https://arxiv.org/abs/2607.00678',
+    source: 'arXiv 2607.00678',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'A world action model unifying navigation and manipulation through alignment at three levels: temporal granularity, action space, and train-test consistency. The mobility-plus-manipulation merge is the same direction Xiaomi-Robotics-1 claims, arriving from the world-model side instead of the data-scale side.',
+    tags: ['world action model', 'mobile manipulation', 'navigation', 'alignment']
+  },
+  {
+    id: 'qwen-vla-unified-2026',
+    dateAdded: '2026-07-23',
+    pubDate: '2026-05-28',
+    title: 'Qwen-VLA: Unifying Vision-Language-Action Modeling across Tasks, Environments, and Robot Embodiments',
+    url: 'https://arxiv.org/abs/2605.30280',
+    source: 'arXiv 2605.30280',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Alibaba Qwen trains a single VLA jointly on robot trajectories, human egocentric demonstrations, simulation, navigation and auxiliary vision-language data. Human ego demonstrations named as a first-class pretraining source inside a top-tier lab stack is the demand signal for exactly the product we ship. Back-filled after trending on Hugging Face.',
+    tags: ['VLA', 'egocentric', 'cross-embodiment', 'pretraining']
+  },
+  {
+    id: 'world-vla-loop-2026',
+    dateAdded: '2026-07-23',
+    pubDate: '2026-02-06',
+    title: 'World-VLA-Loop: Closed-Loop Learning of Video World Model and VLA Policy',
+    url: 'https://arxiv.org/abs/2602.06508',
+    source: 'arXiv 2602.06508',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'Jointly refines an action-conditioned video world model and the VLA policy in a closed loop, using the world model as a virtual environment to dodge expensive real-world RL rollouts. The cheaper virtual rollouts get, the more residual value concentrates in the real-world data that grounds the world model. Back-filled while trending on Hugging Face this week.',
+    tags: ['world model', 'VLA', 'closed-loop', 'reinforcement learning']
   }
 ];
 

@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-07-23",
+      "slug": "2026-07-23",
+      "title": "Thursday, July 23, 2026",
+      "tldr": [
+        "**Anthropic held acquisition talks with Physical Intelligence this spring, per The Information, a fact that surfaced only after a Robert Scoble post set off a weekend rumor cycle that PI's CEO had to deny in a company Slack.** No deal is happening now, but a frontier LLM lab getting close to buying the leading robot-foundation-model startup is the clearest sign yet that the model labs consider Physical AI a must-own layer. TechCrunch",
+        "**Tesla's Q2 call printed the Optimus checkpoint this column flagged: still zero verified production units, first-generation lines now being installed at Fremont, and Musk said the initial robots will be used for training data collection and functionality development, not customer deployment.** The world's most-watched humanoid program described itself as a data collection operation first. Shacknews, Benzinga",
+        "**UK-based Humanoid closed a $152M Series A at a $1.35B post-money, Europe's first pure-play humanoid unicorn, led by Prime Movers Lab with Schaeffler and Bosch on the cap table.** The round funds the Schaeffler agreement covering a four-digit number of wheeled units across global facilities by 2032, first systems live in Germany before end of 2026. The Robot Report, Forbes"
+      ]
+    },
+    {
       "date": "2026-07-22",
       "slug": "2026-07-22",
       "title": "Wednesday, July 22, 2026",
@@ -514,6 +524,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 134,
-  "updated_at": "2026-07-22T11:25:13Z"
+  "papers_count": 139,
+  "updated_at": "2026-07-23T01:48:48Z"
 }
