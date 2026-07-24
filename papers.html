@@ -2178,6 +2178,54 @@ const PAPERS = [
     category: 'World model',
     why: 'Jointly refines an action-conditioned video world model and the VLA policy in a closed loop, using the world model as a virtual environment to dodge expensive real-world RL rollouts. The cheaper virtual rollouts get, the more residual value concentrates in the real-world data that grounds the world model. Back-filled while trending on Hugging Face this week.',
     tags: ['world model', 'VLA', 'closed-loop', 'reinforcement learning']
+  },
+  {
+    id: 'egorecovery-failure-recovery-2026',
+    dateAdded: '2026-07-24',
+    pubDate: '2026-07-22',
+    title: 'EgoRecovery: Acquiring Failure Recovery Ability Through Human Recovery Demonstration',
+    url: 'https://arxiv.org/abs/2607.19745',
+    source: 'arXiv 2607.19745',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'By arranging task-level failure configurations and recording short human recovery segments, operators generate 10x more valid recovery data per hour than robot teleoperation. Recovery demos are the clips QC pipelines usually reject as failed takes. This paper says they are a product, and a capture spec that tags failure-and-recovery segments instead of discarding them just became more valuable.',
+    tags: ['failure recovery', 'human demonstration', 'data economics', 'collection']
+  },
+  {
+    id: 'mevion-dual-arm-capture-2026',
+    dateAdded: '2026-07-24',
+    pubDate: '2026-07-21',
+    title: 'MEVION: Low-Cost Open-Source Data Collection System for Powerful and High-Speed Dual-Arm Manipulation',
+    url: 'https://arxiv.org/abs/2607.17970',
+    source: 'arXiv 2607.17970',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'Open hardware for dual-arm capture at speed and force levels handheld grippers do not reach. Another entry in the cheap-capture lineage from UMI to Xiaomi 100K hours. The rig keeps getting cheaper and more open, which moves differentiation to operations and validation, where it already was.',
+    tags: ['capture hardware', 'dual-arm', 'open source', 'teleoperation']
+  },
+  {
+    id: 't-rex-tactile-reactive-2026',
+    dateAdded: '2026-07-24',
+    pubDate: '2026-06-19',
+    title: 'T-Rex: Tactile-Reactive Dexterous Manipulation',
+    url: 'https://arxiv.org/abs/2606.17055',
+    source: 'arXiv 2606.17055',
+    type: 'Open release',
+    category: 'VLA',
+    why: 'Mixture-of-Transformer-Experts VLA splitting low-frequency visuomotor planning from high-frequency tactile refinement, beating tactile-aware baselines by 30% average across 12 real tasks. Ships a fully open 100-hour tactile-synchronized dataset with 7,700+ trajectories and 200+ objects, with human-video pretraining in the recipe. Tactile-synchronized capture keeps moving from exotic to expected. Back-filled via catch-up sweep.',
+    tags: ['tactile', 'dexterous manipulation', 'open dataset', 'VLA']
+  },
+  {
+    id: 'unidex-dexterous-suite-2026',
+    dateAdded: '2026-07-24',
+    pubDate: '2026-03-23',
+    title: 'UniDex: A Robot Foundation Suite for Universal Dexterous Hand Control from Egocentric Human Videos',
+    url: 'https://arxiv.org/abs/2603.22264',
+    source: 'arXiv 2603.22264',
+    type: 'Open release',
+    category: 'VLA',
+    why: 'Pipeline from egocentric human videos to 10M paired image-pointcloud-action frames and 50K+ trajectories across eight dexterous hands (6 to 24 DoFs), unified through a Function-Actuator-Aligned action space with one VLA policy controlling all of them. Fully open-sourced, CVPR 2026. The strongest version yet of the argument that human ego capture amortizes across robot platforms. Back-filled via catch-up sweep.',
+    tags: ['egocentric', 'dexterous hands', 'cross-embodiment', 'open dataset']
   }
 ];
 

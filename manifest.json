@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-07-24",
+      "slug": "2026-07-24",
+      "title": "Friday, July 24, 2026",
+      "tldr": [
+        "**Travis Kalanick's Atoms closed a $1.7B round led by a16z, with Ben Horowitz taking a board seat and Uber, the company that pushed Kalanick out in 2017, joining as an investor.** Atoms is pitched as three connected robotics businesses (Food, Mining, Transport) and framed as a \"Wheelbase for robots.\" TechCrunch",
+        "**China approved its first national standard project for humanoid robot dataset quality evaluation, drafted by the Beijing Machinery Industry Automation Research Institute and UBTech under SAC/TC591.** Data quality for robot training is about to become definable, measurable and reviewable by national standard, covering dataset selection, quality grading, third-party evaluation and acceptance. Gasgoo",
+        "**Ti5 Robot and Siemens signed a project agreement to build a benchmark factory for embodied intelligence, spanning lights-out factory construction, a joint lab for lightweight joints, and co-developed industry standards.** Siemens keeps stacking humanoid bets: this lands months after its Humanoid-NVIDIA factory deployment. Gasgoo"
+      ]
+    },
+    {
       "date": "2026-07-23",
       "slug": "2026-07-23",
       "title": "Thursday, July 23, 2026",
@@ -524,6 +534,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 139,
-  "updated_at": "2026-07-23T01:48:48Z"
+  "papers_count": 143,
+  "updated_at": "2026-07-24T01:48:48Z"
 }
