@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-07-25",
+      "slug": "2026-07-25",
+      "title": "Saturday, July 25, 2026",
+      "tldr": [
+        "**Singapore's Ropedia closed a $22M pre-Series A ($30M total pre-A) to mass-produce HOMIE, its head-mounted egocentric capture rig, and scale collection across Southeast Asia and North America toward a 10,000-device fleet.** The first well-funded pure-play in the wearable ego-capture lane, and it is being built 3,000 km from Bengaluru. TNGlobal, The Robot Report",
+        "**Open-AoE (arXiv 2607.14183, submitted July 15) released ~2,000 hours of egocentric manipulation video captured on 400+ ordinary smartphones by 500+ contributors, with a full open toolchain from raw capture to training-ready samples.** Crowd-sourced phone capture with automated annotation just became a public baseline every paid capture operation gets compared against. arXiv",
+        "**Catch-up the sweep had missed: Mistral entered robotics on July 8 with Robostral Navigate, an 8B model that navigates a robot through complex spaces from a single RGB camera and a language instruction, hitting 76.6% success on R2R-CE unseen environments.** A European frontier LLM lab picking embodied navigation as its first robotics product, and doing it sensor-minimal. Mistral"
+      ]
+    },
+    {
       "date": "2026-07-24",
       "slug": "2026-07-24",
       "title": "Friday, July 24, 2026",
@@ -534,6 +544,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 143,
-  "updated_at": "2026-07-24T01:48:48Z"
+  "papers_count": 146,
+  "updated_at": "2026-07-25T02:20:55Z"
 }

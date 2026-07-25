@@ -2226,6 +2226,42 @@ const PAPERS = [
     category: 'VLA',
     why: 'Pipeline from egocentric human videos to 10M paired image-pointcloud-action frames and 50K+ trajectories across eight dexterous hands (6 to 24 DoFs), unified through a Function-Actuator-Aligned action space with one VLA policy controlling all of them. Fully open-sourced, CVPR 2026. The strongest version yet of the argument that human ego capture amortizes across robot platforms. Back-filled via catch-up sweep.',
     tags: ['egocentric', 'dexterous hands', 'cross-embodiment', 'open dataset']
+  },
+  {
+    id: 'open-aoe-ego-manip-2026',
+    dateAdded: '2026-07-25',
+    pubDate: '2026-07-15',
+    title: 'Open-AoE: An Open Egocentric Manipulation Dataset and Toolchain for Embodied Learning',
+    url: 'https://arxiv.org/abs/2607.14183',
+    source: 'arXiv 2607.14183',
+    type: 'Dataset',
+    category: 'Collection',
+    why: 'Roughly 2,000 hours of egocentric manipulation video captured on 400+ ordinary smartphones by 500+ contributors across 400+ scenes and 8,000+ tasks, released open with MANO hand poses, camera trajectories and atomic-action annotations. The toolchain automates segmentation, semantic annotation, hand reconstruction and trajectory reconstruction. Free phone capture just became the public baseline every paid capture op gets compared against, which pushes the sellable product toward sensor completeness and validated delivery.',
+    tags: ['egocentric', 'smartphone capture', 'open dataset', 'auto-annotation']
+  },
+  {
+    id: 'humannet-1m-hours-2026',
+    dateAdded: '2026-07-25',
+    pubDate: '2026-05-07',
+    title: 'HumanNet: Scaling Human-centric Video Learning to One Million Hours',
+    url: 'https://arxiv.org/abs/2605.06747',
+    source: 'arXiv 2605.06747',
+    type: 'Dataset',
+    category: 'Collection',
+    why: 'PKU DAGroup one-million-hour human-centric video corpus, first and third person, with interaction-centric annotations (captions, motion descriptions, hand and body signals). The number that matters: 1,000 hours of its egocentric video matches or beats 100 hours of real-robot data on validation loss. A stated 10:1 substitution rate for human ego video against robot data, the strongest public number yet for the human-capture thesis. Back-filled via catch-up sweep.',
+    tags: ['egocentric', 'human video', 'scaling', 'robot transfer']
+  },
+  {
+    id: 'robostral-navigate-2026',
+    dateAdded: '2026-07-25',
+    pubDate: '2026-07-08',
+    title: 'Robostral Navigate: Single-Camera Embodied Navigation at 8B Parameters',
+    url: 'https://mistral.ai/news/robostral-navigate/',
+    source: 'Mistral AI',
+    type: 'Research blog',
+    category: 'Embedded AI',
+    why: 'Mistral entering robotics: an 8B vision-language model that navigates from one RGB frame plus a language instruction, 76.6% success on R2R-CE unseen environments, 9.7 points over the best single-camera prior and 4.5 over multi-sensor systems. Sim-trained on 400K trajectories with online RL, generalizes across wheeled, legged and flying platforms. A fourth frontier-lab bloc enters embodied AI, pitching sensor deletion. Back-filled via catch-up sweep.',
+    tags: ['navigation', 'edge inference', 'sensor-minimal', 'frontier lab']
   }
 ];
 
