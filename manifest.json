@@ -1,6 +1,26 @@
 {
   "days": [
     {
+      "date": "2026-07-30",
+      "slug": "2026-07-30",
+      "title": "Thursday, July 30, 2026",
+      "tldr": [
+        "**The FCC banned imports of new Chinese-made humanoid and quadruped robots on July 28, citing supply chain and cybersecurity risk, and China's foreign ministry fired back within a day.** The ban is not retroactive, but it lands on a market where Unitree holds roughly a fifth of global humanoid share and Unitree plus AgiBot shipped over 10,000 of the ~15,000 humanoids sold worldwide in 2025. TechCrunch, CNN",
+        "**BeingBeyond released Being-H0.8 on July 28, the first embodied model to pull tactile modalities into large-scale pre-training, using TactoHand to pseudo-label touch signals across 500,000+ hours of ordinary human video at near-zero marginal cost.** If touch can be inferred from plain video at usable fidelity, the capture-rig sensor debate moves again toward what ground truth you verify against. Gasgoo",
+        "**Delta Intelligence closed an Angel++ round of nearly RMB 500M, its sixth round in six months, and launched Delta D1, a head-mounted whole-body panoramic ego capture rig, in the same breath.** The cap table is the story: humanoid OEMs AgiBot, Leju and Galaxea AI are all investors, which means the robot makers are now funding their own data-capture supply chain. Gasgoo"
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "slug": "2026-07-28",
+      "title": "Tuesday, July 28, 2026",
+      "tldr": [
+        "**AgiBot formally started its Hong Kong IPO process on July 24, hiring CITIC Securities, CICC and Morgan Stanley as joint sponsors, targeting a HK$40-50B (~$5.1-6.4B) valuation on 15,000 robots shipped through June.** The first of the new crop of Chinese embodied-AI startups to go for a public listing, and it is racing Unitree to the window. TechNode",
+        "**Gasgoo's post-WAIC survey of 20+ Chinese data-collection vendors put hard numbers on the embodied-data shortage: roughly 500,000 hours of high-quality interaction data exist globally against a ~10M-hour entry bar for general embodied models, a gap above 99%.** AgiBot's Maoqing Yao says physical-AI data is 1/20,000th of what LLMs trained on. The clearest public sizing yet of the market we sell into. Gasgoo",
+        "**Hyundai completed its full buyout of Boston Dynamics, paying SoftBank ~$325M for its stake at a ~$3.3B valuation, the same day 35,000 Ulsan workers escalated a strike demanding veto power over Atlas on Korean production lines.** Full ownership plus organized labor pushing back on humanoid deployment, in one news cycle. TechTimes"
+      ]
+    },
+    {
       "date": "2026-07-25",
       "slug": "2026-07-25",
       "title": "Saturday, July 25, 2026",
@@ -544,6 +564,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 146,
-  "updated_at": "2026-07-25T02:20:55Z"
+  "papers_count": 160,
+  "updated_at": "2026-07-30T01:46:37Z"
 }
