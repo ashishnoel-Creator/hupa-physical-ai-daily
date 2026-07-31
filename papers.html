@@ -2430,6 +2430,78 @@ const PAPERS = [
     category: 'Annotation',
     why: 'Parallel physical evaluation of manipulation policies on a farm of low-cost arms, with data on Hugging Face. Cheap parallelized real-world eval is the missing acceptance-testing infrastructure for the whole data market. Every step it takes makes validated delivery more checkable, which is the bar we sell against.',
     tags: ['evaluation', 'benchmark', 'acceptance testing', 'arm farm']
+  },
+  {
+    id: 'gemini-robotics-2-2026',
+    dateAdded: '2026-07-31',
+    pubDate: '2026-07-30',
+    title: 'Gemini Robotics 2: Whole-Body Intelligence for Robots (VLA + ER 2 + On-Device 2)',
+    url: 'https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/',
+    source: 'Google DeepMind',
+    type: 'Open release',
+    category: 'VLA',
+    why: 'First DeepMind model to control a full humanoid feet to fingertips under one learned policy, one checkpoint across Apollo 2 with two different hands and a Franka Duo. The number that matters for us is in the on-device model: adaptation to a completely new bi-arm embodiment in a few hours with typically under 200 examples. When 200 demos onboard a robot, every single demo has to be right, which is a validation argument not a volume argument. They also published the failure numbers: multi-finger dexterity sits at 32-44% on the hard tasks.',
+    tags: ['whole-body control', 'humanoid', 'on-device', 'embodiment adaptation', 'multi-robot']
+  },
+  {
+    id: 'asimov-agentic-2026',
+    dateAdded: '2026-07-31',
+    pubDate: '2026-07-30',
+    title: 'ASIMOV-Agentic: Benchmark for Agentic Safety Orchestration and Uncertainty Resolution',
+    url: 'https://huggingface.co/datasets/google/asimov_agentic/blob/main/README.md',
+    source: 'Google DeepMind',
+    type: 'Dataset',
+    category: 'Governance',
+    why: 'Measures whether an embodied reasoning agent refuses unsafe tool calls from a VLA, predicts task feasibility, and asks for human help when uncertain. Safety benchmarks are acceptance tests by another name. The dimensions a frontier lab formalizes here are the dimensions buyers will eventually demand proof against, in data delivery and in deployment.',
+    tags: ['safety', 'benchmark', 'agentic', 'acceptance testing']
+  },
+  {
+    id: 'pi-r2-reactive-flow-2026',
+    dateAdded: '2026-07-31',
+    pubDate: '2026-07-28',
+    title: 'πR²: Reactive Real-time Flow Policies',
+    url: 'https://arxiv.org/abs/2607.26055',
+    source: 'arXiv 2607.26055',
+    type: 'Research paper',
+    category: 'Embedded AI',
+    why: 'Makes big-backbone action-chunking policies reactive: fine-tuned onto GR00T-N1.7 on a real xArm6, it replans closed-loop about 4x faster than the base policy, roughly 25Hz on a single A5000, acting on a fresh observation every 40ms, with up to +30% real-world success. Large VLAs hitting control-loop rates on commodity GPUs is the unlock the edge deployment stack has been waiting on.',
+    tags: ['real-time', 'flow policy', 'GR00T', 'edge inference']
+  },
+  {
+    id: 's2a2-audio-visual-2026',
+    dateAdded: '2026-07-31',
+    pubDate: '2026-07-28',
+    title: 'S2A2: Audio-Visual Imitation Learning for Manipulation Tasks Using Acoustic Spatial Information',
+    url: 'https://arxiv.org/abs/2607.26047',
+    source: 'arXiv 2607.26047',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'Introduces manipulation tasks where the robot must localize and identify sound sources to act, fusing spatial audio with vision across ACT, Diffusion Policy, VQ-BeT and pi-0. Audio has been the throwaway channel on capture rigs. If policies start consuming spatial sound, mic placement and audio sync become spec lines, and our rig already carries a mic.',
+    tags: ['audio', 'multimodal', 'imitation learning', 'capture spec']
+  },
+  {
+    id: 'transformer-transformer-codesign-2026',
+    dateAdded: '2026-07-31',
+    pubDate: '2026-07-28',
+    title: 'Transformer Transformer: A Unified Model for Motion-Conditioned Robot Co-design',
+    url: 'https://arxiv.org/abs/2607.25798',
+    source: 'arXiv 2607.25798',
+    type: 'Research paper',
+    category: 'Humanoid',
+    why: 'Stanford (Ha, Liu, Song) generates complete robot designs conditioned on target motions from human demonstrations, one diffusion transformer over RoboTokens spanning wheeled bimanual, quadruped and humanoid design spaces. They fabricated an optimized ALOHA that cut tracking error by over 70%. Robot morphology becoming a learned output of human motion data is a new consumer of ego capture nobody prices yet.',
+    tags: ['co-design', 'diffusion transformer', 'embodiment', 'human demonstrations']
+  },
+  {
+    id: 'kai-kinematic-interface-2026',
+    dateAdded: '2026-07-31',
+    pubDate: '2026-07-27',
+    title: 'KAI: A Kinematic-Aware Interface for Data-Efficient Articulated Object Manipulation',
+    url: 'https://arxiv.org/abs/2607.24493',
+    source: 'arXiv 2607.24493',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Shanghai AI Lab hits 82.9% average success across six tasks using half the demonstration data by injecting a kinematic-structure prior, and co-trains on human interaction videos to hold over 70% success under heavy visual distraction. The demo count keeps shrinking and human video keeps substituting for robot data, both of which raise the value per captured example.',
+    tags: ['data efficiency', 'articulated objects', 'human video', 'sample efficiency']
   }
 ];
 
