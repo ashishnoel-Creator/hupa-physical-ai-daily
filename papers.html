@@ -2502,6 +2502,90 @@ const PAPERS = [
     category: 'VLA',
     why: 'Shanghai AI Lab hits 82.9% average success across six tasks using half the demonstration data by injecting a kinematic-structure prior, and co-trains on human interaction videos to hold over 70% success under heavy visual distraction. The demo count keeps shrinking and human video keeps substituting for robot data, both of which raise the value per captured example.',
     tags: ['data efficiency', 'articulated objects', 'human video', 'sample efficiency']
+  },
+  {
+    id: 'checkvla-runtime-verification-2026',
+    dateAdded: '2026-08-01',
+    pubDate: '2026-07-29',
+    title: 'CheckVLA: Execution-Time Verification with Action-Conditioned World Model for Long-Horizon Mobile Manipulation',
+    url: 'https://arxiv.org/abs/2607.26789',
+    source: 'arXiv 2607.26789',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'A frozen action-conditioned world model runs alongside the VLA and flags divergence as it happens: 77.9% timely failure recall at a 5% false-alarm budget, against 48.6% for observation-only watching, and it lifts RoboCasa365 success from 27.6% to 36.1%. Runtime verification with published recall numbers is acceptance-testing infrastructure. Every piece of it that matures makes validated delivery more checkable.',
+    tags: ['verification', 'world model', 'runtime QC', 'failure detection']
+  },
+  {
+    id: 'dexdirect-kinesthetic-collection-2026',
+    dateAdded: '2026-08-01',
+    pubDate: '2026-07-30',
+    title: 'DexDirect: Direct Kinesthetic Arm Guidance for Efficient Dexterous Demonstration Collection',
+    url: 'https://arxiv.org/abs/2607.27784',
+    source: 'arXiv 2607.27784',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'UCLA RoMeLa (Dennis Hong) has operators physically guide the robot arm for dexterous demo collection instead of teleoperating through a leader rig. Every drop in collection-rig complexity lowers the capital cost of a demonstration and moves the differentiator to how well the session is run and checked, which is an operations argument.',
+    tags: ['kinesthetic teaching', 'demo collection', 'dexterous', 'collection economics']
+  },
+  {
+    id: 'cfnbc-counterfactual-coverage-2026',
+    dateAdded: '2026-08-01',
+    pubDate: '2026-07-30',
+    title: "It's Not Just More Demos: Counterfactual Action Sensitivity Coverage for Data-Efficient Robust Robot Imitation",
+    url: 'https://arxiv.org/abs/2607.27261',
+    source: 'arXiv 2607.27261',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'RSS 2026 Data-Centric Robotics workshop paper that ranks which additional demonstrations actually repair a specific brittle policy, via offline counterfactual data selection. Papers that tell buyers which demos to order next turn collection from a volume business into a spec-driven one. This is the direction our validation pricing depends on.',
+    tags: ['data selection', 'robustness', 'imitation learning', 'collection spec']
+  },
+  {
+    id: 'barx-behavior-aligned-2026',
+    dateAdded: '2026-08-01',
+    pubDate: '2026-07-30',
+    title: 'Cross-Embodiment Transfer via Behavior-Aligned Representations',
+    url: 'https://arxiv.org/abs/2607.27549',
+    source: 'arXiv 2607.27549',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Stanford (Sadigh group) benchmarks whether embodiment-invariant intermediate representations, object boxes, language motions and end-effector traces, actually buy cross-embodiment transfer in VLAs. Behavior-aligned representations are annotation products. If they are the currency of transfer, the annotation payload on every dataset grows again.',
+    tags: ['cross-embodiment', 'representations', 'benchmark', 'annotation payload']
+  },
+  {
+    id: 'redflow-failure-corrections-2026',
+    dateAdded: '2026-08-01',
+    pubDate: '2026-07-30',
+    title: 'RedFlow: Redirect Failure into Action-Level Corrections for Flow-matching VLA Policy',
+    url: 'https://arxiv.org/abs/2607.27782',
+    source: 'arXiv 2607.27782',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Converts policy failures into action-level correction signal for flow-matching VLAs instead of discarding them. The correction loop keeps eating the stack: failure data is training data, which is the economic case for logging every intervention in deployment and pricing the log.',
+    tags: ['corrections', 'flow matching', 'failure data', 'VLA']
+  },
+  {
+    id: 'tacwam-tactile-world-action-2026',
+    dateAdded: '2026-08-01',
+    pubDate: '2026-07-30',
+    title: 'TacWAM: Anchor-Guided World Action Model with Mechanics-Aware Tactile Prediction',
+    url: 'https://arxiv.org/abs/2607.28391',
+    source: 'arXiv 2607.28391',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'Tactile prediction inside a world action model, mechanics-aware. Third week running that touch shows up as an inferred or predicted channel rather than a sensor the rig must carry. The capture-spec question keeps shifting from which sensors to mount toward which ground truth you verify the inference against.',
+    tags: ['tactile', 'world action model', 'sensor inference', 'capture spec']
+  },
+  {
+    id: 'practice-makes-policies-2026',
+    dateAdded: '2026-08-01',
+    pubDate: '2026-07-29',
+    title: 'Practice Makes Policies: Bootstrapping and Consolidating Robotic Capabilities from Zero Human Demonstrations',
+    url: 'https://arxiv.org/abs/2607.26809',
+    source: 'arXiv 2607.26809',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'Bootstraps robot capabilities with zero human demonstrations by generating and consolidating its own practice experience. Every zero-demo result chips at volume demand for teleop hours while raising the value of the human data that seeds and corrects what self-practice cannot reach. Both halves matter for how capture gets priced.',
+    tags: ['zero demonstrations', 'self-practice', 'collection economics', 'bootstrapping']
   }
 ];
 

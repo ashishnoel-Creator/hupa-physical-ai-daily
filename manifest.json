@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-08-01",
+      "slug": "2026-08-01",
+      "title": "Saturday, August 1, 2026",
+      "tldr": [
+        "**Unitree published its full IPO prospectus on the evening of July 30, and the number the launch coverage missed is in the H1 2026 forecast: revenue up 35.6-45.4% to RMB 1.05-1.13B, but adjusted net profit DOWN 6.4-22% year over year.** The first humanoid company to face public disclosure is showing margin compression in the same document that prices it at RMB 42B. Pricing inquiry August 5, subscription August 10. Gasgoo",
+        "**CheckVLA (arXiv 2607.26789) puts hard numbers on execution-time QC: a frozen action-conditioned world model watching a VLA run catches 77.9% of failures in time, versus 48.6% for a model that only watches observations.** Verification as a separate, always-on layer over the policy is exactly the architecture argument for capture-time and run-time validation, now with an ablation proving the action stream is what makes it work. arXiv",
+        "**Black Sesame Technologies signed a strategic partnership with Striding.AI on July 29, pairing its SesameX robotics compute platform with a full-stack physical AI software company, covering algorithm adaptation, real-world deployment and overseas commercialization.** The automotive-grade chip supply chain keeps converting itself into robotics compute, one named agreement at a time. Gasgoo"
+      ]
+    },
+    {
       "date": "2026-07-31",
       "slug": "2026-07-31",
       "title": "Friday, July 31, 2026",
@@ -562,6 +572,12 @@
   ],
   "monthly_reviews": [
     {
+      "date": "2026-07",
+      "slug": "2026-07",
+      "title": "July 2026 review",
+      "summary": "July was the month the data thesis stopped being our argument and became the industry's paperwork. Buyers put numbers on the shortage (500K quality hours against a 10M-hour entry bar), China approved a national standard for dataset quality "
+    },
+    {
       "date": "2026-06",
       "slug": "2026-06",
       "title": "June 2026 review",
@@ -574,6 +590,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 166,
-  "updated_at": "2026-07-31T01:46:06Z"
+  "papers_count": 173,
+  "updated_at": "2026-08-01T09:10:17Z"
 }
