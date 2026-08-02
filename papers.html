@@ -2586,6 +2586,114 @@ const PAPERS = [
     category: 'Collection',
     why: 'Bootstraps robot capabilities with zero human demonstrations by generating and consolidating its own practice experience. Every zero-demo result chips at volume demand for teleop hours while raising the value of the human data that seeds and corrects what self-practice cannot reach. Both halves matter for how capture gets priced.',
     tags: ['zero demonstrations', 'self-practice', 'collection economics', 'bootstrapping']
+  },
+  {
+    id: 'surgical-failure-detection-flow-2026',
+    dateAdded: '2026-08-02',
+    pubDate: '2026-07-29',
+    title: 'Failure Detection for Surgical Robot Imitation Policies via Flow-Matching World Modeling',
+    url: 'https://arxiv.org/abs/2607.27511',
+    source: 'arXiv 2607.27511',
+    type: 'Research paper',
+    category: 'Annotation',
+    why: 'A flow-matching world model watches a surgical imitation policy and flags failures as they develop. Two days after CheckVLA published recall numbers for mobile manipulation, the same runtime-verification architecture shows up in surgery, the domain where an undetected failure costs the most. The always-on checker over the policy is consolidating into the default safety layer.',
+    tags: ['runtime verification', 'failure detection', 'surgical robotics', 'world model']
+  },
+  {
+    id: 'pacman-humanoid-dodgeball-2026',
+    dateAdded: '2026-08-02',
+    pubDate: '2026-07-30',
+    title: 'PAC-MAN: Perception-Aware CBF-RL for Whole-Body Safety in Humanoid Dodgeball',
+    url: 'https://arxiv.org/abs/2607.28623',
+    source: 'arXiv 2607.28623',
+    type: 'Research paper',
+    category: 'Humanoid',
+    why: 'Aaron Ames lab trains perception-aware whole-body evasive safety for a humanoid via control-barrier-function RL, demoed as dodgeball. Whole-body safety under perception constraints is the flip side of the locomotion demos: not getting hit is the same machinery as not hitting things, and it will be an acceptance test eventually.',
+    tags: ['whole-body safety', 'CBF', 'humanoid', 'RL']
+  },
+  {
+    id: 'static-in-dynamic-out-2026',
+    dateAdded: '2026-08-02',
+    pubDate: '2026-07-29',
+    title: 'Static In, Dynamic Out: Counterfactual Action Augmentation for Moving Object Manipulation',
+    url: 'https://arxiv.org/abs/2607.27890',
+    source: 'arXiv 2607.27890',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'Danfei Xu group generates counterfactual dynamic-object training data from static demonstrations. Another line in the ledger of what buyers synthesize versus what they must capture. Motion-rich interaction keeps moving to the synthesized column while contact ground truth stays captured.',
+    tags: ['data augmentation', 'counterfactual', 'moving objects', 'collection economics']
+  },
+  {
+    id: 'fa-rdp-reactive-diffusion-2026',
+    dateAdded: '2026-08-02',
+    pubDate: '2026-07-30',
+    title: 'FA-RDP: A Frequency-Adaptive Reactive Diffusion Policy for Contact-Rich Manipulation',
+    url: 'https://arxiv.org/abs/2607.28596',
+    source: 'arXiv 2607.28596',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Cewu Lu group adapts the control frequency of a reactive diffusion policy to the contact phase of the task. Chunked policies keep becoming closed-loop, continuing the piR2 thread, and every step in that direction raises the bar on timestamp and sync quality in training data.',
+    tags: ['reactive policy', 'diffusion policy', 'contact-rich', 'control frequency']
+  },
+  {
+    id: 'unicross-dexterous-synthesis-2026',
+    dateAdded: '2026-08-02',
+    pubDate: '2026-07-30',
+    title: 'UniCross: Unified Cross-Skill Dexterous Manipulation Synthesis',
+    url: 'https://arxiv.org/abs/2607.28198',
+    source: 'arXiv 2607.28198',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'One framework synthesizing dexterous manipulation across skills from ETH Zurich. Cross-skill synthesis is the dexterity-side version of the demo-count collapse: fewer captured demonstrations per skill, more value per validated one.',
+    tags: ['dexterous manipulation', 'synthesis', 'cross-skill', 'demo efficiency']
+  },
+  {
+    id: 'fastac-tactile-sensor-2026',
+    dateAdded: '2026-08-02',
+    pubDate: '2026-07-30',
+    title: 'FasTac: A Curved Multispectral Vision-Based Tactile Sensor for High-Speed High-Precision 3D Shape and Force Perception',
+    url: 'https://arxiv.org/abs/2607.28416',
+    source: 'arXiv 2607.28416',
+    type: 'Hardware release',
+    category: 'Collection',
+    why: 'New curved multispectral vision-based tactile sensor claiming high-speed 3D shape and force perception. Filed against the standing question of whether touch gets sensed or inferred from pixels. The sensor side is improving in parallel with the inference side, and the capture spec has to pick a lane per use case.',
+    tags: ['tactile sensor', 'hardware', 'force perception', 'capture spec']
+  },
+  {
+    id: 'world-action-planner-2026',
+    dateAdded: '2026-08-02',
+    pubDate: '2026-07-29',
+    title: 'World Action Planner: Generalizable Decision-Making with Action-Conditioned World Models',
+    url: 'https://arxiv.org/abs/2607.27599',
+    source: 'arXiv 2607.27599',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'Yilun Du and Xiangcheng Zhang point action-conditioned world models at general decision-making. Same substrate CheckVLA uses for verification, used here for planning. The action-conditioned world model is becoming the common part across planning, evaluation and runtime QC.',
+    tags: ['world model', 'planning', 'action-conditioned', 'decision-making']
+  },
+  {
+    id: 'sharpa-origami-dataset-2026',
+    dateAdded: '2026-08-02',
+    pubDate: '2026-07-30',
+    title: 'Sharpa Origami Dataset (Robotic Origami Challenge, IROS 2026)',
+    url: 'https://x.com/SharpaRobotics',
+    source: 'Sharpa Robotics',
+    type: 'Dataset',
+    category: 'Collection',
+    why: 'Visuotactile corpus of Sharpa robots folding origami paper planes, released for the IROS 2026 Robotic Origami Challenge co-organized with Chris Paxton and Lightwheel. Billed as one of the largest tactile datasets out there. The hand vendor on NVIDIA GR00T reference hardware publishing a tactile benchmark is a spec-setting move for what tactile capture should look like.',
+    tags: ['tactile', 'dataset', 'dexterous manipulation', 'IROS 2026']
+  },
+  {
+    id: 'oopsiedata-failure-clips-2026',
+    dateAdded: '2026-08-02',
+    pubDate: '2026-07-31',
+    title: 'OopsieData: open community dataset of robot failure clips',
+    url: 'https://x.com/svlevine',
+    source: 'Community (Paul Zhou, boosted by Sergey Levine)',
+    type: 'Dataset',
+    category: 'Collection',
+    why: 'A public open dataset collecting the robot failure clips labs throw away daily, framed by Levine as the most abundant but underused resource in robot learning. First open corpus organized around failure specifically. If it compounds, failure capture and triage become a spec-ed deliverable rather than exhaust, which is the direction JD Logistics and RedFlow already pointed.',
+    tags: ['failure data', 'open dataset', 'community', 'collection economics']
   }
 ];
 

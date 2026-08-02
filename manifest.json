@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-08-02",
+      "slug": "2026-08-02",
+      "title": "Sunday, August 2, 2026",
+      "tldr": [
+        "**The EU AI Act's high-risk obligations went live today, and Article 10 makes data governance a legal requirement: training, validation and testing sets for high-risk AI systems must now have documented collection processes, origin, and \"relevant data-preparation processing operations, such as annotation, labelling, cleaning, updating, enrichment and aggregation.\"** Audit-trailed data work is no longer a differentiator pitch in the EU, it is compliance. Article 10 text",
+        "**Figure's F.03 climbed a ladder fully autonomously, posted by Brett Adcock on August 1 and reposted by the company account, followed within hours by Adcock declaring \"wheeled robots are an utter dead end.\"** The legged-vs-wheeled argument now has a demo attached, and it lands two weeks after a wheeled-humanoid round and Kalanick's anti-humanoid ATOMS thesis took the other side. Adcock on X",
+        "**Sergey Levine is backing OopsieData, a public, open dataset of robot failure clips: \"almost every robot lab produces clips like this daily... and almost all of them get thrown away. This is the most abundant but underused resource in robot learning.\"** Failure data going from trash to community corpus is the collection-economics story of the weekend. Levine on X"
+      ]
+    },
+    {
       "date": "2026-08-01",
       "slug": "2026-08-01",
       "title": "Saturday, August 1, 2026",
@@ -590,6 +600,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 173,
-  "updated_at": "2026-08-01T09:10:17Z"
+  "papers_count": 182,
+  "updated_at": "2026-08-02T06:58:43Z"
 }
