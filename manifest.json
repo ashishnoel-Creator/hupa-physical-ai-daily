@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-08-03",
+      "slug": "2026-08-03",
+      "title": "Monday, August 3, 2026",
+      "tldr": [
+        "**Tau Robotics is renting out teleoperated humanoid maids in San Francisco at $30 an hour, invite-only, with every full-session video retained indefinitely to train its models.** A human pilot drives the robot with AI assist, the customer pays for the cleaning, and the company keeps the data. The service is the collection rig. ABC7",
+        "**Delta and United joined Southwest in banning humanoid and animal-like robots from cabins, checked luggage and cargo, citing lithium-ion thermal-runaway risk.** The first consumer-facing humanoid regulation in the US turns out to be about batteries and stowage, not autonomy. CBS News",
+        "**BYD confirmed its first humanoid robot debuts in early August at its Zhengzhou Di Space experience center, with plans to put it to work on battery production lines.** The second Chinese carmaker after Chery goes humanoid, days before Unitree prices its IPO. CnEVPost"
+      ]
+    },
+    {
       "date": "2026-08-02",
       "slug": "2026-08-02",
       "title": "Sunday, August 2, 2026",
@@ -601,5 +611,5 @@
     }
   ],
   "papers_count": 182,
-  "updated_at": "2026-08-02T06:58:43Z"
+  "updated_at": "2026-08-03T06:32:30Z"
 }

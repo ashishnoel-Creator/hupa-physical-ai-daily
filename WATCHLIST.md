@@ -2,6 +2,15 @@
 
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
+## 2026-08-03 (Monday)
+
+Browser X path connected this run (retry cycle 3, second profile) but X served only the top post per profile, so no new handles were surfaced from timelines. Adds come from the day's research:
+
+- **Tau Robotics** (tau-robotics.com) — launched the invite-only $30/hour teleoperated humanoid cleaning service in San Francisco, retaining full-session video indefinitely for model training, reportedly on Unitree hardware. First paid consumer service whose real product is in-home teleop data. Add to §4-B as a standing company to watch; their launch coverage broke via local TV (ABC7), not the robotics trade press. ([ABC7](https://abc7news.com/post/can-hire-humanoid-robots-tau-robotics-clean-home-san-francisco/19599847/))
+- **@zhiyuan_zhou_ (Paul Zhou)** — organizer of OopsieData, the open robot-failure-clip dataset Levine boosted July 31. If failure data becomes a spec'd deliverable, this account is where the corpus grows. Add to the §4-A egocentric/embodied handle list.
+- **humanoid.press (Humanoid Daily)** — aggregator that surfaced the Tau launch, the airline robot bans and the BYD Di Space detail before the robotics trade press. Heavy day-to-day repetition, so treat as a lead generator requiring primary-source verification, but worth a standing fetch in §4-B on thin weekend windows. ([humanoid.press](https://www.humanoid.press/humanoid-daily/))
+- **CnEVPost** (cnevpost.com) — consistently first in English on Chinese carmaker robotics moves (BYD humanoid confirmation Jul 26-28). Add alongside Gasgoo/Caixin in the §4-B China sweep.
+
 ## 2026-07-20 (Monday)
 
 Browser X path failed again this run (extension connected, tab-group handshake timed out three times), so adds come from the fallback sweep:
