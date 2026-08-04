@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-08-04",
+      "slug": "2026-08-04",
+      "title": "Tuesday, August 4, 2026",
+      "tldr": [
+        "**PokeBot, a Chinese embodied-intelligence startup founded in April, closed a nine-figure RMB Pre-A co-led by Shunwei and Matrix, its second round in three months.** The pitch is a world action model trained with real-world RL on proprietary data-collection hardware, demoed by a robot autonomously cooking mapo tofu in a 9-minute long-horizon run. Gasgoo",
+        "**Scale AI has a new CEO: Francis deSouza, ex-Illumina CEO and ex-Google Cloud COO, effective August 10.** The largest annotation vendor is handing itself to an enterprise operator, and the announcement leads with BP, Mayo Clinic and government wins rather than frontier-lab labeling. Scale blog",
+        "**MIIT numbers surfacing via the BYD coverage: China produced roughly 20,000 humanoids in 2025, over 40,000 in H1 2026 alone, and expects to pass 100,000 for the full year.** Production doubled in six months while the US debate stayed on import bans. KrASIA"
+      ]
+    },
+    {
       "date": "2026-08-03",
       "slug": "2026-08-03",
       "title": "Monday, August 3, 2026",
@@ -610,6 +620,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 182,
-  "updated_at": "2026-08-03T06:32:30Z"
+  "papers_count": 186,
+  "updated_at": "2026-08-04T02:31:41Z"
 }

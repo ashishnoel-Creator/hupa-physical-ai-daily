@@ -2694,6 +2694,54 @@ const PAPERS = [
     category: 'Collection',
     why: 'A public open dataset collecting the robot failure clips labs throw away daily, framed by Levine as the most abundant but underused resource in robot learning. First open corpus organized around failure specifically. If it compounds, failure capture and triage become a spec-ed deliverable rather than exhaust, which is the direction JD Logistics and RedFlow already pointed.',
     tags: ['failure data', 'open dataset', 'community', 'collection economics']
+  },
+  {
+    id: 'n0-vtla-tactile-tokens-2026',
+    dateAdded: '2026-08-04',
+    pubDate: '2026-07-28',
+    title: 'N0-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens',
+    url: 'https://arxiv.org/abs/2607.23782',
+    source: 'arXiv 2607.23782',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Claims the first VLA pretrained on tactile data at scale, built on NeoData, a proprietary large visuo-tactile corpus, plus ALTER, an advantage-conditioned offline-RL recipe for improving deployed policies. Wins all nine real-robot NeoReal tasks. The counter-bet to the touch-gets-inferred thread: capture the tactile channel at corpus scale and pretrain on it directly, with the collection hardware and dataset as the moat.',
+    tags: ['tactile', 'VLA', 'pretraining corpus', 'collection economics']
+  },
+  {
+    id: 'n0-twam-tactile-world-action-2026',
+    dateAdded: '2026-08-04',
+    pubDate: '2026-07-28',
+    title: 'N0-TWAM: Scaling Tactile-Native World-Action Model for Contact-Rich Manipulation',
+    url: 'https://arxiv.org/abs/2607.23783',
+    source: 'arXiv 2607.23783',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'Companion to N0-VTLA: a tactile-native world-action model predicting future vision and future contact jointly through NeoForce, a unified force-based representation, across 6 embodiments and 450 tasks with an asymmetric Mixture-of-Transformers for real-time control. Touch as a first-class predicted channel inside the world model, from teams that captured the tactile corpus themselves.',
+    tags: ['tactile', 'world model', 'contact-rich', 'NeoForce']
+  },
+  {
+    id: 'worldscape-policy-2-manipevent-2026',
+    dateAdded: '2026-08-04',
+    pubDate: '2026-07-22',
+    title: 'WorldScape Policy 2.0: Steerable World Action Modeling with Reasoning-Augmented Memory',
+    url: 'https://arxiv.org/abs/2607.18840',
+    source: 'arXiv 2607.18840',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'Steerable world action model with reasoning-augmented long and short-term memory for manipulation. The part that matters for the data thesis is ManipEvent-5M: roughly 5M event segments with aligned actions, subtask captions, goal images and video demos. Event-grounded pretraining data is an annotation-heavy product, and 5M segments is a statement about the scale labs now assume. Back-filled from the July 22 mailing.',
+    tags: ['world action model', 'ManipEvent-5M', 'annotation', 'pretraining data']
+  },
+  {
+    id: 'recti-q-quantized-edge-2026',
+    dateAdded: '2026-08-04',
+    pubDate: '2026-07-22',
+    title: 'Recti-Q: Feature-Space Rectification for OOD-Robust Quantized Perception in Edge Robotics',
+    url: 'https://arxiv.org/abs/2607.18540',
+    source: 'arXiv 2607.18540',
+    type: 'Research paper',
+    category: 'Embedded AI',
+    why: 'Names the quantization-induced robustness gap: 4-bit post-training-quantized vision backbones keep clean accuracy but degrade badly under distribution shift, the regime deployed robots actually live in. Fix is a LoRA adapter as small as 6 KB patching the quantized feature space, shippable over the air to a deployed fleet. First clean result pricing what cheap edge inference costs in OOD robustness and how little it takes to buy back. Back-filled from the July 22 mailing.',
+    tags: ['quantization', 'edge inference', 'OOD robustness', 'fleet OTA']
   }
 ];
 
