@@ -2742,6 +2742,114 @@ const PAPERS = [
     category: 'Embedded AI',
     why: 'Names the quantization-induced robustness gap: 4-bit post-training-quantized vision backbones keep clean accuracy but degrade badly under distribution shift, the regime deployed robots actually live in. Fix is a LoRA adapter as small as 6 KB patching the quantized feature space, shippable over the air to a deployed fleet. First clean result pricing what cheap edge inference costs in OOD robustness and how little it takes to buy back. Back-filled from the July 22 mailing.',
     tags: ['quantization', 'edge inference', 'OOD robustness', 'fleet OTA']
+  },
+  {
+    id: 'ego2robot-synthesis-2026',
+    dateAdded: '2026-08-05',
+    pubDate: '2026-08-03',
+    title: 'Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data',
+    url: 'https://arxiv.org/abs/2608.02580',
+    source: 'arXiv 2608.02580',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'Converts egocentric human manipulation video into robot-format training data via action retargeting, robot-arm visual synthesis and quality curation. 18,561 hours across 15 robot morphologies, claimed largest ego-to-robot dataset to date, with joint pretraining improving OOD generalization on extended RoboTwin2.0 and real robots. Ego human capture as the scalable substrate for VLA pretraining, now published method. Synthesis quality is bounded by source footage quality, which is our whole argument.',
+    tags: ['egocentric', 'data synthesis', 'retargeting', 'VLA pretraining']
+  },
+  {
+    id: 'action-chunking-why-2026',
+    dateAdded: '2026-08-05',
+    pubDate: '2026-08-03',
+    title: 'Why Does Action Chunking Improve Behavioral Cloning Performance in Robotic Control?',
+    url: 'https://arxiv.org/abs/2608.02547',
+    source: 'arXiv 2608.02547',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Berkeley group with Sergey Levine shows the standard explanations for chunking (temporal consistency, horizon reduction) fail empirically. Real mechanisms are non-Markovian expressivity, reduced compounding error and implicit ensembling. They match chunking without chunking via randomized-delay policy ensembles, then beat it with an explicit ensemble. Chunking was treated as settled infrastructure in every VLA. This reopens it.',
+    tags: ['action chunking', 'behavioral cloning', 'imitation learning']
+  },
+  {
+    id: 'fact-vla-contact-failures-2026',
+    dateAdded: '2026-08-05',
+    pubDate: '2026-08-02',
+    title: 'Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them',
+    url: 'https://arxiv.org/abs/2608.01402',
+    source: 'arXiv 2608.01402',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Bohg group at Stanford ran ~2,500 real rollouts to isolate two root VLA failure modes in contact-rich tasks: precision failures from flow-matching training mismatch and force failures from force-signal structure. Their FACT fix hits 66% vs 41% best baseline. Failure-mode taxonomies are what annotation specs get written from, so this is upstream of a labeling deliverable.',
+    tags: ['VLA failures', 'contact-rich', 'force sensing', 'failure taxonomy']
+  },
+  {
+    id: 'teleopit-humanoid-teleop-2026',
+    dateAdded: '2026-08-05',
+    pubDate: '2026-08-04',
+    title: 'Teleopit: A Full-Embodiment Humanoid Teleoperation System',
+    url: 'https://arxiv.org/abs/2608.01834',
+    source: 'arXiv 2608.01834',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'Westlake University full-embodiment humanoid teleoperation rig. Part of a one-mailing cluster of new demonstration-capture hardware (with TWINS and the panorama whole-body teleop system), which says the capture-rig layer is getting more instrumented, fast.',
+    tags: ['teleoperation', 'humanoid', 'capture rig']
+  },
+  {
+    id: 'twins-tactile-isomorphic-2026',
+    dateAdded: '2026-08-05',
+    pubDate: '2026-08-04',
+    title: 'TWINS: A Tactile Wearable Isomorphic Arm Networked System for Contact-Rich Manipulation Learning',
+    url: 'https://arxiv.org/abs/2608.01733',
+    source: 'arXiv 2608.01733',
+    type: 'Research paper',
+    category: 'Collection',
+    why: 'AIST Japan wearable isomorphic-arm capture system with tactile sensing for contact-rich demonstrations. Another datapoint on the standing thread: tactile is moving from inferred-from-RGB to a captured first-class channel, and the rigs that capture it are being spec\'d in public.',
+    tags: ['tactile', 'wearable rig', 'contact-rich', 'demonstration capture']
+  },
+  {
+    id: 'panorama-vla-wholebody-2026',
+    dateAdded: '2026-08-05',
+    pubDate: '2026-08-04',
+    title: 'Learning Panorama-Aware VLA for Mobile Manipulation with Whole-Body Teleoperation',
+    url: 'https://arxiv.org/abs/2608.02257',
+    source: 'arXiv 2608.02257',
+    type: 'Research paper',
+    category: 'VLA',
+    why: 'Shandong, BIGAI and Beihang pair a panoramic-vision VLA with whole-body teleop data collection for mobile manipulation. Panoramic capture entering the training spec matters for anyone writing collection contracts: field-of-view is becoming a negotiated parameter, not a default.',
+    tags: ['panoramic vision', 'mobile manipulation', 'whole-body teleop']
+  },
+  {
+    id: 'motubrain-async-wam-2026',
+    dateAdded: '2026-08-05',
+    pubDate: '2026-08-04',
+    title: 'World Action Models in Real Time: An Empirical Study of Smooth Execution via Asynchronous Deployment',
+    url: 'https://arxiv.org/abs/2608.01880',
+    source: 'arXiv 2608.01880',
+    type: 'Research paper',
+    category: 'Embedded AI',
+    why: 'Startup team (Motubrain) studies how to run world-action models smoothly in real time via asynchronous deployment. WAMs are the heaviest model class proposed for on-robot use, and the deployment-engineering literature is starting before the model class is even settled. Early but on the critical path for edge inference.',
+    tags: ['world action model', 'async deployment', 'real-time control']
+  },
+  {
+    id: 'wcm-world-critic-2026',
+    dateAdded: '2026-08-05',
+    pubDate: '2026-07-31',
+    title: 'WCM: A World Critic Model for Vision-Language-Action Reinforcement Learning',
+    url: 'https://arxiv.org/abs/2607.29613',
+    source: 'arXiv 2607.29613',
+    type: 'Research paper',
+    category: 'World model',
+    why: 'OpenMOSS at Fudan uses a world model as the critic for VLA reinforcement learning. The world-model-as-checker pattern from CheckVLA and the surgical failure detector, now pointed at training instead of runtime verification. Trending on Hugging Face August 4. Every branch of this pattern prices validated ground truth.',
+    tags: ['world model', 'critic', 'VLA RL', 'verification']
+  },
+  {
+    id: 'vlx-seek-15-open-release-2026',
+    dateAdded: '2026-08-05',
+    pubDate: '2026-08-05',
+    title: 'VLX-Seek 1.5: 3B-parameter on-device fine-grained perception model (open release)',
+    url: 'https://eu.36kr.com/en/p/3924843743607172',
+    source: 'Om AI (Hangzhou Lianhui)',
+    type: 'Open release',
+    category: 'Embedded AI',
+    why: 'Open-sourced alongside a several-hundred-million-yuan round led by Qianhai Mother Fund. Company claims it beats NVIDIA LocateAnything-3B by 62.9% accuracy in drone embodied scenarios with 74.8% fewer false positives. Benchmarks are company-sourced and unverified, but a state-fund-led round paired with an open edge model is the Chinese edge-AI playbook in one announcement.',
+    tags: ['on-device', 'edge perception', 'open source', 'China']
   }
 ];
 

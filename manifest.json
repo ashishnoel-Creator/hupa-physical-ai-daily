@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-08-05",
+      "slug": "2026-08-05",
+      "title": "Wednesday, August 5, 2026",
+      "tldr": [
+        "**Unitree's IPO opened book-building today with sponsor Citic guiding a 50.6-55.9B yuan valuation (~$7.4B), and the newly disclosed financials show the growth story cooling fast: H1 2026 revenue up 35.6-45.4% against +332% a year ago, adjusted net profit down 6.4-22%, and humanoid ASP down 72% since 2023.** The first Chinese humanoid IPO is pricing a volume-over-price strategy in public. Reuters via Yahoo, Gasgoo",
+        "**Ego2Robot (arXiv 2608.02580, Renmin University and collaborators) converts egocentric human video into robot-format training data at scale: 18,561 hours across 15 robot morphologies, claimed as the largest ego-to-robot dataset to date.** Human first-person capture as the substrate for VLA pretraining, now with a published pipeline and a scale number. arXiv",
+        "**Reimagine Robotics came out of stealth: founded by Jonathan Scholz, who built and ran Google DeepMind's Applied Robotics team in London for seven years, with three ex-DeepMind colleagues.** The product is robots that learn on the job from worker demonstrations and on-the-spot corrections, already deployed in a plastics plant and a three-robot hard-drive disassembly cell. The Robot Report"
+      ]
+    },
+    {
       "date": "2026-08-04",
       "slug": "2026-08-04",
       "title": "Tuesday, August 4, 2026",
@@ -620,6 +630,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 186,
-  "updated_at": "2026-08-04T02:31:41Z"
+  "papers_count": 195,
+  "updated_at": "2026-08-05T04:50:18Z"
 }
