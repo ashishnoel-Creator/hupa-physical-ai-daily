@@ -2,6 +2,15 @@
 
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
+## 2026-08-10 (Monday)
+
+Browser X path unavailable this run (extension reported zero connected browsers, no handshake possible), so no new X handles from timelines. Adds come from the day's research:
+
+- **Tacta Systems** (tactasystems.com; co-founder/CEO Vikram Pavate) — launched TactaBot on August 7: a 15-DoF tactile hand, a Dexterous Intelligence model, and the Tacta Glove capture rig with 256 tactile sensors per fingertip (250-700,000 Pa range, 1 mm pitch) that records force, motion, video and temperature from factory workers during normal paid work. The clearest capture-at-work product yet in skilled manufacturing. Add to §4-B as a standing company; first TactaBots ship early 2027. ([The Robot Report](https://www.therobotreport.com/tacta-systems-takes-aim-high-skilled-manufacturing-work-tactabot/))
+- **JoyAI-RA (JD.com robotics)** — JD's robotics model team published JoyAI-RA 0.5 (arXiv 2608.05674) claiming egocentric pretraining scales with no plateau. A commerce giant's robotics lab shipping ego-scaling results deserves a standing arXiv-affiliation watch alongside the other big-lab sweeps.
+- **HKUST(GZ) + Huawei Noah's Ark WAM cluster** — three world-action-model papers in one week (Robust-WAM, DyPES-VLA, PSG-JEPA) plus the SSC annotation schema from Noah's Ark/HKU. Noah's Ark is becoming the most prolific industrial WAM group; sweep its arXiv affiliation string each run.
+- **Reimagine Robotics** (reimagine-robotics.com; founder Jonathan Scholz, ex-DeepMind Applied Robotics) — stealth exit August 5 with worker-demonstration learn-on-the-job robots and two live deployments. Backed by Fly Ventures and firstminute, next round explicitly coming. Add to §4-B as a standing Western company to watch. ([The Robot Report](https://www.therobotreport.com/reimagine-robotics-emerges-stealth-with-robotslearn-on-the-job/))
+
 ## 2026-08-03 (Monday)
 
 Browser X path connected this run (retry cycle 3, second profile) but X served only the top post per profile, so no new handles were surfaced from timelines. Adds come from the day's research:

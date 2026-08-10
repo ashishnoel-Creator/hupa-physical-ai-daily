@@ -1,6 +1,26 @@
 {
   "days": [
     {
+      "date": "2026-08-10",
+      "slug": "2026-08-10",
+      "title": "Monday, August 10, 2026",
+      "tldr": [
+        "**Unitree priced its IPO at 150.80 yuan per share, a market cap of roughly 61 billion yuan (~$8.5B) at issuance, and subscriptions open today, August 10.** The raise came in at 6.099 billion yuan, nearly 1.9 billion above the 4.202 billion originally targeted, and the issue price already sits above sponsor Citic's 50.6-55.9B yuan 6-12 month guidance band. Gasgoo, 36Kr",
+        "**Tacta Systems launched TactaBot, and the part that matters here is the capture glove: 256 tactile sensors per fingertip recording force, motion, video and temperature from factory workers doing their normal jobs, with every paid hour compounding the training dataset.** Contact-rich capture embedded in real work, sold as a product. First units ship early 2027. The Robot Report",
+        "**HII, America's largest military shipbuilder, signed an agreement worth up to $900M with Path Robotics and GrayMatter Robotics, expanding its HYPER program for autonomous welding and surface work.** One of the largest known contracts anywhere for learned-policy industrial robotics, and it is defense money. The Robot Report"
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "slug": "2026-08-06",
+      "title": "Thursday, August 6, 2026",
+      "tldr": [
+        "**PaXini Tech raised another 1 billion yuan (~$140M) just five months after its 1B+ yuan Series B, taking cumulative funding to 3.5B yuan. The Shenzhen tactile-sensing company says it consumed nearly 1 million of its own tactile chips in the past year and opened four new \"super embodied-data collection factories\" in 2026, claiming the world's largest embodied-data-factory cluster.** Tactile capture at factory scale just got its second billion-yuan year. Gasgoo",
+        "**Chef Robotics published ValueFormer (arXiv 2608.02958), a causal-transformer value function with stage-aware labels that scores a VLA's execution in real time and decides when a human should take over.** One of the few companies running learned policies in paying production just showed its intervention-triggering machinery, and it is built on labeled failure stages. arXiv",
+        "**Ant Group's embodied-AI unit Robbyant opened its first external funding round targeting 1.5 billion yuan, with a second round planned before year-end.** LingBot-VLA 2.0 is adapted to 17 robot brands across 20 configurations, and the unit already runs a smart-pharmacy deployment with Sinopharm. Gasgoo"
+      ]
+    },
+    {
       "date": "2026-08-05",
       "slug": "2026-08-05",
       "title": "Wednesday, August 5, 2026",
@@ -630,6 +650,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 195,
-  "updated_at": "2026-08-05T04:50:18Z"
+  "papers_count": 235,
+  "updated_at": "2026-08-10T03:03:35Z"
 }
