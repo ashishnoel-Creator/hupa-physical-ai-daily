@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-08-11",
+      "slug": "2026-08-11",
+      "title": "Tuesday, August 11, 2026",
+      "tldr": [
+        "**China's market regulator says 116,000 new humanoid-robotics companies were registered in H1 2026 alone, up 9.5% YoY, while embodied-intelligence financing hit 93.5 billion yuan, five times last year's level, across 322 deals.** Output already passed 40,000 units in H1 and MIIT expects the year to clear 100,000, with state plans calling for 10,000-unit-scale deployment capacity by December. Gasgoo",
+        "**Ego-OSCAR (arXiv 2608.08285) is an open-hardware, head-mounted stereo-inertial ego capture rig with a bill of materials under $200, shipped alongside roughly 550 hours of crowdsourced egocentric stereo video collected by a distributed contributor network.** The paper's own framing: not Aria-grade fidelity, but \"the cheapest defensible substrate for crowdsourced egocentric capture.\" The capture-rig layer just got an open-source floor price. arXiv",
+        "**Hadrian raised $1.37B at a $7.87B valuation to build automated defense and aerospace factories, its second round of 2026.** The biggest dollar figure of the window, and it went to production autonomy, not humanoids. The Robot Report"
+      ]
+    },
+    {
       "date": "2026-08-10",
       "slug": "2026-08-10",
       "title": "Monday, August 10, 2026",
@@ -650,6 +660,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 235,
-  "updated_at": "2026-08-10T03:03:35Z"
+  "papers_count": 254,
+  "updated_at": "2026-08-11T05:03:54Z"
 }
