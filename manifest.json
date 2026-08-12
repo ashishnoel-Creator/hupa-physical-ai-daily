@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-08-12",
+      "slug": "2026-08-12",
+      "title": "Wednesday, August 12, 2026",
+      "tldr": [
+        "**Tesla dismantled the Model S/X production lines at Fremont in 46 days to make room for the Optimus line, and the Q2 earnings report puts planned annual capacity at 1 million units in Fremont and 10 million in Austin.** Suppliers were told to hit 1,000 units per week by September and 2,000-2,500 per week by year end, and supply-chain sources already report the July milestone slipped. Some Chinese suppliers have allocated 70% of capacity to Optimus anyway. 36Kr",
+        "**Tencent's Hy-Embodied-0.5 release turns out to include the data: an open corpus of 10,000+ hours of human UMI demonstrations, roughly 1M episodes across 70+ tasks, collected with a custom fingertip interface plus optical mocap.** The 5B model trained on it hits 90.9% on RoboTwin 2.0 and ships Apache-2.0 with the full capture-to-RL pipeline. One of the largest open human-demonstration corpora ever published, from a company that built its own rigs to collect it. Hugging Face, Tencent",
+        "**Ant Group led a several-hundred-million-yuan strategic round into tactile-sensing company Daimon Robotics, two months after its Series A, on the same day Tsinghua spinout LatentVerse announced a hundreds-of-millions-yuan seed for a unified tactile-action world model.** Two tactile-first checks in one day, both priced on the thesis that vision alone cannot close contact-rich tasks. Gasgoo (Daimon), Gasgoo (LatentVerse)"
+      ]
+    },
+    {
       "date": "2026-08-11",
       "slug": "2026-08-11",
       "title": "Tuesday, August 11, 2026",
@@ -660,6 +670,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 254,
-  "updated_at": "2026-08-11T05:03:54Z"
+  "papers_count": 270,
+  "updated_at": "2026-08-12T14:07:29Z"
 }
