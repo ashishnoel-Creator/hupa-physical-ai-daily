@@ -1,6 +1,26 @@
 {
   "days": [
     {
+      "date": "2026-08-17",
+      "slug": "2026-08-17",
+      "title": "Monday, August 17, 2026",
+      "tldr": [
+        "**OneRobotics signed a strategic framework with 58.com, China's classifieds and local-services giant, to turn its lifestyle-services workforce into a data collection network: high-quality human interaction data from daily life, gathered via ego-centric vision, UMI and teleoperation, feeding OneRobotics' OneModel brain.** The agreement explicitly extends \"traditional labor services into the robot training, testing, and application phases.\" A services platform with millions of workers just became a capture channel. Gasgoo",
+        "**The humanoid supply chain is industrializing under everyone's noses: Jiangsu Eyou, an integrated servo-joint maker, closed a 200M+ yuan Series B (Samsung Venture Investment and CATL Zhichuang on the ticket) with 1.5 million joint orders in hand for 2026, a 15x jump over its entire 2025 shipments.** Its automated line in Shanghai's Zhangjiang Robot Valley produces a harmonic joint every 60 seconds at a 98% full-process pass rate. Gasgoo",
+        "**AdvDex (arXiv 2608.14028, Shanghai AI Lab and SJTU authors) released OmniShare, a large-scale multimodal human manipulation demonstration corpus with kinematic supervision AND tactile measurements, built explicitly \"to reduce reliance on robot teleoperation.\"** A joint-aligned action space unifies human hands, dexterous hands and grippers, and the paper shows zero-shot human-to-robot transfer on real hardware. Human demonstration data with force ground truth is the exact deliverable the teleop-replacement wave keeps demanding. arXiv"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "slug": "2026-08-15",
+      "title": "Saturday, August 15, 2026",
+      "tldr": [
+        "**INFIFORCE closed nearly 1 billion yuan in combined Series A and A+ funding to build its embodied brain on an explicitly ego-centric data strategy: first-person capture of visual feeds, action trajectories, spatial relationships and environmental feedback from human operations, feeding its AtomBrain model and DataGrid infrastructure.** The company says it will soon launch \"the world's first embodied model built on high-quality Ego data.\" A nine-figure-dollar check just priced the exact thesis we are building on. Gasgoo",
+        "**Unitree says cumulative production of its bipedal humanoids has hit roughly 18,000 units, and market firm SAG puts global humanoid shipments at about 19,100 units for H1 2026, with Chinese manufacturers taking over 97% of the market and Unitree alone at 5,900 units for a 31% share.** The STAR-Market IPO plan behind it targets a plant with 190,000 units of annual capacity, 75,000 of them humanoids. Gasgoo",
+        "**Shenzhen's Physen AI, which sells head-mounted ego capture terminals, data gloves and wristbands, has a supply partnership with Figure and is running technical integrations with Amazon and DoorDash, per Gasgoo's coverage of its new tie-up with IMU maker W-Ibeda to push robot data acquisition equipment into North America.** A Chinese wearable-capture hardware vendor is already inside the biggest US humanoid and delivery names. Gasgoo"
+      ]
+    },
+    {
       "date": "2026-08-12",
       "slug": "2026-08-12",
       "title": "Wednesday, August 12, 2026",
@@ -670,6 +690,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 270,
-  "updated_at": "2026-08-12T14:07:29Z"
+  "papers_count": 300,
+  "updated_at": "2026-08-17T05:35:34Z"
 }

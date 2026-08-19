@@ -2,6 +2,15 @@
 
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
+## 2026-08-17 (Monday)
+
+Browser X path failed the tab-group handshake through all 5 retry cycles again (7th consecutive run), so no new X handles from timelines. Adds come from the day's research:
+
+- **OneRobotics** (with its OneModel embodied brain) — signed the 58.com data-collection framework August 14-15: ego-centric vision, UMI and teleop capture converted into "trainable, evaluable, replayable data assets," products claimed in 90+ countries and 5M+ households. Add to §4-B China company list as a standing name; second consumer-platform capture deal in five days after DexTeleop/JD. ([Gasgoo](https://autonews.gasgoo.com/articles/market-industry/onerobotics-58com-reach-deep-cooperation-2088508124096126977))
+- **Jiangsu Eyou Robot Technology** — integrated servo-joint maker with 1.5M joint orders for 2026 and a 60-second automated harmonic-joint line. The clearest humanoid supply-chain volume indicator found so far; worth a standing slot in the China component sweep. ([Gasgoo](https://autonews.gasgoo.com/articles/market-industry/seeds-eyou-robot-technology-raises-over-200-million-yuan-with-15-million-orders-in-hand-2088521646431559680))
+- **Aviral Kumar (CMU)** — MiDAS (2608.11363) claims first reliable single-demo adaptation of generalist policies via offline-to-online RL. His group keeps producing the demo-economics-relevant RL results; worth an arXiv-affiliation watch.
+- **BAAI robot-evaluation cluster (Yao Mu, Zhongyuan Wang et al.)** — PRM-as-a-Judge 1.5 plus RoboPulse++ (2608.14284) makes this the most active open process-reward-model group; sweep the affiliation string each run.
+
 ## 2026-08-10 (Monday)
 
 Browser X path unavailable this run (extension reported zero connected browsers, no handshake possible), so no new X handles from timelines. Adds come from the day's research:
