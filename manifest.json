@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-08-19",
+      "slug": "2026-08-19",
+      "title": "Wednesday, August 19, 2026",
+      "tldr": [
+        "**Addverb, the Reliance-controlled Indian robotics company, is training its physical AI robots on 1,000 hours of data every week and says it plans to move that to 5,000 hours a week.** CEO Sangeet Kumar gave the number to Business Standard alongside the detail that they have been at physical AI for three years and are targeting industrial and defence. An Indian company just published a weekly data burn rate and a 5x scaling plan, which is the first hard demand-side number out of India we have seen. Business Standard",
+        "**LinkerBot and OriginFlow signed a strategic partnership to fuse EMG-based neural capture with dexterous-hand hardware, and OriginFlow has confirmed plans to work with 58 Group to gather human operation data for a housekeeping-robot skill database.** The stated goal is moving the data paradigm from \"capturing motion\" to \"understanding full physical interactions.\" Second 58-linked capture deal in three days, and the capture modality is now muscle signal, not just video. Gasgoo",
+        "**Hydra-0 (arXiv 2608.18077, an NVIDIA-orbit team with Bowen Wen, Stan Birchfield and Soha Pouya plus Yilun Du, Yunzhu Li and George Konidaris) represents robot actions as pixel motion and reports an emergent inverse mode: predict compatible robot motion from object flow transferred off a human demonstration, then map latents to executable actions \"without requiring task-specific expert robot demonstrations.\"** Headline numbers are 90.4% lower robot-motion error and r=0.96 between replayed and reference success rates. If human demonstration flow substitutes for robot demonstrations at this quality, the value of clean human capture hours goes up again. arXiv"
+      ]
+    },
+    {
       "date": "2026-08-17",
       "slug": "2026-08-17",
       "title": "Monday, August 17, 2026",
@@ -690,6 +700,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 300,
-  "updated_at": "2026-08-17T05:35:34Z"
+  "papers_count": 316,
+  "updated_at": "2026-08-19T13:44:05Z"
 }
