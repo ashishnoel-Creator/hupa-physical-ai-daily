@@ -1,6 +1,26 @@
 {
   "days": [
     {
+      "date": "2026-08-24",
+      "slug": "2026-08-24",
+      "title": "Monday, August 24, 2026",
+      "tldr": [
+        "**Dyna Robotics pre-trained Dyna-2 on more than 1M hours of egocentric human video and published a human-to-robot scaling law, claiming performance scales smoothly across four orders of magnitude of human data and that the curve transfers to zero-shot evaluation on robot data never seen in training.** Reported lift is 20% to 80-90% success on high-precision manufacturing from pretraining scale alone with no post-training change. This is our thesis, published by somebody else, with a scaling curve attached. Dated August 10 and uncovered here until now. PR Newswire issued a correction to the original release, so hold the specific numbers loosely. Dyna Robotics",
+        "**Generalist AI's GEN-1.5 learns a new manipulation task from 3 to 12 seconds of a single demonstration with zero gradient updates, hitting 59% average success across 10 tasks one-shot in-context and 83% after 10 gradient steps on about 50 demos.** Ten adaptation steps move weights by less than 0.15%. It includes human-to-robot transfer where a person demonstrates with bare hands in view of the robot's cameras. Posted August 19 at 19:40 UTC, amplified by IEEE Spectrum on August 21. Generalist AI",
+        "**X-Humanoid signed a strategic partnership putting TianGong 3.0 into Mercedes-Benz dealerships, and its Pelican VL-2.0 is billed as the first embodied large model in China to clear Cyberspace Administration of China approval.** A Western OEM taking a Chinese humanoid into its retail channel is the distribution story. CAC approval is the regulatory moat, and it makes Pelican-Unify the default licensable brain for Chinese humanoid OEMs. Gasgoo"
+      ]
+    },
+    {
+      "date": "2026-08-20",
+      "slug": "2026-08-20",
+      "title": "Thursday, August 20, 2026",
+      "tldr": [
+        "**Unitree listed on the Shanghai STAR Market and closed day one up roughly 460%, taking a company priced at 61 billion yuan (about $9.04B) to a close near 342 billion yuan (about $50B).** It priced at 150.8 yuan a share for 40.45M new shares, raising 6.1 billion yuan (about $904M), traded as high as 1,100 yuan intraday on August 18, and is the first mainland-listed humanoid maker. DeepSeek was on the book for roughly 140.8M yuan. Every humanoid company on earth now has a public comp, and it is Chinese. The Robot Report, Caixin",
+        "**RoboEdit (arXiv 2608.18948) turns plain RGB human manipulation video into robot training data automatically and ships RoboEdit-14M: 174K aligned video pairs, 14M frames, seven robot embodiments.** The pipeline reconstructs and retargets 3D interactions from uncurated video and includes a 3D Robot-State Decoder that recovers per-frame hand states as structured motion supervision. This is the sharpest version yet of the \"why pay for embodiment-specific capture\" question, and it is also the exact service a capture company should be selling on top of its own footage. arXiv",
+        "**SoftVTBench (arXiv 2608.18701) checked whether \"successful\" robot rollouts actually left the object intact, and found that all 12 in-distribution configurations across Diffusion Policy, pi-0.5 and FastWAM contained successes that violated deformation tolerance, between 0.7% and 24% of each configuration's successes.** The benchmark carries evaluator-only FEM state as independent ground truth against 4,000 expert demos. Binary task success is silently passing up to a quarter of rollouts that damaged the thing they were manipulating. arXiv"
+      ]
+    },
+    {
       "date": "2026-08-19",
       "slug": "2026-08-19",
       "title": "Wednesday, August 19, 2026",
@@ -700,6 +720,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 316,
-  "updated_at": "2026-08-19T13:46:27Z"
+  "papers_count": 363,
+  "updated_at": "2026-08-24T08:24:34Z"
 }

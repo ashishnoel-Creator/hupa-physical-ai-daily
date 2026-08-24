@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HuPa Physical AI Daily — Signal Digest</title>
+<meta name="description" content="HuPa daily intelligence digest on Physical AI: data, annotation, embedded systems, robotics, humanoids. Signal only.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1A2D5C;        /* deep indigo - primary */
+  --ink-2: #4A4438;      /* warm body text */
+  --mute: #7A7466;       /* warm muted */
+  --mute-2: #9A958C;     /* lighter muted */
+  --paper: #F8F3E9;      /* warm cream background */
+  --paper-2: #F0EBDF;    /* warmer card */
+  --paper-3: #EAE2D0;    /* slightly stronger */
+  --hair: rgba(26, 45, 92, 0.12);
+  --hair-strong: rgba(26, 45, 92, 0.22);
+  --amber: #F4A300;      /* HuPa saffron */
+  --amber-soft: rgba(244, 163, 0, 0.12);
+  --amber-strong: rgba(244, 163, 0, 0.22);
+  --green: #0F5132;
+  --red: #B7402A;
+
+  --sidebar-w: 232px;
+  --header-h: 56px;
+  --content-w: 820px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  background: var(--paper);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink-2);
+  font-family: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16.5px;
+  line-height: 1.7;
+  font-feature-settings: "kern" 1, "liga" 1, "ss01" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Progress bar */
+.progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: transparent;
+  z-index: 200;
+}
+.progress-bar {
+  height: 100%;
+  background: var(--amber);
+  width: 0;
+  transition: width 0.08s linear;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-w);
+  right: 0;
+  height: var(--header-h);
+  background: rgba(248, 243, 233, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--hair);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 36px;
+}
+.header-meta {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mute);
+}
+.header-meta b {
+  color: var(--ink);
+  font-weight: 600;
+}
+.header-meta i {
+  color: var(--amber);
+  font-style: normal;
+  padding: 0 4px;
+}
+.pdf-btn {
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--ink);
+  padding: 9px 16px;
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 0;
+  text-decoration: none;
+}
+.pdf-btn:hover {
+  background: var(--amber);
+  color: var(--ink);
+  border-color: var(--amber);
+}
+.pdf-btn.outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--hair-strong);
+}
+.pdf-btn.outline:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.pdf-btn svg {
+  width: 13px; height: 13px;
+  stroke-width: 1.6;
+}
+.header-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Layout */
+.layout {
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 28px 22px 28px 28px;
+  border-right: 1px solid var(--hair);
+  overflow-y: auto;
+  background: var(--paper);
+}
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-track { background: transparent; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--hair-strong); border-radius: 2px; }
+
+.brand-mark {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.18em;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.brand-mark span {
+  color: var(--amber);
+  padding: 0 2px;
+}
+.brand-sub {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--mute);
+  margin-bottom: 36px;
+}
+
+/* Site nav (rendered from manifest.json by _sidebar.js) */
+.sitenav { margin-bottom: 24px; }
+.sitenav-block { margin-bottom: 16px; }
+.sitenav-label {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--mute);
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--hair);
+}
+.sitenav-label .count {
+  font-weight: 500;
+  color: var(--mute-2);
+  margin-left: 4px;
+}
+.sitenav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.sitenav-list > li { margin-bottom: 3px; }
+.sitenav-list a {
+  display: block;
+  color: var(--ink-2);
+  text-decoration: none;
+  padding: 4px 8px;
+  border-left: 2px solid transparent;
+  transition: all 0.12s ease;
+}
+.sitenav-list a:hover { background: var(--paper-2); color: var(--ink); }
+.sitenav-list a.active {
+  background: var(--amber-soft);
+  color: var(--ink);
+  border-left-color: var(--amber);
+  font-weight: 500;
+}
+.sitenav-list .count {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px;
+  color: var(--mute-2);
+  margin-left: 4px;
+}
+.sitenav-list details { margin: 0; }
+.sitenav-list summary {
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 12.5px;
+  color: var(--ink);
+  font-weight: 500;
+  list-style: none;
+  user-select: none;
+  border-left: 2px solid transparent;
+}
+.sitenav-list summary::-webkit-details-marker { display: none; }
+.sitenav-list summary::before {
+  content: '▸';
+  color: var(--mute-2);
+  font-size: 9px;
+  margin-right: 6px;
+  transition: transform 0.12s ease;
+  display: inline-block;
+}
+.sitenav-list details[open] > summary::before { transform: rotate(90deg); }
+.sitenav-list summary:hover { background: var(--paper-2); }
+.sitenav-list ul.sub {
+  list-style: none;
+  padding: 2px 0 4px 14px;
+  margin: 0;
+  border-left: 1px solid var(--hair);
+  margin-left: 12px;
+}
+.sitenav-list ul.sub a { font-size: 12.5px; padding: 3px 8px; }
+.day-item .day-date {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 11.5px;
+}
+.sitenav-list li.muted span {
+  display: block;
+  padding: 4px 8px;
+  color: var(--mute);
+  font-size: 12.5px;
+}
+.sitenav-list li.muted small { color: var(--mute-2); font-size: 10.5px; }
+
+#sitenavSearch {
+  width: 100%;
+  font-family: 'Geist', sans-serif;
+  font-size: 12.5px;
+  padding: 6px 8px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--hair-strong);
+  border-radius: 0;
+  outline: none;
+}
+#sitenavSearch:focus { border-color: var(--ink); }
+.search-results { margin-top: 8px; max-height: 280px; overflow-y: auto; }
+.search-hit {
+  display: block;
+  padding: 6px 8px;
+  margin-bottom: 4px;
+  text-decoration: none;
+  color: var(--ink-2);
+  border-left: 2px solid var(--hair);
+  background: var(--paper-2);
+  transition: all 0.1s ease;
+}
+.search-hit:hover { border-left-color: var(--amber); background: var(--paper-3); }
+.search-hit .hit-date {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10.5px;
+  color: var(--mute);
+  margin-bottom: 2px;
+}
+.search-hit .hit-snippet { font-size: 12px; line-height: 1.35; color: var(--ink-2); }
+.search-empty { padding: 6px 8px; color: var(--mute); font-size: 12px; }
+.sitenav-error { padding: 8px; color: var(--red); font-size: 12px; }
+
+.toc-label {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--mute);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--hair);
+}
+
+.toc nav ul {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.toc > nav > ul > li {
+  margin-bottom: 1px;
+}
+
+.toc a {
+  display: block;
+  font-family: 'Geist', sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: var(--ink-2);
+  text-decoration: none;
+  padding: 6px 8px 6px 10px;
+  border-left: 2px solid transparent;
+  border-bottom: none;
+  transition: all 0.12s ease;
+  line-height: 1.35;
+}
+.toc a:hover {
+  color: var(--ink);
+  background: var(--paper-2);
+}
+.toc a.active {
+  color: var(--ink);
+  border-left-color: var(--amber);
+  background: var(--amber-soft);
+  font-weight: 500;
+}
+
+/* Sub-list — collapsed by default, expand only under active parent */
+.toc > nav > ul > li > ul {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.28s ease, margin 0.28s ease;
+  margin: 0;
+  padding-left: 14px;
+  border-left: 1px solid var(--hair);
+  margin-left: 6px;
+}
+.toc > nav > ul > li.active > ul,
+.toc > nav > ul > li:hover > ul {
+  max-height: 800px;
+  margin-top: 2px;
+  margin-bottom: 8px;
+}
+.toc ul ul a {
+  font-size: 12px;
+  color: var(--mute);
+  padding: 4px 8px 4px 10px;
+  font-weight: 400;
+}
+.toc ul ul a:hover {
+  color: var(--ink-2);
+  background: transparent;
+}
+.toc ul ul a.active {
+  color: var(--ink);
+  background: transparent;
+  border-left-color: var(--amber);
+  font-weight: 500;
+}
+
+/* Main */
+.main-wrap {
+  padding-top: var(--header-h);
+}
+.main {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 56px 40px 120px;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin: 0 0 24px;
+}
+h1 + p {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 11.5px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mute);
+  line-height: 1.9;
+  margin-bottom: 8px;
+}
+h1 + p strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+h2 {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 72px 0 24px;
+  padding-top: 36px;
+  border-top: 1px solid var(--hair);
+  scroll-margin-top: 80px;
+}
+
+h3 {
+  font-family: 'Geist', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 44px 0 14px;
+  scroll-margin-top: 80px;
+}
+
+h4 {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin: 28px 0 10px;
+}
+
+p {
+  margin-bottom: 18px;
+  color: var(--ink-2);
+}
+
+p > strong:first-child {
+  color: var(--ink);
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+}
+
+strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+em {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink);
+  font-size: 1.08em;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--amber);
+  transition: all 0.12s;
+  padding-bottom: 1px;
+}
+a:hover {
+  color: var(--amber);
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 24px;
+  margin: 0 0 22px;
+}
+ul li, ol li {
+  margin-bottom: 8px;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+ul li::marker {
+  color: var(--amber);
+}
+ol li::marker {
+  color: var(--amber);
+  font-family: 'Geist Mono', monospace;
+  font-weight: 500;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 28px 0 32px;
+  font-family: 'Geist', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.5;
+  background: var(--paper);
+  border: 1px solid var(--hair-strong);
+}
+thead {
+  background: var(--paper-2);
+  border-bottom: 1.5px solid var(--ink);
+}
+th {
+  text-align: left;
+  padding: 11px 13px;
+  color: var(--ink);
+  font-family: 'Geist Mono', monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 10.5px;
+  vertical-align: bottom;
+}
+td {
+  padding: 11px 13px;
+  border-bottom: 1px solid var(--hair);
+  vertical-align: top;
+  color: var(--ink-2);
+}
+td strong { color: var(--ink); }
+td a {
+  border-bottom-color: var(--amber);
+}
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: var(--paper-2); }
+
+/* Code */
+code {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.88em;
+  background: var(--paper-2);
+  padding: 1px 6px;
+  border: 1px solid var(--hair);
+  color: var(--ink);
+}
+pre {
+  background: var(--paper-2);
+  border: 1px solid var(--hair);
+  border-left: 3px solid var(--amber);
+  padding: 18px 22px;
+  overflow-x: auto;
+  margin: 24px 0;
+  font-size: 12px;
+  line-height: 1.7;
+  font-family: 'Geist Mono', ui-monospace, monospace;
+}
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--ink-2);
+  font-size: inherit;
+}
+
+/* Blockquote */
+blockquote {
+  border-left: 3px solid var(--amber);
+  padding: 4px 0 4px 18px;
+  margin: 22px 0;
+  color: var(--mute);
+}
+blockquote em {
+  color: var(--ink-2);
+}
+
+/* HR — restrained */
+hr {
+  border: none;
+  border-top: 1px solid var(--hair);
+  margin: 44px 0;
+  position: relative;
+}
+hr::before {
+  content: '✦';
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+  background: var(--paper);
+  color: var(--mute-2);
+  font-size: 12px;
+  padding: 0 12px;
+}
+
+/* Tighter spacing for first section */
+section.level1 > h1 {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+section.level2:first-of-type > h2 {
+  margin-top: 28px;
+  padding-top: 0;
+  border-top: none;
+}
+section.level2 > section.level3:first-of-type > h3 {
+  margin-top: 24px;
+}
+
+/* Mobile-only elements hidden on desktop */
+.mobile-toc-trigger,
+.mobile-toc-scrim,
+.sidebar-actions { display: none; }
+
+/* Responsive — tablet down */
+@media (max-width: 980px) {
+  /* Hide the desktop top bar entirely on mobile — let the content breathe */
+  .header { display: none; }
+  .main-wrap { padding-top: 0; }
+  .layout { grid-template-columns: 1fr; }
+
+  body { font-size: 17px; line-height: 1.7; -webkit-text-size-adjust: 100%; }
+  .main { padding: 36px 22px 110px; max-width: 100%; }
+
+  h1 { font-size: 36px; line-height: 1.08; }
+  h1 + p { font-size: 11px; line-height: 1.8; margin-bottom: 6px; }
+  h2 { font-size: 26px; margin-top: 56px; padding-top: 28px; }
+  h3 { font-size: 19px; margin-top: 40px; }
+
+  /* Sidebar morphs into bottom sheet */
+  .sidebar {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    max-height: 82vh;
+    border-right: none;
+    border-top: 2px solid var(--ink);
+    box-shadow: 0 -12px 44px rgba(26, 45, 92, 0.28);
+    transform: translateY(100%);
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 10px 22px 32px;
+    z-index: 200;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .sidebar.open { transform: translateY(0); }
+  .sidebar::before {
+    content: '';
+    display: block;
+    width: 44px;
+    height: 4px;
+    background: var(--hair-strong);
+    border-radius: 2px;
+    margin: 0 auto 14px;
+  }
+  .brand-mark { font-size: 18px; margin-bottom: 2px; }
+  .brand-sub { margin-bottom: 16px; font-size: 9.5px; }
+
+  /* PDF action shows inside the bottom sheet on mobile */
+  .sidebar-actions {
+    display: flex;
+    margin: 0 0 18px;
+    padding: 0 0 16px;
+    border-bottom: 1px solid var(--hair);
+  }
+  .sidebar-actions .pdf-btn {
+    display: inline-flex;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    padding: 12px 18px;
+    font-family: 'Geist Mono', ui-monospace, monospace;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    border-radius: 0;
+  }
+  .sidebar-actions .pdf-btn svg {
+    width: 14px;
+    height: 14px;
+    stroke-width: 1.6;
+  }
+
+  /* Floating contents trigger — bottom-right pill */
+  .mobile-toc-trigger {
+    display: inline-flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    left: auto;
+    transform: none;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    padding: 13px 20px;
+    font-family: 'Geist Mono', ui-monospace, monospace;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 150;
+    box-shadow: 0 10px 32px rgba(26, 45, 92, 0.38), 0 2px 8px rgba(26, 45, 92, 0.18);
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    transition: opacity 0.2s ease, transform 0.2s ease, background 0.15s ease, color 0.15s ease;
+  }
+  .mobile-toc-trigger:active {
+    background: var(--amber);
+    color: var(--ink);
+  }
+  .mobile-toc-trigger svg {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+    stroke-width: 1.6;
+  }
+  .mobile-toc-trigger.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+  }
+
+  /* Scrim */
+  .mobile-toc-scrim {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 45, 92, 0.48);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 180;
+    transition: opacity 0.32s ease;
+  }
+  .mobile-toc-scrim.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Horizontally-scrollable tables on small screens */
+  .main table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 13.5px;
+  }
+  .main table tbody td,
+  .main table thead th {
+    min-width: 130px;
+    padding: 11px 12px;
+  }
+
+  /* Code blocks can scroll */
+  pre { font-size: 12px; padding: 14px 18px; }
+}
+
+@media (max-width: 540px) {
+  body { font-size: 16.5px; line-height: 1.68; }
+  h1 { font-size: 30px; line-height: 1.1; }
+  h1 + p { font-size: 10.5px; line-height: 1.7; }
+  h2 { font-size: 23px; margin-top: 46px; padding-top: 22px; }
+  h3 { font-size: 18px; margin-top: 34px; }
+  h4 { font-size: 10px; }
+  .main { padding: 28px 18px 110px; }
+  .main table { font-size: 12.5px; }
+  .main th, .main td { padding: 9px 10px; }
+  .main pre { font-size: 11.5px; padding: 12px 14px; }
+  ul, ol { padding-left: 22px; }
+
+  .mobile-toc-trigger {
+    padding: 11px 16px;
+    font-size: 10.5px;
+    bottom: 16px;
+    right: 16px;
+  }
+  .mobile-toc-trigger svg { width: 13px; height: 13px; }
+}
+
+/* Print → PDF */
+@media print {
+  @page {
+    size: A4;
+    margin: 18mm 16mm 18mm 16mm;
+  }
+  html { scroll-behavior: auto; }
+  body {
+    background: #FFFFFF;
+    color: #1A2D5C;
+    font-family: 'Geist', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.5;
+  }
+  ::selection { background: transparent; }
+  .progress, .header, .sidebar { display: none !important; }
+  .layout { display: block; }
+  .main-wrap { padding-top: 0; }
+  .main {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  h1 {
+    font-size: 24pt;
+    color: #1A2D5C;
+    margin: 0 0 12pt;
+    page-break-after: avoid;
+  }
+  h1 + p {
+    font-size: 8pt;
+    color: #7A7466;
+    margin-bottom: 18pt;
+  }
+  h1 + p strong { color: #1A2D5C; }
+  h2 {
+    font-size: 16pt;
+    color: #1A2D5C;
+    margin: 22pt 0 10pt;
+    padding-top: 14pt;
+    page-break-before: always;
+    page-break-after: avoid;
+    border-top: 1px solid #D8D4CA;
+  }
+  section.level2:first-of-type > h2 {
+    page-break-before: avoid;
+  }
+  h3 {
+    font-size: 12pt;
+    color: #1A2D5C;
+    margin: 16pt 0 8pt;
+    page-break-after: avoid;
+  }
+  h4 {
+    font-size: 9pt;
+    color: #B8810C;
+    font-family: 'Geist Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 12pt 0 6pt;
+    page-break-after: avoid;
+  }
+  p {
+    margin-bottom: 9pt;
+    color: #4A4438;
+    orphans: 3;
+    widows: 3;
+  }
+  p > strong:first-child {
+    color: #1A2D5C;
+  }
+  strong { color: #1A2D5C; }
+  em { color: #1A2D5C; font-family: 'Instrument Serif', serif; }
+  a {
+    color: #1A2D5C;
+    border-bottom: 1px solid #F4A300;
+    text-decoration: none;
+  }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 7.5pt;
+    color: #999;
+    font-family: 'Geist Mono', monospace;
+    word-break: break-all;
+    border-bottom: none;
+  }
+  a[href^="#"]::after { content: ""; }
+  table {
+    font-size: 8.5pt;
+    background: #FFF;
+    border: 1px solid #C8C0B0;
+    page-break-inside: avoid;
+    margin: 12pt 0;
+  }
+  thead {
+    background: #F4ECDA;
+    border-bottom: 1.5px solid #1A2D5C;
+  }
+  th {
+    color: #1A2D5C;
+    font-size: 8pt;
+    padding: 6pt 8pt;
+  }
+  td {
+    border-bottom: 1px solid #E0DCD0;
+    color: #4A4438;
+    padding: 6pt 8pt;
+  }
+  tbody tr:hover { background: none; }
+  td strong { color: #1A2D5C; }
+  code {
+    background: #F4ECDA;
+    color: #1A2D5C;
+    border: 1px solid #D8D0BC;
+    font-size: 0.88em;
+  }
+  pre {
+    background: #FAF6EC;
+    border: 1px solid #D8D0BC;
+    border-left: 2pt solid #F4A300;
+    padding: 9pt 11pt;
+    font-size: 8pt;
+    page-break-inside: avoid;
+    margin: 9pt 0;
+  }
+  pre code { color: #4A4438; }
+  ul li, ol li { margin-bottom: 4pt; color: #4A4438; }
+  ul li::marker, ol li::marker { color: #F4A300; }
+  hr {
+    border-top: 1px solid #D8D4CA;
+    margin: 14pt 0;
+  }
+  hr::before {
+    background: #FFF;
+    color: #999;
+  }
+  blockquote {
+    border-left: 2pt solid #F4A300;
+    color: #7A7466;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="header">
+  <div class="header-meta"><b>HU<i>·</i>PA</b> &nbsp; Physical AI Daily</div>
+  <div class="header-nav">
+    <a class="pdf-btn" href="index.html" title="Latest brief">Latest brief</a>
+    <a class="pdf-btn outline" href="papers.html" title="Open Papers DB">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2.5 3.5h11v9h-11z"/><path d="M2.5 6.5h11M5.5 3.5v9M10 3.5v9"/></svg>
+      Papers DB
+    </a>
+    <button class="pdf-btn outline" onclick="window.print()" title="Save as PDF via browser print dialog">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 1.5h6L13.5 5v9.5h-9.5z"/><path d="M9.5 1.5V5h4"/><path d="M5.5 8.5h5M5.5 11h5"/></svg>
+      Export PDF
+    </button>
+  </div>
+</div>
+
+<button class="mobile-toc-trigger" id="mobileTocTrigger" aria-label="Open contents menu">
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2.5 4h11M2.5 8h11M2.5 12h11" stroke-linecap="round"/></svg>
+  Contents
+</button>
+<div class="mobile-toc-scrim" id="mobileTocScrim" aria-hidden="true"></div>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div id="sitenav" class="sitenav"></div>
+
+    <div class="toc">
+      <div class="toc-label">On this page</div>
+      <nav><ul id="tocList"></ul></nav>
+    </div>
+  </aside>
+
+  <div class="main-wrap">
+  <main class="main">
+<section id="thursday-august-20-2026" class="level2">
+<h2>Thursday, August 20, 2026</h2>
+<section id="tldr" class="level3">
+<h3>TL;DR</h3>
+<ul>
+<li><strong>Unitree listed on the Shanghai STAR Market and closed day one up roughly 460%, taking a company priced at 61 billion yuan (about $9.04B) to a close near 342 billion yuan (about $50B).</strong> It priced at 150.8 yuan a share for 40.45M new shares, raising 6.1 billion yuan (about $904M), traded as high as 1,100 yuan intraday on August 18, and is the first mainland-listed humanoid maker. DeepSeek was on the book for roughly 140.8M yuan. Every humanoid company on earth now has a public comp, and it is Chinese. <a href="https://www.therobotreport.com/what-does-unitree-robotics-ipo-mean-for-humanoid-industry/">The Robot Report</a>, <a href="https://www.caixinglobal.com/2026-08-18/unitree-to-debut-at-61-billion-yuan-valuation-in-closely-watched-shanghai-ipo-102475173.html">Caixin</a></li>
+<li><strong>RoboEdit (arXiv 2608.18948) turns plain RGB human manipulation video into robot training data automatically and ships RoboEdit-14M: 174K aligned video pairs, 14M frames, seven robot embodiments.</strong> The pipeline reconstructs and retargets 3D interactions from uncurated video and includes a 3D Robot-State Decoder that recovers per-frame hand states as structured motion supervision. This is the sharpest version yet of the “why pay for embodiment-specific capture” question, and it is also the exact service a capture company should be selling on top of its own footage. <a href="https://arxiv.org/abs/2608.18948">arXiv</a></li>
+<li><strong>SoftVTBench (arXiv 2608.18701) checked whether “successful” robot rollouts actually left the object intact, and found that all 12 in-distribution configurations across Diffusion Policy, pi-0.5 and FastWAM contained successes that violated deformation tolerance, between 0.7% and 24% of each configuration’s successes.</strong> The benchmark carries evaluator-only FEM state as independent ground truth against 4,000 expert demos. Binary task success is silently passing up to a quarter of rollouts that damaged the thing they were manipulating. <a href="https://arxiv.org/abs/2608.18701">arXiv</a></li>
+</ul>
+</section>
+<section id="data-collection" class="level3">
+<h3>Data collection</h3>
+<ul>
+<li><strong>RoboEdit is the collection story of the window and it cuts both ways.</strong> RoboEdit-ADC reconstructs and retargets 3D interactions from ordinary RGB human video with no motion capture and no teleoperation rig, producing 174K aligned video pairs across 14M frames and seven embodiments. The 3D Robot-State Decoder recovering per-frame hand states is what makes the output supervisable rather than merely watchable. Read it next to the wider pattern: the automatic-retargeting stack keeps getting better at converting free video into trainable data, so the premium moves to footage that is scarce, specified and provably clean rather than merely plentiful. <a href="https://arxiv.org/abs/2608.18948">arXiv</a></li>
+<li><strong>Linkerbot and Orbbec signed a strategic partnership to close a visual-perception to dexterous-manipulation to data-feedback loop, and Orbbec’s half of it is the part worth reading twice.</strong> Orbbec’s disclosed embodied-data-collection business sells body-agnostic capture hardware platforms to data-collection providers, model developers and haptics and glove vendors, from white-label through full contract manufacturing, and it serves 5,000+ enterprise clients including 1,600 robotics companies. Linkerbot supplies dexterity data accumulated from live deployments in flexible manufacturing, embodied retail and logistics sorting, and separately maintains UMI-Dex, an open-source dexterous collection scheme built on isomorphic end-effectors with native tactile sensing. Somebody is quietly building the arms supplier to the capture industry. <a href="https://autonews.gasgoo.com/articles/market-industry/linkerbot-orbbec-reach-strategic-partnership-2090030738815864832">Gasgoo</a></li>
+<li><strong>RealMan Intelligent Technology filed ChiNext listing guidance and disclosed 10,000+ hours of stored real-world robot data plus 500,000-unit annual joint-module capacity.</strong> It runs data training centers in Beijing and Changzhou, plans to put nearly 100 robots onto industrial front lines to “do real work and gather real data,” and operates GLN, a cross-city teleoperation network demonstrated at WAIC 2026 with millisecond-latency Beijing-to-Shanghai control. A stored-hours figure is now something a Chinese company puts in a listing document. <a href="https://autonews.gasgoo.com/articles/news/another-embodied-intelligence-company-launches-chinext-listing-guidance-2090023797582479361">Gasgoo</a></li>
+<li><strong>VERAGMIL (arXiv 2608.18258) is a small paper with a procurement-relevant result: VR-recorded demonstrations significantly outperformed 3D space-mouse demonstrations on success rate, spillage, generalization to unseen foods and completion time, across BC, BC-RNN and BCQ.</strong> The task is granular-food scooping for robot-assisted feeding, and BCQ was best overall. Interface fidelity, not just demonstration count, sets the ceiling on downstream policy quality. That is the argument for a premium rig, made by somebody else. <a href="https://arxiv.org/abs/2608.18258">arXiv</a></li>
+<li><strong>LabDex (arXiv 2608.18618) is a real-world dexterous manipulation benchmark for chemistry labs, organized as a three-level taxonomy of atomic skills, compositional skills and long-horizon lab workflows, and the authors claim it is the first to unify real and simulated platforms under one set of task definitions and evaluation protocols.</strong> No hour or episode counts are given in the abstract, so treat “large-scale” as unquantified. The shape matters anyway: vertical-specific capture with a task taxonomy attached is what buyer demand actually looks like. <a href="https://arxiv.org/abs/2608.18618">arXiv</a></li>
+<li><strong>Datakrew, Hyundai’s CRADLE venture arm and car-sharing operator GetGo finished a year-long Singapore fleet program covering 3.6 billion data points from 70 vehicles across roughly 55,000 driving hours, forecasting battery state of health months ahead inside a claimed 3% error band.</strong> Not embodied AI, but it is the largest named-OEM real-world data flywheel to surface in SEA this window, and Datakrew raised $2.6M in March 2026 for exactly this. <a href="https://e27.co/70-cars-55000-hours-one-question-can-you-forecast-when-an-ev-battery-will-die-20260817/">e27</a></li>
+</ul>
+</section>
+<section id="data-annotation-validation" class="level3">
+<h3>Data annotation &amp; validation</h3>
+<ul>
+<li><strong>SoftVTBench is the most useful annotation result in weeks because it attacks the label itself.</strong> 4,000 expert demonstrations, 50+ assets pairing volumetric deformables with visually matched rigid twins, every episode at 20 Hz synchronizing multi-view RGB, dual-finger tactile RGB and marker motion, proprioception, language and both binary and continuous gripper actions, with FEM state held back as evaluator-only ground truth. The finding is that binary success is not a safe label for deformable work, with 0.7% to 24% of recorded successes violating deformation tolerance in every single in-distribution configuration tested. Second finding worth holding: under distribution shift, visuo-tactile variants won on task success in 6 of 6 comparisons but on deformation-aware success in only 5 of 6, so adding a touch channel does not automatically buy fusion. <a href="https://arxiv.org/abs/2608.18701">arXiv</a></li>
+<li><strong>Toloka published a named enterprise deployment with Shopify and hard numbers, which is the first primary vendor signal this sweep has surfaced in four consecutive runs.</strong> De-identified production conversations are scored by an LLM judge, sub-threshold cases route to Toloka humans for correction, and the corrections feed both SFT golden sets and RL reward signal. Skill-judge accuracy went 75% to 89% in one month from prompt engineering alone with no retraining, and annotation cost roughly halved. Two named work streams: Zero Scores for golden sets, Thumbs Down for merchant-flagged dissatisfaction. That architecture, judge triages and humans fix the tail, is precisely the one robot-rollout validation is converging on. <a href="https://toloka.ai/blog/how-shopify-and-toloka-built-a-ground-truth-flywheel-to-keep-skill-agents-accurate-at-scale/">Toloka</a></li>
+<li><strong>Toloka also shipped Exams, gated annotator onboarding with three grading modes, configurable inside generation and quorum nodes.</strong> Grading runs by exact ground-truth match, by instruction-based LLM-judge comparison for cases like bounding boxes where exact match fails, or against the same criteria used in production. An agent can auto-generate the exam dataset and config. The vendors are starting to compete on provable annotator screening rather than throughput, which is a good sign for anyone selling audit trails. <a href="https://toloka.ai/blog/screen-annotators-with-exams-for-higher-quality-data/">Toloka</a></li>
+<li><strong>Dream2Reward (arXiv 2608.18787) learns a language-conditioned reward model from positive demonstrations only, and explicitly needs no failure annotations, no progress labels and no synthetic negatives.</strong> It scores an observed latent displacement against a learned successful-transition field using signed directional plus symmetric magnitude agreement, which lets it penalize wrong-direction, overshooting and stagnant motion that progress-based rewards mistakenly score as advancing. The frozen model reduces reward hacking in online and offline policy learning including on real hardware. Note the pricing implication in both directions: it deflates demand for failure labeling and raises the value of verified clean positives. <a href="https://arxiv.org/abs/2608.18787">arXiv</a></li>
+<li><strong>Prism-GRPO (arXiv 2608.17423) fixes the waste in VLA reinforcement post-training where groups whose rollouts all succeed or all fail carry zero advantage and get thrown away.</strong> It splits same-outcome groups using a weighted trajectory-level execution-quality score, with a proof that it never increases discard probability and a guarantee that every success still outranks every failure. Across four RoboTwin tasks it reaches target success with up to 56% fewer rollouts and suppresses a reward-hacking shortcut, and the cleaner behavior transfers to a real robot. The quality signal can come from simulator contacts, executed actions or a VLM, which makes it a labeling spec. <a href="https://arxiv.org/abs/2608.17423">arXiv</a></li>
+<li><strong>Surge AI launched Tuesday, a Frontier Work Index folding eight of its own benchmarks into one composite score.</strong> Chartography, HANDBOOK.md, GDP.pdf, ComplexConstraints, CoreCraft, Hemingway-bench, Antidote and Riemann-bench roll into a single number spanning instruction following, long-context agentic work, professional documents, graphical reasoning, judgment, writing and frontier math. Published leaderboard: Fable 5 at 66.8, GPT-5.6 Sol at 66.7, DeepSeek V4 Pro at 59.7. The strategic read is the interesting one. A data supplier converting its eval portfolio into a branded index it owns and hosts is moving from vendor to standard-setter. <a href="https://surgehq.ai/blog/tuesday-frontier-work-index">Surge AI</a></li>
+<li><strong>The Affordance Sheet proposal (arXiv 2608.18317) argues affordance prediction is effectively unbenchmarkable today because of heterogeneous problem formulations, inconsistent dataset annotations, incomplete protocol reporting and missing deployment-condition information.</strong> No experiments, no numbers, it is a documentation standard. Worth tracking anyway. A datasheet standard for annotation provenance is the sort of thing worth being early and compliant on rather than retrofitting later. <a href="https://arxiv.org/abs/2608.18317">arXiv</a></li>
+<li><em>Vendors checked with nothing in-window: Mercor (newest 11 Aug), Labelbox (30 Jun), Invisible, iMerit (two 17 Aug posts, both SEO explainers, site now carrying an iMerit and EXL lockup), Scale AI, CloudFactory, Sama, Centific, Appen.</em></li>
+</ul>
+</section>
+<section id="embedded-ai-systems" class="level3">
+<h3>Embedded AI systems</h3>
+<ul>
+<li><strong>Jetson-ORB-SLAM3 (arXiv 2608.17874) is the cleanest edge-deployment result of the window, and its lesson is that the runtime stack is the bottleneck, not the model.</strong> The GPU ORB front end on a Jetson Orin Nano reproduces the CPU reference detector to 94.7% exact keypoint agreement and 99.9% descriptor bit agreement, with all four GPU/CPU by Jetson/desktop configurations agreeing within 0.10 cm mean ATE on EuRoC. Generic ONNX-Runtime CUDA and TensorRT providers were unusable for their CosPlace ResNet-50 on device, but a native libnvinfer FP16 engine cut per-query loop-closure inference to 2.2 ms, a 180x speedup, letting learned place recognition run alongside tracking on a 7 W part at 32 FPS mean in monocular-inertial mode. <a href="https://arxiv.org/abs/2608.17874">arXiv</a></li>
+<li><strong>EcoVLA (arXiv 2608.15502) puts a number on the device-versus-edge question that on-rig inference budgets keep running into: up to 236% better system energy efficiency than existing co-inference approaches under a 20 Hz action-output constraint, while holding SLO satisfaction as network and edge load vary.</strong> It builds an architecture-agnostic stage-level abstraction over VLA paradigms, a joint device-edge-network latency and energy model, and a runtime scheme selector with millisecond-level overhead, plus lightweight compression of inter-stage intermediate tensors. From the August 16 mailing and never covered here, so logged now. <a href="https://arxiv.org/abs/2608.15502">arXiv</a></li>
+<li><strong>Zetta (arXiv 2608.16590) argues that existing agentic harnesses are open-loop, with fixed skills during rollout and reflection only after the episode ends, which cannot govern execution at physical-interaction frequency.</strong> It evolves code-based runtime critics and recovery skills online while keeping the base policy frozen, across three timescale-separated loops. Numbers: 90.8% on LIBERO-Pro, 93.6% on RoboCasa, an 11.1x inference speedup, success that keeps scaling with self-exploration experience, and learned skills that transfer zero-shot. Note also that a third independent group has now reached for “harness” as the name for this layer. <a href="https://arxiv.org/abs/2608.16590">arXiv</a></li>
+<li><strong>NebulaVLA (arXiv 2608.16503) decouples high-level semantic reasoning from low-level action control into an asynchronous dual-frequency architecture, reporting 85.5% average success on LIBERO-Plus and roughly 2.7x faster action generation than synchronous baselines.</strong> It adds GESTURE-7, a language-grounded action representation for cross-embodiment transfer, and a Guide Action algorithm enforcing kinematic continuity through mask-based smoothness constraints. Two clock rates in one policy keeps reappearing as the answer to on-device VLA budgets. <a href="https://arxiv.org/abs/2608.16503">arXiv</a></li>
+<li><strong>Black Sesame Technologies signed a framework chip-supply agreement with Meichuangxi, Midea’s wholly-owned chip platform, starting with industrial and humanoid robots.</strong> Black Sesame supplies domestic edge-compute silicon for Meichuangxi’s robotics and home-appliance lines, adaptation and validation first, and is pushing its SesameX embodied platform across Kalos, Aura and Liora modules spanning 48 TOPS to nearly 600 TOPS. It already names COSCO SHIPPING, Lenovo and Joyson Electronics as robotics partners. Midea brings stable procurement volume and mature end-use scenarios, which is what domestic substitution actually needs. <a href="https://autonews.gasgoo.com/articles/news/black-sesame-technologies-enters-mideas-robotics-supply-chain-2090024130912215041">Gasgoo</a></li>
+<li><strong>NVIDIA used Actuate 26 in San Francisco on August 18 and 19 to position Halos, its automotive-derived safety system, as the path from prototype to production for humanoids and industrial robots working alongside people.</strong> Cosmos 3 was presented across the same workflow, from synthetic data generation and neural-simulation policy evaluation through real-time deployment on Jetson Thor. Sourced from NVIDIA’s own event material rather than a dated press release, so treat the framing as positioning rather than a product ship. Read it next to the FORT Robotics listing below. Safety and certification are being commercialized as a layer this week, by two very different kinds of company. <a href="https://www.nvidia.com/en-us/events/actuate/">NVIDIA</a></li>
+</ul>
+</section>
+<section id="robotics-humanoids" class="level3">
+<h3>Robotics &amp; humanoids</h3>
+<ul>
+<li><strong>GigaBrain-WBC-0.5 (arXiv 2608.18234) is the strongest single technical result in the window, and the annotation half of it is the part most people will skip.</strong> A causal Transformer jointly predicts next action, next state and the distribution over the next latent behavior command, so implausible commands get retracted onto learned behaviors online. It reports 81.3% success on terrain interaction against the strongest of three large-scale tracker baselines at 4.3x lower, 83.1% under implausible commands, and 99.3% fall recovery at 16.8x the strongest baseline, with the Unitree G1 checkpoint transferring to a Maker L01 on simple fine-tuning. The overlooked part is an automatic terrain-annotation pipeline that recovers full 3D contact geometry from retargeted motion, so terrain labels can be applied across motion datasets that already exist. Value migrating from new capture to relabeling data already on disk is a pattern to watch closely. <a href="https://arxiv.org/abs/2608.18234">arXiv</a></li>
+<li><strong>Agentic Push-T (arXiv 2608.18227) is four pages of discomfort for demonstration-hungry imitation learning.</strong> An LLM coding agent was told to solve Push-T algorithmically with zero demonstration data, found the 2D gym simulator online, ran experiments to learn push mechanics, and reached 100% success using 46% fewer steps than the best diffusion policy trained on 200 human demonstrations. It then self-generated a curriculum extending to Push-A through Push-Z and produced Franka and UR5 cross-embodiment simulation code. The honest response is not to dismiss it. It is to be precise in public about which task classes still need demonstrations, which is contact-rich, unmodelable and open-world work, and Push-T is none of those. <a href="https://arxiv.org/abs/2608.18227">arXiv</a></li>
+<li><strong>ADEPT (arXiv 2608.19182) pretrains on a generic object-reposing task then post-trains downstream policies with that behavior as prior, using BC distillation, critic warm-up and conservative on-policy updates because naive RL fine-tuning destroys the prior.</strong> Teachers distill into perceptive students that zero-shot sim-to-real onto a 23-DoF Kuka-Allegro with two RGB cameras and a 29-DoF Flexiv-Sharpa with two RGB plus five vision-based tactile sensors, solving long-horizon tasks at human-level speed from raw visuo-tactile input. Pre-train then post-train for dexterity, with no human data in the loop. <a href="https://arxiv.org/abs/2608.19182">arXiv</a></li>
+<li><strong>FetchMan (arXiv 2608.17027) reports that cloning synthetic demonstrations hits a hard performance ceiling regardless of data volume, and that refining the cloned policy with Flow-GRPO on a single sparse reward breaks through it.</strong> The sim-to-real pipeline spans more than 150,000 scenes and the reach-and-pick policy deploys zero-shot onto a real Unitree G1 at 73.3% success, walking to and grasping targets in unseen scenes. FetchMan-Bench is released. “Behavior cloning ceilings, reinforcement breaks it” is the transferable claim, and it applies to real demonstrations too. <a href="https://arxiv.org/abs/2608.17027">arXiv</a></li>
+<li><strong>Xiaomi confirmed its first humanoid on the August 18 earnings call and showed it publicly on August 19, with a nut-tightening success rate improved from 90.2% to 98% across a four-month plant internship.</strong> President Lu Weibing put target deployment on Xiaomi’s own smart manufacturing lines, inside the “human, car, home” framing. A real benchmark on a real task from a company with captive factory demand beats another demo reel, and the four-month figure is the honest part. <a href="https://www.gizmochina.com/2026/08/18/xiaomi-robot-set-to-make-public-debut-at-2026-world-robot-conference-on-august-19/">Gizmochina</a></li>
+<li><strong>X-Humanoid launched Linglong L2.0, a fire-fighting humanoid with 560 TOPS of onboard compute and over 95% domestically sourced hardware.</strong> 1.73 m, 42 active degrees of freedom, stable 3 m/s running, rubble and stair traversal, with visible-light HD cameras plus infrared thermal plus LiDAR plus a multi-parameter gas sensor array for smoke-blind mapping, in a suit rated to 1,000 degrees C. It shuts gas valves and electrical switches autonomously and operates extinguishers by visually locating the fire. Deployed as a fleet alongside a wheeled robot and a quadruped scout. Hazardous-environment work is the deployment wedge where the ROI arithmetic does not depend on wage arbitrage. <a href="https://autonews.gasgoo.com/articles/news/nationallocal-joint-innovation-center-for-human-launches-fire-fighting-humanoid-robot-2090027425957437440">Gasgoo</a></li>
+<li><strong>“The Embodiment Gap in Robot Foundation Models” (arXiv 2608.18433) defines the gap as the work between a reusable model, representation or dataset and actual execution on a target robot, and proposes a reporting framework for adaptation cost that success rate alone hides.</strong> It maps existing methods on two axes, type of shared structure and stage at which adaptation is required. Useful as citable vocabulary for why cross-embodiment data has to be sold with its adaptation cost disclosed. <a href="https://arxiv.org/abs/2608.18433">arXiv</a></li>
+<li><strong>A contrarian result worth flagging (arXiv 2608.15938): action chunking mainly helps short-context policies imitate non-Markovian demonstrations, and with sufficiently long context, closed-loop reactive policies win.</strong> That runs against the working assumption in a lot of recent deployment writing, including some of ours. From the August 16 mailing, uncovered until now. <a href="https://arxiv.org/abs/2608.15938">arXiv</a></li>
+</ul>
+</section>
+<section id="india-sea-spotlight" class="level3">
+<h3>India &amp; SEA spotlight</h3>
+<ul>
+<li><strong>AlgoFET raised Rs 15 crore (about $1.7M) in a pre-Series A led by Piper Serica, and the numbers underneath are better than the headline: 2,000+ units deployed against a 4,000+ unit order pipeline and an order book near Rs 100 crore.</strong> The Bengaluru company, founded December 2023 by IIT Guwahati alum Ankit Mishra, builds the ground layer for drone autonomy as one vertically integrated stack: docking mechanisms, battery management, high-power charging, embedded electronics and firmware, plus cloud fleet monitoring. Customers include the Indian Army and drone OEMs, with early traction in the US and Europe. Picks and shovels beneath the autonomous platform, funded and shipping. <a href="https://entrackr.com/snippets/piper-serica-leads-rs-15-cr-pre-series-a-round-in-deep-tech-startup-algofet-12395742">Entrackr</a></li>
+<li><strong>NeoGeo raised a $20M Series A led by Neev II Fund and Aavishkaar Capital for full-stack geospatial data acquisition, running satellite imagery, LiDAR, drones and ground survey with analytics on top.</strong> Claimed scale is 200+ projects, 500,000 sq km mapped and 550+ CORS stations, with capital going to R&amp;D and Middle East and Americas expansion. Adjacent rather than embodied, but it is one of the larger Indian real-world-sensing raises of the window and the buyer logic rhymes. <a href="https://entrackr.com/news/neogeo-raises-20-mn-series-a-led-by-neev-ii-fund-and-aavishkaar-capital-12392388">Entrackr</a></li>
+<li><strong>Chery’s robot unit AiMOGA named Southeast Asia and the Middle East as priority markets for humanoid police robots, arguing heat and heavy rainfall make traffic-police roles a strong substitution case.</strong> Unit head Zhang Guibing, speaking at the World Robot Conference, said AiMOGA is in talks with several listing venues, reports 3,000+ robots delivered globally with 2,000 overseas across 60+ countries, targets 10,000 next year, and already has 110 humanoid police robots across Chinese cities. Chinese humanoid vendors are treating SEA as an export market before Indian or SEA companies have built the domestic alternative. <a href="https://www.dealstreetasia.com/stories/chinese-auto-maker-cherys-robot-unit-eyes-ipo-492622/">DealStreetAsia</a></li>
+<li><strong>HSBC Global Investment Research flagged a two-speed Malaysian chip sector, naming Malaysia, Singapore and Vietnam as the primary SEA beneficiaries of AI infrastructure spend while warning that firms without direct AI exposure face margin compression from rising memory prices.</strong> Malaysia exported about $110B of semiconductors in 2025, roughly 23% of GDP, holds 13% of global assembly, test and packaging, and drew about $22.52B in approved semiconductor investment between January 2024 and March 2026. Binding constraints named are engineer retention against Singapore wages and helium supply for front-end fabs. <a href="https://e27.co/ai-demand-lifts-malaysias-chip-sector-but-not-every-player-wins-20260817/">e27</a></li>
+<li><em>Coverage gap to name honestly: Tech in Asia, Straits Times, Moneycontrol and Economic Times tech were all hard-blocked at the fetch layer this run, and Inc42 and YourStory returned stale or client-rendered content. If Singapore’s National Robotics Programme, A*STAR or EDB announced anything on August 18 to 20, this sweep would not have caught it.</em></li>
+</ul>
+</section>
+<section id="china-spotlight" class="level3">
+<h3>China spotlight</h3>
+<ul>
+<li><strong>The Unitree listing is the item of the week and the read-through is not really about Unitree.</strong> It priced at 150.8 yuan for 40.45M new shares, 10% of enlarged capital, raising 6.1 billion yuan at a 61 billion yuan valuation, traded to 1,100 yuan intraday on August 18 and closed day one up about 460% near 342 billion yuan, roughly $50B. DeepSeek took roughly 140.8M yuan of the IPO. The Robot Report’s follow-up asks which humanoid company lists next, which is the right question. A Chinese public comp now anchors valuation for the entire category, and it did so three days before the World Robot Conference opened in Beijing. <a href="https://www.therobotreport.com/what-does-unitree-robotics-ipo-mean-for-humanoid-industry/">The Robot Report</a>, <a href="https://www.caixinglobal.com/2026-08-18/unitree-to-debut-at-61-billion-yuan-valuation-in-closely-watched-shanghai-ipo-102475173.html">Caixin</a></li>
+<li><strong>RobotEra is lining up a Hong Kong main-board IPO targeting $800M to $1B, on top of roughly 5 billion yuan already raised in 2026 alone.</strong> The Tsinghua-incubated company has engaged advisors, claims an in-house hardware development rate above 95% across motors, drivers and reducers, and says its full-stack logistics solution is in regular operation at more than a dozen Chinese logistics centers with SF Express and China Post. Nine rounds since founding in August 2023, three of them this year: 1 billion yuan in March, over $200M in late April, another 1 billion yuan in early July. <a href="https://autonews.gasgoo.com/articles/market-industry/robotera-reportedly-plans-hong-kong-ipo-aiming-to-raise-up-to-1-billion-2090027934059618305">Gasgoo</a></li>
+<li><strong>Acorn Robot closed an angel round led by CM Venture Capital and NIO Capital, taking total raised to several hundred million yuan, and used the same day to launch a model that explicitly abandons data pretraining.</strong> The Natus AGE-0 “Embodied Instinct Model” is positioned as tactile-perception-centered general manipulation requiring no labeled datasets and no specific robot hardware, claiming zero-shot generalization across bodies and materials. The round follows a nearly 100 million yuan seed just four months earlier. Commercially it completed a POC at a global cosmetics ODM and signed to revenue in two months, and is building a standardized dual-arm unit for a Manufacturing-as-a-Service model. This is a funded, revenue-generating contrarian bet against the entire data-scale thesis, and it deserves an honest hearing rather than a dismissal. <a href="https://autonews.gasgoo.com/articles/news/seeds-acorn-robot-closes-angel-round-unveils-worlds-first-embodied-instinct-model-2090024497473409025">Gasgoo</a></li>
+<li><strong>RealMan’s ChiNext listing guidance filing with Guotai Haitong comes five months after a roughly 500 million yuan strategic round backed by Ecovacs, CM Capital and Yunqi Capital.</strong> Beyond the 10,000+ stored hours covered above, it claims integrated joint modules at 50,000-hour MTBF with CR L3 certification and 500,000-unit annual capacity. Two Chinese embodied-AI companies filed for public markets in the same 48 hours as Unitree’s debut, which is not a coincidence. <a href="https://autonews.gasgoo.com/articles/news/another-embodied-intelligence-company-launches-chinext-listing-guidance-2090023797582479361">Gasgoo</a></li>
+<li><strong>LimX Dynamics signed with Hefei’s Baohe District for a regional headquarters plus a national smart manufacturing center, and said more than half of its “thousands” of orders come from overseas.</strong> The subsidiary will hold a production base, an R&amp;D center and a scenario training lab, deepening ties with shareholders Zhongding Shares, Hefei Flexible Keti and NIO Capital. LimX Luna shipped domestically and overseas within a month of its May launch, and TRON 2 has bulk orders. No investment figure disclosed. <a href="https://autonews.gasgoo.com/articles/news/limx-dynamics-establishes-regional-headquarters-and-smart-manufacturing-center-in-hefei-2090022687832563712">Gasgoo</a></li>
+<li><strong>The World Robot Conference opened in Beijing on August 19 with a first-ever central state-owned-enterprise pavilion, 49 central SOEs presenting 12 application scenarios, and SASAC launching a Central Enterprise Robotics Innovation Consortium timed to the show.</strong> The conference restructured into themed days, with August 20 designated Procurement Day for buyer and seller matchmaking. State buyers being formalized as a demand channel, with a day of the conference named after purchasing, is the positioning shift. Numbers on exhibitor growth come from an August 8 preview rather than the opening, so treat the count as pre-announced; AP’s coverage of the actual opening reports roughly 3,000 products shown. <a href="https://abcnews.com/Technology/wireStory/robot-dogs-helpers-china-puts-robotics-ambitions-display-135767418">AP</a></li>
+</ul>
+</section>
+<section id="twitter-x-signal" class="level3">
+<h3>Twitter / X signal</h3>
+<p><em>Browser path lost again, and this run it failed differently. The extension listed one connected browser and <code>select_browser</code> succeeded twice, but <code>tabs_context_mcp</code> timed out on cycles 1 and 2, returned “not connected” on cycle 3, <code>tabs_create_mcp</code> timed out on cycle 4, and by cycle 5 <code>list_connected_browsers</code> returned an empty array. Five full cycles attempted per the runbook. The host also threw repeated sleep-interruption errors during this run, which is the likely common cause. Eighth consecutive run without browser X access. Fallback ran the grouped handle queries plus both mandated catch-up queries. Nothing datable inside August 18 to 20 surfaced from the monitored handles: the newest recoverable posts were Adcock’s Figure production charts (June), Jim Fan’s 8,000-timestep context post (July) and NVIDIA EgoScale reaction threads, all previously covered. The catch-up sweep did surface one genuinely uncovered in-window item, NVIDIA’s Actuate 26 on August 18 and 19, which is written up in Embedded AI systems above. Treat X as a known gap, not as quiet.</em></p>
+</section>
+<section id="research-papers-worth-a-look" class="level3">
+<h3>Research papers worth a look</h3>
+<ul>
+<li><strong>RoboEdit</strong> (arXiv <a href="https://arxiv.org/abs/2608.18948">2608.18948</a>). Automatic 3D reconstruction and retargeting from plain human RGB video, shipping 174K aligned pairs across 14M frames and seven embodiments.</li>
+<li><strong>SoftVTBench</strong> (arXiv <a href="https://arxiv.org/abs/2608.18701">2608.18701</a>). 4,000 demos with FEM ground truth, and the finding that 0.7% to 24% of “successful” rollouts violated deformation tolerance in every configuration tested.</li>
+<li><strong>GigaBrain-WBC-0.5</strong> (arXiv <a href="https://arxiv.org/abs/2608.18234">2608.18234</a>). Behavior world model for whole-body control, 99.3% fall recovery at 16.8x baseline, plus automatic terrain annotation of existing motion corpora.</li>
+<li><strong>ADEPT</strong> (arXiv <a href="https://arxiv.org/abs/2608.19182">2608.19182</a>). Pre-train then post-train for dexterity, zero-shot sim-to-real on 23-DoF and 29-DoF visuo-tactile hands.</li>
+<li><strong>Agentic Push-T</strong> (arXiv <a href="https://arxiv.org/abs/2608.18227">2608.18227</a>). Coding agent beats a 200-demo diffusion policy with zero demonstrations, 100% success at 46% fewer steps.</li>
+<li><strong>Dream2Reward</strong> (arXiv <a href="https://arxiv.org/abs/2608.18787">2608.18787</a>). Reward model from positive demonstrations only, no failure annotations, no progress labels, no synthetic negatives.</li>
+<li><strong>Prism-GRPO</strong> (arXiv <a href="https://arxiv.org/abs/2608.17423">2608.17423</a>). Splitting same-outcome GRPO groups by execution quality, target success at up to 56% fewer rollouts.</li>
+<li><strong>Jetson-ORB-SLAM3</strong> (arXiv <a href="https://arxiv.org/abs/2608.17874">2608.17874</a>). 180x loop-closure speedup to 2.2 ms on a 7 W Orin Nano through a native TensorRT engine, with accuracy preserved.</li>
+<li><strong>EcoVLA</strong> (arXiv <a href="https://arxiv.org/abs/2608.15502">2608.15502</a>). Device-edge co-inference for VLAs, up to 236% better energy efficiency under a 20 Hz action constraint.</li>
+<li><strong>Zetta</strong> (arXiv <a href="https://arxiv.org/abs/2608.16590">2608.16590</a>). Closed-loop embodied harness with online critic and recovery-skill evolution, 90.8% LIBERO-Pro at an 11.1x inference speedup.</li>
+<li><strong>NebulaVLA</strong> (arXiv <a href="https://arxiv.org/abs/2608.16503">2608.16503</a>). Dual-frequency VLA, 85.5% on LIBERO-Plus and roughly 2.7x faster action generation.</li>
+<li><strong>FetchMan</strong> (arXiv <a href="https://arxiv.org/abs/2608.17027">2608.17027</a>). Behavior-cloning ceiling broken by Flow-GRPO on a single sparse reward, 73.3% zero-shot on a real Unitree G1.</li>
+<li><strong>LabDex</strong> (arXiv <a href="https://arxiv.org/abs/2608.18618">2608.18618</a>). Three-level dexterous benchmark for chemistry labs unifying real and simulated platforms.</li>
+<li><strong>VERAGMIL</strong> (arXiv <a href="https://arxiv.org/abs/2608.18258">2608.18258</a>). VR demonstrations beat space-mouse demonstrations on success, spillage, generalization and time.</li>
+<li><strong>The Embodiment Gap</strong> (arXiv <a href="https://arxiv.org/abs/2608.18433">2608.18433</a>). Survey defining the model-to-robot adaptation gap, with a proposed reporting framework for adaptation cost.</li>
+<li><strong>Affordance Sheet</strong> (arXiv <a href="https://arxiv.org/abs/2608.18317">2608.18317</a>). A datasheet standard for affordance annotation provenance and protocol reporting.</li>
+<li><strong>SparkVLA</strong> (arXiv <a href="https://arxiv.org/abs/2608.16172">2608.16172</a>). Stop-aware hierarchical VLA ranking “Stop” against every action-prefix length, 47.12% on RoboCerebra, +30.57 points over the official hierarchical baseline.</li>
+<li><strong>UCA-Flow</strong> (arXiv <a href="https://arxiv.org/abs/2608.16153">2608.16153</a>). Unified condition-action token space for one-step action generation, +9.3 points average success with 45.6x and 33.4x speedups over DP3 and Simple DP3.</li>
+<li><strong>BATON</strong> (arXiv <a href="https://arxiv.org/abs/2608.16889">2608.16889</a>). Subtask as the unit of exploration, cutting long-horizon cost from T^K to T*K with per-stage failure attribution, +11.6% task success with no parameters updated.</li>
+<li><strong>Open-loop execution study</strong> (arXiv <a href="https://arxiv.org/abs/2608.15938">2608.15938</a>). Action chunking mainly helps short-context policies, and long-context closed-loop reactive policies win.</li>
+</ul>
+</section>
+<section id="money-moves" class="level3">
+<h3>Money &amp; moves</h3>
+<ul>
+<li><strong>Unitree: 6.1 billion yuan raised (about $904M) at a 61 billion yuan IPO valuation, closing day one near 342 billion yuan, about $50B, up roughly 460%.</strong> First mainland-listed humanoid maker. Full read in China spotlight. <a href="https://www.therobotreport.com/what-does-unitree-robotics-ipo-mean-for-humanoid-industry/">The Robot Report</a></li>
+<li><strong>FORT Robotics is going public via SPAC at a $556.6M valuation with about $201M gross proceeds, pitching itself as the “trust layer for physical AI.”</strong> Merging with Newbury Street II Acquisition Corp on Nasdaq, close expected Q4 2026, with roughly $31M of PIPE and non-redemption equity from Tiger Global, Prologis Ventures and Mark Cuban, about $182M net cash to the balance sheet, and existing holders rolling 100% for roughly 67%. The operating disclosure is unusually concrete for this sector: 2025 revenue up 62% year on year with 91% growth among accounts above $100K, 70% and 66% gross margins in 2024 and 2025, opex up 19%, $276K revenue per employee, 19,500+ units deployed, 600 customers including Agility, Google DeepMind, Zoox, Ocado and DoorDash, and no customer above 9% of revenue. Somebody is getting paid for the safety and certification layer, at real margins. <a href="https://www.therobotreport.com/fort-robotics-takes-safety-stack-public-via-spac-merger/">The Robot Report</a></li>
+<li><strong>RobotEra is targeting $800M to $1B in a Hong Kong main-board IPO, after roughly 5 billion yuan raised in 2026 alone.</strong> <a href="https://autonews.gasgoo.com/articles/market-industry/robotera-reportedly-plans-hong-kong-ipo-aiming-to-raise-up-to-1-billion-2090027934059618305">Gasgoo</a></li>
+<li><strong>RealMan filed ChiNext listing guidance</strong>, five months after a roughly 500 million yuan strategic round. <a href="https://autonews.gasgoo.com/articles/news/another-embodied-intelligence-company-launches-chinext-listing-guidance-2090023797582479361">Gasgoo</a></li>
+<li><strong>Acorn Robot closed an angel round led by CM Venture Capital and NIO Capital</strong>, taking total raised to several hundred million yuan four months after a nearly 100 million yuan seed. <a href="https://autonews.gasgoo.com/articles/news/seeds-acorn-robot-closes-angel-round-unveils-worlds-first-embodied-instinct-model-2090024497473409025">Gasgoo</a></li>
+<li><strong>AlgoFET raised Rs 15 crore pre-Series A led by Piper Serica</strong>, with 2,000+ units deployed and an order book near Rs 100 crore. <a href="https://entrackr.com/snippets/piper-serica-leads-rs-15-cr-pre-series-a-round-in-deep-tech-startup-algofet-12395742">Entrackr</a></li>
+<li><strong>NeoGeo raised a $20M Series A</strong> led by Neev II Fund and Aavishkaar Capital for geospatial data acquisition. <a href="https://entrackr.com/news/neogeo-raises-20-mn-series-a-led-by-neev-ii-fund-and-aavishkaar-capital-12392388">Entrackr</a></li>
+<li><strong>Unichem acquired Loomia to enter the humanoid skin market</strong>, working with Loomia’s Smart Skin capacitive and force-sensitive-resistor tactile stack for automotive and robotics. Terms undisclosed, so this clears the bar as a named partnership rather than a money story. Tier-1 auto suppliers buying into humanoid sensing is the pattern. <a href="https://www.therobotreport.com/unichem-acquires-loomia-accelerate-entry-humanoid-skin-market/">The Robot Report</a></li>
+<li><strong>Serve Robotics posted Q2 revenue of $3.2M, up 404% year on year</strong>, and added Grubhub and Wonder across 100+ Chicago and roughly 200 LA merchants, launched Washington DC and San Jose with DoorDash, and opened a first low-capex microdepot in Miami. The counterweight in the same reporting: Uber sold its remaining Serve stake on August 11 after weaker-than-expected volume through Uber Eats, so part of this expansion is channel replacement rather than pure upside. <a href="https://www.therobotreport.com/serve-robotics-deploys-autonomous-delivery-robots-grubhub/">The Robot Report</a></li>
+<li><em>The Robot Report’s investments feed carried no new private funding rounds dated August 18 to 20. The only in-window capital events were the two public-market ones above, which is itself the signal.</em></li>
+</ul>
+</section>
+</section>
+  </main>
+  </div>
+</div>
+
+<script>
+// Load sidebar JS with depth-aware path
+(function(){
+  var depth = /\/(days|monthly)\//.test(location.pathname) ? '../' : './';
+  var s = document.createElement('script');
+  s.src = depth + '_sidebar.js';
+  s.defer = true;
+  document.body.appendChild(s);
+})();
+</script>
+<script>
+// Build TOC from h2/h3 inside main
+(function() {
+  const tocList = document.getElementById('tocList');
+  const main = document.querySelector('.main');
+  const headings = main.querySelectorAll('section.level2 > h2, section.level3 > h3');
+  let currentH2Item = null;
+  let currentH2SubList = null;
+
+  headings.forEach(h => {
+    const parent = h.parentElement;
+    const id = parent.id;
+    if (!id) return;
+    let text = h.textContent.trim();
+    const isH2 = h.tagName === 'H2';
+
+    const link = document.createElement('a');
+    link.href = '#' + id;
+    link.textContent = text;
+    link.dataset.target = id;
+
+    const li = document.createElement('li');
+    li.appendChild(link);
+
+    if (isH2) {
+      tocList.appendChild(li);
+      currentH2Item = li;
+      currentH2SubList = null; // lazy-create only if H3 follows
+    } else if (currentH2Item) {
+      if (!currentH2SubList) {
+        currentH2SubList = document.createElement('ul');
+        currentH2Item.appendChild(currentH2SubList);
+      }
+      currentH2SubList.appendChild(li);
+    }
+  });
+})();
+
+// Reading progress
+(function() {
+  const bar = document.getElementById('progressBar');
+  function update() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = Math.min(100, progress) + '%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
+
+// Active section highlighting
+(function() {
+  const tocLinks = document.querySelectorAll('#tocList a');
+  const linkMap = {};
+  tocLinks.forEach(a => { linkMap[a.dataset.target] = a; });
+
+  // Map link → its parent h2 LI (so we can expand the right group)
+  const parentH2LiMap = {};
+  document.querySelectorAll('#tocList > li').forEach(h2Li => {
+    const h2Link = h2Li.querySelector(':scope > a');
+    if (!h2Link) return;
+    parentH2LiMap[h2Link.dataset.target] = h2Li;
+    h2Li.querySelectorAll(':scope > ul a').forEach(subA => {
+      parentH2LiMap[subA.dataset.target] = h2Li;
+    });
+  });
+
+  const sections = document.querySelectorAll('.main section.level2, .main section.level3');
+  if (!sections.length) return;
+
+  function clearActive() {
+    document.querySelectorAll('#tocList a.active').forEach(a => a.classList.remove('active'));
+    document.querySelectorAll('#tocList > li.active').forEach(li => li.classList.remove('active'));
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    // Pick the topmost intersecting entry
+    let topEntry = null;
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (!topEntry || entry.boundingClientRect.top < topEntry.boundingClientRect.top) {
+          topEntry = entry;
+        }
+      }
+    });
+    if (!topEntry) return;
+    const id = topEntry.target.id;
+    if (!linkMap[id]) return;
+
+    clearActive();
+    linkMap[id].classList.add('active');
+    const parentH2 = parentH2LiMap[id];
+    if (parentH2) {
+      parentH2.classList.add('active');
+      // Also mark the H2 link active if a child is active
+      const h2Link = parentH2.querySelector(':scope > a');
+      if (h2Link && h2Link.dataset.target !== id) {
+        // Keep H2 visually de-emphasized while child is active — just expand
+      }
+    }
+  }, {
+    rootMargin: '-80px 0px -65% 0px',
+    threshold: 0
+  });
+
+  sections.forEach(s => { if (s.id) observer.observe(s); });
+})();
+
+// Smooth TOC click
+document.querySelectorAll('#tocList a').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const id = a.dataset.target;
+    const target = document.getElementById(id);
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - 68;
+      window.scrollTo({ top, behavior: 'smooth' });
+      history.replaceState(null, '', '#' + id);
+    }
+  });
+});
+
+// Mobile TOC sheet open/close
+(function() {
+  const trigger = document.getElementById('mobileTocTrigger');
+  const scrim = document.getElementById('mobileTocScrim');
+  const sheet = document.querySelector('.sidebar');
+  if (!trigger || !sheet || !scrim) return;
+
+  function openSheet() {
+    sheet.classList.add('open');
+    scrim.classList.add('open');
+    trigger.classList.add('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeSheet() {
+    sheet.classList.remove('open');
+    scrim.classList.remove('open');
+    trigger.classList.remove('hidden');
+    document.body.style.overflow = '';
+  }
+
+  trigger.addEventListener('click', openSheet);
+  scrim.addEventListener('click', closeSheet);
+
+  // Close on TOC link click (after scroll kicks off)
+  document.querySelectorAll('#tocList a').forEach(a => {
+    a.addEventListener('click', () => {
+      if (sheet.classList.contains('open')) {
+        setTimeout(closeSheet, 240);
+      }
+    });
+  });
+
+  // Escape closes
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && sheet.classList.contains('open')) closeSheet();
+  });
+})();
+</script>
+
+</body>
+</html>
