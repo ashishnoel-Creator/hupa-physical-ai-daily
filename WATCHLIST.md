@@ -96,3 +96,35 @@ India names not yet in §4-B:
 - **Axiom Robotics** — Bengaluru/IIT-Kanpur humanoid team, ₹50 Cr Series A (mid-May, syndicate unconfirmed), Chennai manufacturing facility planned. Third IIT-Kanpur humanoid team in the 2026 tape after General Autonomy and BharatBotics. Worth a standing slot in the India sweep. ([RobotWale](https://robotwale.com/news/axiom-robotics-secures-50-crore-series-a-to-scale-humanoid-manufacturing-in-india))
 
 Note: this run's X harvest was web-search-fallback only (browser read-permission denied on the unattended run), so no new X handles were added this Monday. Re-walk for new handles next Monday when the browser path is available.
+
+---
+
+## Added Monday, 2026-08-24 (catch-up run covering Aug 20-24)
+
+X harvest ran on fallback again (ninth consecutive run), but the fallback recovered enough to add handles this week.
+
+**New X handles worth a standing slot:**
+
+- **@GeneralistAI** — Generalist AI. Shipped GEN-1.5 on 19 Aug via X before broad press pickup. Announces model releases X-first, which is exactly the pattern the browser gap keeps costing us.
+- **@DynaRobotics** — Dyna Robotics. Dyna-2 and the human-to-robot scaling law, 1M+ hours of egocentric human video. The single most thesis-adjacent account on this list. Was uncovered here for two weeks.
+- **@XSquareRobot** — X Square Robot. Posts throughput results directly, e.g. 1,816 parcels per hour at above 98% success on 12 Aug, using simple grippers rather than dexterous hands.
+- **@humanoidsdaily** — aggregator, not a primary source, but fast and it surfaces Chinese items before English press. Useful as a discovery feed for IDs.
+- **@boosterobotics** — Booster Robotics. Supplied the 80-unit T2 parade formation at the World Humanoid Robot Games.
+- **@aesposito0** — surfaced rebutting Brett Adcock publicly on tendon-based hands (13 Aug). Worth watching as a critical voice rather than a company channel.
+
+**New companies for the standing sweep (not X handles):**
+
+- **Ropedia** (Singapore) — wearable ego-capture device HOMIE, $30M total funding, $22M pre-Series A. The closest direct comparable to surface in months. Track closely.
+- **Axis Robotics** — $12M seed led by Hack VC, contributor-network capture claiming 100,000+ contributors and 20,000+ hours per month. Different shape of competitor from a rig company.
+- **Moving Atoms** — YC-backed, sells policy evaluation across ~1,000 simulated environments. Second company this window selling evaluation rather than robots.
+- **Sunday Robotics** — Tony Zhao's company. Skill Capture Glove, data from 500+ households, 99.1% zero-shot laundry folding claim. Explains why @tonyzzhao's output is now company-channel rather than academic.
+- **Honor** — smartphone maker, entered humanoids with "Lightning" (9.32s 100m). Add to the consumer-electronics-into-robotics watch alongside Xiaomi.
+
+**Method note, worth keeping regardless of the browser situation.**
+
+X posts can be read and precisely dated without authentication:
+
+- Expand a post: `https://cdn.syndication.twimg.com/tweet-result?id=<ID>&lang=en&token=a` returns full text, handle and exact `created_at`.
+- Date any post from its ID alone via the Snowflake epoch: `utcfromtimestamp(((id >> 22) + 1288834974657) / 1000)`.
+
+The bottleneck is discovering IDs, not reading them. The only reliable discovery route found was scraping tweet embeds out of robotics news article pages. Nitter, xcancel, lightbrd, the syndication timeline endpoint, Bing and Brave all failed or rate-limited. If the browser path stays down, build discovery around embed scraping rather than around mirrors.
