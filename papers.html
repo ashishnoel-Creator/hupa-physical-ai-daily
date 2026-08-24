@@ -4866,6 +4866,42 @@ const PAPERS = [
     category: 'Annotation',
     why: 'Beats strong baselines by 25.2% in locomotion and 6.6% in manipulation across 17 tasks using a persistent reusable module pool for reward design. Reward specification keeps drifting from a hand-written artifact toward a generated and reused one. Worth watching for the same reason as Dream2Reward, because it changes what a buyer is willing to pay humans to specify versus generate.',
     tags: ['reward design', 'LLM', 'modular', 'reuse']
+  },
+  {
+    id: 'dyna2-human-scaling-2026',
+    dateAdded: '2026-08-24',
+    pubDate: '2026-08-10',
+    title: 'Dyna-2: A World-Action Model Pre-trained on 1M+ Hours of Egocentric Human Video',
+    url: 'https://www.dyna.co/dyna-2',
+    source: 'Dyna Robotics',
+    type: 'Open release',
+    category: 'Collection',
+    why: 'Pre-trained on more than 1M hours of egocentric human video, roughly 170 years of waking experience, with a claimed first human-to-robot scaling law running from 1k to 1M hours. The commercially important claim is transfer: the scaling curve is said to hold on zero-shot offline evaluation against robot data the model never saw, with reported lift from 20% to 80-90% on high-precision manufacturing from pretraining scale alone and no post-training change. This is our thesis published by somebody else with a curve attached. PR Newswire issued a correction to the original release, so hold the specific numbers loosely.',
+    tags: ['egocentric', 'scaling law', 'human video', 'world action model']
+  },
+  {
+    id: 'gen15-generalist-2026',
+    dateAdded: '2026-08-24',
+    pubDate: '2026-08-19',
+    title: 'GEN-1.5: One-Shot In-Context Learning of Physical Skills',
+    url: 'https://generalistai.com/blog/gen-1.5',
+    source: 'Generalist AI',
+    type: 'Open release',
+    category: 'VLA',
+    why: 'Learns a new manipulation task from 3 to 12 seconds of a single demonstration with zero gradient updates, hitting 59% average success across 10 diverse tasks one-shot in-context, 83% after 10 gradient steps on about 50 demos, and 66.5% on a held-out task after one gradient step on one minute of data. Ten adaptation steps move weights by under 0.15%. Ingests 30s of video memory and outputs 100 Hz trajectories, pretrained continuously for 8+ months over a corpus whose nearest-neighbour search spans 1,891,392 scenes. Cuts both ways for a capture business: human demonstration becomes directly promptable, and the per-task volume needed collapses, so the premium moves to breadth and provenance of the pretraining corpus. Note Ackerman\'s caveat, that they can only claim no relevant pretraining data to the best of their knowledge, which is exactly the provenance gap a validation vendor sells against.',
+    tags: ['one-shot', 'in-context', 'human-to-robot', 'provenance']
+  },
+  {
+    id: 'nvidia-open-h-embodiment-2026',
+    dateAdded: '2026-08-24',
+    pubDate: '2026-08-23',
+    title: 'PhysicalAI-Robotics-Open-H-Embodiment',
+    url: 'https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment',
+    source: 'NVIDIA (Hugging Face)',
+    type: 'Dataset',
+    category: 'Collection',
+    why: '750 hours of training data, 120,000 trajectories of paired video and kinematics, 4.54 TB, LeRobot v2.1 format, CC-BY-4.0, refreshed around 23 Aug with 201,015 downloads in the prior month. Built with 33 contributing organizations including JHU, Stanford, TUM, UCSD and Moon Surgical, and eleven models already train on it including GR00T-H and Cosmos-H-Dreams. The line to read twice is the labeling method, listed as hybrid across human, automatic sensor and synthetic. That is the reference architecture for how open physical-AI datasets get assembled, a consortium contributes and NVIDIA hosts, and the hybrid label is an admission that human validation stays in the loop.',
+    tags: ['dataset', 'open consortium', 'hybrid labeling', 'NVIDIA']
   }
 ];
 
