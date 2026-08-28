@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-08-28",
+      "slug": "2026-08-28",
+      "title": "Friday, August 28, 2026",
+      "tldr": [
+        "**The capture layer got funded four separate times in five days, and none of the four is a robot company.** SYNAPATH AI closed nearly RMB 100M in angel money selling ego, exo and tactile human-behavior data to X Square Robot, Fourier Intelligence and ROBOTERA. GenRobot.AI took a Series A led by Momenta, its seventh round in a year and more than $200M raised total, on a non-intrusive wearable collection device and a 13,000+ hour open dataset doing over 1M downloads a month. Transfyr launched with a $25M seed from General Catalyst and Lux to passively instrument human lab work. Ropedia shipped HOMIE Gen2, its fourth head-worn rig in twelve months. Four funded bets on human-worn capture in one week is a stronger cluster than anything in humanoid hardware this window. Gasgoo, Gasgoo, The AI Insider, The AI Insider",
+        "**XPeng's humanoid unit raised over $900M at a post-money above $6.3B while Unitree lost roughly half its market cap in three sessions, and both moves point the same direction.** IDG Capital led the XPeng round with Tencent and Alibaba as strategic investors, and XPeng's stated reason for volume deployment is generating real-world and human-demonstration data, not selling robots. Unitree fell to about RMB 240B from a debut peak near RMB 444.9B, which puts it above 140x price-to-sales on 2025 revenue of RMB 1.699B, and Wang Xingxing used his WRC stage to say embodied AI's ChatGPT moment is two to three years away at best and possibly a decade. Capital is repricing bodies down and data up in the same week. Gasgoo, Gasgoo",
+        "**Perceptron released Isaac 0.5 as an open-weight model and named ego video as a training input on the record.** The team is ex-Meta FAIR, founded by Armen Aghajanyan and Akshat Shrivastava, and the disclosed training mix is roughly one million hours of general video plus ego video from GoPro and wearable first-person task capture plus UMI video. A frontier-model team listing wearable first-person capture alongside general video, in public, in an open release, is the cleanest third-party validation of the thesis to land all month. TechCrunch"
+      ]
+    },
+    {
       "date": "2026-08-24",
       "slug": "2026-08-24",
       "title": "Monday, August 24, 2026",
@@ -720,6 +730,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 366,
-  "updated_at": "2026-08-24T09:38:38Z"
+  "papers_count": 402,
+  "updated_at": "2026-08-28T04:51:54Z"
 }
