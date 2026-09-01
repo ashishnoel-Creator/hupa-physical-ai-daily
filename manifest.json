@@ -712,6 +712,12 @@
   ],
   "monthly_reviews": [
     {
+      "date": "2026-08",
+      "slug": "2026-08",
+      "title": "August 2026 review",
+      "summary": "August separated the capture layer from the robot layer and priced them in opposite directions. Unitree listed, ran up 460%, then gave back half its market cap inside three sessions while its founder talked his own timeline down. In the sam"
+    },
+    {
       "date": "2026-07",
       "slug": "2026-07",
       "title": "July 2026 review",
@@ -731,5 +737,5 @@
     }
   ],
   "papers_count": 402,
-  "updated_at": "2026-08-28T05:43:32Z"
+  "updated_at": "2026-09-01T02:57:23Z"
 }
