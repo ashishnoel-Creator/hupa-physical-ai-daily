@@ -1,6 +1,26 @@
 {
   "days": [
     {
+      "date": "2026-09-08",
+      "slug": "2026-09-08",
+      "title": "Tuesday, September 8, 2026",
+      "tldr": [
+        "**Agility Robotics opened its books and a US humanoid company turns out to be running $1.8M of revenue against a $140M operating loss.** The S-4 filed ahead of the Churchill Capital XI SPAC merger shows 2025 net sales of $1.8 million, $111 million spent on operations, and roughly $100 million of cash burned. The deal values Agility at $2.5 billion, about 1,400 times revenue. Digit has logged 65,000+ operating hours across 9 customer sites and there is a $300M+ multi-year v5 order from a single customer. The RaaS rate card is the useful part: $8,500 a month plus a $25,000 deployment fee, roughly $535,000 per robot over five years. Every other US humanoid maker is private and none of them have had to publish anything like this. The Robot Report, S-4",
+        "**Sharpa raised $668M at a $3.3B valuation and put a robot behind the counter of a real Dairy Queen with zero retrofit.** September 3, RMB 4.5 billion from Alibaba, Meituan, Tencent, JD.com and Transsion alongside HSG, Qiming, DragonBall and Luminous. On August 29 it opened a DQ outlet on Wujiang Road in Shanghai where the robot runs the full 55-step Blizzard Treat workflow from order to handoff, 10am to 10pm, using the same equipment and ingredients as human staff. Tactile sensing is involved in 98% of those 55 steps. This is the counterexample to the line that no commercial food venue anywhere runs a learned policy, and we should stop using that line without a caveat. KrASIA",
+        "**A former Huawei autonomous-driving AI lead raised $148M to run our exact thesis, and said out loud that data engineering beats model architecture.** Morphi Robot, CTO Huang Qingqiu, ex-head of AI for Huawei's ADS stack. It built its own lightweight wearable capture devices and hired cleaners working in hotels and mixed-use residential and commercial buildings to wear them. The pipeline he describes is filter for bad movement and improperly worn equipment, classify so you can retrieve exactly which data trains which model, auto-label ground truth, evaluate at scale, then go back and mine again where results are weak. His line is that if data quality were infinitely high a very simple model would train to excellent results. Published August 11 and never covered here, which is a real miss. KrASIA"
+      ]
+    },
+    {
+      "date": "2026-09-07",
+      "slug": "2026-09-07",
+      "title": "Monday, September 7, 2026",
+      "tldr": [
+        "**NVIDIA is buying Hugging Face for $12.9B, and that means a chip vendor now owns the open robot-data commons.** Confirmed September 3 after two weeks of leaks, $11.9B to shareholders plus about $1B in retention equity, against roughly $150M of annualized revenue at Hugging Face. Jensen Huang committed on the record that NVIDIA compute will not be required to build on or deploy through the platform. The part that matters for us is not the LLM story. LeRobot lives there. Isaac GR00T and Isaac Teleop live there. Nearly every open robot dataset anyone in this field trains on, including the community collection that just crossed 251 hours across 46 robot types, sits on infrastructure that a GPU company now controls. Bloomberg puts the all-in figure closer to $14B. TechCrunch, NVIDIA, CNBC, The Robot Report",
+        "**XDOF is in talks for a Series B at roughly $1.2B, three months after its Series A, on about $50M of annualized revenue, and it is hiring people to wear body sensors.** TechCrunch reported September 4 that 8VC is leading, with terms not final. XDOF raised a $70M Series A in June led by Thrive with a16z, Lux and Spark. It has 20+ customers including several frontier labs. It is recruiting two distinct operator classes worldwide, teleoperators and egocentric operators who wear body sensors, and investors quoted in the piece are calling it the Scale AI of physical robotics. This is the closest priced comparable to what we are building that has ever existed, and the multiple is being set right now. TechCrunch",
+        "**Human capture data stopped being a research input this window and became a graded, priced, tradeable commodity.** Kinetic Blocks opened a two-sided marketplace on September 1 that accepts egocentric human video, teleoperation recordings and robot execution data in LeRobot v3.0 format, grades every dataset A+ to F on four quality pillars through its KBQS score, and settles the commercial licence at checkout instead of through months of bilateral negotiation. Figure disclosed that its Index app has taken 16 million video uploads from 108 countries, ingests 30 minutes of footage per second, has paid out $15M to contributors and has over $1B committed to data collection and compute for the next twelve months. Meanwhile a GF Securities estimate says deployable embodied models need at least 10M hours of multimodal interaction data and the entire global accumulation is under 5% of that. Kinetic Blocks, Figure, RoboMIND / Global Times via humanoid.guide"
+      ]
+    },
+    {
       "date": "2026-08-28",
       "slug": "2026-08-28",
       "title": "Friday, August 28, 2026",
@@ -736,6 +756,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 402,
-  "updated_at": "2026-09-01T02:57:23Z"
+  "papers_count": 464,
+  "updated_at": "2026-09-08T04:02:05Z"
 }
