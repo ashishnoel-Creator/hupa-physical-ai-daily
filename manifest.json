@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-09-10",
+      "slug": "2026-09-10",
+      "title": "Thursday, September 10, 2026",
+      "tldr": [
+        "**Amazon is shutting down Mechanical Turk on September 30, and taking SageMaker Ground Truth and Augmented AI down with it.** The announcement went out August 25 and no brief here has covered it, so it goes in now. MTurk ran 21 years, peaked at roughly 500,000 registered workers across 190 countries, and stopped taking new customers on July 30. Amazon is not trimming a product line, it is exiting human-data infrastructure entirely on one date. Every research group and small lab that used MTurk as the default cheap human-judgment API has 20 days to be somewhere else. CNBC, iMerit's read on it",
+        "**Figure's Index app is at 69,943 weekly active users and 35 minutes of uploaded video every second.** Brett Adcock posted the number on September 9. In August the same pipeline was doing 30 minutes per second, so ingestion is up about 17% in two weeks, on top of 16M+ uploads across 108 countries and $15M already paid out to contributors. Crowdsourced ego capture has stopped being an experiment. Adcock, Humanoids Daily",
+        "**XPeng commissioned humanoid production lines on September 7 and the first IRON walked off one autonomously.** More than 80% of core processes are automated, built on automotive-grade quality systems. Mass production is scheduled for end of 2026. No capacity number and no price disclosed, which is the part to hold. XPeng, CnEVPost"
+      ]
+    },
+    {
       "date": "2026-09-08",
       "slug": "2026-09-08",
       "title": "Tuesday, September 8, 2026",
@@ -756,6 +766,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 464,
-  "updated_at": "2026-09-08T04:02:05Z"
+  "papers_count": 476,
+  "updated_at": "2026-09-10T03:45:18Z"
 }
