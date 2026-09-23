@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-09-23",
+      "slug": "2026-09-23",
+      "title": "Wednesday, September 23, 2026",
+      "tldr": [
+        "**Human video now has a stronger measured case for robot training.** Figure's September 17 Helix 2.5 evaluation reports whole-task success rising from 9% to 56% with Index pretraining across 30 unseen homes. Tasks still needed fine-tuning elsewhere. XPENG's XPACE and the new Zeva-Ego paper add different evidence for combining human experience with robot supervision. The opportunity is clearer; universal transfer from arbitrary footage is still unproven. Figure, XPACE, Zeva-Ego",
+        "**Industrial deployment is becoming more concrete.** Agility announced Digit 5; Boston Dynamics opened a permanent Atlas training and application centre at Hyundai's Georgia plant; FANUC announced a Gemini-based welding agent. Distinguish their stages: a future robot release, an operating training facility and a product scheduled to ship in December. Agility, Boston Dynamics interview, FANUC",
+        "**The supporting businesses are getting capital and usable software.** Snorkel announced $350M for its data business, D-Robotics closed a reported $400M Series C, and Watney raised $80M for robots working in data centres. On September 22, NVIDIA released Isaac ROS 5.0 and Intrinsic released Core, including an open machine-tending reference solution. Snorkel, D-Robotics, Watney, NVIDIA, Intrinsic"
+      ]
+    },
+    {
       "date": "2026-09-10",
       "slug": "2026-09-10",
       "title": "Thursday, September 10, 2026",
@@ -766,6 +776,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 476,
-  "updated_at": "2026-09-10T03:45:18Z"
+  "papers_count": 494,
+  "updated_at": "2026-09-23T03:41:58Z"
 }

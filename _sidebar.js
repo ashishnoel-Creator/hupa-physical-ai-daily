@@ -155,6 +155,10 @@
   }
 
   async function init() {
+    // Shared header HTML is also copied into nested day and monthly pages.
+    document.querySelectorAll('a.pdf-btn[href="index.html"], a.pdf-btn[href="papers.html"]').forEach(link => {
+      link.setAttribute('href', SITE_ROOT + link.getAttribute('href'));
+    });
     try {
       const manifest = await fetchManifest();
       renderNav(manifest);
