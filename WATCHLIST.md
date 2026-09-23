@@ -2,6 +2,43 @@
 
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
+## 2026-09-23: standing collection-opportunity sources
+
+Check these sources for new or changed requests every daily run. This registry includes discovery sources and demand signals, not just confirmed buyer opportunities. Egocentric capture is the priority; adjacent speech, video, image, motion, teleoperation and collection-linked QA work also belongs in the sweep. Programme pages checked September 23 may predate that date.
+
+### Reddit and public community discovery
+
+| Source | What to look for | Qualification rule |
+| --- | --- | --- |
+| [r/robotics](https://www.reddit.com/r/robotics/new/) | Collection partners, human demonstrations, teleoperation, UMI and physical task requests. | Follow the actual request to the company/project. Research discussions and sellers promoting themselves are not buyer demand. |
+| [r/datasets](https://www.reddit.com/r/datasets/new/) | Requests to commission or license hard-to-source video, audio, image or multimodal datasets. | Distinguish paid collection from requests for existing free datasets. |
+| [r/computervision](https://www.reddit.com/r/computervision/new/) | Custom video/image capture, workplace footage, pose, depth and unusual environments. | Identify the requested work, geography and company before ranking as a business lead. |
+| [r/MachineLearning](https://www.reddit.com/r/MachineLearning/new/) | Dataset sourcing, research partnerships and data operations signals. | Hiring threads are secondary procurement intelligence; individual jobs are not supplier contracts. |
+| Public LinkedIn/X company and founder posts | Explicit calls for vendors, collection partners, site access and specialist datasets. | Use dated post permalinks, verify company attribution, follow official intake routes. Report inaccessible coverage. |
+| [YC launches](https://www.ycombinator.com/launches) and [Hacker News](https://news.ycombinator.com/) | Founder requests, new data businesses and partnership invitations. | Read the actual ask and comments; a product launch alone is not a collection commission. |
+
+Search Reddit site-wide as well as these four communities. Use newest posts plus targeted 24/72-hour searches, not just ranked home feeds. Public community access was verified September 23; specific requests still require date and buyer verification. No current Reddit agency contract was verified during this source-expansion pass. Never promote an anonymous claim to a verified company request without corroboration.
+
+### Primary programmes and commercial routes
+
+| Source | Evidence and scope | What to recheck |
+| --- | --- | --- |
+| [DeepReach partners](https://www.deepreach.ai/join) | Explicit local collection-partner onboarding with wearable capture and accepted-data payment. | Current countries/tasks, device terms, capacity commitments and accepted-hour economics. |
+| [Praxis founder invitation](https://www.ycombinator.com/launches/STf-praxis-ai-training-data-for-robotics) / [company](https://www.praxisrobotics.io) | Invitation to physical-work businesses to participate in workplace demonstration capture. | Requested trades/sites, aggregator eligibility, geography and capture modalities. |
+| [Defined.ai partnership programmes](https://defined.ai/partnerships) | Distinct **AI Service Supplier** route for collection/annotation businesses and **Data Partner** route for licensing datasets. Audio, video, image, text and multimodal coverage; project-based supplier work is explicitly described. | Actual project availability, geography, qualification/specs and commercial terms. Intake is not a work guarantee. |
+| [Generalist Data Partnerships role](https://jobs.ashbyhq.com/generalist/d5aa97c1-fc3e-439a-9aba-b8c9aaa2dab4) | Company-authored procurement signal: external vendors, trials, specifications and accepted-data economics. | New business intake or procurement contact. This employment form is not a supplier application. |
+| [Kinetic Blocks](https://kineticblocks.com/) | Dataset seller/distribution channel and custom sourcing. | Buyer requests, seller eligibility, licence/fees and evidence of actual transactions. |
+| [Robotics Center marketplace](https://www.roboticscenter.ai/marketplace) | Robotics dataset distribution channel, with LeRobot/HDF5/RLDS formats. | Current availability and buyer demand; listed/coming-soon inventory is not a confirmed sale. |
+
+### Project specifications and adjacent demand
+
+| Source | Useful collection information | Limitation |
+| --- | --- | --- |
+| [OneForma collection projects](https://www.oneforma.com/projects/type/data-collection/) / [open projects](https://www.oneforma.com/projects) | Named projects, task descriptions, language/country restrictions, recording conditions and payment units. | Contributor-facing listings. Business subcontracting must be verified independently; do not apply as an individual on a company's behalf. |
+| [DataForce Community projects](https://dataforcecommunity.transperfect.com/projects) | Data sourcing and user studies with remote/on-site and country filters. | Contributor opportunities are demand intelligence unless a managed-team/vendor route is explicitly offered. |
+
+For other collection vendors (Appen, LXT, TELUS, RWS and similar), search for actual supplier calls and collection briefs. Their services catalogues show what they sell, not necessarily what they buy. Add newly verified primary intake routes here as they are found. Record source failures and distinguish newly discovered older programmes from new announcements. Keep private lead ranking and commercial follow-up outside this public repository.
+
 ## 2026-08-17 (Monday)
 
 Browser X path failed the tab-group handshake through all 5 retry cycles again (7th consecutive run), so no new X handles from timelines. Adds come from the day's research:
