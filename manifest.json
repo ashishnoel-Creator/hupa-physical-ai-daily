@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-09-24",
+      "slug": "2026-09-24",
+      "title": "Thursday, September 24, 2026",
+      "tldr": [
+        "**Eidon has wound down and released its collection stack.** Its own archive confirms the closure and links hardware, simulation and datasets, including 1,273.8 hours of paired ego video/IMU and a separate 305.7-hour video-only collection. This was reported September 21 and missed in yesterday's catch-up. The release is useful infrastructure. The closure is a reason to qualify demand carefully, but it does not establish why the business failed. Eidon archive, dataset card",
+        "**New research is getting specific about which human data matters.** TANDEM reports 2.9 times as many demonstrations for the same human intervention time on one task. Shanghai AI Lab's InternW0 includes a 275-hour laboratory ego dataset inside a roughly 7,200-hour training mix. These are targeted collection recipes, not evidence that arbitrary footage has a buyer. TANDEM, InternW0",
+        "**There is a verified supplier route and a concrete Indian collection brief.** Defined.ai explicitly accepts collection/annotation businesses through its AI Service Supplier programme. DataForce's Viola study seeks Telugu-speaking adults in Hyderabad during September and early October, paying participants $55 for a successfully completed session. The latter is an individual study, not an agency contract. Defined.ai, DataForce"
+      ]
+    },
+    {
       "date": "2026-09-23",
       "slug": "2026-09-23",
       "title": "Wednesday, September 23, 2026",
@@ -776,6 +786,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 495,
-  "updated_at": "2026-09-23T04:16:58Z"
+  "papers_count": 506,
+  "updated_at": "2026-09-24T03:18:00Z"
 }
