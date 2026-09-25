@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-09-25",
+      "slug": "2026-09-25",
+      "title": "Friday, September 25, 2026",
+      "tldr": [
+        "**GenRobot released a substantial ego-data reference.** Gen-HumanEgo combines 1,847.7 hours of demonstrations with six-camera capture, reconstructed hands, depth and time-aligned task labels. The September 23 release was missed yesterday. PolyUMI adds a new contact-rich collection design, while Ego-Exo4D-HM adds dense human-motion reconstructions. GenRobot, dataset card, PolyUMI, Ego-Exo4D-HM",
+        "**Newly discovered commercial routes need different treatment.** Deepen Refinery has an active data-supplier waitlist. DeepReach's older Southeast Asia call specifies local business and field-team requirements. DataForce has October Bengali and Marathi studies in Pune, but those remain participant projects. None establishes a commissioned Indian ego-data order. Deepen, DeepReach call, DataForce Bengali, Marathi",
+        "**Two industry changes deserve attention.** Cognex agreed to acquire RealSense for approximately $500M on September 22, a missed catch-up item, with closing expected in Q4. AGIBOT's September 24 release describes a 300-plus-robot deployment at Chimelong. The former is an agreement awaiting closing; the latter is a company deployment claim without published utilisation or intervention metrics. Cognex, AGIBOT"
+      ]
+    },
+    {
       "date": "2026-09-24",
       "slug": "2026-09-24",
       "title": "Thursday, September 24, 2026",
@@ -786,6 +796,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 506,
-  "updated_at": "2026-09-24T03:18:00Z"
+  "papers_count": 531,
+  "updated_at": "2026-09-25T03:28:11Z"
 }
