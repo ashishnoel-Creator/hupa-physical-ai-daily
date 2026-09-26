@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-09-26",
+      "slug": "2026-09-26",
+      "title": "Saturday, September 26, 2026",
+      "tldr": [
+        "**Two older India partner calls deserve a current-availability check:** Dhvani.Ai explicitly invites collection agencies; Sajid Ahmed seeks operating workplaces and says cameras are supplied. Neither establishes a live purchase order, rate or minimum volume. Dhvani, workplace invitation",
+        "**Collection quality and scene coverage matter alongside hours.** Dream Machines reports controlled pi-0.5 fine-tuning experiments on one manufacturing task, with released data. This is a missed September technical writeup, not a new model launch. Study",
+        "**Industrial robot adoption keeps growing:** IFR's September 24 report puts 2025 installations above 600,000, up 11%, and the operating stock at five million. These are industrial-robot statistics, not humanoid deployments or an estimate of data-buying demand. IFR"
+      ]
+    },
+    {
       "date": "2026-09-25",
       "slug": "2026-09-25",
       "title": "Friday, September 25, 2026",
@@ -796,6 +806,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 531,
-  "updated_at": "2026-09-25T03:28:11Z"
+  "papers_count": 541,
+  "updated_at": "2026-09-26T01:44:24Z"
 }
