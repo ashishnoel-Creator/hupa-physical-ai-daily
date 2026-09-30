@@ -2,6 +2,16 @@
 
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
+## 2026-09-30: recovered September 28 source review
+
+The Monday run did not finish. These public request sources were verified September30 and added for subsequent checks, without implying current orders or buyer due diligence:
+
+- [MyTron Labs regional vendor/community request](https://www.linkedin.com/posts/my-tron-labs_join-us-for-more-such-projects-activity-7499453983888044032-C2KA): India and regional ego collection. Watch the company and original author for current task briefs, device rules and agency terms.
+- [Annolance AI narrated POV request](https://www.linkedin.com/posts/annolance-ai-95550a297_egocentricdata-povvideo-datacollection-activity-7506285064041783297-L9bh): explicit vendor versus individual approved-hour terms. Watch for geography, hardware costs, acceptance and payment updates; legal identity/current availability remain unverified.
+- [Mansi Joshi India vendor request](https://www.linkedin.com/posts/mansi-joshi-9899b8110_vendorpartnership-recruitmentpartners-activity-7481263583054704640-7ipB): commercial headcam capture and participant operations. Named public request using an E-Solutions address; verify mandate and current availability.
+
+Defined.ai's canonical programme URL is now `/partnership-programs`. Existing source categories and qualification rules remain in force. No new X handle was verified this run.
+
 ## 2026-09-23: standing collection-opportunity sources
 
 Check these sources for new or changed requests every daily run. This registry includes discovery sources and demand signals, not just confirmed buyer opportunities. Egocentric capture is the priority; adjacent speech, video, image, motion, teleoperation and collection-linked QA work also belongs in the sweep. Programme pages checked September 23 may predate that date.
@@ -25,7 +35,7 @@ Search Reddit site-wide as well as these four communities. Use newest posts plus
 | --- | --- | --- |
 | [DeepReach partners](https://www.deepreach.ai/join) | Explicit local collection-partner onboarding with wearable capture and accepted-data payment. | Current countries/tasks, device terms, capacity commitments and accepted-hour economics. |
 | [Praxis founder invitation](https://www.ycombinator.com/launches/STf-praxis-ai-training-data-for-robotics) / [company](https://www.praxisrobotics.io) | Invitation to physical-work businesses to participate in workplace demonstration capture. | Requested trades/sites, aggregator eligibility, geography and capture modalities. |
-| [Defined.ai partnership programmes](https://defined.ai/partnerships) | Distinct **AI Service Supplier** route for collection/annotation businesses and **Data Partner** route for licensing datasets. Audio, video, image, text and multimodal coverage; project-based supplier work is explicitly described. | Actual project availability, geography, qualification/specs and commercial terms. Intake is not a work guarantee. |
+| [Defined.ai partnership programmes](https://defined.ai/partnership-programs) | Distinct **AI Service Supplier** route for collection/annotation businesses and **Data Partner** route for licensing datasets. Audio, video, image, text and multimodal coverage; project-based supplier work is explicitly described. | Actual project availability, geography, qualification/specs and commercial terms. Intake is not a work guarantee. |
 | [Generalist Data Partnerships role](https://jobs.ashbyhq.com/generalist/d5aa97c1-fc3e-439a-9aba-b8c9aaa2dab4) | Company-authored procurement signal: external vendors, trials, specifications and accepted-data economics. | New business intake or procurement contact. This employment form is not a supplier application. |
 | [Kinetic Blocks](https://kineticblocks.com/) | Dataset seller/distribution channel and custom sourcing. | Buyer requests, seller eligibility, licence/fees and evidence of actual transactions. |
 | [Robotics Center marketplace](https://www.roboticscenter.ai/marketplace) | Robotics dataset distribution channel, with LeRobot/HDF5/RLDS formats. | Current availability and buyer demand; listed/coming-soon inventory is not a confirmed sale. |

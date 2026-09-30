@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-09-30",
+      "slug": "2026-09-30",
+      "title": "Wednesday, September 30, 2026",
+      "tldr": [
+        "**Additional collection-partner requests surfaced:** Mansi Joshi's India vendor call, MyTron Labs' regional community/vendor invitation and Annolance's narrated POV specification. These are newly discovered older posts, with current availability unconfirmed. Annolance publishes a vendor rate of **$5 per approved hour**; that requires careful qualification of acceptance and operating costs. India request, MyTron, Annolance",
+        "**Human demonstrations are becoming richer training inputs.** September 28's DexRoam preserves whole-body coordination through ego capture and reports real-robot gains; UVTA and VisTacAlign separately test tactile human-to-robot transfer. Their common requirement is alignment across embodiments and modalities. DexRoam, UVTA, VisTacAlign",
+        "**Sensor integration is advancing alongside models.** RoboSense announced E2/EM4 support for NVIDIA Holoscan Sensor Bridge on September 28, including a direct-to-GPU path on supported configurations. Prototype integration and validation are still part of the announced work. Company release"
+      ]
+    },
+    {
       "date": "2026-09-26",
       "slug": "2026-09-26",
       "title": "Saturday, September 26, 2026",
@@ -806,6 +816,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 541,
-  "updated_at": "2026-09-26T01:44:24Z"
+  "papers_count": 560,
+  "updated_at": "2026-09-30T05:08:53Z"
 }
