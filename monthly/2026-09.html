@@ -1,0 +1,3454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HuPa Physical AI Daily — Signal Digest</title>
+<meta name="description" content="HuPa daily intelligence digest on Physical AI: data, annotation, embedded systems, robotics, humanoids. Signal only.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1A2D5C;        /* deep indigo - primary */
+  --ink-2: #4A4438;      /* warm body text */
+  --mute: #7A7466;       /* warm muted */
+  --mute-2: #9A958C;     /* lighter muted */
+  --paper: #F8F3E9;      /* warm cream background */
+  --paper-2: #F0EBDF;    /* warmer card */
+  --paper-3: #EAE2D0;    /* slightly stronger */
+  --hair: rgba(26, 45, 92, 0.12);
+  --hair-strong: rgba(26, 45, 92, 0.22);
+  --amber: #F4A300;      /* HuPa saffron */
+  --amber-soft: rgba(244, 163, 0, 0.12);
+  --amber-strong: rgba(244, 163, 0, 0.22);
+  --green: #0F5132;
+  --red: #B7402A;
+
+  --sidebar-w: 232px;
+  --header-h: 56px;
+  --content-w: 820px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  background: var(--paper);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink-2);
+  font-family: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16.5px;
+  line-height: 1.7;
+  font-feature-settings: "kern" 1, "liga" 1, "ss01" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Progress bar */
+.progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: transparent;
+  z-index: 200;
+}
+.progress-bar {
+  height: 100%;
+  background: var(--amber);
+  width: 0;
+  transition: width 0.08s linear;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-w);
+  right: 0;
+  height: var(--header-h);
+  background: rgba(248, 243, 233, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--hair);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 36px;
+}
+.header-meta {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mute);
+}
+.header-meta b {
+  color: var(--ink);
+  font-weight: 600;
+}
+.header-meta i {
+  color: var(--amber);
+  font-style: normal;
+  padding: 0 4px;
+}
+.pdf-btn {
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--ink);
+  padding: 9px 16px;
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 0;
+  text-decoration: none;
+}
+.pdf-btn:hover {
+  background: var(--amber);
+  color: var(--ink);
+  border-color: var(--amber);
+}
+.pdf-btn.outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--hair-strong);
+}
+.pdf-btn.outline:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.pdf-btn svg {
+  width: 13px; height: 13px;
+  stroke-width: 1.6;
+}
+.header-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Layout */
+.layout {
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 28px 22px 28px 28px;
+  border-right: 1px solid var(--hair);
+  overflow-y: auto;
+  background: var(--paper);
+}
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-track { background: transparent; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--hair-strong); border-radius: 2px; }
+
+.brand-mark {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.18em;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.brand-mark span {
+  color: var(--amber);
+  padding: 0 2px;
+}
+.brand-sub {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--mute);
+  margin-bottom: 36px;
+}
+
+/* Site nav (rendered from manifest.json by _sidebar.js) */
+.sitenav { margin-bottom: 24px; }
+.sitenav-block { margin-bottom: 16px; }
+.sitenav-label {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--mute);
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--hair);
+}
+.sitenav-label .count {
+  font-weight: 500;
+  color: var(--mute-2);
+  margin-left: 4px;
+}
+.sitenav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.sitenav-list > li { margin-bottom: 3px; }
+.sitenav-list a {
+  display: block;
+  color: var(--ink-2);
+  text-decoration: none;
+  padding: 4px 8px;
+  border-left: 2px solid transparent;
+  transition: all 0.12s ease;
+}
+.sitenav-list a:hover { background: var(--paper-2); color: var(--ink); }
+.sitenav-list a.active {
+  background: var(--amber-soft);
+  color: var(--ink);
+  border-left-color: var(--amber);
+  font-weight: 500;
+}
+.sitenav-list .count {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px;
+  color: var(--mute-2);
+  margin-left: 4px;
+}
+.sitenav-list details { margin: 0; }
+.sitenav-list summary {
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 12.5px;
+  color: var(--ink);
+  font-weight: 500;
+  list-style: none;
+  user-select: none;
+  border-left: 2px solid transparent;
+}
+.sitenav-list summary::-webkit-details-marker { display: none; }
+.sitenav-list summary::before {
+  content: '▸';
+  color: var(--mute-2);
+  font-size: 9px;
+  margin-right: 6px;
+  transition: transform 0.12s ease;
+  display: inline-block;
+}
+.sitenav-list details[open] > summary::before { transform: rotate(90deg); }
+.sitenav-list summary:hover { background: var(--paper-2); }
+.sitenav-list ul.sub {
+  list-style: none;
+  padding: 2px 0 4px 14px;
+  margin: 0;
+  border-left: 1px solid var(--hair);
+  margin-left: 12px;
+}
+.sitenav-list ul.sub a { font-size: 12.5px; padding: 3px 8px; }
+.day-item .day-date {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 11.5px;
+}
+.sitenav-list li.muted span {
+  display: block;
+  padding: 4px 8px;
+  color: var(--mute);
+  font-size: 12.5px;
+}
+.sitenav-list li.muted small { color: var(--mute-2); font-size: 10.5px; }
+
+#sitenavSearch {
+  width: 100%;
+  font-family: 'Geist', sans-serif;
+  font-size: 12.5px;
+  padding: 6px 8px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--hair-strong);
+  border-radius: 0;
+  outline: none;
+}
+#sitenavSearch:focus { border-color: var(--ink); }
+.search-results { margin-top: 8px; max-height: 280px; overflow-y: auto; }
+.search-hit {
+  display: block;
+  padding: 6px 8px;
+  margin-bottom: 4px;
+  text-decoration: none;
+  color: var(--ink-2);
+  border-left: 2px solid var(--hair);
+  background: var(--paper-2);
+  transition: all 0.1s ease;
+}
+.search-hit:hover { border-left-color: var(--amber); background: var(--paper-3); }
+.search-hit .hit-date {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10.5px;
+  color: var(--mute);
+  margin-bottom: 2px;
+}
+.search-hit .hit-snippet { font-size: 12px; line-height: 1.35; color: var(--ink-2); }
+.search-empty { padding: 6px 8px; color: var(--mute); font-size: 12px; }
+.sitenav-error { padding: 8px; color: var(--red); font-size: 12px; }
+
+.toc-label {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--mute);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--hair);
+}
+
+.toc nav ul {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.toc > nav > ul > li {
+  margin-bottom: 1px;
+}
+
+.toc a {
+  display: block;
+  font-family: 'Geist', sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: var(--ink-2);
+  text-decoration: none;
+  padding: 6px 8px 6px 10px;
+  border-left: 2px solid transparent;
+  border-bottom: none;
+  transition: all 0.12s ease;
+  line-height: 1.35;
+}
+.toc a:hover {
+  color: var(--ink);
+  background: var(--paper-2);
+}
+.toc a.active {
+  color: var(--ink);
+  border-left-color: var(--amber);
+  background: var(--amber-soft);
+  font-weight: 500;
+}
+
+/* Sub-list — collapsed by default, expand only under active parent */
+.toc > nav > ul > li > ul {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.28s ease, margin 0.28s ease;
+  margin: 0;
+  padding-left: 14px;
+  border-left: 1px solid var(--hair);
+  margin-left: 6px;
+}
+.toc > nav > ul > li.active > ul,
+.toc > nav > ul > li:hover > ul {
+  max-height: 800px;
+  margin-top: 2px;
+  margin-bottom: 8px;
+}
+.toc ul ul a {
+  font-size: 12px;
+  color: var(--mute);
+  padding: 4px 8px 4px 10px;
+  font-weight: 400;
+}
+.toc ul ul a:hover {
+  color: var(--ink-2);
+  background: transparent;
+}
+.toc ul ul a.active {
+  color: var(--ink);
+  background: transparent;
+  border-left-color: var(--amber);
+  font-weight: 500;
+}
+
+/* Main */
+.main-wrap {
+  padding-top: var(--header-h);
+}
+.main {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 56px 40px 120px;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin: 0 0 24px;
+}
+h1 + p {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 11.5px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mute);
+  line-height: 1.9;
+  margin-bottom: 8px;
+}
+h1 + p strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+h2 {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 72px 0 24px;
+  padding-top: 36px;
+  border-top: 1px solid var(--hair);
+  scroll-margin-top: 80px;
+}
+
+h3 {
+  font-family: 'Geist', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 44px 0 14px;
+  scroll-margin-top: 80px;
+}
+
+h4 {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin: 28px 0 10px;
+}
+
+p {
+  margin-bottom: 18px;
+  color: var(--ink-2);
+}
+
+p > strong:first-child {
+  color: var(--ink);
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+}
+
+strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+em {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink);
+  font-size: 1.08em;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--amber);
+  transition: all 0.12s;
+  padding-bottom: 1px;
+}
+a:hover {
+  color: var(--amber);
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 24px;
+  margin: 0 0 22px;
+}
+ul li, ol li {
+  margin-bottom: 8px;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+ul li::marker {
+  color: var(--amber);
+}
+ol li::marker {
+  color: var(--amber);
+  font-family: 'Geist Mono', monospace;
+  font-weight: 500;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 28px 0 32px;
+  font-family: 'Geist', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.5;
+  background: var(--paper);
+  border: 1px solid var(--hair-strong);
+}
+thead {
+  background: var(--paper-2);
+  border-bottom: 1.5px solid var(--ink);
+}
+th {
+  text-align: left;
+  padding: 11px 13px;
+  color: var(--ink);
+  font-family: 'Geist Mono', monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 10.5px;
+  vertical-align: bottom;
+}
+td {
+  padding: 11px 13px;
+  border-bottom: 1px solid var(--hair);
+  vertical-align: top;
+  color: var(--ink-2);
+}
+td strong { color: var(--ink); }
+td a {
+  border-bottom-color: var(--amber);
+}
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: var(--paper-2); }
+
+/* Code */
+code {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.88em;
+  background: var(--paper-2);
+  padding: 1px 6px;
+  border: 1px solid var(--hair);
+  color: var(--ink);
+}
+pre {
+  background: var(--paper-2);
+  border: 1px solid var(--hair);
+  border-left: 3px solid var(--amber);
+  padding: 18px 22px;
+  overflow-x: auto;
+  margin: 24px 0;
+  font-size: 12px;
+  line-height: 1.7;
+  font-family: 'Geist Mono', ui-monospace, monospace;
+}
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--ink-2);
+  font-size: inherit;
+}
+
+/* Blockquote */
+blockquote {
+  border-left: 3px solid var(--amber);
+  padding: 4px 0 4px 18px;
+  margin: 22px 0;
+  color: var(--mute);
+}
+blockquote em {
+  color: var(--ink-2);
+}
+
+/* HR — restrained */
+hr {
+  border: none;
+  border-top: 1px solid var(--hair);
+  margin: 44px 0;
+  position: relative;
+}
+hr::before {
+  content: '✦';
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+  background: var(--paper);
+  color: var(--mute-2);
+  font-size: 12px;
+  padding: 0 12px;
+}
+
+/* Tighter spacing for first section */
+section.level1 > h1 {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+section.level2:first-of-type > h2 {
+  margin-top: 28px;
+  padding-top: 0;
+  border-top: none;
+}
+section.level2 > section.level3:first-of-type > h3 {
+  margin-top: 24px;
+}
+
+/* Mobile-only elements hidden on desktop */
+.mobile-toc-trigger,
+.mobile-toc-scrim,
+.sidebar-actions { display: none; }
+
+/* Responsive — tablet down */
+@media (max-width: 980px) {
+  /* Hide the desktop top bar entirely on mobile — let the content breathe */
+  .header { display: none; }
+  .main-wrap { padding-top: 0; }
+  .layout { grid-template-columns: 1fr; }
+
+  body { font-size: 17px; line-height: 1.7; -webkit-text-size-adjust: 100%; }
+  .main { padding: 36px 22px 110px; max-width: 100%; }
+
+  h1 { font-size: 36px; line-height: 1.08; }
+  h1 + p { font-size: 11px; line-height: 1.8; margin-bottom: 6px; }
+  h2 { font-size: 26px; margin-top: 56px; padding-top: 28px; }
+  h3 { font-size: 19px; margin-top: 40px; }
+
+  /* Sidebar morphs into bottom sheet */
+  .sidebar {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    max-height: 82vh;
+    border-right: none;
+    border-top: 2px solid var(--ink);
+    box-shadow: 0 -12px 44px rgba(26, 45, 92, 0.28);
+    transform: translateY(100%);
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 10px 22px 32px;
+    z-index: 200;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .sidebar.open { transform: translateY(0); }
+  .sidebar::before {
+    content: '';
+    display: block;
+    width: 44px;
+    height: 4px;
+    background: var(--hair-strong);
+    border-radius: 2px;
+    margin: 0 auto 14px;
+  }
+  .brand-mark { font-size: 18px; margin-bottom: 2px; }
+  .brand-sub { margin-bottom: 16px; font-size: 9.5px; }
+
+  /* PDF action shows inside the bottom sheet on mobile */
+  .sidebar-actions {
+    display: flex;
+    margin: 0 0 18px;
+    padding: 0 0 16px;
+    border-bottom: 1px solid var(--hair);
+  }
+  .sidebar-actions .pdf-btn {
+    display: inline-flex;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    padding: 12px 18px;
+    font-family: 'Geist Mono', ui-monospace, monospace;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    border-radius: 0;
+  }
+  .sidebar-actions .pdf-btn svg {
+    width: 14px;
+    height: 14px;
+    stroke-width: 1.6;
+  }
+
+  /* Floating contents trigger — bottom-right pill */
+  .mobile-toc-trigger {
+    display: inline-flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    left: auto;
+    transform: none;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    padding: 13px 20px;
+    font-family: 'Geist Mono', ui-monospace, monospace;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 150;
+    box-shadow: 0 10px 32px rgba(26, 45, 92, 0.38), 0 2px 8px rgba(26, 45, 92, 0.18);
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    transition: opacity 0.2s ease, transform 0.2s ease, background 0.15s ease, color 0.15s ease;
+  }
+  .mobile-toc-trigger:active {
+    background: var(--amber);
+    color: var(--ink);
+  }
+  .mobile-toc-trigger svg {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+    stroke-width: 1.6;
+  }
+  .mobile-toc-trigger.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+  }
+
+  /* Scrim */
+  .mobile-toc-scrim {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 45, 92, 0.48);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 180;
+    transition: opacity 0.32s ease;
+  }
+  .mobile-toc-scrim.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Horizontally-scrollable tables on small screens */
+  .main table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 13.5px;
+  }
+  .main table tbody td,
+  .main table thead th {
+    min-width: 130px;
+    padding: 11px 12px;
+  }
+
+  /* Code blocks can scroll */
+  pre { font-size: 12px; padding: 14px 18px; }
+}
+
+@media (max-width: 540px) {
+  body { font-size: 16.5px; line-height: 1.68; }
+  h1 { font-size: 30px; line-height: 1.1; }
+  h1 + p { font-size: 10.5px; line-height: 1.7; }
+  h2 { font-size: 23px; margin-top: 46px; padding-top: 22px; }
+  h3 { font-size: 18px; margin-top: 34px; }
+  h4 { font-size: 10px; }
+  .main { padding: 28px 18px 110px; }
+  .main table { font-size: 12.5px; }
+  .main th, .main td { padding: 9px 10px; }
+  .main pre { font-size: 11.5px; padding: 12px 14px; }
+  ul, ol { padding-left: 22px; }
+
+  .mobile-toc-trigger {
+    padding: 11px 16px;
+    font-size: 10.5px;
+    bottom: 16px;
+    right: 16px;
+  }
+  .mobile-toc-trigger svg { width: 13px; height: 13px; }
+}
+
+/* Print → PDF */
+@media print {
+  @page {
+    size: A4;
+    margin: 18mm 16mm 18mm 16mm;
+  }
+  html { scroll-behavior: auto; }
+  body {
+    background: #FFFFFF;
+    color: #1A2D5C;
+    font-family: 'Geist', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.5;
+  }
+  ::selection { background: transparent; }
+  .progress, .header, .sidebar { display: none !important; }
+  .layout { display: block; }
+  .main-wrap { padding-top: 0; }
+  .main {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  h1 {
+    font-size: 24pt;
+    color: #1A2D5C;
+    margin: 0 0 12pt;
+    page-break-after: avoid;
+  }
+  h1 + p {
+    font-size: 8pt;
+    color: #7A7466;
+    margin-bottom: 18pt;
+  }
+  h1 + p strong { color: #1A2D5C; }
+  h2 {
+    font-size: 16pt;
+    color: #1A2D5C;
+    margin: 22pt 0 10pt;
+    padding-top: 14pt;
+    page-break-before: always;
+    page-break-after: avoid;
+    border-top: 1px solid #D8D4CA;
+  }
+  section.level2:first-of-type > h2 {
+    page-break-before: avoid;
+  }
+  h3 {
+    font-size: 12pt;
+    color: #1A2D5C;
+    margin: 16pt 0 8pt;
+    page-break-after: avoid;
+  }
+  h4 {
+    font-size: 9pt;
+    color: #B8810C;
+    font-family: 'Geist Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 12pt 0 6pt;
+    page-break-after: avoid;
+  }
+  p {
+    margin-bottom: 9pt;
+    color: #4A4438;
+    orphans: 3;
+    widows: 3;
+  }
+  p > strong:first-child {
+    color: #1A2D5C;
+  }
+  strong { color: #1A2D5C; }
+  em { color: #1A2D5C; font-family: 'Instrument Serif', serif; }
+  a {
+    color: #1A2D5C;
+    border-bottom: 1px solid #F4A300;
+    text-decoration: none;
+  }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 7.5pt;
+    color: #999;
+    font-family: 'Geist Mono', monospace;
+    word-break: break-all;
+    border-bottom: none;
+  }
+  a[href^="#"]::after { content: ""; }
+  table {
+    font-size: 8.5pt;
+    background: #FFF;
+    border: 1px solid #C8C0B0;
+    page-break-inside: avoid;
+    margin: 12pt 0;
+  }
+  thead {
+    background: #F4ECDA;
+    border-bottom: 1.5px solid #1A2D5C;
+  }
+  th {
+    color: #1A2D5C;
+    font-size: 8pt;
+    padding: 6pt 8pt;
+  }
+  td {
+    border-bottom: 1px solid #E0DCD0;
+    color: #4A4438;
+    padding: 6pt 8pt;
+  }
+  tbody tr:hover { background: none; }
+  td strong { color: #1A2D5C; }
+  code {
+    background: #F4ECDA;
+    color: #1A2D5C;
+    border: 1px solid #D8D0BC;
+    font-size: 0.88em;
+  }
+  pre {
+    background: #FAF6EC;
+    border: 1px solid #D8D0BC;
+    border-left: 2pt solid #F4A300;
+    padding: 9pt 11pt;
+    font-size: 8pt;
+    page-break-inside: avoid;
+    margin: 9pt 0;
+  }
+  pre code { color: #4A4438; }
+  ul li, ol li { margin-bottom: 4pt; color: #4A4438; }
+  ul li::marker, ol li::marker { color: #F4A300; }
+  hr {
+    border-top: 1px solid #D8D4CA;
+    margin: 14pt 0;
+  }
+  hr::before {
+    background: #FFF;
+    color: #999;
+  }
+  blockquote {
+    border-left: 2pt solid #F4A300;
+    color: #7A7466;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="header">
+  <div class="header-meta"><b>HU<i>·</i>PA</b> &nbsp; Physical AI Daily</div>
+  <div class="header-nav">
+    <a class="pdf-btn" href="index.html" title="Latest brief">Latest brief</a>
+    <a class="pdf-btn outline" href="papers.html" title="Open Papers DB">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2.5 3.5h11v9h-11z"/><path d="M2.5 6.5h11M5.5 3.5v9M10 3.5v9"/></svg>
+      Papers DB
+    </a>
+    <button class="pdf-btn outline" onclick="window.print()" title="Save as PDF via browser print dialog">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 1.5h6L13.5 5v9.5h-9.5z"/><path d="M9.5 1.5V5h4"/><path d="M5.5 8.5h5M5.5 11h5"/></svg>
+      Export PDF
+    </button>
+  </div>
+</div>
+
+<button class="mobile-toc-trigger" id="mobileTocTrigger" aria-label="Open contents menu">
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2.5 4h11M2.5 8h11M2.5 12h11" stroke-linecap="round"/></svg>
+  Contents
+</button>
+<div class="mobile-toc-scrim" id="mobileTocScrim" aria-hidden="true"></div>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div id="sitenav" class="sitenav"></div>
+
+    <div class="toc">
+      <div class="toc-label">On this page</div>
+      <nav><ul id="tocList"></ul></nav>
+    </div>
+  </aside>
+
+  <div class="main-wrap">
+  <main class="main">
+<section id="september-2026-review" class="level1">
+<h1>September 2026 review</h1>
+<p>September strengthened the case for egocentric demonstrations while
+making their limits clearer. Human-to-robot transfer studies
+increasingly tested alignment, task variation, contact sensing and
+downstream policy outcomes. Data marketplaces and supplier invitations
+offered routes to buyers, but rarely disclosed firm orders or usable
+vendor economics. Large proposed acquisitions reached across model
+hosting, world models and perception. Deployment announcements became
+more specific about workflows and safety, although laboratory success,
+planned fleets and commercial uptime remained different measures.</p>
+<p><strong>Coverage is sparse: 8 daily inputs out of 30; 22 missing
+days.</strong> Saved editions: <a href="../days/2026-09-07.html">7</a>,
+<a href="../days/2026-09-08.html">8</a>, <a
+href="../days/2026-09-10.html">10</a>, <a
+href="../days/2026-09-23.html">23</a>, <a
+href="../days/2026-09-24.html">24</a>, <a
+href="../days/2026-09-25.html">25</a>, <a
+href="../days/2026-09-26.html">26</a> and <a
+href="../days/2026-09-30.html">30</a>. Missing: September <strong>1–6,
+9, 11–22 and 27–29</strong>. Later catch-ups recover some events, not
+complete daily coverage. This is an archive synthesis, not an exhaustive
+month-long search. Public Reddit/X and institutional-source access were
+partial. AMD, Dyna and Destro are explicitly dated September supplements
+verified in the <a href="../days/2026-10-01.html">October 1 daily</a>;
+they do not increase the input-day count.</p>
+<section id="tldr" class="level2">
+<h2>TL;DR</h2>
+<ul>
+<li><strong>Human video is becoming a more differentiated training
+input.</strong> <a href="https://arxiv.org/abs/2609.17372">XPACE</a>
+separates heterogeneous experience and aligned bridge data; <a
+href="https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization">Figure’s
+Helix 2.5 evaluation</a> reports better performance in unseen homes,
+without claiming unseen-task generalisation. Collection proposals should
+specify the training role and a buyer-agreed evaluation.</li>
+<li><strong>The platform deals are agreements, not verified completed
+ownership changes.</strong> NVIDIA announced its approximately <a
+href="https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/">$12.93B
+Hugging Face agreement</a> on September 3. AMD announced an
+approximately <a
+href="https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute">$8.2B
+World Labs agreement</a> on September 28. Watch approvals, closing and
+access terms.</li>
+<li><strong>Business intake exists, but an open route is not an
+order.</strong> <a href="https://www.deepreach.ai/join">DeepReach</a>,
+<a
+href="https://www.ycombinator.com/launches/STf-praxis-ai-training-data-for-robotics">Praxis</a>
+and <a href="https://defined.ai/partnership-programs">Defined.ai</a> are
+distinct routes. India-specific vendor requests surfaced too, mostly
+with unresolved dates, availability and acceptance/payment terms.</li>
+<li><strong>Quality needs to survive the control loop.</strong> <a
+href="https://arxiv.org/abs/2609.24350">LIBERO-VPro</a>, <a
+href="https://arxiv.org/abs/2609.25376">VLAQuantBench</a> and recovery
+benchmarks test weaknesses hidden by clean scenes or isolated inference
+scores. Sensor timing, failure coverage and rejected footage belong in
+collection design.</li>
+<li><strong>October’s commercial watchpoints are concrete:</strong>
+qualify current supplier orders, verify proposed transactions, follow
+October contributor studies without treating their pay as vendor rates,
+and require deployment evidence beyond announced fleet sizes. The
+appendix inventories <strong>158 library entries added in
+September</strong>, including older research.</li>
+</ul>
+</section>
+<section id="biggest-moves-by-theme" class="level2">
+<h2>Biggest moves by theme</h2>
+<section id="data-collection" class="level3">
+<h3>Data collection</h3>
+<p><strong>The stronger argument was about useful experience, not hours
+alone.</strong> XPACE’s September 15 paper combines general human
+experience, action-aligned data, bridging and robot experience; it
+distinguishes world-model failure learning from imitation. Figure’s
+September 17 study reports whole-task success rising from 9% to 56% with
+Index pretraining under its comparison conditions across 30 unseen
+homes. These are company/research results, not a guarantee that any
+additional video produces the same return. <a
+href="https://arxiv.org/abs/2609.17372">XPACE</a>, <a
+href="https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization">Figure</a>.</p>
+<p>The late-month papers broadened capture choices. <a
+href="https://arxiv.org/abs/2609.35761">DexRoam</a> uses whole-body
+human demonstrations for mobile manipulation; <a
+href="https://arxiv.org/abs/2609.34512">MonoEgo</a> studies metric
+monocular capture with wrist markers and workstation anchors; <a
+href="https://arxiv.org/abs/2609.29760">PolyUMI</a>, <a
+href="https://arxiv.org/abs/2609.30959">VisTacAlign</a> and <a
+href="https://arxiv.org/abs/2609.34182">visual-tactile-action
+modelling</a> make contact sensing a deliberate part of demonstrations.
+Their hardware and tasks differ. They do not establish one universal
+capture rig or imply that tactile instrumentation is already available
+to every supplier.</p>
+<p>Two releases also illustrated why dataset totals need qualification.
+Gen-HumanEgo’s September 23 card reports <strong>1,847.7 hours</strong>,
+six cameras and structured supervision, but some labels are
+model-derived and task counts differ between the card and launch
+materials. Eidon ceased operating and released archived assets; its
+tracker-POV card reports <strong>1,273.8 hours from 27
+contributors</strong>, with substantial imbalance and incomplete
+raw-motion coverage. Availability of a download does not settle consent,
+privacy or fitness for a particular use. <a
+href="https://huggingface.co/datasets/genrobot2025/Gen-HumanEgo">Gen-HumanEgo
+card</a>, <a href="https://www.eidon.ai/">Eidon archive</a>, <a
+href="https://huggingface.co/datasets/eidon-ai/tracker-pov">tracker-POV
+card</a>.</p>
+<p>Marketplaces became more visible through Kinetic Blocks and the
+September 21 Deepen Refinery announcement. These offer distribution,
+licensing and validation mechanisms; the archive does not verify
+realised sales or standing collection orders. Nor does Eidon’s closure
+establish a cause or prove that the entire human-video market is
+failing. For an egocentric collection business, the proposed decision is
+to describe tasks, sites, sensor provenance, permitted uses and
+acceptance criteria before pricing a generic hour of footage. <a
+href="https://humanoid.guide/kinetic-blocks-humanoid-training-data-marketplace/">Kinetic
+Blocks coverage, with publisher affiliation disclosed</a>, <a
+href="https://refinery.deepen.ai/">Deepen supplier waitlist</a>.</p>
+</section>
+<section id="data-annotation-validation" class="level3">
+<h3>Data annotation &amp; validation</h3>
+<p><strong>Evaluation moved closer to operational failure.</strong>
+CALIPER questions what clean scenes reveal about physical inference.
+LIBERO-RECOVER and RoboRecover probe recovery, while LIBERO-VPro tests
+visual disruption in closed-loop control. VLAQuantBench similarly
+evaluates compressed models as policies, rather than inferring control
+quality from model size or latency. Together they support a collection
+specification that preserves timing, interventions, failure episodes and
+task boundaries. They do not provide interchangeable benchmark scores.
+<a href="https://arxiv.org/abs/2609.08250">CALIPER</a>, <a
+href="https://arxiv.org/abs/2609.05178">LIBERO-RECOVER</a>, <a
+href="https://arxiv.org/abs/2609.28952">RoboRecover</a>, <a
+href="https://arxiv.org/abs/2609.25376">VLAQuantBench</a>.</p>
+<p>The <a
+href="https://voxel51.com/blog/egocentric-emg-force-dataset-fiftyone">September
+16 EMG-force audit</a> adds a practical warning: channel names alone do
+not establish direct force measurements or reliable alignment. Synthetic
+and inferred supervision can be useful, but provenance should remain
+visible. Scale’s READY and verifier work, Mercor’s RL guide and
+Snorkel’s September 22 funding belong to the wider AI-data/evaluation
+market; none proves a corresponding open robotics collection budget. <a
+href="https://labs.scale.com/blog/ready">READY</a>, <a
+href="https://snorkel.ai/blog/data-2-0-and-the-research-era-of-ai-data/">Snorkel</a>.</p>
+<p><strong>Correction to the September 10 archive:</strong> AWS confirms
+Mechanical Turk’s September 30 permanent closure. Its notices
+distinguish that event from Ground Truth and Augmented AI restrictions
+on new customers starting July 30, and Ground Truth Plus ending June 30.
+The older blanket claim that all three services close September 30
+should not be carried forward. EXL’s iMerit agreement was announced June
+24; its later appearance in a September brief does not make it September
+deal flow. <a
+href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-workforce-management-public.html">MTurk
+notice</a>, <a href="https://aws.amazon.com/sagemaker/ai/features/">AWS
+feature notices</a>, <a
+href="https://www.exlservice.com/about/newsroom/exl-to-acquire-imerit-advancing-its-leadership-in-enterprise-ai-by-adding-foundation-model-expertise-and-technology">EXL
+original agreement</a>, <a href="../days/2026-09-10.html">September 10
+historical brief</a>.</p>
+</section>
+<section id="embedded-ai-systems" class="level3">
+<h3>Embedded AI systems</h3>
+<p><strong>Software availability and control-aware efficiency were the
+useful changes.</strong> September 22 brought <a
+href="https://blogs.nvidia.com/blog/isaac-ros-5-0-agentic-open-source-robotics/">Isaac
+ROS 5.0</a> and <a
+href="https://www.intrinsic.ai/blog/posts/introducing-intrinsic-core">Intrinsic
+Core</a>, including an open machine-tending reference. Universal Robots
+announced its Gen 7 platform on September 14. These expand development
+choices; they are not evidence that integration, calibration or
+operational support have disappeared. <a
+href="https://www.universal-robots.com/news-and-media/news-center/universal-robots-unveils-gen-7-new-platform-industrial-automation-physical-ai">Gen
+7</a>.</p>
+<p>Research on adaptive action chunking, early exits, one-step
+generation and split inference asks where computation can be removed
+without harming control. <a
+href="https://arxiv.org/abs/2609.29382">Decoupled Early Exits</a> and <a
+href="https://arxiv.org/abs/2609.25376">VLAQuantBench</a> make this a
+task-dependent question. PrismML’s September 23 smart-glasses
+demonstration is a specific model/device result, not verified all-day
+battery performance. RoboSense’s September 28 Holoscan Sensor Bridge
+integration and Innodisk’s September 14 multi-camera platform highlight
+sensor transport and synchronisation alongside inference. <a
+href="https://prismml.com/news/prismml-brings-1-bit-bonsai-models-to-ai-smart-glasses-powered-by-snapdragon">PrismML</a>,
+<a href="https://www.robosense.ai/en/news-show-2003">RoboSense</a>, <a
+href="https://www.prweb.com/releases/innodisk-brings-cloud-free-generative-ai-and-multi-camera-vision-to-ai-infra-summit-302877433.html">Innodisk</a>.</p>
+</section>
+<section id="robotics-humanoids" class="level3">
+<h3>Robotics &amp; humanoids</h3>
+<p><strong>Workflows became clearer, but maturity still varied.</strong>
+Agility announced Digit 5 on September 15 with future availability,
+Boston Dynamics opened its Robotics Metaplant Application Center on
+September 21, and FANUC’s September 11 AI Welding Agent announcement
+described a later shipping schedule. AGIBOT reported a first phase of
+more than 300 robots with Chimelong on September 24. A company-reported
+count, a training centre and a product announcement measure different
+things; none substitutes for independent uptime, intervention or
+economic data. <a
+href="https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale">Digit
+5</a>, <a
+href="https://bostondynamics.com/news/boston-dynamics-opens-robotics-metaplant-application-center-to-train-humanoid-robots-for-manufacturing-tasks">Boston
+Dynamics</a>, <a
+href="https://www.fanuc.co.jp/en/profile/pr/newsrelease/2026/notice20260911.html">FANUC</a>,
+<a
+href="https://www.agibot.com/article/231/detail/123.html">AGIBOT</a>.</p>
+<p><strong>September 29 supplement, verified October 1:</strong> Dyna
+2.1 combines a mobile dual-arm platform, a unified robot representation
+and a slower orchestration layer for extended workflows such as laundry.
+Its published material explains the architecture and company
+demonstrations. It does not supply independently audited fleet
+reliability; its failure-rate calculator is illustrative. <a
+href="https://www.dyna.co/dyna-2.1">Dyna technical release</a>.</p>
+<p>World-model research also became more cautious about control.
+InternW0, PointCast and Rolling-WAM explore different representations
+and rollout strategies; When World Models Lie examines safety under
+incorrect predictions. Improved generated video is not automatically
+improved planning or safe execution. The archive also added February’s
+EgoScale and DreamDojo as belated background; those are <strong>not
+September releases</strong>. <a
+href="https://arxiv.org/abs/2609.27656">InternW0</a>, <a
+href="https://arxiv.org/abs/2609.28393">PointCast</a>, <a
+href="https://arxiv.org/abs/2609.30247">Rolling-WAM</a>, <a
+href="https://arxiv.org/abs/2609.34300">When World Models Lie</a>.</p>
+</section>
+<section id="india-sea-spotlight" class="level3">
+<h3>India &amp; SEA spotlight</h3>
+<p><strong>The evidence spans engineering, operating partners and
+adjacent capture demand.</strong> Jaipur Robotics’ €4.3M seed round
+concerns a Swiss-headquartered company with Bengaluru engineering.
+Hivebotics’ $6M Series A supports its Singapore cleaning-robot business.
+Neither should be presented as a census of all regional funding.
+IISc/ARTPARK’s noise-robust speech release is relevant to multilingual
+collection and labelling, while remaining separate from egocentric
+manipulation data. <a
+href="https://inc42.com/buzz/deeptech-startup-jaipur-robotics-raises-e4-3-mn-eyes-india-expansion/">Jaipur</a>,
+<a
+href="https://technode.global/2026/09/04/singapores-hivebotics-raises-6m-led-by-vertex-to-scale-restroom-cleaning-robots/">Hivebotics</a>,
+<a
+href="https://huggingface.co/blog/ARTPARK-IISc/a-real-world-dataset-for-noise-robust-speech-ai">ARTPARK</a>.</p>
+<p>NVIDIA’s September 22 regional update describes NCS/HTX work in
+Singapore, ITMAX traffic applications in Malaysia and AS-TECH
+passenger-flow work in Thailand. These are programmes at different
+stages, not a verified regional humanoid deployment total. IFR’s
+September 24 report records almost <strong>10,500 Indian
+industrial-robot installations in 2025</strong>, up 15%; it measures
+factory automation, not a data-procurement market. <a
+href="https://blogs.nvidia.com/blog/ai-day-singapore/">Regional
+update</a>, <a
+href="https://ifr.org/ifr-press-releases/news/five-million-robots-now-operate-in-factories-globally">IFR</a>.</p>
+<p>The actionable September discovery was a set of India
+vendor/workplace invitations and October speech-study specifications,
+detailed below. DeepReach’s specific regional business call lists five
+SEA countries and does not establish Indian eligibility. Thin
+institutional coverage cannot support the older briefs’ broad assertions
+that India had no relevant activity.</p>
+</section>
+<section id="china-spotlight" class="level3">
+<h3>China spotlight</h3>
+<p><strong>Capital, domestic computing and industrial scale all
+mattered.</strong> D-Robotics’ reported $400M Series C and SemiDrive’s
+nearly RMB1B across three 2026 rounds concern infrastructure; the latter
+is a combined-year update, not a new RMB1B round on September 21.
+Reports on InstAdapt and LingYu also point to collection and simulation
+infrastructure. Sharpa’s Singapore registration and founder links make a
+simple country label inadequate. <a
+href="https://autonews.gasgoo.com/articles/news/d-robotics-closes-400-million-series-c-funding-round-2100850533836685313">D-Robotics</a>,
+<a
+href="https://autonews.gasgoo.com/articles/news/2101862033787392001">SemiDrive</a>,
+<a
+href="https://kr-asia.com/singapore-based-sharpa-surfaces-as-robotics-venture-linked-to-hesai-founders">Sharpa
+background</a>.</p>
+<p>IFR reports <strong>354,000 industrial robots installed in China in
+2025</strong>, representing 59% of global installations. Domestic
+suppliers’ unit volume rose while their market share moved from 57% to
+55%. This is industrial-robot evidence, not a count of autonomous
+humanoids or collection customers. Research including XPACE and InternW0
+adds technical context; papers and financing do not by themselves
+validate advertised deployments. <a
+href="https://ifr.org/ifr-press-releases/news/five-million-robots-now-operate-in-factories-globally">IFR</a>.</p>
+<p>Across regions, public X coverage was incomplete. Founder commentary
+about buyer concentration or data quality remains opinion unless backed
+by disclosed transactions or controlled results. No account’s absence
+from accessible search results is treated as evidence that it was
+silent.</p>
+</section>
+</section>
+<section id="money-moves" class="level2">
+<h2>Money &amp; moves</h2>
+<p>Amounts below retain their transaction stage and original currency.
+<strong>Do not sum them into “funding raised”:</strong> acquisition
+agreements, valuations, credit/financing proposals, compute commitments
+and closed rounds are different measures. Sources are those retained in
+the daily archive, except the two explicitly marked October 1
+supplements.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>September date</th>
+<th>Entity</th>
+<th>Move and status</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30</td>
+<td>Amazon Mechanical Turk</td>
+<td>Permanent closure; Ground Truth/A2I notices differ, as corrected
+above.</td>
+<td><a
+href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-workforce-management-public.html">Source</a></td>
+</tr>
+<tr>
+<td>29</td>
+<td>Destro</td>
+<td>Investor announces $8M seed. September event verified October 1;
+warehouse coordination, not a collection tender.</td>
+<td><a
+href="https://cofoundpartners.com/blog/destro-8m-seed">Source</a></td>
+</tr>
+<tr>
+<td>28</td>
+<td>AMD / World Labs</td>
+<td>Approximately $8.2B all-stock acquisition agreement; expected
+end-2026 close subject to conditions. September event verified October
+1.</td>
+<td><a
+href="https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute">Source</a></td>
+</tr>
+<tr>
+<td>28</td>
+<td>Arbe</td>
+<td>Closed $15M registered direct offering, gross before fees.</td>
+<td><a
+href="https://ir.arberobotics.com/news/press-releases/detail/187/arbe-robotics-ltd-announces-closing-of-15-million">Source</a></td>
+</tr>
+<tr>
+<td>28 / earlier September round</td>
+<td>Maven / Presight / Shorooq</td>
+<td>Investor participation in an existing $100M Series A; not another
+$100M round. Planned fleet is not delivered units.</td>
+<td><a
+href="https://www.presight.ai/news/shorooq-and-presight-back-maven-robotics-in-100m-series-a-bringing-gulf-capital-to-the-frontier-of-physical-ai-1">Source</a></td>
+</tr>
+<tr>
+<td>25</td>
+<td>Nauticus</td>
+<td>Up to $50M proposed investment under a non-binding LOI; no
+obligation to close.</td>
+<td><a
+href="https://www.sec.gov/Archives/edgar/data/1849820/000184982026000150/kitt-20260925.htm">Source</a></td>
+</tr>
+<tr>
+<td>24</td>
+<td>AGIBOT / Chimelong</td>
+<td>Company-reported first deployment phase; contract amount
+undisclosed.</td>
+<td><a
+href="https://www.agibot.com/article/231/detail/123.html">Source</a></td>
+</tr>
+<tr>
+<td>24 coverage</td>
+<td>Feather</td>
+<td>Previously announced $7.6M pre-seed; do not count as a new September
+24 raise.</td>
+<td><a
+href="https://techcrunch.com/2026/09/24/meet-feather-the-startup-building-the-android-of-robotics-for-developers/">Source</a></td>
+</tr>
+<tr>
+<td>23 report</td>
+<td>TacnIQ</td>
+<td>$1.5M investment within a described $3M pre-seed; full $3M close
+unconfirmed.</td>
+<td><a
+href="https://apac.entrepreneur.com/business-news/singapores-tacniq-raises-1-5-mn-to-build-ai-that-learns-from-touch">Source</a></td>
+</tr>
+<tr>
+<td>22</td>
+<td>Snorkel</td>
+<td>$350M Series E at $3.5B valuation; broader AI-data business.</td>
+<td><a
+href="https://snorkel.ai/blog/data-2-0-and-the-research-era-of-ai-data/">Source</a></td>
+</tr>
+<tr>
+<td>22</td>
+<td>Cognex / RealSense</td>
+<td>Approximately $500M definitive acquisition agreement; expected Q4
+closing.</td>
+<td><a
+href="https://investor.cognex.com/news/news-details/2026/Cognex-to-Acquire-RealSense-Expanding-Machine-Vision-Leadership-into-High-Growth-Robotic-Perception-Market/default.aspx">Source</a></td>
+</tr>
+<tr>
+<td>21</td>
+<td>SemiDrive</td>
+<td>Nearly RMB1B across three rounds during 2026, not all new on this
+date.</td>
+<td><a
+href="https://autonews.gasgoo.com/articles/news/2101862033787392001">Source</a></td>
+</tr>
+<tr>
+<td>21 report</td>
+<td>Eidon</td>
+<td>Ceased operating and released assets; no verified causal
+explanation.</td>
+<td><a href="https://www.eidon.ai/">Source</a></td>
+</tr>
+<tr>
+<td>21</td>
+<td>Deepen Refinery</td>
+<td>Supplier/buyer waitlists; proposed beta, no verified transaction
+volume.</td>
+<td><a
+href="https://www.wboc.com/online_features/press_releases/deepen-ai-unveils-refinery-to-build-the-data-economy-physical-ai-will-run-on/article_a88ef9ad-036c-56e7-ab1d-8a2e25121860.html">Source</a></td>
+</tr>
+<tr>
+<td>18 report</td>
+<td>SoftBank / Robotics and AI Institute</td>
+<td>Reported acquisition agreement, undisclosed terms and regulatory
+review; not a sale of Boston Dynamics.</td>
+<td><a
+href="https://www.therobotreport.com/softbank-agrees-to-acquire-robotics-and-ai-institute/">Source</a></td>
+</tr>
+<tr>
+<td>17–18</td>
+<td>D-Robotics</td>
+<td>$400M Series C, reported closed.</td>
+<td><a
+href="https://autonews.gasgoo.com/articles/news/d-robotics-closes-400-million-series-c-funding-round-2100850533836685313">Source</a></td>
+</tr>
+<tr>
+<td>17</td>
+<td>Watney</td>
+<td>$80M Series A; company reports over $100M raised in total.</td>
+<td><a
+href="https://watney.com/media/introducing-watney">Source</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Vector / PEM Motion / FMC³</td>
+<td>MoU and intended German joint venture; no completed venture or
+supplier tender verified.</td>
+<td><a
+href="https://www.fmc3-robotics.ai/News/show?id=29">Source</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Agility</td>
+<td>S-4 filing: proposed $2.5B SPAC valuation and more than $620M
+expected gross proceeds; not a completed cash raise.</td>
+<td><a
+href="https://www.therobotreport.com/agility-robotics-reports-18m-revenue-ahead-of-humanoid-spac/">Source</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Pixxel</td>
+<td>$100M Series C reported; satellite/Earth intelligence, adjacent to
+robotics.</td>
+<td><a
+href="https://technode.global/2026/09/07/pixxel-100m-series-c-earth-intelligence/">Source</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Jaipur Robotics</td>
+<td>€4.3M seed; Swiss headquarters and Bengaluru engineering.</td>
+<td><a
+href="https://inc42.com/buzz/deeptech-startup-jaipur-robotics-raises-e4-3-mn-eyes-india-expansion/">Source</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>ARM Institute</td>
+<td>$90M award across ten manufacturing projects, not venture
+financing.</td>
+<td><a
+href="https://www.therobotreport.com/arm-institute-gets-90m-for-10-projects-to-modernize-military-manufacturing/">Source</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Hivebotics</td>
+<td>$6M Series A for Singapore cleaning-robot business.</td>
+<td><a
+href="https://technode.global/2026/09/04/singapores-hivebotics-raises-6m-led-by-vertex-to-scale-restroom-cleaning-robots/">Source</a></td>
+</tr>
+<tr>
+<td>4 report</td>
+<td>XDOF</td>
+<td>Series B talks at about $1.2B valuation; terms not final and
+valuation is not amount raised.</td>
+<td><a
+href="https://techcrunch.com/2026/09/04/xdof-just-three-months-out-of-stealth-is-in-talks-for-a-series-b-at-a-1-2b-valuation/">Source</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>NVIDIA / Hugging Face</td>
+<td>Approximately $12.93B acquisition agreement; completed ownership
+change not verified.</td>
+<td><a
+href="https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/">Source</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Figure / Nscale</td>
+<td>$3.5B compute commitment with stated intent above $6B; up to 100,000
+GPUs planned for H2 2027.</td>
+<td><a
+href="https://www.prnewswire.com/news-releases/nscale-and-figure-sign-strategic-partnership-to-power-the-next-generation-of-physical-ai-302868918.html">Source</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Sharpa</td>
+<td>Reported RMB4.5B financing, RMB22B post-money valuation; retain
+currency and reporting basis.</td>
+<td><a
+href="https://kr-asia.com/sharpa-raises-over-rmb-4-5-billion-as-it-puts-robots-to-work-at-dairy-queen">Source</a></td>
+</tr>
+<tr>
+<td>3 report</td>
+<td>Wandercraft</td>
+<td>Seeking €100M at €750M valuation; not a closed round.</td>
+<td><a
+href="https://www.humanoidsdaily.com/news/wandercraft-seeks-100m-at-750m-valuation-to-scale-industrial-humanoid-ambitions">Source</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>JAKA / Teradyne Robotics</td>
+<td>Countersuit in patent dispute; no deal amount.</td>
+<td><a
+href="https://www.therobotreport.com/jaka-hits-teradyne-robotics-back-over-patent-dispute/">Source</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Lyte AI</td>
+<td>$165M Series C at $1.6B post-money reported.</td>
+<td><a
+href="https://www.therobotreport.com/lyte-raises-165m-help-robots-better-sense-their-surroundings/">Source</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>PlusAI</td>
+<td>Proposed SPAC: roughly $800M pre-money equity value and up to $300M
+gross proceeds, subject to transaction conditions.</td>
+<td><a
+href="https://www.therobotreport.com/plusai-takes-autonomous-trucking-public-via-spac-deal/">Source</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Locus Robotics</td>
+<td>$41.6M Series G reported.</td>
+<td><a
+href="https://www.finsmes.com/2026/09/locus-robotics-raises-41-6m-in-series-g-funding.html">Source</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Aitan</td>
+<td>$41M round; $54M total reported.</td>
+<td><a
+href="https://www.prnewswire.com/news-releases/aitan-emerges-from-stealth-defines-new-defense-category-of-robotic-sovereignty-as-a-service--closes-41-million-funding-round-to-scale-its-battle-proven-technology-globally-302867620.html">Source</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Caterpillar / FieldAI</td>
+<td>Industrial partnership; amount undisclosed.</td>
+<td><a
+href="https://theaiinsider.tech/2026/09/02/caterpillar-and-fieldai-collaborate-on-physical-ai-for-industrial-jobsites-and-factories/">Source</a></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Medtronic / Cornerstone</td>
+<td>Roughly $700M strategic investment plus distribution agreement; not
+an acquisition.</td>
+<td><a
+href="https://news.medtronic.com/2026-09-01-Medtronic-Announces-Strategic-Partnership-with-Cornerstone-Robotics-to-Further-Expand-Global-Access-to-Robotic-Assisted-Surgery">Source</a></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Enovis / eCential</td>
+<td>Binding offer: $180M upfront plus up to $41M earnout, subject to
+closing conditions.</td>
+<td><a
+href="https://ir.enovis.com/news-releases/news-release-details/enovis-invests-innovation-binding-offer-acquire-ecential">Source</a></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Norbert Health</td>
+<td>$14M Series A reported.</td>
+<td><a
+href="https://theaiinsider.tech/2026/09/01/norbert-health-raises-14m-in-series-a-funding-to-for-autonomous-robotic-nursing-assistants/">Source</a></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Visko</td>
+<td>$10M pre-seed; world-model capability descriptions remain company
+claims.</td>
+<td><a
+href="https://www.therobotreport.com/visko-launches-orbis-live-model-closes-pre-seed-funding-round/">Source</a></td>
+</tr>
+<tr>
+<td>1 report</td>
+<td>InstAdapt / LingYu</td>
+<td>Eight-figure USD seed / nine-figure RMB pre-Series A respectively;
+exact amounts undisclosed in the retained report.</td>
+<td><a
+href="https://kr-asia.com/deals-in-brief-bioactivx-raises-pre-series-a-funding-smbc-and-singtel-innov8-back-fileai-latest-china-investments-and-more">Source</a></td>
+</tr>
+</tbody>
+</table>
+<p>Earlier deals discovered in September, including Reframe’s August
+financing and EXL’s June iMerit agreement, are excluded from new
+September deal totals. Personnel changes in the sparse archive are not
+treated as a complete hiring census.</p>
+</section>
+<section id="data-collection-opportunities" class="level2">
+<h2>Data collection opportunities</h2>
+<p>These are deduplicated <strong>September discoveries</strong>, not
+all September announcements or confirmed open contracts. Exact original
+dates for most social posts remain unresolved; archived relative ages
+range from weeks to months. Last-check dates below refer to the saved
+evidence. Except where explicitly stated, <strong>task orders, total
+committed volume, capture/QA thresholds, hardware funding, vendor
+rate/payment unit, acceptance/payment timing, rights and deadlines are
+not disclosed</strong>. A readable post does not verify authority to
+procure or ability to pay. Full specifications and public routes remain
+linked in the daily cards.</p>
+<section id="explicit-business-intake-and-collection-requests"
+class="level3">
+<h3>Explicit business intake and collection requests</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Route / classification</th>
+<th>Public requirements and terms</th>
+<th>Freshness and business route</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DeepReach · business partner intake</td>
+<td>General wearable collection programme; specific SEA call lists
+Malaysia, Philippines, Vietnam, Indonesia and Thailand, registered local
+businesses and field/site access. Says hardware and standards are
+supplied. Illustrative $7 per qualified hour is task-dependent, not a
+guaranteed vendor rate. India eligibility unconfirmed.</td>
+<td>Original launch date unresolved. General route rechecked October 1,
+after month-end; regional call checked September 25. <a
+href="https://www.deepreach.ai/join">Source</a></td>
+</tr>
+<tr>
+<td>Praxis · physical-work business intake</td>
+<td>Invites logistics, manufacturing, food, retail and laboratory
+businesses to discuss demonstrations of work. Country eligibility and
+actual commissioned tasks/terms undisclosed.</td>
+<td>Launch date unresolved; route rechecked October 1, not proof of a
+month-end order. <a
+href="https://www.ycombinator.com/launches/STf-praxis-ai-training-data-for-robotics">Source</a></td>
+</tr>
+<tr>
+<td>Defined.ai · professional supplier intake</td>
+<td>Collection/annotation service suppliers and existing-dataset
+licensing are separate routes. Licensing review includes quality,
+metadata and commercialisation rights. No fixed minimum dataset
+statement is not a supplier-project promise.</td>
+<td>Undated programme; rechecked October 1. Use AI Service Supplier for
+managed services, Data Partner for licensing. <a
+href="https://defined.ai/partnership-programs">Source</a></td>
+</tr>
+<tr>
+<td>Train Them AI · older vendor call</td>
+<td>Household/workplace headcam capture in LATAM, Indonesia and
+Malaysia; local recruitment, onboarding, QC and recurring delivery.</td>
+<td>Checked September 25; availability unknown. vendor@trainthemai.com.
+<a
+href="https://www.linkedin.com/posts/trainthem-ai_were-partnering-with-data-collection-vendors-activity-7474144303951384577-TiG7">Source</a></td>
+</tr>
+<tr>
+<td>Dhvani.Ai · two geographic calls</td>
+<td>India: agencies/field partners for ego, human-hand and
+robot-manipulation video. Separate international call: eight named
+countries, iPhone 12+, target 3,000 hours/country/week. Neither target
+nor “unlimited” promotional wording establishes an order.</td>
+<td>Checked September 25–26; exact dates/availability unknown.
+International route mit.bhatt@dhvani.ai.in; India company post. <a
+href="https://www.linkedin.com/posts/dhvani-ai_egocentric-video-data-collection-project-activity-7470879954897899520-oXcJ">Source</a></td>
+</tr>
+<tr>
+<td>Sajid Ahmed · workplace-partner request</td>
+<td>Paid Indian workplace ego capture, Delhi NCR plus expansion cities;
+author says cameras supplied, consent and data agreements required.
+Corporate mandate and agency eligibility unconfirmed.</td>
+<td>Checked September 26; older post, availability unknown.
+sajid.ahmed@truelancer.com. <a
+href="https://www.linkedin.com/posts/sajidahmed0903_egocentricai-aidatacollection-computervision-activity-7457349700858437632-b814">Source</a></td>
+</tr>
+<tr>
+<td>Salma Ali · vendor request</td>
+<td>First-person video, metadata, annotation and quality/compliance
+work; capability and sample review. Geography and affiliation not
+independently confirmed.</td>
+<td>Checked September 26; older post, availability unknown.
+vm.bayan3@bayan-tech.net. <a
+href="https://www.linkedin.com/posts/salma-ali-1b963518a_vendoropportunity-ai-datacollection-activity-7474836406654234624-MSV_">Source</a></td>
+</tr>
+<tr>
+<td>MAVY EduSolutions · existing-footage request</td>
+<td>Requested 100,000 hours of iPhone footage from
+workplaces/residential settings; asks samples, coverage, timeline and
+quote. Not an awarded volume.</td>
+<td>Checked September 26. Unanchored “next two days” is not a current
+deadline. collab@mavyedusolutions.co.in. <a
+href="https://www.linkedin.com/posts/mm249800_mavyedusolutions-embodiedai-humanoidrobotics-activity-7489010269759905792-tbbI">Source</a></td>
+</tr>
+<tr>
+<td>Karthik Kumar · annotation request</td>
+<td>GoPro-style construction video at 30 FPS; 300-hour pilot over about
+a month, conditional scale to 5,000+ hours. Segmentation, captions,
+classes and task boundaries; requests quote per video hour/minute.</td>
+<td>Checked September 26; older post, underlying client/current need
+unverified. Author post route. <a
+href="https://www.linkedin.com/posts/karthik-kumar-gcc_hiring-annotation-partners-egocentric-video-activity-7452335814665003008-4O4T">Source</a></td>
+</tr>
+<tr>
+<td>Mansi Joshi · India vendor invitation</td>
+<td>Commercial activities using head-mounted smartphones; participant
+recruitment, onboarding, device checks, QC and progress reporting.</td>
+<td>Found September 27, checked September 30; older post,
+mandate/availability unknown. mansi.joshi@E-solutionsinc.com. <a
+href="https://www.linkedin.com/posts/mansi-joshi-9899b8110_vendorpartnership-recruitmentpartners-activity-7481263583054704640-7ipB">Source</a></td>
+</tr>
+<tr>
+<td>MyTron Labs · company-reshared request</td>
+<td>India, Indonesia, Philippines, Africa, LATAM; local
+vendors/coordinators. iPhone 12+, Samsung S21+ or Pixel 6+; paid
+first-person capture, amount undisclosed.</td>
+<td>Found September 27, checked September 30; original exact date
+unresolved, availability unknown. Company/author post route. <a
+href="https://www.linkedin.com/posts/my-tron-labs_join-us-for-more-such-projects-activity-7499453983888044032-C2KA">Source</a></td>
+</tr>
+<tr>
+<td>Annolance AI · explicit vendor terms</td>
+<td>Narrated household POV at 1080p/60 FPS; vendor offer $5 per approved
+hour, 20 active resources, around 3+ hours/person/day and 200+ approved
+hours/week. Only validated footage payable. Separate individual
+₹450/hour offer is not the vendor price.</td>
+<td>Found September 27, checked September 30. Legal buyer/current
+order/payment schedule unverified. annolancelead@gmail.com. <a
+href="https://www.linkedin.com/posts/annolance-ai-95550a297_egocentricdata-povvideo-datacollection-activity-7506285064041783297-L9bh">Source</a></td>
+</tr>
+<tr>
+<td>Tariq Ahmad Bhat · pan-India vendor invitation</td>
+<td>Industrial/workplace ego capture; agencies, field teams, BPOs and
+survey operators. “Competitive payouts” supplies no usable price.</td>
+<td>Found September 27, checked September 30; older post,
+mandate/availability unknown. alwadoodsolutions@gmail.com. <a
+href="https://www.linkedin.com/posts/tariq-ahmad-bhat-46579b17b_we-are-hiring-vendors-across-india-egocentric-activity-7464983190995144704-3xmU">Source</a></td>
+</tr>
+<tr>
+<td>Reuben D’Souza · named vendor request</td>
+<td>Upcoming ego collection; field-operation and workforce-management
+partners. Geography and precise tasks undisclosed.</td>
+<td>Found September 27, checked September 30; older post,
+mandate/availability unknown. reuben.dsouza@ioweb3.in. <a
+href="https://www.linkedin.com/posts/reuben-d-souza-288a19190_datacollection-fieldoperations-vendoropportunity-activity-7465715255634042881-UZFS">Source</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="procurement-signals-marketplaces-and-unverified-requests"
+class="level3">
+<h3>Procurement signals, marketplaces and unverified requests</h3>
+<ul>
+<li><strong>Generalist:</strong> its Data Partnerships role describes
+external vendor sourcing, trials, hardware provision and commercial
+negotiation. That is procurement evidence, not a vendor application form
+or announced budget. Original date unresolved; checked September 23. <a
+href="https://jobs.ashbyhq.com/generalist/d5aa97c1-fc3e-439a-9aba-b8c9aaa2dab4">Role</a>.</li>
+<li><strong>Boston Dynamics:</strong> September 21 RMAC announcement
+discusses wider 2027 Atlas data collection with existing Spot/Stretch
+customers. It does not advertise open agency intake; geography,
+quantities, hardware/QA, rates and deadlines are undisclosed. Detail
+recovered September 26. <a
+href="https://bostondynamics.com/news/boston-dynamics-opens-robotics-metaplant-application-center-to-train-humanoid-robots-for-manufacturing-tasks">Announcement</a>.</li>
+<li><strong>Kinetic Blocks, Robotics Center and Deepen
+Refinery:</strong> distribution/supplier channels, not verified
+collection commissions. Deepen’s September 21 announcement describes
+licences, buyer exclusions and optional validation; fees, payouts and
+specific buyer orders remain undisclosed. Kinetic Blocks/Robotics Center
+were rechecked October 1 with no material new terms established. <a
+href="../days/2026-09-25.html">September 25 channel review</a>, <a
+href="https://refinery.deepen.ai/">Deepen waitlist</a>.</li>
+<li><strong>Reddit Winter-Lake-589:</strong> one anonymous sourcing
+lead, not multiple buyers from repeated posts/comments. The author
+requests 10,000–50,000 hours of global residential/commercial ego
+footage, preferably existing inventory, with interest in additional
+sensors/labels. Claims a budget and 3–6 month horizon but provides no
+amount or anchored deadline. Exact date, buyer identity and current
+availability unverified; checked September 30, direct access failed
+October 1. <a
+href="https://www.reddit.com/r/datasets/comments/1w4mgd8/egocentric_pov_ots_data_needed_large_number_of/">Permalink</a>.</li>
+</ul>
+</section>
+<section
+id="contributor-projects-specification-intelligence-not-agency-orders"
+class="level3">
+<h3>Contributor projects: specification intelligence, not agency
+orders</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Programme</th>
+<th>Public specification</th>
+<th>Commercial scope and freshness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DataForce Viola</td>
+<td>Telugu/Urdu in Hyderabad; Bengali/Marathi in Pune. Adults record
+prompted paired conversations wearing earbuds onsite, up to 2.5 hours.
+Telugu lists September/early October; other reviewed studies list
+October 2026.</td>
+<td>$55 per successfully completed participant session. Agency
+eligibility, supplier fees, total volume and exact deadline undisclosed.
+Posting dates not shown; checked September 24–30 depending on study. <a
+href="https://dataforcecommunity.transperfect.com/study/viola-voice-collection-telugu-hyderabad">Telugu</a>,
+<a
+href="https://dataforcecommunity.transperfect.com/study/viola-voice-collection-urdu-hyderabad">Urdu</a>,
+<a
+href="https://dataforcecommunity.transperfect.com/study/viola-voice-collection-bengali-pune">Bengali</a>,
+<a
+href="https://dataforcecommunity.transperfect.com/study/viola-voice-collection-marathi-pune">Marathi</a>.
+Business enquiry: DataForce.Sourcing@transperfect.com.</td>
+</tr>
+<tr>
+<td>OneForma Juniper</td>
+<td>Remote English/native-language code-switching; at least four
+recordings, quiet space, microphone and reliable internet. France,
+Germany, Italy, Japan, Malaysia, Spain, Taiwan, US; India not
+listed.</td>
+<td>Index dated September 15; checked September 24. Description refers
+to 3.5 hours prorated for shorter completion, with QA; amount and
+business subcontracting undisclosed. <a
+href="https://www.oneforma.com/projects/project-juniper-paid-audio-video-recording-study-5/">Project</a>.</td>
+</tr>
+<tr>
+<td>OneForma Twilight</td>
+<td>Outdoor home-video session with driveway/backyard and internet,
+around 7 PM–2 AM near Redmond, Washington. Page/index disagree on 40/50
+mile radius.</td>
+<td>Exact original date, pay, agency eligibility and deadline
+undisclosed; checked September 24. Resolve geography with organiser. <a
+href="https://www.oneforma.com/projects/overnight-home-video-data-collection-participant/">Project</a>.</td>
+</tr>
+<tr>
+<td>OneForma natural-conversation video</td>
+<td>US adults, moderated paired conversation on own devices; 3–8
+minutes/session, up to ten sessions; fixed or handheld framing by
+role.</td>
+<td>Index dated September 21; checked September 25/30. $18 is displayed
+but payment scope unresolved; do not multiply into a ten-session or
+hourly rate. No confirmed agency route. <a
+href="https://www.oneforma.com/projects/natural-conversation-video-recording-study/">Project</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>No urgent supplier deadline or newly awarded collection contract was
+verified in this archive. Weekly programme review and daily discovery
+should continue; unchanged programmes should not reappear as new
+opportunities. The initial 30-day discovery backfill was completed
+September 24, with social-access gaps. <strong>Kuinbee, newly discovered
+October 1, belongs in the October daily, not September’s discovery
+count.</strong> No outreach or applications were made.</p>
+</section>
+</section>
+<section id="papers-added-this-month" class="level2">
+<h2>Papers added this month</h2>
+<p><strong>158 deduplicated library entries</strong> were added during
+September. This includes papers, datasets, software, technical releases
+and research commentary; separate paper/project resources are separate
+entries, not necessarily separate studies. Older February/August
+publications are intentionally retained as discoveries, not labelled
+September research. All 115 arXiv entries were checked against original
+submission metadata on October 1. Thirteen archived dates were corrected
+below and in the library. Other dates retain the archive’s
+release/update attribution; undated resources remain unresolved rather
+than being assigned discovery dates. A Hugging Face update date does not
+necessarily establish first public release.</p>
+<section id="added-2026-09-07" class="level3">
+<h3>Added 2026-09-07</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Original publication / archived release date</th>
+<th>Resource</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-08-29</td>
+<td><a href="https://arxiv.org/abs/2608.29242">AnyWorld: Factorized
+Egocentric World Models for Cross-Embodiment Generalization</a></td>
+<td>Recomposes human interaction into different cameras, embodiments and
+scenes for transfer tests.</td>
+</tr>
+<tr>
+<td>2026-08-31</td>
+<td><a href="https://arxiv.org/abs/2608.30289">CometVLA: Co-Training on
+an Embodied Data Pyramid towards Physical Understanding</a></td>
+<td>Studies co-training across different levels of embodied
+supervision.</td>
+</tr>
+<tr>
+<td>2026-08-31</td>
+<td><a href="https://arxiv.org/abs/2608.30237">Motus2: A Self-Evolving
+General World Model for Dexterous Manipulation</a></td>
+<td>Explores iterative world-model training for dexterous
+manipulation.</td>
+</tr>
+<tr>
+<td>2026-09-02</td>
+<td><a href="https://arxiv.org/abs/2609.02134">Unified Motion
+Retargeting for Humanoids with Learned Point Cloud
+Correspondence</a></td>
+<td>Uses learned geometric correspondence to retarget humanoid
+motion.</td>
+</tr>
+<tr>
+<td>2026-08-31</td>
+<td><a href="https://arxiv.org/abs/2609.00377">FoldingAgent: Inferring
+Parametric Origami Procedures from Demonstration Videos</a></td>
+<td>Extracts procedural structure from video demonstrations of
+folding.</td>
+</tr>
+<tr>
+<td>2026-08-31</td>
+<td><a href="https://arxiv.org/abs/2609.00478">Beyond Object Selection:
+Markerless Gaze-based Robot Placement at Arbitrary Position</a></td>
+<td>Tests gaze as a control signal for arbitrary placement.</td>
+</tr>
+<tr>
+<td>2026-09-01</td>
+<td><a href="https://arxiv.org/abs/2609.01453">Does Imitation Learning
+Preserve Temporal Robustness in Dexterous Manipulation? An
+Expert-Learner Comparison Across Task Execution Speeds</a></td>
+<td>Examines imitation robustness when task execution speed
+changes.</td>
+</tr>
+<tr>
+<td>2026-08-31</td>
+<td><a href="https://arxiv.org/abs/2608.30536">Behavior-Skill: A
+Fine-Grained Benchmark for Evaluating Vision-Language-Action Policies in
+Long-Horizon Tasks</a></td>
+<td>Separates long-horizon performance into more specific skill
+tests.</td>
+</tr>
+<tr>
+<td>2026-09-02</td>
+<td><a href="https://arxiv.org/abs/2609.02886">SolarWM: Open Data and
+Scalable Training for Long-Horizon Video World Models</a></td>
+<td>Provides data and training methods for longer video rollouts.</td>
+</tr>
+<tr>
+<td>2026-09-03</td>
+<td><a href="https://arxiv.org/abs/2609.04196">Puffin-World: Scaling a
+Unified Multimodal Model with Native 3D World States</a></td>
+<td>Explores explicit 3D state within multimodal world modelling.</td>
+</tr>
+<tr>
+<td>2026-09-02</td>
+<td><a href="https://arxiv.org/abs/2609.02634">Latent Cluster Analysis
+for Vision-Language-Action Models</a></td>
+<td>Analyses latent structure inside robot policies.</td>
+</tr>
+<tr>
+<td>2026-09-02</td>
+<td><a href="https://arxiv.org/abs/2609.02811">Do Better Imagined
+Rollouts Mean Better Robot Control? A Controlled Study of World-Model
+Evaluation Under Feedback</a></td>
+<td>Tests whether better imagined rollouts improve feedback
+control.</td>
+</tr>
+<tr>
+<td>2026-09-02</td>
+<td><a href="https://arxiv.org/abs/2609.02531">SA-WAM: Spatially Aware
+World Action Model via Geometric Latent Diffusion</a></td>
+<td>Adds geometric structure to world-action modelling.</td>
+</tr>
+<tr>
+<td>2026-08-31</td>
+<td><a href="https://arxiv.org/abs/2609.00333">Scene Graph-based Driving
+Scenario Extraction for Automotive Egocentric Datasets</a></td>
+<td>Extracts driving scenarios from egocentric recordings.</td>
+</tr>
+<tr>
+<td>2026-08-29</td>
+<td><a href="https://arxiv.org/abs/2608.29208">AdaVLA: Adaptive Step
+Flow Matching for Training-free Acceleration of Vision-Language-Action
+Models</a></td>
+<td>Adapts action-generation steps to reduce policy inference work.</td>
+</tr>
+<tr>
+<td>2026-08-30</td>
+<td><a href="https://arxiv.org/abs/2608.29749">DriftingVLA: Native
+One-Step Vision-Language-Action Generation via Per-Dimension Temporal
+Drifting</a></td>
+<td>Studies one-step action generation rather than repeated
+denoising.</td>
+</tr>
+<tr>
+<td>2026-09-01</td>
+<td><a href="https://arxiv.org/abs/2609.00908">Knowing When to Stop:
+Adaptive Action Chunking via Internal Cross-Attention Dynamics in
+VLAs</a></td>
+<td>Uses policy internals to adapt action-chunk duration.</td>
+</tr>
+<tr>
+<td>2026-09-02</td>
+<td><a href="https://arxiv.org/abs/2609.02219">Hardware-Accelerated
+Instance Segmentation for Resource-Constrained Space Robotics with
+Criticality Analysis</a></td>
+<td>Examines segmentation acceleration under resource constraints.</td>
+</tr>
+<tr>
+<td>2026-09-02</td>
+<td><a
+href="https://huggingface.co/blog/ErenAta00/cosmos-reason2-quest3">Cosmos-Reason2
+on a Quest 3: Performance, Cost, and What Compression Actually Buys
+You</a></td>
+<td>Tests compression and device-specific deployment tradeoffs.</td>
+</tr>
+<tr>
+<td>2026-09-01</td>
+<td><a href="https://arxiv.org/abs/2609.01938">One Demonstration, Many
+Objects: Generalizing Manipulation via Local Contact Geometry</a></td>
+<td>Uses local contact geometry to transfer a demonstration across
+objects.</td>
+</tr>
+<tr>
+<td>2026-09-02</td>
+<td><a href="https://arxiv.org/abs/2609.02546">ZETA: A Controlled Study
+of Zero-Shot Cross-Embodiment VLA Transfer for Tabletop
+Manipulation</a></td>
+<td>Controls evaluation conditions for cross-embodiment transfer.</td>
+</tr>
+<tr>
+<td>2026-08-29</td>
+<td><a href="https://arxiv.org/abs/2608.29078">DREAM: Deployment-Time
+Demonstration Generation via Real-to-Sim for Scalable Policy
+Adaptation</a></td>
+<td>Generates adaptation demonstrations using real-to-sim
+reconstruction.</td>
+</tr>
+<tr>
+<td>2026-08-29</td>
+<td><a href="https://arxiv.org/abs/2608.29080">GHOST in the Robots:
+Real-Time Exocentric Dual-Robot VR Teleoperation from Onboard
+Cameras</a></td>
+<td>Studies dual-robot teleoperation views from onboard cameras.</td>
+</tr>
+<tr>
+<td>2026-09-01</td>
+<td><a href="https://arxiv.org/abs/2609.01596">Facet-0: A Robotic
+Foundation Model for Contact-Rich Precise Manipulation</a></td>
+<td>Examines foundation-model control for precise contact-rich
+tasks.</td>
+</tr>
+<tr>
+<td>2026-09-02</td>
+<td><a href="https://arxiv.org/abs/2609.02542">World-Model-Augmented
+Visual Locomotion for Humanoids on Foothold-Constrained Terrain</a></td>
+<td>Uses world modelling to support terrain-aware humanoid
+locomotion.</td>
+</tr>
+<tr>
+<td>2026-08-30</td>
+<td><a href="https://arxiv.org/abs/2608.29487">Blind Dexterity:
+Whole-Body Humanoid Manipulation via Pure Proprioception</a></td>
+<td>Studies manipulation using proprioception without visual
+feedback.</td>
+</tr>
+<tr>
+<td>2026-08-28</td>
+<td><a href="https://arxiv.org/abs/2608.28578">Aero Hand Open: A
+Simulation-Ready Tendon-Driven Hand for Dexterous Manipulation
+Learning</a></td>
+<td>Provides an open tendon-driven hand and simulation resources.</td>
+</tr>
+<tr>
+<td>2026-08-31</td>
+<td><a
+href="https://huggingface.co/LightOriginsHQ/LightNav-0">LightNav-0</a></td>
+<td>A navigation model resource for inspecting architecture and
+deployment assumptions.</td>
+</tr>
+<tr>
+<td>2026-08-27</td>
+<td><a href="https://arxiv.org/abs/2608.27550">VLAct:
+Representation-Centric Continued Pretraining for VLA</a></td>
+<td>Studies continued pretraining and representation quality for action
+models.</td>
+</tr>
+<tr>
+<td>2026-08-31</td>
+<td><a href="https://huggingface.co/blog/cavanloy/vlanext">VLANeXt: A
+Simple and Research-Oriented Codebase for Robotics Research</a></td>
+<td>Provides research infrastructure for VLA experimentation.</td>
+</tr>
+<tr>
+<td>2026-08-31</td>
+<td><a
+href="https://developer.nvidia.com/blog/scale-av-perception-across-vehicle-platforms-with-nvidia-omniverse-nurec/">Scale
+AV Perception Across Vehicle Platforms with NVIDIA Omniverse
+NuRec</a></td>
+<td>Explains sensor-view resynthesis across autonomous-vehicle
+platforms.</td>
+</tr>
+<tr>
+<td>2026-09-02</td>
+<td><a href="https://huggingface.co/nvidia/SOMA-X">NVIDIA SOMA-X
+v0.3.0</a></td>
+<td>A body-model resource relevant to motion representation and
+reconstruction.</td>
+</tr>
+<tr>
+<td>2026-08-31</td>
+<td><a
+href="https://huggingface.co/OpenMOSS-Team/EasyWAM-MoT-Wan22">EasyWAM-MoT-Wan22</a></td>
+<td>A world-action-model release for inspecting mixture-of-transformer
+design.</td>
+</tr>
+<tr>
+<td>2026-08-31</td>
+<td><a
+href="https://huggingface.co/datasets/ACERobotics/ACE-Data-0">ACE-Data-0</a></td>
+<td>A robot-data release for inspecting schema and demonstration
+coverage.</td>
+</tr>
+<tr>
+<td>2026-08-30</td>
+<td><a
+href="https://huggingface.co/datasets/lerobot/community_dataset_v3">lerobot/community_dataset_v3</a></td>
+<td>A community robot-data resource spanning multiple embodiments.</td>
+</tr>
+<tr>
+<td>2026-08-31</td>
+<td><a
+href="https://huggingface.co/datasets/MINT-SJTU/RW-RL-Dataset">MINT-SJTU
+RW-RL-Dataset</a></td>
+<td>A real-world reinforcement-learning dataset resource.</td>
+</tr>
+<tr>
+<td>2026-09-02</td>
+<td><a
+href="https://huggingface.co/datasets/robot-football-league/matches">robot-football-league/matches</a></td>
+<td>Match recordings offer a specialised embodied-interaction data
+source.</td>
+</tr>
+<tr>
+<td>2026-09-02</td>
+<td><a href="https://labs.scale.com/blog/verifier-design-for-cua">Who
+Grades the Graders? Rethinking Verifier Design for Computer Use
+Agents</a></td>
+<td>Examines how verifier design affects agent evaluation.</td>
+</tr>
+<tr>
+<td>2026-09-03</td>
+<td><a href="https://labs.scale.com/blog/ready">READY: Reliable
+Enterprise Agent Deployment benchmark suite</a></td>
+<td>An enterprise-agent benchmark suite, adjacent to robotics
+evaluation.</td>
+</tr>
+<tr>
+<td>2026-09-01</td>
+<td><a
+href="https://www.mercor.com/blog/training-frontier-knowledge-work-agents-a-397b-rl-training-guide-with-skyrl/">Training
+frontier knowledge work agents: A 397B RL training guide with
+SkyRL</a></td>
+<td>A reinforcement-learning training guide for knowledge-work agents,
+not robot demonstrations.</td>
+</tr>
+<tr>
+<td>2026-08-28</td>
+<td><a
+href="https://snorkel.ai/blog/terminal-bench-4-continuous-qa/">Terminal-Bench
+4.0: Why Continuous Benchmarks Require Continuous QA</a></td>
+<td>Discusses continuing quality checks as benchmarks change.</td>
+</tr>
+<tr>
+<td>2026-09-01</td>
+<td><a href="https://www.worldlabs.ai/blog/atlas">Atlas</a></td>
+<td>A World Labs spatial-model release, distinct from a robot-control
+benchmark.</td>
+</tr>
+<tr>
+<td>2026-09-02</td>
+<td><a
+href="https://www.chathamhouse.org/2026/09/chinas-humanoid-robot-industry-bubble">Is
+China humanoid robot industry a bubble?</a></td>
+<td>Industry analysis questioning whether humanoid investment matches
+commercial evidence.</td>
+</tr>
+<tr>
+<td>2026-02-18</td>
+<td><a href="https://arxiv.org/abs/2602.16710">EgoScale: Scaling
+Egocentric Human Video for Vision-Language-Action Models</a></td>
+<td>Older February work studying scaling of egocentric pretraining for
+robot policies.</td>
+</tr>
+<tr>
+<td>2026-02-06</td>
+<td><a href="https://arxiv.org/abs/2602.06949">DreamDojo: A Generalist
+Robot World Model from Egocentric Human Video</a></td>
+<td>Older February work learning robot world models from human
+video.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="added-2026-09-08" class="level3">
+<h3>Added 2026-09-08</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Original publication / archived release date</th>
+<th>Resource</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-09-04</td>
+<td><a href="https://arxiv.org/abs/2609.04958">MINT: A Unified Model for
+World-Space Camera and Hand Motion Estimation from Scalable Egocentric
+Pipeline Supervision</a></td>
+<td>Estimates camera and hand motion for egocentric supervision
+pipelines.</td>
+</tr>
+<tr>
+<td>2026-09-04</td>
+<td><a href="https://arxiv.org/abs/2609.05401">Same Trajectory,
+Contradictory Rewards (ROBORMBENCH): Paraphrase Fragility in Vision
+Language Reward Models</a></td>
+<td>Tests reward-model sensitivity to equivalent instruction
+wording.</td>
+</tr>
+<tr>
+<td>2026-09-03</td>
+<td><a href="https://arxiv.org/abs/2609.04277">FailureSpot:
+Label-Efficient Timestamp-Level Failure Detection for
+Vision-Language-Action Models</a></td>
+<td>Studies timestamp-level failure detection with limited labels.</td>
+</tr>
+<tr>
+<td>2026-09-04</td>
+<td><a href="https://arxiv.org/abs/2609.05178">LIBERO-RECOVER: Beyond
+Task Success Towards Failure Recovery in Robotic Manipulation
+Models</a></td>
+<td>Benchmarks recovery rather than only successful task
+completion.</td>
+</tr>
+<tr>
+<td>2026-09-03</td>
+<td><a href="https://arxiv.org/abs/2609.04552">Continual Field-Adaptive
+Models (CFAMs) for Post-Deployment Physical AI</a></td>
+<td>Explores model adaptation after field deployment.</td>
+</tr>
+<tr>
+<td>2026-09-04</td>
+<td><a href="https://arxiv.org/abs/2609.05324">RoboSPA: Can VLA Models
+Go Beyond Simple Scenes and Short-Horizon Tasks?</a></td>
+<td>Tests robot policies beyond short tasks and simple scenes.</td>
+</tr>
+<tr>
+<td>2026-09-04</td>
+<td><a href="https://arxiv.org/abs/2609.05376">What Matters, When?
+Diagnosing and Improving Conditional Visual Grounding in Visuomotor
+Imitation Policies</a></td>
+<td>Diagnoses when visual observations influence imitation
+policies.</td>
+</tr>
+<tr>
+<td>2026-09-04</td>
+<td><a href="https://arxiv.org/abs/2609.05266">TacPAC: Tactile
+Prediction and Real-Time Action Correction in World-Action Models for
+Contact-Rich Manipulation</a></td>
+<td>Uses tactile prediction to correct actions during contact.</td>
+</tr>
+<tr>
+<td>2026-09-04</td>
+<td><a href="https://arxiv.org/abs/2609.05260">One Word, Different
+Action: A Real-Robot Benchmark for Language-Conditioned Embodied
+Reasoning</a></td>
+<td>Tests whether small language changes produce appropriate real-robot
+actions.</td>
+</tr>
+<tr>
+<td>2026-09-04</td>
+<td><a href="https://arxiv.org/abs/2609.04893">Reasoning Without
+Inference Cost: Latent Semantic Scaffolding for Robot VLA
+Policies</a></td>
+<td>Studies training-time semantic support without added inference
+stages.</td>
+</tr>
+<tr>
+<td>2026-09-04</td>
+<td><a href="https://arxiv.org/abs/2609.05161">APEX-RBD: Mixed-Precision
+Exploration Framework for Hardware-Efficient Robot Dynamics Accelerator
+Design</a></td>
+<td>Explores mixed precision for robot-dynamics accelerators.</td>
+</tr>
+<tr>
+<td>2026-09-03</td>
+<td><a href="https://arxiv.org/abs/2609.04355">VLA-Precision: Asymmetric
+Co-Bootstrapping for Efficient Real-World Online RL of
+Vision-Language-Action Models</a></td>
+<td>Studies efficient online reinforcement learning on real robots.</td>
+</tr>
+<tr>
+<td>2026-09-03</td>
+<td><a href="https://arxiv.org/abs/2609.04193">GIFT: Guided Intermediate
+Feature Training via Action-Oriented Structural Supervision for Robotic
+Manipulation</a></td>
+<td>Uses action-oriented structural supervision during training.</td>
+</tr>
+<tr>
+<td>2026-09-03</td>
+<td><a href="https://arxiv.org/abs/2609.03889">FWBC-VLA: Force-Aware
+Whole-Body Compensation for Contact-Rich Loco-Manipulation</a></td>
+<td>Compensates whole-body motion during contact-rich manipulation.</td>
+</tr>
+<tr>
+<td>2026-09-03</td>
+<td><a href="https://arxiv.org/abs/2609.03927">Toward Unified Robot
+Learning: Bridging Representation, Vision-Language-Action, and World
+Models</a></td>
+<td>Examines connections among representation learning, VLAs and world
+models.</td>
+</tr>
+<tr>
+<td>2026-09-03</td>
+<td><a href="https://arxiv.org/abs/2609.04545">SocioGesture: Real-Time
+and Adaptive Social Gesture Perception for Human-Robot
+Interaction</a></td>
+<td>Studies adaptive social-gesture perception for human-robot
+interaction.</td>
+</tr>
+<tr>
+<td>2026-09-01</td>
+<td><a
+href="https://huggingface.co/SIMFORGE-AI/SIMFORGE-D1.5">SIMFORGE-D1.5</a></td>
+<td>A simulation-generation resource for inspecting training-data
+workflows.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="added-2026-09-10" class="level3">
+<h3>Added 2026-09-10</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Original publication / archived release date</th>
+<th>Resource</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-09-08</td>
+<td><a href="https://arxiv.org/abs/2609.08250">CALIPER: Clean Scenes
+Cannot Rank Physical Inference in Pretrained Visual
+Representations</a></td>
+<td>Tests whether clean-scene evaluations distinguish physical
+inference.</td>
+</tr>
+<tr>
+<td>2026-09-08</td>
+<td><a href="https://arxiv.org/abs/2609.08209">Monkey See, Can Monkey
+Do? A Benchmark for Evaluating Robot Skill Learning by
+Observation</a></td>
+<td>Benchmarks learning skills from observation.</td>
+</tr>
+<tr>
+<td>2026-09-08</td>
+<td><a href="https://arxiv.org/abs/2609.09023">DYAD: A Multimodal
+Dataset of Co-Located Human Assistance</a></td>
+<td>A multimodal dataset of co-located assistance interactions.</td>
+</tr>
+<tr>
+<td>2026-09-08</td>
+<td><a href="https://arxiv.org/abs/2609.08636">From Where to How:
+Continuous 4D Interaction Forecasting from Egocentric Video</a></td>
+<td>Forecasts where and how future egocentric interaction unfolds.</td>
+</tr>
+<tr>
+<td>2026-09-08</td>
+<td><a href="https://arxiv.org/abs/2609.08755">Kairos: A Dataset for
+Fine-Grained Video-Language Modeling over Space, Time, and
+Dynamics</a></td>
+<td>Provides fine-grained video-language supervision over space and
+time.</td>
+</tr>
+<tr>
+<td>2026-09-07</td>
+<td><a href="https://arxiv.org/abs/2609.07747">Dex-X: Learning
+Visual-Tactile Dexterous Manipulation From Human Videos with Simulated
+Interaction</a></td>
+<td>Combines human videos and simulated interaction for visual-tactile
+learning.</td>
+</tr>
+<tr>
+<td>2026-09-08</td>
+<td><a href="https://arxiv.org/abs/2609.09119">DeCAL: Towards
+Physically-Grounded Dexterous Vision-Language-Action Models via
+Contact-Aware Latent Co-Imagination</a></td>
+<td>Uses contact-aware latent modelling for dexterous control.</td>
+</tr>
+<tr>
+<td>2026-09-08</td>
+<td><a href="https://arxiv.org/abs/2609.09158">TANGO: Humanoid
+Navigation in Cluttered Environments with a Whole-Body
+Vision-Language-Action Model</a></td>
+<td>Studies whole-body navigation through clutter.</td>
+</tr>
+<tr>
+<td>2026-09-07</td>
+<td><a href="https://arxiv.org/abs/2609.07838">ComVLA:
+Communication-Aware Split Inference for VLA Models in 6G-Connected
+Robotics</a></td>
+<td>Examines communication costs in split robot-policy inference.</td>
+</tr>
+<tr>
+<td>2026-09-08</td>
+<td><a href="https://arxiv.org/abs/2609.08280">Seeing is Not Believing:
+Breaking the Physical-to-Digital Trust Boundary in Robotics</a></td>
+<td>Tests the physical-to-digital trust boundary of robot
+perception.</td>
+</tr>
+<tr>
+<td>2026-09-09</td>
+<td><a href="https://arxiv.org/abs/2609.10243">FolDeX: A Physical-World
+Benchmark for Long-Horizon Robotic Manipulation of Deformable
+Objects</a></td>
+<td>Benchmarks long-horizon manipulation of deformable objects.</td>
+</tr>
+<tr>
+<td>2026-09-08</td>
+<td><a
+href="https://huggingface.co/XiaomiRobotics/Xiaomi-Robotics-U0-4B">Xiaomi-Robotics-U0</a></td>
+<td>An open robot-model resource for inspecting embodiment and training
+assumptions.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="added-2026-09-23" class="level3">
+<h3>Added 2026-09-23</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Original publication / archived release date</th>
+<th>Resource</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-09-15</td>
+<td><a href="https://arxiv.org/abs/2609.17372">XPACE: Joint World and
+Action Modeling from Heterogeneous Experience</a></td>
+<td>Connects human video, aligned bridge data and robot demonstrations;
+distinguishes simulator failures from policy imitation.</td>
+</tr>
+<tr>
+<td>2026-09-20</td>
+<td><a href="https://arxiv.org/abs/2609.23755">EgoWild2Dex: Learning
+Dexterous Robotic Manipulation from In-the-Wild Human
+Experience</a></td>
+<td>538.9-hour egocentric collection; strong selected-task results
+coexist with a much weaker object zero-shot result. Release availability
+not verified.</td>
+</tr>
+<tr>
+<td>2026-09-21</td>
+<td><a href="https://arxiv.org/abs/2609.24411">Zeva-Ego: Egocentric
+Mid-Training with In-Context Causal Learning for Robot
+Manipulation</a></td>
+<td>Compares egocentric and robot demonstration scaling in a specific
+evaluation; the empirical data ratio is not universal.</td>
+</tr>
+<tr>
+<td>2026-09-21</td>
+<td><a href="https://arxiv.org/abs/2609.24778">H2RBench: A Real-to-Sim
+Benchmark for Evaluating Human-to-Robot Transfer</a></td>
+<td>Standardises human-to-robot evaluation on four tasks and tests
+simulation-to-real ranking agreement.</td>
+</tr>
+<tr>
+<td>2026-09-21</td>
+<td><a href="https://arxiv.org/abs/2609.24350">LIBERO-VPro: Benchmarking
+Closed-Loop Visual Robustness of Robotic Foundation Models</a></td>
+<td>Tests stale observations, visual degradation and changed conditions;
+clean benchmark success can conceal control failures.</td>
+</tr>
+<tr>
+<td>2026-09-21</td>
+<td><a href="https://arxiv.org/abs/2609.25376">VLAQuantBench:
+Closed-Loop Evaluation of Post-Training Quantization for
+Vision-Language-Action Models</a></td>
+<td>Quantisation outcomes depend on model, layer scope and calibration.
+Validate low-precision policies on tasks.</td>
+</tr>
+<tr>
+<td>2026-09-22</td>
+<td><a href="https://arxiv.org/abs/2609.25562">IndustrialVLA-Bench: A
+Traceable Multi-Axis Evaluation of Open Robot Policy Models</a></td>
+<td>Separates clean capability, robustness, instruction sensitivity and
+runtime cost while exposing reproduction quality.</td>
+</tr>
+<tr>
+<td>2026-09-21</td>
+<td><a href="https://arxiv.org/abs/2609.24682">Think Like a World Model,
+Act Like a VLA: Distilling World-Model Representations into Compact
+Robot Policies</a></td>
+<td>Distils cached teacher features into a compact policy without adding
+the world model to deployment inference.</td>
+</tr>
+<tr>
+<td>2026-09-22</td>
+<td><a href="https://arxiv.org/abs/2609.25653">PhyVisGen: Physically and
+Visually High-Fidelity Robotic Manipulation Data Generation</a></td>
+<td>Combines soft-contact simulation and scene reconstruction; evaluates
+synthetic-only training on five real tasks.</td>
+</tr>
+<tr>
+<td>2026-09-16</td>
+<td><a href="https://arxiv.org/abs/2609.19315">GAVEL: Graph World Models
+for Verified and Efficient Long-Horizon LLM Task Planning</a></td>
+<td>Explicit graph state and precondition repair improve evaluated
+planners; simulation evidence is distinct from field reliability.</td>
+</tr>
+<tr>
+<td>2026-09-21</td>
+<td><a href="https://arxiv.org/abs/2609.24815">Uranus: Building the
+Next-Generation Simulation Infrastructure for Embodied AI</a></td>
+<td>Trajectory-conditioned streaming video simulation with release
+links; generation speed alone does not validate physical fidelity.</td>
+</tr>
+<tr>
+<td>2026-09-17</td>
+<td><a
+href="https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization">Helix
+2.5: Zero-Shot 30-Home Generalization</a></td>
+<td>Company reports 9% to 56% whole-task success from Index pretraining,
+holding downstream conditions fixed. Zero-shot homes and objects, not
+tasks.</td>
+</tr>
+<tr>
+<td>2026-09-16</td>
+<td><a
+href="https://voxel51.com/blog/egocentric-emg-force-dataset-fiftyone">Egocentric
+EMG-Force in FiftyOne: sensor provenance and timing audit</a></td>
+<td>Small-sample audit distinguishes real EMG from vision-estimated
+force and tests per-episode timing. Not a general verdict on EMG.</td>
+</tr>
+<tr>
+<td>2026-09-22</td>
+<td><a
+href="https://blogs.nvidia.com/blog/isaac-ros-5-0-agentic-open-source-robotics/">NVIDIA
+Isaac ROS 5.0 Advances Agentic, Open Source Robotics
+Development</a></td>
+<td>ROS Lyrical support, accelerated robotics capabilities and
+agent-assisted development workflows.</td>
+</tr>
+<tr>
+<td>2026-09-22</td>
+<td><a
+href="https://www.intrinsic.ai/blog/posts/introducing-intrinsic-core">Introducing
+Intrinsic Core: An open source approach to Physical AI</a></td>
+<td>ROS-compatible industrial runtime, real-time control and digital
+twin, with a machine-tending reference application.</td>
+</tr>
+<tr>
+<td>2026-09-21</td>
+<td><a
+href="https://blogs.nvidia.com/blog/physical-ai-halos-safety/">Why
+Deploying Physical AI at Scale Demands Safety at Every Layer</a></td>
+<td>Explains layered safety separate from learned autonomy; this is a
+technical update rather than the first Halos launch.</td>
+</tr>
+<tr>
+<td>2026-09-15</td>
+<td><a
+href="https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale">Agility
+unveils Digit 5 for cooperatively safe work at scale</a></td>
+<td>Announced next-generation Digit specifications and independent
+safety controller; planned availability in 2027.</td>
+</tr>
+<tr>
+<td>2026-09-11</td>
+<td><a
+href="https://www.fanuc.co.jp/en/profile/pr/newsrelease/2026/notice20260911.html">FANUC
+AI Welding Agent with Google Cloud</a></td>
+<td>Gemini-based drawing-to-welding-program workflow, with December 2026
+shipments planned.</td>
+</tr>
+<tr>
+<td>2026-09-14</td>
+<td><a
+href="https://www.universal-robots.com/news-and-media/news-center/universal-robots-unveils-gen-7-new-platform-industrial-automation-physical-ai">Universal
+Robots unveils Gen 7 for industrial automation and physical AI</a></td>
+<td>Open APIs, ROS2, tool connectivity, force-torque sensing and RTDE
+expand options for AI manipulation and data/evaluation partners. Not a
+data procurement programme.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="added-2026-09-24" class="level3">
+<h3>Added 2026-09-24</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Original publication / archived release date</th>
+<th>Resource</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-09-23</td>
+<td><a href="https://arxiv.org/abs/2609.28314">TANDEM: Task and Motion
+Planning with As-Needed Demonstrations for Efficient
+Vision-Language-Action Model Fine-tuning</a></td>
+<td>Interleaves planning and teleoperation. Reports 2.9x demonstrations
+at matched human intervention time on one task, and 60% average success
+after 20 demonstrations per task across five tasks. Under review.</td>
+</tr>
+<tr>
+<td>2026-09-23</td>
+<td><a href="https://arxiv.org/abs/2609.28184">VLMs Can Describe, But
+Not Measure: Object-Centric Scene Understanding for Robotic
+Manipulation</a></td>
+<td>Uses segmentation, VLM semantic annotation and depth-grounded
+geometry on 151 tabletop scenes. Relevant to separating generated
+spatial labels from actual measurements.</td>
+</tr>
+<tr>
+<td>2026-09-23</td>
+<td><a href="https://arxiv.org/abs/2609.27450">BEE:
+Intervention-Adaptive Real-World Reinforcement Learning with
+Vision-Language-Action Models</a></td>
+<td>Models correction consistency by action dimension. Reported 91.2%
+average spans three real tasks and one simulation task, not fleet
+reliability. Preserve context around interventions.</td>
+</tr>
+<tr>
+<td>2026-09-23</td>
+<td><a href="https://arxiv.org/abs/2609.27656">InternW0: A Foundational
+Physical World Model for Efficient Real-World Interactions</a></td>
+<td>Roughly 7,200 hours of heterogeneous training data includes 275-hour
+EgoLab. Asynchronous video/action experts and contact-aware
+post-training evaluated on scientific workflows. No procurement
+programme established.</td>
+</tr>
+<tr>
+<td>2026-09-23</td>
+<td><a href="https://arxiv.org/abs/2609.28393">PointCast: One World
+Model for Rigid, Articulated, and Deformable Object
+Manipulation</a></td>
+<td>19.8M-parameter point-set architecture with persistent point
+identities. Separate checkpoints per regime; planning evaluated on four
+simulated tasks over 64 episodes.</td>
+</tr>
+<tr>
+<td>2026-09-22</td>
+<td><a href="https://arxiv.org/abs/2609.26672">Imperfection for
+Precision: Upcycling Imperfect Data for High-Precision Robotic
+Manipulation</a></td>
+<td>Combines low-precision target-task and high-precision off-task data
+at different flow-matching stages. Supports keeping useful quality
+strata rather than discarding all imperfect recordings.</td>
+</tr>
+<tr>
+<td>2026-09-22</td>
+<td><a href="https://arxiv.org/abs/2609.26567">Beyond End-Task Success:
+How to Audit Visual Experience Retrieval in Robotics</a></td>
+<td>Separates retrieval-rule quality from experience-library quality.
+Recommends selection distributions and best-single-experience baselines;
+high aggregate success can conceal weak selection.</td>
+</tr>
+<tr>
+<td>Not established</td>
+<td><a href="https://huggingface.co/datasets/eidon-ai/tracker-pov">Eidon
+Tracker POV: Egocentric Video with Seven-Point IMU Arm Tracking</a></td>
+<td>Final release checked September 24; exact public-release date
+unresolved. 1,273.8 hours, 27 contributors, severe task imbalance and
+incomplete raw-motion coverage. Publisher declares CC-BY-4.0 and
+discloses unredacted video.</td>
+</tr>
+<tr>
+<td>Not established</td>
+<td><a href="https://www.eidon.ai/">Eidon archived capture hardware,
+simulation and dataset release</a></td>
+<td>Company confirms it has ceased operating and links released
+tracker/glove designs, simulation and data. Exact archive publication
+date unresolved. App backend is shut down; not a turnkey operating
+service.</td>
+</tr>
+<tr>
+<td>Not established</td>
+<td><a href="https://github.com/robotiq/ros">Robotiq maintained ROS
+gripper and tactile-sensor packages</a></td>
+<td>Current first-party maintenance verified September 24. Supports 2F
+grippers and TSF-85 sensor stack. Exact launch date unresolved; do not
+infer it from September press coverage.</td>
+</tr>
+<tr>
+<td>2026-08-12</td>
+<td><a
+href="https://blog.robotiq.com/robotiq-releases-open-source-c-sdk-for-adaptive-gripper">Robotiq
+Releases an Open-Source C++ SDK for Adaptive Grippers</a></td>
+<td>Original August 12 announcement recovered while verifying September
+coverage. Separates the earlier SDK launch from the later combined
+physical-AI tooling story.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="added-2026-09-25" class="level3">
+<h3>Added 2026-09-25</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Original publication / archived release date</th>
+<th>Resource</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.30249">RAPID: Robot Agentic
+Programming from Demonstrations</a></td>
+<td>Demonstration-conditioned code generation with execution checks.
+Tested on eight nonprehensile tasks including real Franka deployment;
+abstract does not give one universal success figure.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.30247">Rolling-WAM: World Action
+Models with Rolling Imagination</a></td>
+<td>Staggered denoising carries future action/video context between
+replanning cycles. Reports 4.5x steady-state replanning speedup;
+benchmarks differ from other WAM papers.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.30134">Training-free Behavior
+Cloning</a></td>
+<td>Retrieval-based Behavior Predictive Control preserves traceability
+to demonstration windows; reports control above 75 Hz on Orin Nano
+without end-to-end policy fitting.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.30092">Self-Adaptive VLA for
+Robust Robot Deployment</a></td>
+<td>Rollouts under hardware shifts train context-conditioned adaptation.
+Over 80% recovery of reference performance across four tasks is not an
+absolute success-rate claim.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.30023">Res-HIL: Human-Guided
+Residual Reinforcement Learning for Sample-Efficient Dexterous
+Manipulation</a></td>
+<td>Human corrections train a residual on a frozen imitation policy.
+Five tasks, 20 initial demonstrations and ten minutes of online
+training; preserve intervention context.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.29850">BeyondRetarget: Learning
+Executable Humanoid Motions Directly from Monocular Video</a></td>
+<td>Direct monocular-video-to-robot motion learning with contact-aware
+optimisation. Abstract gives real/sim evidence but no numerical
+improvement to quote.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.29760">PolyUMI: Accessible
+Visual-Tactile-Audio Data Collection for Object Inference and
+Manipulation</a></td>
+<td>Wireless wrist-video, optical tactile, contact-audio and
+proprioception capture. Shared sensing finger reduces
+demonstration/deployment sensor mismatch.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.29382">Decoupled Early Exits for
+Task-Dependent Compute Allocation in Flow-Matching VLAs</a></td>
+<td>Independent VLM depth, action-expert depth and denoising-step
+budgets reveal task-dependent latency tradeoffs on SmolVLA and
+pi-0.5.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.29310">EgoSpeedUp: Transferring
+Human Manipulation Tempo to Robot Policies</a></td>
+<td>Paired human/robot task demonstrations supply phase-wise tempo
+supervision. Two real tasks show 25-point average success gain and 36.5%
+shorter successful executions.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.29166">HarnessPAI: An Evolving
+Harness for Physical AI</a></td>
+<td>Executable programs evolve between rollouts and generate expert
+data. Reported gains are benchmark comparisons, not production
+uptime.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.28952">RoboRecover: Benchmarking
+Robot Policy Recovery under Execution Deviations</a></td>
+<td>2,000 reconstructed deviation states test recovery separately from
+initial-state success. Fixed train/test partitions help evaluate
+corrective-data interventions.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.28927">Streaming-WAM:
+Action-Conditioned World-Action Model for Asynchronous Robot
+Manipulation</a></td>
+<td>Action-conditioned predictions account for already committed
+actions; evaluates asynchronous control in simulation and a real
+stamping task.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.28878">Online Sim-to-Real
+Adaptation via Closed-Loop System Modeling</a></td>
+<td>Adapts reference commands from measured closed-loop response while
+leaving the underlying policy unchanged. Real/sim tracking
+evidence.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.30187">Ego-Exo4D Human Meshes
+Dataset: 4D Human Motion Reconstruction for Ego-Exo Captures</a></td>
+<td>Dense human body/hand reconstructions and pipeline for Ego-Exo4D.
+Keep aggregate camera-hours separate from distinct activity
+duration.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.29836">SplatLabel:
+Pseudo-Labelling through 4D Gaussian Splatting</a></td>
+<td>4D Gaussian pseudo-labels for dynamic LiDAR segmentation and
+occupancy with predictive confidence and selective risk/recall
+evaluation.</td>
+</tr>
+<tr>
+<td>2026-09-23</td>
+<td><a href="https://arxiv.org/abs/2609.28811">DeltaWAM: Delta World
+Action Models for Bimanual Manipulation</a></td>
+<td>Visual deltas and cached context reduce repeated video-expert work;
+tested on RoboTwin and real bimanual tasks.</td>
+</tr>
+<tr>
+<td>2026-09-23</td>
+<td><a href="https://arxiv.org/abs/2609.28431">LiMA: Bridging Long-term
+Imagination to Real-time Dexterous Manipulation via Asynchronous
+Diffusion</a></td>
+<td>Asynchronous slow intent and fast motion refinement, with six
+bimanual tasks and a reported latency comparison against
+Cosmos-Policy.</td>
+</tr>
+<tr>
+<td>2026-09-23</td>
+<td><a href="https://arxiv.org/abs/2609.28429">Watch, Recall, Act:
+Always-On Robots in Concurrent Embodied Streams</a></td>
+<td>Always-on dual-arm teleoperation data and agent-causal action
+history supervise streaming context without extra manual module
+annotation.</td>
+</tr>
+<tr>
+<td>2026-09-23</td>
+<td><a
+href="https://huggingface.co/datasets/genrobot2025/Gen-HumanEgo">Gen-HumanEgo:
+multi-view egocentric human demonstrations</a></td>
+<td>Dataset card reports 1,847.7 hours, six cameras, MCAP and structured
+hand/depth/task supervision. Card task count differs from launch
+materials; labels are not all measured ground truth.</td>
+</tr>
+<tr>
+<td>2026-09-23</td>
+<td><a href="https://www.genrobot.ai/blog/gen-human-ego">Gen-HumanEgo:
+Data Foundation Model and structured supervision</a></td>
+<td>Explains multiview reconstruction and video/task/subtask annotation
+with time ranges and success fields. Mocap is used for
+calibration/evaluation, distinct from production labels.</td>
+</tr>
+<tr>
+<td>Not established</td>
+<td><a href="https://polyumi-vista.github.io">PolyUMI hardware, code and
+multimodal sensing platform</a></td>
+<td>Project links hardware/code and estimates $236 for the sensing
+finger in parts, not a full rig. Exact project-page release date
+unverified; accompanying paper submitted September 24.</td>
+</tr>
+<tr>
+<td>Not established</td>
+<td><a
+href="https://abhiram824.github.io/egoexo4d_human_meshes">Ego-Exo4D
+Human Meshes: reconstruction dataset and tools</a></td>
+<td>2,649 takes and eight activities. 523 aggregate hours across five
+cameras correspond to 104.6 hours per camera. Exact project-page
+publication date unverified.</td>
+</tr>
+<tr>
+<td>2026-09-23</td>
+<td><a
+href="https://prismml.com/news/prismml-brings-1-bit-bonsai-models-to-ai-smart-glasses-powered-by-snapdragon">PrismML
+1-bit Bonsai VLM demonstrated on Snapdragon smart glasses</a></td>
+<td>Company describes local 2B vision-language inference on Snapdragon
+AR1 Gen 1. Demonstration does not establish sustained thermal/battery
+results or a shipping glasses product.</td>
+</tr>
+<tr>
+<td>2026-09-23</td>
+<td><a href="https://www.skild.ai/blogs/physical-self-play">Physical
+Self-Play</a></td>
+<td>Soccer self-play post-training in Isaac Sim, followed by physical
+transfer. 140 simulated years is a training quantity, not proof of
+workplace generalisation; pretraining still uses human data.</td>
+</tr>
+<tr>
+<td>Not established</td>
+<td><a href="https://feather.dev/technology">Feather modular bimanual
+mobile robot: technical specification</a></td>
+<td>Two 7-DoF arms, holonomic base and developer software; current page
+verified September 25 after new coverage. Exact original release date
+unverified; specifications remain vendor claims.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="added-2026-09-26" class="level3">
+<h3>Added 2026-09-26</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Original publication / archived release date</th>
+<th>Resource</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.29964">World Action Agent:
+Harnessing VLMs for Robot Manipulation via World Action
+Rehearsal</a></td>
+<td>Visual workspace, rehearsal and reusable skills generate execution
+traces; simulation evidence, not workplace reliability.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.30127">Faster Visuomotor Policy
+Learning on Action Manifolds via Riemannian MeanFlow</a></td>
+<td>Manifold-respecting action generation with as few as one network
+evaluation; benchmark and real manipulation evidence.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.29822">Self-Supervised Anchoring
+of Fingertip Sensing to Proprioception and Proactive Actions for Robot
+Imitation Learning</a></td>
+<td>Aligns fingertip pressure and proximity histories to proprioception
+and actions; naive sensor addition can hurt performance.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.30214">Underwater C3-JEPA: An
+Object-Centric Cross-View World Model for ROV Salvage</a></td>
+<td>Multi-view RGB and ROV controls support predictive representations;
+real-video validation is not autonomous salvage.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.30233">Coding Agents for
+Generalized Task and Motion Planning Problems</a></td>
+<td>Coding agents synthesise generalised planners, evaluated across 28
+simulated environments; no physical deployment result.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.29861">GPT-6-Astra Lights Up
+Embodied Navigation: Evaluation in Zero-Shot Vision-and-Language
+Navigation in Continuous Environments</a></td>
+<td>Reports 79% zero-shot R2R-CE success from monocular RGB; simulated
+navigation still has goal-verification failures.</td>
+</tr>
+<tr>
+<td>Not established</td>
+<td><a href="https://dream-machines.eu/blog/pi05-fine-tuning">Empirical
+results fine-tuning pi-0.5 on a real manufacturing task</a></td>
+<td>Controlled comparisons of scene coverage, quality and interventions
+on one manufacturing task. Month given as September 2026; exact
+publication day unresolved.</td>
+</tr>
+<tr>
+<td>Not established</td>
+<td><a
+href="https://huggingface.co/datasets/DreamMachines/actuator_unboxing_1h_HQ">Actuator
+unboxing: one high-quality hour</a></td>
+<td>198 episodes at 50 Hz, three views and 14-dimensional state/action
+in LeRobot v3.0. Exact publication day not established.</td>
+</tr>
+<tr>
+<td>2026-09-18</td>
+<td><a href="https://robocurve.org/roboharm/">RoboHarm: Do Frontier
+Robot Policies Refuse Unsafe Instructions?</a></td>
+<td>Human-reviewed 300-trial study separates refusal, inaction, failed
+attempts and completion. Five fixed instructions on one bench limit
+generalisation.</td>
+</tr>
+<tr>
+<td>Not established</td>
+<td><a href="https://efficient-embodied-ai.github.io/">Efficient
+Foundation Models for Real-Time Embodied AI: workshop and challenge
+protocol</a></td>
+<td>Published Orin NX-class evaluation plan and October deadlines.
+Harness release is scheduled for September 25, but downloadable artifact
+was not verified.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="added-2026-09-30" class="level3">
+<h3>Added 2026-09-30</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Original publication / archived release date</th>
+<th>Resource</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-09-28</td>
+<td><a href="https://arxiv.org/abs/2609.35761">DexRoam: Learning Mobile
+Bimanual Dexterous Manipulation from Egocentric Whole-Body Human
+Demonstrations</a></td>
+<td>VR/stereo whole-body capture and three alignment stages improve two
+VLA backbones on real manipulation tasks.</td>
+</tr>
+<tr>
+<td>2026-09-28</td>
+<td><a href="https://arxiv.org/abs/2609.34512">MonoEgo: Monocular Metric
+Egocentric Demonstration Capture with Passive Wrist Constellations and
+Sparse Workstation Anchors</a></td>
+<td>Passive markers and a single camera reduce capture hardware;
+validity/provenance retained and dynamic accuracy unresolved.</td>
+</tr>
+<tr>
+<td>2026-09-28</td>
+<td><a href="https://arxiv.org/abs/2609.34182">Unified
+Visual-Tactile-Action Modeling from Human Demonstrations for Dexterous
+Manipulation</a></td>
+<td>Aligned visual-tactile human demonstrations improve five real
+manipulation tasks; aggregate human-demo count is ambiguous in
+abstract.</td>
+</tr>
+<tr>
+<td>2026-09-25</td>
+<td><a href="https://arxiv.org/abs/2609.30959">VisTacAlign: Co-Training
+Dexterous Policies on Tactile Human and Robot Demonstrations</a></td>
+<td>Aligns stereo appearance, retargeted motion and tactile signals
+across human and robot demonstrations on three real tasks.</td>
+</tr>
+<tr>
+<td>2026-09-25</td>
+<td><a href="https://arxiv.org/abs/2609.30735">Praxis: Distilling
+Physical Interaction Priors from Egocentric Videos for Generalizable
+Whole-Body Manipulation</a></td>
+<td>One-shot ego demonstrations support online whole-body manipulation
+with visual/tactile correction; distinct from the same-named collection
+business.</td>
+</tr>
+<tr>
+<td>2026-09-28</td>
+<td><a href="https://arxiv.org/abs/2609.34300">When World Models Lie:
+Adaptive Safety Analysis Under Wrong Imaginations</a></td>
+<td>Observed prediction errors calibrate latent safety filters;
+uncertainty coverage is not a universal robot safety guarantee.</td>
+</tr>
+<tr>
+<td>2026-09-27</td>
+<td><a href="https://arxiv.org/abs/2609.33189">When an Evaluation Rule
+Writes Training Labels: Measuring Human-Reference Forgiveness in
+NAVSIM</a></td>
+<td>Audits an evaluation forgiveness rule reused in training labels
+across 103,288 NAVSIM scenes; documents discrimination and consistency
+tradeoffs.</td>
+</tr>
+<tr>
+<td>2026-09-28</td>
+<td><a href="https://arxiv.org/abs/2609.35047">EMPIRIC:
+Experiment-Driven Learning of Residual World Models for Robot
+Planning</a></td>
+<td>Experiment-driven residual programs extend a physics engine;
+simulated domains and a physical wind/domino task test planning.</td>
+</tr>
+<tr>
+<td>2026-09-27</td>
+<td><a href="https://arxiv.org/abs/2609.33807">CodeActionBench:
+Evaluating Agentic Code-as-Policy for Embodied Manipulation</a></td>
+<td>Controlled 25-task code-as-policy evaluation distinguishes
+model/harness success from at-least-once task coverage.</td>
+</tr>
+<tr>
+<td>2026-09-28</td>
+<td><a href="https://arxiv.org/abs/2609.34414">From World Models to
+World Action Models: Rethinking Next-State Prediction</a></td>
+<td>Multiple projections of future states provide human/robot learning
+supervision; benchmark and real-task results are author-reported.</td>
+</tr>
+<tr>
+<td>2026-09-28</td>
+<td><a href="https://arxiv.org/abs/2609.35375">From Pixel to Poses:
+Object-centric Tool Manipulation Learning from Human
+Demonstrations</a></td>
+<td>Object-pose priors support human-video tool learning without paired
+alignment data; reported improvement is relative.</td>
+</tr>
+<tr>
+<td>2026-09-28</td>
+<td><a href="https://arxiv.org/abs/2609.34233">GAE: General Action
+Expert for Real-Time Humanoid Teleoperation</a></td>
+<td>Human-motion synthesis and delay compensation support whole-body
+teleoperation on G1 and Westlake O1.</td>
+</tr>
+<tr>
+<td>2026-09-28</td>
+<td><a href="https://arxiv.org/abs/2609.34724">DexWeave: Learning
+Dexterous Humanoid Loco-Manipulation from Human Demonstrations</a></td>
+<td>Coupled retargeting and anatomy-aware policy learning preserve
+body/hand interactions; demonstrated on G1 with dexterous hands.</td>
+</tr>
+<tr>
+<td>2026-09-27</td>
+<td><a href="https://arxiv.org/abs/2609.33464">VIDEAS: Distilling
+Explicit Action Semantics from Demonstration Videos for World Models via
+Prior-Guided Simulation</a></td>
+<td>VLM extraction plus text simulation validation turns operational
+videos into action preconditions/effects; semantic reasoning differs
+from robot reliability.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.30082">Real-Time Force
+Regulation for Whole-Hand Dexterous Grasping</a></td>
+<td>Geometric whole-hand contact force regulation supports grasp
+recovery; simulation comparisons omit gravity.</td>
+</tr>
+<tr>
+<td>2026-09-20</td>
+<td><a href="https://arxiv.org/abs/2609.23418">HEARTH: An Object-Centric
+RGB-Thermal-3D Dataset for Temperature-Aware Robot Manipulation</a></td>
+<td>Calibrated RGB-thermal-3D object assets support
+temperature-dependent simulation tasks; measured physical properties
+complement video.</td>
+</tr>
+<tr>
+<td>2026-09-24</td>
+<td><a href="https://arxiv.org/abs/2609.29171">Representation World
+Model: Learning States, Transition and Executable Plans in
+Representation</a></td>
+<td>Plans in learned representation geometry using inverse dynamics
+without recursive rollout/search; benchmark evidence.</td>
+</tr>
+<tr>
+<td>2026-09-28</td>
+<td><a href="https://www.robosense.ai/en/news-show-2003">RoboSense E2
+and EM4 integrate NVIDIA Holoscan Sensor Bridge</a></td>
+<td>Company-announced Ethernet sensor integration; direct GPU-memory
+path depends on supported configuration. Prototype validation
+continues.</td>
+</tr>
+<tr>
+<td>2026-09-14</td>
+<td><a
+href="https://www.prweb.com/releases/innodisk-brings-cloud-free-generative-ai-and-multi-camera-vision-to-ai-infra-summit-302877433.html">Innodisk
+APEX-A200 eight-camera edge platform and GenieX demonstrations</a></td>
+<td>Eight synchronised GMSL2 inputs on Dragonwing IQ-9075; company
+specifications separate capture synchronisation from inference
+performance.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="what-to-watch-in-october" class="level2">
+<h2>What to watch in October</h2>
+<ol type="1">
+<li><strong>Supplier qualification:</strong> obtain current, specific
+briefs from the India/global routes. Check who buys, who supplies
+hardware, approved-data definitions, rejection appeals, rights and
+payment timing before costing any pilot. This is a proposed next step,
+not evidence of existing orders.</li>
+<li><strong>Transfer value:</strong> watch for controlled ablations of
+data alignment, diversity and modality, with held-out sites/objects and
+intervention counts. Hypothesis: auditable, task-aligned capture will be
+easier to qualify than undifferentiated video volume; the archive does
+not establish a market price premium.</li>
+<li><strong>Transactions and access:</strong> monitor NVIDIA/Hugging
+Face, AMD/World Labs and Cognex/RealSense for closing, licensing and
+platform-access changes. Announced ownership plans should not be treated
+as completed changes.</li>
+<li><strong>Operating evidence:</strong> seek workflow completion, human
+resets, maintenance and safety results for deployed systems, rather than
+turning lab success or fleet plans into commercial reliability
+claims.</li>
+<li><strong>Repair coverage:</strong> sustain daily collection, recheck
+enduring programmes weekly, and revisit partial Reddit/X and
+institutional sources. October speech-study windows merit checks, but
+participant availability does not authorise an agency offering.</li>
+</ol>
+<p>Prepared October 1, 2026. Public programme facts only; private
+supplier fit, qualification notes and next actions remain in the private
+opportunity register. No prospect contact, signup or project commitment
+was made.</p>
+</section>
+</section>
+  </main>
+  </div>
+</div>
+
+<script>
+// Load sidebar JS with depth-aware path
+(function(){
+  var depth = /\/(days|monthly)\//.test(location.pathname) ? '../' : './';
+  var s = document.createElement('script');
+  s.src = depth + '_sidebar.js';
+  s.defer = true;
+  document.body.appendChild(s);
+})();
+</script>
+<script>
+// Build TOC from h2/h3 inside main
+(function() {
+  const tocList = document.getElementById('tocList');
+  const main = document.querySelector('.main');
+  const headings = main.querySelectorAll('section.level2 > h2, section.level3 > h3');
+  let currentH2Item = null;
+  let currentH2SubList = null;
+
+  headings.forEach(h => {
+    const parent = h.parentElement;
+    const id = parent.id;
+    if (!id) return;
+    let text = h.textContent.trim();
+    const isH2 = h.tagName === 'H2';
+
+    const link = document.createElement('a');
+    link.href = '#' + id;
+    link.textContent = text;
+    link.dataset.target = id;
+
+    const li = document.createElement('li');
+    li.appendChild(link);
+
+    if (isH2) {
+      tocList.appendChild(li);
+      currentH2Item = li;
+      currentH2SubList = null; // lazy-create only if H3 follows
+    } else if (currentH2Item) {
+      if (!currentH2SubList) {
+        currentH2SubList = document.createElement('ul');
+        currentH2Item.appendChild(currentH2SubList);
+      }
+      currentH2SubList.appendChild(li);
+    }
+  });
+})();
+
+// Reading progress
+(function() {
+  const bar = document.getElementById('progressBar');
+  function update() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = Math.min(100, progress) + '%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
+
+// Active section highlighting
+(function() {
+  const tocLinks = document.querySelectorAll('#tocList a');
+  const linkMap = {};
+  tocLinks.forEach(a => { linkMap[a.dataset.target] = a; });
+
+  // Map link → its parent h2 LI (so we can expand the right group)
+  const parentH2LiMap = {};
+  document.querySelectorAll('#tocList > li').forEach(h2Li => {
+    const h2Link = h2Li.querySelector(':scope > a');
+    if (!h2Link) return;
+    parentH2LiMap[h2Link.dataset.target] = h2Li;
+    h2Li.querySelectorAll(':scope > ul a').forEach(subA => {
+      parentH2LiMap[subA.dataset.target] = h2Li;
+    });
+  });
+
+  const sections = document.querySelectorAll('.main section.level2, .main section.level3');
+  if (!sections.length) return;
+
+  function clearActive() {
+    document.querySelectorAll('#tocList a.active').forEach(a => a.classList.remove('active'));
+    document.querySelectorAll('#tocList > li.active').forEach(li => li.classList.remove('active'));
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    // Pick the topmost intersecting entry
+    let topEntry = null;
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (!topEntry || entry.boundingClientRect.top < topEntry.boundingClientRect.top) {
+          topEntry = entry;
+        }
+      }
+    });
+    if (!topEntry) return;
+    const id = topEntry.target.id;
+    if (!linkMap[id]) return;
+
+    clearActive();
+    linkMap[id].classList.add('active');
+    const parentH2 = parentH2LiMap[id];
+    if (parentH2) {
+      parentH2.classList.add('active');
+      // Also mark the H2 link active if a child is active
+      const h2Link = parentH2.querySelector(':scope > a');
+      if (h2Link && h2Link.dataset.target !== id) {
+        // Keep H2 visually de-emphasized while child is active — just expand
+      }
+    }
+  }, {
+    rootMargin: '-80px 0px -65% 0px',
+    threshold: 0
+  });
+
+  sections.forEach(s => { if (s.id) observer.observe(s); });
+})();
+
+// Smooth TOC click
+document.querySelectorAll('#tocList a').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const id = a.dataset.target;
+    const target = document.getElementById(id);
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - 68;
+      window.scrollTo({ top, behavior: 'smooth' });
+      history.replaceState(null, '', '#' + id);
+    }
+  });
+});
+
+// Mobile TOC sheet open/close
+(function() {
+  const trigger = document.getElementById('mobileTocTrigger');
+  const scrim = document.getElementById('mobileTocScrim');
+  const sheet = document.querySelector('.sidebar');
+  if (!trigger || !sheet || !scrim) return;
+
+  function openSheet() {
+    sheet.classList.add('open');
+    scrim.classList.add('open');
+    trigger.classList.add('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeSheet() {
+    sheet.classList.remove('open');
+    scrim.classList.remove('open');
+    trigger.classList.remove('hidden');
+    document.body.style.overflow = '';
+  }
+
+  trigger.addEventListener('click', openSheet);
+  scrim.addEventListener('click', closeSheet);
+
+  // Close on TOC link click (after scroll kicks off)
+  document.querySelectorAll('#tocList a').forEach(a => {
+    a.addEventListener('click', () => {
+      if (sheet.classList.contains('open')) {
+        setTimeout(closeSheet, 240);
+      }
+    });
+  });
+
+  // Escape closes
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && sheet.classList.contains('open')) closeSheet();
+  });
+})();
+</script>
+
+</body>
+</html>
