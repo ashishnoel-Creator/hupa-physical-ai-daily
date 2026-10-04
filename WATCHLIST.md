@@ -175,3 +175,12 @@ X posts can be read and precisely dated without authentication:
 - Date any post from its ID alone via the Snowflake epoch: `utcfromtimestamp(((id >> 22) + 1288834974657) / 1000)`.
 
 The bottleneck is discovering IDs, not reading them. The only reliable discovery route found was scraping tweet embeds out of robotics news article pages. Nitter, xcancel, lightbrd, the syndication timeline endpoint, Bing and Brave all failed or rate-limited. If the browser path stays down, build discovery around embed scraping rather than around mirrors.
+
+## Source registry additions · October 4, 2026
+
+- **Opendatabay:** [official provider intake](https://www.opendatabay.com/data-providers) and [robotics category](https://www.opendatabay.com/resources/robotics-data). Monitor as a marketplace route. The Winter-Lake-589 Reddit request now self-identifies via an Opendatabay address; identity and specific buying mandate still require verification. Reuse that lead rather than counting older posts separately.
+- **Kuinbee:** [supplier route](https://kuinbee.com/supplier-resources). Added to briefing October1; explicit ego supplier invitation includes India/Spain. Monitor actual commissioned briefs, not simulated marketplace revenue examples.
+- **India author requests:** [Rahul Pandey](https://www.linkedin.com/posts/rahul-pandey-3787b0127_vendorpartnership-aidatacollection-egocentric-activity-7487366967490961408-f2-m) and [Virat Chaudhary](https://www.linkedin.com/posts/virat-chaudhary-04b110371_datacollection-egocentricdata-industrialdata-activity-7465694075954946049-8DlY). Older named vendor requests, current availability/mandate unverified; watch material changes rather than repeating unchanged posts.
+- **OneForma Rover:** [worldwide video project](https://www.oneforma.com/projects/real-world-video-recorder/). Contributor-only eligibility currently established, not agency intake. Monitor published rates, QA and business-route changes.
+
+Daily registry checks completed October4; previous full weekly enduring-programme review October1, next October8. Initial August25–September24 discovery backfill remains complete.
