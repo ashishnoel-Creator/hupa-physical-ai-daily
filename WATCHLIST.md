@@ -184,3 +184,11 @@ The bottleneck is discovering IDs, not reading them. The only reliable discovery
 - **OneForma Rover:** [worldwide video project](https://www.oneforma.com/projects/real-world-video-recorder/). Contributor-only eligibility currently established, not agency intake. Monitor published rates, QA and business-route changes.
 
 Daily registry checks completed October4; previous full weekly enduring-programme review October1, next October8. Initial August25–September24 discovery backfill remains complete.
+
+## Monday source review · October 5, 2026
+
+- **Taarini Infotech public source accounts:** [Apeksha Waghale](https://in.linkedin.com/in/apeksha-waghale-504915217), [Daryani Renuka](https://in.linkedin.com/in/daryani-renuka-a44115368), [Shubham Yogi](https://in.linkedin.com/in/shubham-yogi-0921a2224). Indexed household/language vendor invitations, older Americas request and facial-expression vendor repost. Group by programme, not poster. Direct profile access blocked October5; verify live status before qualification.
+- **coreQ AI:** [October3 roadmap channel](https://www.digitaljournal.com/pr/news/newsfile/coreq-ai-unveils-data-infrastructure-1585959649.html). Track Asia production-network developments; no explicit supplier intake yet.
+- **PaXini PGH:** [company programme update](https://www.digitaljournal.com/pr/news/newsfile/iros-2026-paxini-showcases-1485237488.html). Global industry/research collaboration invitation; paid collector eligibility unresolved.
+
+All four required Reddit communities, site-wide requests, public LinkedIn/X, YC/HN and the enduring official programme registry checked October5. Full weekly review remains due October8; initial backfill complete September24. No new X handle was verified.

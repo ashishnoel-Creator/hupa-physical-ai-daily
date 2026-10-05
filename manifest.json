@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-05",
+      "slug": "2026-10-05",
+      "title": "Monday, October 5, 2026",
+      "tldr": [
+        "**A new company to qualify: Taarini Infotech.** Public indexed posts explicitly invite vendors for household egocentric and language-data work, with a separate older Americas collection request. These are newly discovered invitations, with current orders and commercial terms unverified. Public vendor request",
+        "**Human demonstrations are gaining touch, and old robot recordings are becoming more reusable.** SoTa aligns tactile signals between human and robot hands; NEEDLEWORK improves offline demonstrations using verified action bridges, including failed episodes. SoTa, NEEDLEWORK",
+        "**coreQ plans an Asian robotics-data production network.** Its October 3 roadmap connects model requirements, standardised capture, evaluation and targeted recollection. This is a company strategy announcement, without a published supplier tender. Company release"
+      ]
+    },
+    {
       "date": "2026-10-04",
       "slug": "2026-10-04",
       "title": "Sunday, October 4, 2026",
@@ -842,6 +852,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 613,
-  "updated_at": "2026-10-04T05:30:29Z"
+  "papers_count": 643,
+  "updated_at": "2026-10-05T07:07:59Z"
 }
