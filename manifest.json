@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-06",
+      "slug": "2026-10-06",
+      "title": "Tuesday, October 6, 2026",
+      "tldr": [
+        "**A collection-vendor call with an explicit acceptance unit:** BARG offers **₹450 per approved hour** for narrated first-person footage. D-HUB, Avyaan and a changed MyTron request also surfaced. These are newly discovered public invitations, with live orders and remaining terms unconfirmed. BARG request",
+        "**Schneider Electric agreed to acquire PTC:** approximately **$22.6B equity value**, or **$23.7B enterprise value**. The October 5 agreement connects product/engineering information to industrial operations; closing is expected by Q3 2027, subject to approvals. PTC announcement",
+        "**Volvo and Waabi began customer freight operations for Warp in Texas.** Trucks now serve third-party facilities on the Dallas–Houston corridor, with an observer in the driver's seat. This is operating evidence, with a clear autonomy limit. Volvo announcement"
+      ]
+    },
+    {
       "date": "2026-10-05",
       "slug": "2026-10-05",
       "title": "Monday, October 5, 2026",
@@ -852,6 +862,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 643,
-  "updated_at": "2026-10-05T07:07:59Z"
+  "papers_count": 657,
+  "updated_at": "2026-10-06T02:34:27Z"
 }

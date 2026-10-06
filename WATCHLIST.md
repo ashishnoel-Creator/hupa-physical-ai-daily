@@ -192,3 +192,13 @@ Daily registry checks completed October4; previous full weekly enduring-programm
 - **PaXini PGH:** [company programme update](https://www.digitaljournal.com/pr/news/newsfile/iros-2026-paxini-showcases-1485237488.html). Global industry/research collaboration invitation; paid collector eligibility unresolved.
 
 All four required Reddit communities, site-wide requests, public LinkedIn/X, YC/HN and the enduring official programme registry checked October5. Full weekly review remains due October8; initial backfill complete September24. No new X handle was verified.
+
+## Source additions and daily check · October 6, 2026
+
+- [BARG vendor request](https://www.linkedin.com/posts/barg-info-solutions-pvt-ltd_vendorpartnership-egocentricvideo-aidatacollection-activity-7509698015771873281-0vfD): explicit narrated household-ego agency intake; live specification and approved-hour unit, availability unknown. Deduplicate older general company calls.
+- [D-HUB indexed public activity](https://in.linkedin.com/in/eshaku-p-87a668325): Dhana Revathi Lalam vendor invitation for India and separate USA/LATAM work; direct access blocked and exact date unresolved.
+- [Avyaan country partners](https://in.linkedin.com/jobs/view/global-vendor-country-partner-opportunity-%E2%80%93-ai-egocentric-video-collection-project-at-avyaan-management-pvt-ltd-4430557063): agency/country-manager eligibility is explicit despite jobs-page presentation; older request, reverify active countries.
+- [MyTron revised call](https://www.linkedin.com/posts/activity-7511382257530699776-H1hF): existing buyer, distinct iPhone12+/Malaysia-inclusive variant; avoid merging device specifications across calls.
+- [Alex Vogiatzis teleoperation request](https://www.linkedin.com/posts/alexandros-vogiatzis_here-i-am-yet-again-asking-the-internet-for-activity-7505360184878370817-aye6): robot-only data, explicitly no human ego/exo; corporate mandate unverified.
+
+Required Reddit communities/site-wide requests, public LinkedIn/X, YC/HN, official partner routes, DataForce/OneForma and marketplaces checked. X logged-in search recovered dated results today, but coverage remains partial. Next full weekly programme check October8; initial backfill completed September24.
