@@ -202,3 +202,11 @@ All four required Reddit communities, site-wide requests, public LinkedIn/X, YC/
 - [Alex Vogiatzis teleoperation request](https://www.linkedin.com/posts/alexandros-vogiatzis_here-i-am-yet-again-asking-the-internet-for-activity-7505360184878370817-aye6): robot-only data, explicitly no human ego/exo; corporate mandate unverified.
 
 Required Reddit communities/site-wide requests, public LinkedIn/X, YC/HN, official partner routes, DataForce/OneForma and marketplaces checked. X logged-in search recovered dated results today, but coverage remains partial. Next full weekly programme check October8; initial backfill completed September24.
+
+## Source additions and daily check · October 7, 2026
+
+- [NEURVIX public company activity](https://www.linkedin.com/company/neurvix): distinguish global ego vendor intake,2,000+hour narrated procedural acquisition and15,000hour Arabic OTS licensing. Older calls with uncertain live mandates; do not merge terms.
+- [Atlas Capture / Riya Ganjoo public activity](https://in.linkedin.com/in/riya-ganjoo-7b0917254): indexed vendor/team invitation with separate valid-hour rate; direct-access gap.
+- [Sahil Bagri overseas3D vendor request](https://www.linkedin.com/posts/sahil-bagri-3ab04925b_neurvix-human-data-ai-data-services-activity-7508085237613219840-dJvx): explicit team intake; Multisolution naming and NEURVIX contact need entity clarification.
+
+Required Reddit communities and site-wide requests, public LinkedIn/X, YC/HN, partner programmes and collection boards/marketplaces checked. No new verified Reddit buyer qualified. X dated Top/Latest query was partial; opened Deep Robotics and Pollen posts separately. Daily enduring terms unchanged in checked pages; full weekly recheck due October8. Initial backfill remains completed September24.

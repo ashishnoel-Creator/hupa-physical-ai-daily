@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-07",
+      "slug": "2026-10-07",
+      "title": "Wednesday, October 7, 2026",
+      "tldr": [
+        "**Egocentric video gets more structured:** TwelveLabs released Pegasus 1.6 on October 6, adding first-person video understanding. Its Physical AI workflow covers timestamped actions, captions, QC and curation. This is tooling sold to data providers, not a collection contract.",
+        "**Human expertise remains central:** Minerva announced approximately $10M in pre-seed funding and plans paid pilots for a specialist-operated humanoid. Doosan won two R&D projects totalling KRW98.9B, combining domestic on-device AI and skilled-worker welding imitation.",
+        "**Newly discovered business requests:** NEURVIX has several distinct ego and adjacent-data calls below. Separately, Mulligan supports collecting failures and untried states at a fixed operator budget, rather than treating every extra hour as equally valuable."
+      ]
+    },
+    {
       "date": "2026-10-06",
       "slug": "2026-10-06",
       "title": "Tuesday, October 6, 2026",
@@ -862,6 +872,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 657,
-  "updated_at": "2026-10-06T02:34:27Z"
+  "papers_count": 697,
+  "updated_at": "2026-10-07T04:58:34Z"
 }
