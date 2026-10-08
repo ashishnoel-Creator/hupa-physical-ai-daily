@@ -210,3 +210,12 @@ Required Reddit communities/site-wide requests, public LinkedIn/X, YC/HN, offici
 - [Sahil Bagri overseas3D vendor request](https://www.linkedin.com/posts/sahil-bagri-3ab04925b_neurvix-human-data-ai-data-services-activity-7508085237613219840-dJvx): explicit team intake; Multisolution naming and NEURVIX contact need entity clarification.
 
 Required Reddit communities and site-wide requests, public LinkedIn/X, YC/HN, partner programmes and collection boards/marketplaces checked. No new verified Reddit buyer qualified. X dated Top/Latest query was partial; opened Deep Robotics and Pollen posts separately. Daily enduring terms unchanged in checked pages; full weekly recheck due October8. Initial backfill remains completed September24.
+
+## Weekly source review · October 8, 2026
+
+- [Neeraj indexed activity](https://in.linkedin.com/in/neeraj-charmkar-36b015243): separate Zohaib Shakeel stereo and Lan Xia supplied-six-camera vendor calls. Neeraj is a discovery surface, not automatically the buyer; identities/dates/mandates unverified.
+- [Annolance construction variant](https://in.linkedin.com/in/veenus-jaiswal-3ab0b2279): separate from household terms, index-only evidence.
+- [Reddit PPE buyer request](https://www.reddit.com/r/computervision/comments/1wz8ba7/looking_for_recommendations_to_purchase/): anonymous adjacent demand, no verified company or budget.
+- [Kinetic Blocks request mechanics](https://kineticblocks.com/how-requests-work): non-binding cards versus budgeted requests, acceptance-based payment. Specific cards behind login; no signup.
+
+Full weekly review completed: DeepReach, Praxis, Defined.ai, Kuinbee and marketplaces; DataForce/OneForma and NEURVIX also checked. No new order inferred from unchanged intake. Next review October15, daily change checks continue. Initial backfill completed September24. Four Reddit communities/site-wide, public LinkedIn/X, YC/HN covered with gaps; locked Mac prevented logged-in X,12-handle public fallback partial.

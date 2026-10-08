@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-08",
+      "slug": "2026-10-08",
+      "title": "Thursday, October 8, 2026",
+      "tldr": [
+        "**Mecka raises $60M for the physical-data stack.** Its October 7 announcement names Sequoia as lead, with NVIDIA, M12, Qualcomm Ventures and Samsung among new investors. Capture hardware, reconstruction, quality systems and robot deployment are all in scope. Funding is confirmed by the company; supplier procurement is not. Company announcement",
+        "**New collection requests include stereo workplace capture and supplied six-camera rigs.** Both were discovered through indexed LinkedIn activity; buyer mandate and live availability are unverified. A separate Reddit buyer asks for licensed industrial PPE images. Specifications and evidence limits appear below.",
+        "**Capture and annotation choices affect learning.** RoboCap couples a 250g six-camera hat with 3D reconstruction; YUBI-STAG adds contact-aware action labels; CureWM tests executed failure examples to correct overoptimistic world models."
+      ]
+    },
+    {
       "date": "2026-10-07",
       "slug": "2026-10-07",
       "title": "Wednesday, October 7, 2026",
@@ -872,6 +882,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 697,
-  "updated_at": "2026-10-07T04:58:34Z"
+  "papers_count": 730,
+  "updated_at": "2026-10-08T03:29:16Z"
 }
