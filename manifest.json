@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-09",
+      "slug": "2026-10-09",
+      "title": "Friday, October 9, 2026",
+      "tldr": [
+        "**OneForma has an explicit egocentric agency-partner route.** Its published country list includes Indonesia and Malaysia, but not India. Compensation is per accepted hour; rates and committed volumes are undisclosed. Official programme",
+        "**Commercial adoption and tooling are advancing.** Helm.ai reports $70M of signed contracts over 12 months. AWS's October 7 toolchain connects capture formats, simulation, training and deployment.",
+        "**Human demonstrations need more than raw video.** TACROSS studies contact-event alignment; YOCO calibrates glove bias; DreamTrue uses human labels of video defects. Each suggests a distinct quality or annotation requirement."
+      ]
+    },
+    {
       "date": "2026-10-08",
       "slug": "2026-10-08",
       "title": "Thursday, October 8, 2026",
@@ -882,6 +892,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 730,
-  "updated_at": "2026-10-08T03:29:16Z"
+  "papers_count": 761,
+  "updated_at": "2026-10-09T05:46:10Z"
 }

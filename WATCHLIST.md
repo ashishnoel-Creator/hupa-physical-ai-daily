@@ -2,6 +2,15 @@
 
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
+## 2026-10-09: opportunity source registry additions
+
+- [OneForma agency partner programme](https://www.oneforma.com/join/partners/): official egocentric business intake, distinct from Rover contributor work. Check country eligibility, accepted-hour terms and actual allocations. Undated, first checked October9; do not infer Indian eligibility.
+- [E-Solutions / Daksh Panchratna](https://in.linkedin.com/in/daksh-panchratna): indexed Philippines/Egypt vendor request, relative age3d; seek exact dated original and mandate. Existing company family, separate programme geography.
+- [VistarNITI Communications](https://in.linkedin.com/company/vistarniti-communications): India team/agency request, visible6mo; monitor for current commissioning status rather than treating discovery as a new order.
+- [AMAKH](https://in.linkedin.com/company/amakh-innovating-tomorrow): Americas ego vendor request, visible4mo; keep workforce seller marketing separate from buyer demand.
+
+Daily checks included all four listed Reddit communities and site-wide requests, public LinkedIn/X, YC/HN, DeepReach/Praxis/Defined.ai, DataForce/OneForma and marketplaces. No additional verified Reddit buyer or changed enduring-programme allocation. Weekly review completed October8, next October15. Initial discovery backfill remains complete September24. Public/social access is partial; no new verified X account added. Public programme facts only; private qualification stays in the buyer map.
+
 ## 2026-09-30: recovered September 28 source review
 
 The Monday run did not finish. These public request sources were verified September30 and added for subsequent checks, without implying current orders or buyer due diligence:
