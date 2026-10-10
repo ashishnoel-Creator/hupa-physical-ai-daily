@@ -2,6 +2,14 @@
 
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
+## Daily source additions and checks · October 10, 2026
+
+- [Yugm AI public company activity](https://www.linkedin.com/company/yugm-ai): keep India commercial ego, global workplaces, eight-country vendors and adjacent audio programmes separate. Older calls newly discovered; exact dates and current allocation unresolved. [Jobs portal](https://yugmai.in/jobs) returned a contributor shell.
+- [VisionCapture public company activity](https://www.linkedin.com/company/visioncaptureai/): recent commercial-ego vendor call; older country-specific and conversation calls have separate scope. [Website](https://www.visioncapture.in/) had no readable spec.
+- VWU.AI Reddit candidate remains unverified: indexed request not recovered in opened thread; seller website is not procurement confirmation.
+
+Daily change checks: required four Reddit communities/site-wide, public LinkedIn/X, YC/HN, DeepReach, Praxis, Defined.ai, Kuinbee, DataForce Viola Urdu, OneForma agency/Rover routes, Kinetic Blocks, Robotics Center and Opendatabay. No additional verified changed allocated work. Full weekly review October8, nextOctober15. Initial backfill completed September24. Logged-in X search worked but was partial; exact social dates and some source extraction remain gaps. No new account added to standing X list outside Monday review.
+
 ## 2026-10-09: opportunity source registry additions
 
 - [OneForma agency partner programme](https://www.oneforma.com/join/partners/): official egocentric business intake, distinct from Rover contributor work. Check country eligibility, accepted-hour terms and actual allocations. Undated, first checked October9; do not infer Indian eligibility.
