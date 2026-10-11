@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-11",
+      "slug": "2026-10-11",
+      "title": "Sunday, October 11, 2026",
+      "tldr": [
+        "**An existing India ego lead now has a public business route.** Rahul Pandey's older vendor call names an Innodata-domain email and asks for partners who can onboard and manage small businesses. Current allocation and contracting authority remain unverified.",
+        "**MMI's $125M Series D is confirmed.** Investor confirmation, October 9, resolves yesterday's primary-source gap. Its previously announced €17M co-investment is included in the round, not additional funding.",
+        "**Industrial QA and embedded platforms are consolidating.** Gecko/Anduril integrate inspection into manufacturing; Microchip's October 8 Hailo writeup connects vision inference with embedded control. These are catch-up findings, not new data tenders."
+      ]
+    },
+    {
       "date": "2026-10-10",
       "slug": "2026-10-10",
       "title": "Saturday, October 10, 2026",
@@ -902,6 +912,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 785,
-  "updated_at": "2026-10-10T01:41:57Z"
+  "papers_count": 790,
+  "updated_at": "2026-10-11T03:13:45Z"
 }

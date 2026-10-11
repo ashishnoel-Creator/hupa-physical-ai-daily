@@ -2,6 +2,14 @@
 
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
+## Daily source additions and checks · October 11, 2026
+
+- [Rahul Pandey India vendor call](https://www.linkedin.com/posts/rahul-pandey-3787b0127_vendorpartnership-egocentricvideo-aidatacollection-activity-7480571587612581889-wztv): second older source for existing lead, public corporate email discovered;3moEdited, current allocation unverified.
+- [Kinetic Blocks public updates](https://www.linkedin.com/company/kineticblocks): Nuuduu channel partnership and beta registration mix, not buyer orders; full panel article extraction unavailable. [Seller route](https://kineticblocks.com/sellers) readable.
+- [Microchip/Hailo technical overview](https://www.microchip.com/en-us/about/media-center/blog/2026/microchip-hailo-expanding-the-possibilities-of-edge-ai) October8 led to recovery of September21 completed acquisition. [Gecko inspection integration](https://www.geckorobotics.com/news/anduril-maritime-industrial-base) October8 and MMI primary funding confirmation added.
+
+Required daily checks: Reddit r/robotics,r/datasets,r/computervision,r/MachineLearning plus sitewide; public LinkedIn/X and YC/HN; DeepReach,Praxis,Defined.ai,Kuinbee; DataForce Viola Urdu and OneForma agency/Rover; Kinetic Blocks,Robotics Center,Opendatabay. No additional verified changed commissioned work. TrainThemAI already tracked; VWU.AI remains unresolved. Full review October8,nextOctober15; initial backfill September24. Twelve-handle dated X searches attempted, sparse/noisy results; locked Mac prevents logged-in inspection. Parallel insufficient credit. Regional/institutional coverage and some dynamic pages remain gaps. No new standing X accounts added outside Monday review.
+
 ## Daily source additions and checks · October 10, 2026
 
 - [Yugm AI public company activity](https://www.linkedin.com/company/yugm-ai): keep India commercial ego, global workplaces, eight-country vendors and adjacent audio programmes separate. Older calls newly discovered; exact dates and current allocation unresolved. [Jobs portal](https://yugmai.in/jobs) returned a contributor shell.
