@@ -2,6 +2,14 @@
 
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
+## Monday source review and daily checks · October 12, 2026
+
+- **New standing company source: [HUMXN journal](https://humxn.io/humxn-launches-free-home-service-program)**. October6 skilled-trades wearable-capture announcement discovered through Hacker News. Monitor its [business-data intake](https://humxn.io/sell-company-data) and [referral programme](https://humxn.io/partners) for actual briefs, geography, payment terms and evidence of purchases. Company claims and advertised deal examples are not verified orders. Checked October12; no signup or referral.
+- **Existing BARG family extended**, not a new company: [public feed](https://in.linkedin.com/company/barg-info-solutions-pvt-ltd) carries BAVE stereo (2d), UK/Europe speech evaluation (1d) and LiDAR/radiology QC (4d) vendor requests. Individual post URLs/exact dates not recovered. Do not reuse the older household-ego rate. Check programme-specific hardware, location, volume and allocation.
+- **Existing Dhvani family extended**: [head + two-wrist camera request](https://www.linkedin.com/posts/dhvani-ai_egocentric-ots-data-collection-requirement-activity-7473014454734151680-KjKE), visible3mo. Newly discovered spec, current availability unverified; separate from its iPhone/international volume programme.
+
+Monday account review found no new verified X handle. Native Chrome read timed out; dated fallback searches covered twelve priority handles but yielded largely unrelated results. PanTact, Human2Dex, StereoEngine and Chronos papers added through original arXiv sources; Chronos project-page extraction failed. All four Reddit communities/site-wide, public LinkedIn/X, YC/HN and required programme/marketplace routes checked. DeepReach/Praxis/Kuinbee/marketplace direct reads worked; Defined.ai and OneForma fallback reads worked after direct failures; DataForce Viola remained contributor-only. No additional verified changed allocated work or urgent dated deadline. Initial30-day backfill completeSeptember24; full enduring-programme reviewOctober8,nextOctober15. Parallel credit unavailable. Social/regional/institutional coverage partial.
+
 ## Daily source additions and checks · October 11, 2026
 
 - [Rahul Pandey India vendor call](https://www.linkedin.com/posts/rahul-pandey-3787b0127_vendorpartnership-egocentricvideo-aidatacollection-activity-7480571587612581889-wztv): second older source for existing lead, public corporate email discovered;3moEdited, current allocation unverified.

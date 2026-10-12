@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-12",
+      "slug": "2026-10-12",
+      "title": "Monday, October 12, 2026",
+      "tldr": [
+        "**A new stereo vendor request within the existing BARG lead.** The company feed requests field teams for BAVE stereo capture. Geography, equipment and rates are missing; funded allocation remains unverified.",
+        "**Collection is moving beyond a single headcam.** PanTact adds body contact, Human2Dex reuses wrist-centric demonstrations, and Chronos makes capture timing explicit. These are research results, not purchase requests.",
+        "**Newly discovered skilled-trades channel:** HUMXN's October 6 programme proposes paying for home-service work to capture demonstrations. Its separate licensing/referral intake is public; actual buyer orders and realised payouts were not verified."
+      ]
+    },
+    {
       "date": "2026-10-11",
       "slug": "2026-10-11",
       "title": "Sunday, October 11, 2026",
@@ -912,6 +922,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 790,
-  "updated_at": "2026-10-11T03:13:45Z"
+  "papers_count": 845,
+  "updated_at": "2026-10-12T09:00:51Z"
 }
