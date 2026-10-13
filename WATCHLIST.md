@@ -2,6 +2,15 @@
 
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
+
+## Daily source checks · October 13, 2026
+
+- [Reddit vendor request](https://www.reddit.com/r/B2BForHire/comments/1x3ybzq/hiring/): October12 indexed post from u/This_Alternative3357, original readableOctober13. Explicit ego vendor language but anonymous company/mandate, terms and countries unresolved; unverified community lead, not a confirmed buyer.
+- Salma/Bayan, MAVY OTS and Karthik construction calls are existing September26 leads; unchanged and deduplicated. VWU.AI comment remains index-only, not recovered in opened thread.
+- [SJ/SoftBank pilots](https://www.sjgroup.com/news/sj-softbank-robotics-ai-powered-facility-management/), [Flexcompute investment](https://hs.flexcompute.com/news/flexcompute-raises-strategic-investment-from-samsung-ventures-and-applied-ventures-to-build-the-physics-world-model) and [iMerit triage](https://imerit.ai/resources/blog/why-industrial-robot-deployments-need-triage-programs-as-much-as-autonomous-vehicles-do/) are news/technical sources, not vendor intake.
+
+All four Reddit communities/site-wide, public LinkedIn/X, YC/HN and mandatory programme/marketplace routes checked with access limits. DeepReach/Praxis/Kuinbee and marketplaces directly readable; Defined.ai/OneForma recovered through public web fallback; DataForce remains contributor intelligence. No changed funded allocation or urgent verified deadline. Initial backfillSeptember24; weeklyreviewOctober8,nextOctober15. Chrome unavailable and twelve-handle dated X fallback uninformative; Parallel credit exhausted. arXiv still displayed October12 listings. No new standing X handle added.
+
 ## Monday source review and daily checks · October 12, 2026
 
 - **New standing company source: [HUMXN journal](https://humxn.io/humxn-launches-free-home-service-program)**. October6 skilled-trades wearable-capture announcement discovered through Hacker News. Monitor its [business-data intake](https://humxn.io/sell-company-data) and [referral programme](https://humxn.io/partners) for actual briefs, geography, payment terms and evidence of purchases. Company claims and advertised deal examples are not verified orders. Checked October12; no signup or referral.

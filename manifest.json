@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-13",
+      "slug": "2026-10-13",
+      "title": "Tuesday, October 13, 2026",
+      "tldr": [
+        "**Physics-grounded simulation attracts strategic capital.** Flexcompute confirmed investment from Samsung Ventures and Applied Ventures, with the amount undisclosed. Its Physics World Model combines neural methods with numerical physics; performance claims remain company-reported. Company announcement",
+        "**China's home-robot data spending continues.** Gasgoo reports OlaDimensions' fourth financing since March, an Angel+ round of several hundred million yuan. The founder earmarks roughly one-third for compute and data. This is a prospect signal, not an open collection tender. Original reporting",
+        "**Singapore pilots will measure robots inside operating buildings.** SJ and SoftBank Robotics Singapore signed an MoU covering service-robot trials and facility-management software, with performance assessed against agreed baselines. Primary release"
+      ]
+    },
+    {
       "date": "2026-10-12",
       "slug": "2026-10-12",
       "title": "Monday, October 12, 2026",
@@ -922,6 +932,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 845,
-  "updated_at": "2026-10-12T09:00:51Z"
+  "papers_count": 851,
+  "updated_at": "2026-10-13T07:10:05Z"
 }
