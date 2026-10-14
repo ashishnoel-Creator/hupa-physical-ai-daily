@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-14",
+      "slug": "2026-10-14",
+      "title": "Wednesday, October 14, 2026",
+      "tldr": [
+        "**Newly discovered collection routes:** WorldEngine invites country partners; Arctic Engines seeks existing stereo footage and annotation vendors; an older DeepAnnotate call specifies India-wide egocentric collection. These are public intake signals with incomplete verification and commercial terms, not confirmed orders. WorldEngine source · Arctic source · DeepAnnotate source",
+        "**Physical Intelligence opens its API beta.** Teams can upload robot data, fine-tune hosted models and connect robots to cloud inference. This makes task-specific data and evaluation part of a more accessible deployment workflow. October 13 release",
+        "**Capital reaches both compute and humanoids:** Ubitium announces $14 million for its universal-processor architecture; Astribot's investor reports approximately RMB1 billion in financing at RMB15 billion valuation. Funding is not proof of shipped products or collection procurement. Ubitium · Astribot investor"
+      ]
+    },
+    {
       "date": "2026-10-13",
       "slug": "2026-10-13",
       "title": "Tuesday, October 13, 2026",
@@ -932,6 +942,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 851,
-  "updated_at": "2026-10-13T07:10:05Z"
+  "papers_count": 856,
+  "updated_at": "2026-10-14T02:42:41Z"
 }

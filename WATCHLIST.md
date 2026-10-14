@@ -3,6 +3,18 @@
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
 
+
+## Daily source checks · October 14, 2026
+
+- [WorldEngine / Ophelia L.](https://uk.linkedin.com/in/ophelialiu): indexed 4d country-partner ego invitation; [official partner route](https://worldengine.ai/) readable in Chrome (contact@worldengine.ai). Geography, volume, hardware/QA and commercial terms undisclosed; original post permalink and allocated work unverified.
+- [Arctic Engines / Indranil Kar](https://in.linkedin.com/in/indranilkar081): indexed 1w OTS stereo, 5,000 hours and ego annotation vendor calls; older 2mo Indic voice vendor call via Vedank Bhatnagar. Three separate intakes, availability unverified. Shortened vendor forms unavailable; individual jobs excluded.
+- [DeepAnnotate / Toufiq Omer](https://in.linkedin.com/in/toufiq-omer-567a3441a): older 2mo Pan-India ego vendor invitation, 50,000+ validated-hour target, head-mounted 1080p/30fps; current intake/payment/assigned volume unknown. All above first seen and checked October 14; do not invent absolute publication dates.
+- Required r/robotics, r/datasets, r/computervision, r/MachineLearning and site-wide searches completed; anonymous prior request/VWU deduplicated. YC/HN checked; YC shell limited. No extra verified community buyer.
+- DeepReach/Praxis/Defined.ai/Kuinbee/OneForma/DataForce/KineticBlocks/RoboticsCenter/Opendatabay daily checks yielded no additional verified material programme change; some needed fallback, marketplace extraction partial. Full enduring review next October 15, previous October 8; initial backfill September 24.
+- X in Chrome worked: combined 12-handle query for October 11–14 checked Latest and Top, substantive PI release and founder reactions verified. Not exhaustive account coverage. Parallel credit unavailable; arXiv new pages still October 12. No new standing handle added.
+
+Public requirements, missing terms and dated technical/funding sources are in [today's brief](days/2026-10-14.html). Five newly recorded intake signals are not five verified contracts. No outreach/signups/applications.
+
 ## Daily source checks · October 13, 2026
 
 - [Reddit vendor request](https://www.reddit.com/r/B2BForHire/comments/1x3ybzq/hiring/): October12 indexed post from u/This_Alternative3357, original readableOctober13. Explicit ego vendor language but anonymous company/mandate, terms and countries unresolved; unverified community lead, not a confirmed buyer.
