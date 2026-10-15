@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-15",
+      "slug": "2026-10-15",
+      "title": "Thursday, October 15, 2026",
+      "tldr": [
+        "**Human-video research advances on contact and multimodal capture.** EgoExplorer describes 100 hours of synchronized vision, motion and touch; EgoMatrix converts ego videos into paired robot trajectories and observations. Both are research evidence, not collection purchase requests. EgoExplorer · EgoMatrix",
+        "**Newly discovered adjacent vendor intake:** NEURVIX seeks annotation agencies, alongside a separate older multilingual dataset-licensing call. Current allocations and commercial terms remain unverified. The weekly programme review found Kinetic's open interest-card count has fallen from three to two. NEURVIX · Kinetic",
+        "**FORT adds connectivity aggregation; FFR signs a robotics acquisition agreement.** FORT combines multiple network types for machine connectivity. FFR's approximately $200 million all-stock acquisition valuation is not cash raised or a completed transaction. FORT · FFR"
+      ]
+    },
+    {
       "date": "2026-10-14",
       "slug": "2026-10-14",
       "title": "Wednesday, October 14, 2026",
@@ -942,6 +952,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 856,
-  "updated_at": "2026-10-14T02:42:41Z"
+  "papers_count": 897,
+  "updated_at": "2026-10-15T04:07:21Z"
 }

@@ -4,6 +4,17 @@ Accounts, researchers, and companies found during daily runs that are worth addi
 
 
 
+
+## Weekly source review and daily checks · October 15, 2026
+
+- [NEURVIX company activity](https://www.linkedin.com/company/neurvix): newly discovered PSD/FD annotation-agency intake, labelled **3d Edited**. Requires LiDAR bounding boxes/segmentation and experienced QA/QC. Current allocation, geography, volume and commercial terms remain unverified. The multilingual OTS request was already noted October 8. Existing ego, narrated-video and Arabic programmes remain visible without newly verified orders. Exact publication dates were not recovered.
+- [Kinetic request mechanics](https://kineticblocks.com/how-requests-work): **two open interest cards**, versus three on October 8. Card identities and the reason for the reduction are unavailable. Non-binding cards and budgeted requests are separate; gated specifications were not accessed.
+- DeepReach, Praxis, Defined.ai, Kuinbee, OneForma's agency route, DataForce Viola Urdu, Robotics Center and Opendatabay reviewed. Programme pages are generally undated; last checked **October 15**. OneForma's published countries still exclude India. Rover was unavailable; Opendatabay extraction was thin. Defined.ai and OneForma agency details were recovered through public-web fallback.
+- Required Reddit communities and site-wide requests checked. The opened hand-exoskeleton discussion is a maker project, not buyer intake. Prior anonymous/VWU requests were deduplicated. Public LinkedIn/X and YC/HN checked; the YC launch index returned a shell and original social-post access remains partial.
+- Full weekly review completed **October 15; next October 22**. Initial 30-day backfill completed September 24; daily change checks continue. Chrome was unavailable and dated searches covering twelve X handles yielded no additional corroborated signal. Parallel lacked credit. arXiv listings advanced to October 14; 38 selected papers retain original submission dates.
+
+Public requirements and missing terms are in the [October 15 brief](days/2026-10-15.html). No urgent verified deadline or newly confirmed funded collection order. Private qualification remains local. No outreach, signups or applications. No new standing X handle added outside the Monday review.
+
 ## Daily source checks · October 14, 2026
 
 - [WorldEngine / Ophelia L.](https://uk.linkedin.com/in/ophelialiu): indexed 4d country-partner ego invitation; [official partner route](https://worldengine.ai/) readable in Chrome (contact@worldengine.ai). Geography, volume, hardware/QA and commercial terms undisclosed; original post permalink and allocated work unverified.
