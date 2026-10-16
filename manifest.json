@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-16",
+      "slug": "2026-10-16",
+      "title": "Friday, October 16, 2026",
+      "tldr": [
+        "**Human experience is becoming structured robot supervision.** NatureWill describes a 50B-parameter model trained on over one million hours of egocentric experience; Spark-0 introduces 1,000 hours of full-hand tactile data. These are company/research claims, not purchase requests. Natura-1 · Spark-0",
+        "**Capture, reconstruction and QA are converging.** Hesai launches Kosmo for real-world 3D capture; Google's October 13 robotics examples span human-video-to-simulation and hierarchical hindsight annotation. Hesai · Google",
+        "**Commercial progress comes with dates and conditions.** Agility names Nyobolt for Digit 5 batteries, with early access expected in H1 2027. Accel confirms its investment in construction-robot company Origin. Neither establishes an open collection contract. Agility · Accel"
+      ]
+    },
+    {
       "date": "2026-10-15",
       "slug": "2026-10-15",
       "title": "Thursday, October 15, 2026",
@@ -952,6 +962,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 897,
-  "updated_at": "2026-10-15T04:07:21Z"
+  "papers_count": 950,
+  "updated_at": "2026-10-16T05:04:04Z"
 }

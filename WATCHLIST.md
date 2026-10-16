@@ -5,6 +5,17 @@ Accounts, researchers, and companies found during daily runs that are worth addi
 
 
 
+
+## Daily source checks · October 16, 2026
+
+- Required Reddit r/robotics, r/datasets, r/computervision, r/MachineLearning and site-wide searches completed. Opened Bay Area ecosystem and custom-speech threads are hiring/seller signals, not verified agency orders. An in-cabin request surfaced in an index but not the opened thread; no verified buyer/comment/date. Public LinkedIn search yielded existing invitations and inaccessible price details, not a new confirmed allocation.
+- DeepReach, Praxis, Kuinbee and marketplaces checked directly; Defined.ai and OneForma agency recovered via public-web fallback. No verified material eligibility/assignment change. OneForma still lists 13 countries excluding India. DataForce Viola Urdu checked; Rover unavailable and Opendatabay thin. Kinetic public access did not reveal a newly budgeted brief.
+- [NatureWill](https://www.naturewill.com/blog/natura-1), [NEURA](https://neura-robotics.com/neura-robotics-introduces-neuron-ai/), [Origin](https://www.accel.com/news/our-investment-in-origin-bringing-physical-ai-to-the-built-world) and [Hesai](https://www.hesaitech.com/9974-2/) are technical/ecosystem demand signals, not collection-vendor invitations. No supplier budget, assigned volume or deadline established.
+- Public LinkedIn/X, YC/HN checked with gaps: YC launch index thin; only in-app browser exposed, no logged-in Chrome; 12-handle dated X fallback noisy. Direct PI/DeepMind/Hugging Face/MIT checks supplemented discovery. arXiv RO/CV/LG/AI lists refreshed to October 16; 45 selected original abstract pages read.
+- Parallel lacked credit; public-web/direct-source fallback used. Full weekly review completed October 15, next October 22; initial 30-day backfill completed September 24. No new standing X handle added outside Monday review. No outreach/applications/signups.
+
+See [October 16 briefing](days/2026-10-16.html) for public facts and explicit source-access limits. No new verified collection-partner opportunity or urgent verified deadline.
+
 ## Weekly source review and daily checks · October 15, 2026
 
 - [NEURVIX company activity](https://www.linkedin.com/company/neurvix): newly discovered PSD/FD annotation-agency intake, labelled **3d Edited**. Requires LiDAR bounding boxes/segmentation and experienced QA/QC. Current allocation, geography, volume and commercial terms remain unverified. The multilingual OTS request was already noted October 8. Existing ego, narrated-video and Arabic programmes remain visible without newly verified orders. Exact publication dates were not recovered.
