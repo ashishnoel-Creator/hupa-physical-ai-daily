@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-17",
+      "slug": "2026-10-17",
+      "title": "Saturday, October 17, 2026",
+      "tldr": [
+        "**Avala has an explicit supplier route for egocentric capture teams.** Its official programme buys against written briefs and pays per accepted hour. Numerical rates, assigned volume, India eligibility and deadlines are not public. Newly discovered today; the page is undated. Partner programme",
+        "**Robot-agent progress needs time, cost and outcome checks.** AA-Robotics' October 14 preview tests eight real-arm tasks but reports roughly half-hour attempts. ASPIRE's October release reports strong simulation results and separate hardware demonstrations. These measure different things. AA-Robotics · ASPIRE",
+        "**Data quality is moving beyond successful demonstrations.** Avala specifies diversity, duplicate detection and failure/recovery labels; supervised play and CoDA explore how to generate useful experience. Coverage standard · Supervised play · CoDA"
+      ]
+    },
+    {
       "date": "2026-10-16",
       "slug": "2026-10-16",
       "title": "Friday, October 16, 2026",
@@ -962,6 +972,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 950,
-  "updated_at": "2026-10-16T05:04:04Z"
+  "papers_count": 980,
+  "updated_at": "2026-10-17T04:17:09Z"
 }

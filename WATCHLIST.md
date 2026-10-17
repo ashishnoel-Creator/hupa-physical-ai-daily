@@ -6,6 +6,18 @@ Accounts, researchers, and companies found during daily runs that are worth addi
 
 
 
+
+## Daily source checks · October 17, 2026
+
+- **Added official supplier source:** [Avala data partners](https://about.avala.ai/data-partners), [coverage standard](https://about.avala.ai/coverage), [business route](https://about.avala.ai/demo?intent=data-partner). Undated; first discovered/checked October 17. Explicit intake includes egocentric teams; accepted-hour payment, written brief and QA criteria. No public numeric rate, India eligibility, allocated volume or deadline. Recheck with other enduring programmes; next full review October 22.
+- Reddit r/robotics, r/datasets, r/computervision, r/MachineLearning plus site-wide requests searched. VWU in-cabin request remains indexed but not attributable to an opened original comment. Public LinkedIn/X, YC/HN searched; D-HUB and existing invitations deduplicated, seller marketing and individual jobs not counted as agency demand.
+- DeepReach, Praxis, Kuinbee and marketplaces checked directly; Defined.ai/OneForma agencies recovered via public-web fallback. No verified material terms change. DataForce ViolaUrdu contributor-only; Rover unavailable. Kinetic now displays three non-binding interest cards versus two October 15–16, without a new accessible budgeted brief. Robotics Center/Opendatabay details partial.
+- Logged-in Chrome X worked for combined Latest search of DrJimFan, tonyzzhao, physical_int, adcock_brett, svlevine, chelseabfinn, pabbeel, kkitani, JitendraMalikCV, Figure_robot,1x_tech, ericjang11. Partial scrolling, not complete timelines. Fan's October 16 ASPIRE post and Malik's supervised-play signal checked against original repository/paper.
+- Original research abstracts: 17 October 14–15 preprints, all deduplicated. Direct company/lab/institutional/regional checks supplied news; Human Archive indexed article not recovered and not promoted into a claim. Parallel insufficient credit; built-in web/direct fallback. Social and institutional/regional coverage partial.
+- Initial 30-day backfill remains completed September 24; weekly review completed October 15, next October 22. No standing X handle additions outside Monday review. No outreach, applications, signups or commitments.
+
+See [October 17 briefing](days/2026-10-17.html). Newly verified supplier route does not establish a currently allocated contract; no urgent verified collection deadline.
+
 ## Daily source checks · October 16, 2026
 
 - Required Reddit r/robotics, r/datasets, r/computervision, r/MachineLearning and site-wide searches completed. Opened Bay Area ecosystem and custom-speech threads are hiring/seller signals, not verified agency orders. An in-cabin request surfaced in an index but not the opened thread; no verified buyer/comment/date. Public LinkedIn search yielded existing invitations and inaccessible price details, not a new confirmed allocation.
