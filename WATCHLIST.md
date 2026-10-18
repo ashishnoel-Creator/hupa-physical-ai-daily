@@ -7,6 +7,18 @@ Accounts, researchers, and companies found during daily runs that are worth addi
 
 
 
+
+## Daily source checks · October 18, 2026
+
+- Required Reddit r/robotics,r/datasets,r/computervision,r/MachineLearning and site-wide searches completed. Original [Asylic agency request](https://www.reddit.com/r/B2BForHire/comments/1x6hymv/hiring_skilled_workers_and_vendor_partners_for_ai/) datedOctober 15 and [anonymous ego-dataset request](https://www.reddit.com/r/datasets/comments/1x73m26/looking_for_egocentric_video_data_to_train/) datedOctober 16 read. Corporate mandate/current allocations unverified; Asylic regional rates are indicative accepted-hour rates, India not listed. Cross-posts deduplicated.
+- Public LinkedIn/X,YC/HN checked. [HUD robotics-data role](https://www.ycombinator.com/companies/hud/jobs/nC83OjE-research-engineer-robotics-data) explicitly names external-provider protocols but is procurement intelligence, not vendor intake. Its linked [DataVendor marketplace](https://datavendor.ai/) is the same company family; no actual ego brief verified. Both undated, first seen/checkedOctober 18. Seller advertisements and individual jobs not counted as agency contracts.
+- Avala,DeepReach,Praxis,Kuinbee readable; Defined.ai/OneForma agency recovered via public-web fallback without material new verified terms. OneForma's 13 named countries omit India, form includes Other. DataForce ViolaUrdu contributor-only; Rover unavailable. Kinetic remains three non-binding interest cards, unchangedOctober 17. RoboticsCenter/Opendatabay details partial.
+- Chrome unavailable in browser inventory;12-handle dated fallback covered DrJimFan,tonyzzhao,physical_int,adcock_brett,svlevine,chelseabfinn,pabbeel,kkitani,JitendraMalikCV,Figure_robot, 1x_tech,ericjang11 but was uninformative. Direct lab/company sources supplemented. Not a complete timeline audit.
+- Four arXiv lists still displayedFridayOctober 16;13 new-to-library originals withSeptember 28–October 15 submission dates read. H2L,Rhoda,YYForce,Plim,Unitree,UT Austin andZenodo primary pages checked; UniUni primary text available in public search while direct extraction empty. Winverse pending-deal claim retained as attributed reporting, not closing confirmation.
+- Parallel lacked credit; direct/web fallback used, no purchase. Social/institutional/China/India/SEA coverage partial. Initial 30-day backfill completed September 24; weekly review completed October 15,next October 22. No standing X additions outside Monday review. No outreach,applications,signups or commitments.
+
+See [October 18 briefing](days/2026-10-18.html). No newly verified allocated collection contract or urgent confirmed deadline.
+
 ## Daily source checks · October 17, 2026
 
 - **Added official supplier source:** [Avala data partners](https://about.avala.ai/data-partners), [coverage standard](https://about.avala.ai/coverage), [business route](https://about.avala.ai/demo?intent=data-partner). Undated; first discovered/checked October 17. Explicit intake includes egocentric teams; accepted-hour payment, written brief and QA criteria. No public numeric rate, India eligibility, allocated volume or deadline. Recheck with other enduring programmes; next full review October 22.

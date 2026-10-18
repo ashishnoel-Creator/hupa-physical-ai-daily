@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-18",
+      "slug": "2026-10-18",
+      "title": "Sunday, October 18, 2026",
+      "tldr": [
+        "**New agency request, still unverified:** a Reddit account claiming to represent Asylic seeks commercial egocentric collection partners in five regions, with indicative approved-hour rates. India is not listed. HUD separately names external robotics-data providers in its own research role. Asylic request · HUD procurement signal",
+        "**Collection is extending beyond video.** H2L estimates force modulation from an arm-worn muscle sensor; Rhoda adds measured contact forces to handheld UMI demonstrations and predicts future tactile observations. Both are dated catch-up, with company-test limits. H2L · Rhoda",
+        "**Singapore hotel workflows become a robotics research setting.** YYForce's October 13 agreement covers an initial service-robot rollout and later humanoid research. Deployment has not begun; projected savings are not measured results. Original release"
+      ]
+    },
+    {
       "date": "2026-10-17",
       "slug": "2026-10-17",
       "title": "Saturday, October 17, 2026",
@@ -972,6 +982,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 980,
-  "updated_at": "2026-10-17T04:17:09Z"
+  "papers_count": 1002,
+  "updated_at": "2026-10-18T03:22:26Z"
 }
