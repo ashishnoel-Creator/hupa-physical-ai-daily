@@ -986,286 +986,321 @@ section.level2 > section.level3:first-of-type > h3 {
 
   <div class="main-wrap">
   <main class="main">
-<section id="sunday-october-18-2026" class="level2">
-<h2>Sunday, October 18, 2026</h2>
+<section id="monday-october-19-2026" class="level2">
+<h2>Monday, October 19, 2026</h2>
 <section id="tldr" class="level3">
 <h3>TL;DR</h3>
 <ul>
-<li><strong>New agency request, still unverified:</strong> a Reddit
-account claiming to represent Asylic seeks commercial egocentric
-collection partners in five regions, with indicative approved-hour
-rates. India is not listed. HUD separately names external robotics-data
-providers in its own research role. <a
-href="https://www.reddit.com/r/B2BForHire/comments/1x6hymv/hiring_skilled_workers_and_vendor_partners_for_ai/">Asylic
-request</a> · <a
-href="https://www.ycombinator.com/companies/hud/jobs/nC83OjE-research-engineer-robotics-data">HUD
-procurement signal</a></li>
-<li><strong>Collection is extending beyond video.</strong> H2L estimates
-force modulation from an arm-worn muscle sensor; Rhoda adds measured
-contact forces to handheld UMI demonstrations and predicts future
-tactile observations. Both are dated catch-up, with company-test limits.
-<a href="https://h2l.jp/bodysharing-physical-ai/">H2L</a> · <a
-href="https://www.rhoda.ai/research/giving-robots-a-sense-of-touch">Rhoda</a></li>
-<li><strong>Singapore hotel workflows become a robotics research
-setting.</strong> YYForce’s October 13 agreement covers an initial
-service-robot rollout and later humanoid research. Deployment has not
-begun; projected savings are not measured results. <a
-href="https://www.globenewswire.com/news-release/2026/10/13/3380142/0/en/yyforce-brings-humanoid-robots-to-hospitality-in-landmark-partnership-with-novotel-mercure-singapore-on-stevens.html">Original
-release</a></li>
+<li><strong>A concrete agency specification:</strong> Jupiter AI Labs
+requests 1,000 accepted hours of commercial stereo egocentric video
+across Africa, LATAM and Eastern Europe. It asks agencies to propose an
+accepted-hour price; current allocation and funded milestones remain
+unverified. <a
+href="https://ca.linkedin.com/company/jupiter-ai-labs">Company
+request</a></li>
+<li><strong>Useful data needs more than footage.</strong> <a
+href="https://arxiv.org/abs/2610.21090">RoboCloth</a> adds calibrated
+material capture; <a href="https://arxiv.org/abs/2610.20693">Orbia</a>
+evaluates persistent 3D consistency; <a
+href="https://arxiv.org/abs/2610.21306">VLA-Δ</a> supervises physical
+state changes. These are dated research catch-up, not October 19
+releases.</li>
+<li><strong>Industrial robotics gains infrastructure and
+financing:</strong> Symbotic confirms its cellumation acquisition, while
+the EIB signs €150M of lending for Fugro’s remote survey fleet. Neither
+is an external data-collection tender. <a
+href="https://www.symbotic.com/news/symbotic-announces-acquisition-of-cellumation-advancing-next-generation-sortation-technology-for-the-global-supply-chain/">Symbotic,
+October 13</a> · <a
+href="https://www.eib.org/en/press/all/2026-335-eib-boosts-sustainable-development-of-geo-data-experts-fugro">EIB,
+October 14</a></li>
 </ul>
-<p>Checked October 18 IST against the successful October 17 edition and
-existing library. Older items retain their original dates and are
-labelled catch-up; undated pages are newly discovered, not newly
-announced. Friday’s arXiv listings supplied additional missed papers,
-not a new Sunday batch. The completed <a
-href="../monthly/2026-09.html">September recap</a> is preserved.</p>
+<p>Checked October 19 IST after the successful October 18 briefing, with
+a 72-hour discovery overlap and the latest seven editions used for
+deduplication. Newly discovered older or undated items are labelled
+below. The accessible arXiv lists still show October 16; no new Monday
+submission batch is claimed. September’s <a
+href="../monthly/2026-09.html">completed recap</a> is preserved.</p>
 </section>
 <section id="data-collection-opportunities" class="level3">
 <h3>Data collection opportunities</h3>
-<p><strong>Newly discovered · Asylic commercial egocentric programme ·
-unverified community lead with explicit agency/vendor language.</strong>
-An October 15 post by u/Asylic_Official seeks staffing agencies,
-gig-worker platforms and recruitment partners for real commercial work:
-retail, construction, agriculture, restaurants, warehouses,
-manufacturing, automotive, hotels, cleaning, salons and trades. It
-advertises indicative rates <strong>per approved hour</strong>:</p>
+<p><strong>Jupiter AI Labs · newly discovered explicit agency/vendor
+request.</strong> The company feed displays <strong>3d</strong>;
+regional mirrors differ, so the exact post date is unresolved. First
+seen/checked October 19; availability and assigned work unverified. <a
+href="https://ca.linkedin.com/company/jupiter-ai-labs">Source</a></p>
 <table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
 <thead>
 <tr>
-<th>Region</th>
-<th>Published indicative rate</th>
+<th>Requirement</th>
+<th>Published terms</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>USA</td>
-<td>$7</td>
+<td>Scope</td>
+<td>1,000 quality-accepted hours; genuine non-residential
+commercial/industrial work; no staged, artificially repeated,
+residential or low-value activity</td>
 </tr>
 <tr>
-<td>Canada</td>
-<td>$5</td>
+<td>Geography</td>
+<td>Africa, LATAM, Eastern Europe; exact countries and India
+eligibility: Not disclosed</td>
 </tr>
 <tr>
-<td>LATAM</td>
-<td>$3</td>
+<td>Timing</td>
+<td>Approximately ten calendar days from commencement; calendar
+deadline: Not disclosed</td>
 </tr>
 <tr>
-<td>Egypt</td>
-<td>$1.50</td>
+<td>Capture</td>
+<td>Head-mounted stereo RGB; ≥1080p per camera at 30 FPS; field of view
+≥110° horizontal / 80° vertical; synchronized streams and ≥200 Hz
+IMU</td>
 </tr>
 <tr>
-<td>Philippines</td>
-<td>$1.50</td>
+<td>Delivery / responsibility</td>
+<td>MCAP, calibration/synchronization metadata, episode metadata and
+task annotations; agency supplies equipment, operators, sites,
+permissions and QA</td>
+</tr>
+<tr>
+<td>Commercial</td>
+<td>Propose all-inclusive rate per quality-accepted hour; Upwork
+milestones and a possible smaller validation stage described. Numerical
+budget/rate, rejection/rework thresholds, settlement,
+rights/exclusivity: Not disclosed</td>
 </tr>
 </tbody>
 </table>
-<p>Head-mounted phone; at least 120 seconds per task; both hands and
-fingers visible; clear lighting; no chest mount. Phones: iPhone 12–17
-excluding 16e/17e, Pixel 6–9 standard/Pro, Galaxy S21–S24
-standard/Plus/Ultra. The post asks for regions, capacity, categories,
-turnaround and pricing. <strong>Not disclosed:</strong> assigned
-volume/minimum, resolution/fps, detailed QA/rework, equipment charges,
-settlement schedule, rights/exclusivity and deadline. India is not
-listed. Public route: pratik@asylic.com or vinayak@asylic.com.
-<strong>Checked October 18; allocation, identity and contracting
-authority unverified.</strong> The linked company domain did not
-substantiate the procurement claim. The cross-post is the same lead. <a
-href="https://www.reddit.com/r/B2BForHire/comments/1x6hymv/hiring_skilled_workers_and_vendor_partners_for_ai/">Original
-request</a> · <a href="https://asylic.com/">Company domain</a></p>
-<p><strong>Newly discovered · HUD · procurement signal, plus a
-marketplace route.</strong> Its undated company-authored robotics-data
-role explicitly covers external-provider collection/review protocols,
-schemas, annotations, ground truth, validation and feedback to vendors.
-This establishes interest in supplier-executable data workflows,
-<strong>not an open vendor order</strong>. Task-specific geography,
-volume, hardware, QA thresholds, budget/payment unit and deadline:
-<strong>Not disclosed</strong>. Public business contact:
-founders@hud.ai; the job application is an employment route. Checked
-October 18. <a
-href="https://www.ycombinator.com/companies/hud/jobs/nC83OjE-research-engineer-robotics-data">Role</a>
-· <a href="https://www.hud.ai/">Company contact</a></p>
-<p>HUD also links <strong>DataVendor</strong>, a marketplace accepting
-data, code and technical supply. Its public site describes inventory,
-automated quality checks and payment when a buyer purchases. No specific
-egocentric brief, eligible capture geography, volume, hardware, QA
-thresholds, collection rate/unit, fees or deadline was established:
-<strong>Not disclosed</strong>. The visible codebase prices are not
-robotics-data budgets or verified sales. Status: <strong>open
-marketplace route; egocentric demand and acceptance unverified</strong>.
-Source date unknown; checked October 18. <a
-href="https://datavendor.ai/">Marketplace</a></p>
-<p><strong>Newly discovered · anonymous r/datasets request · unverified
-community sourcing interest.</strong> On October 16, u/OrangeHokage123
-asked companies for egocentric footage of cooking, cleaning, picking up
-objects and everyday chores, including available types, hours and
-pricing for robotics training. Buyer identity/mandate, procurement
-geography, required volume, hardware/QA, rights, budget/payment unit and
-deadline: <strong>Not disclosed</strong>. The request does not establish
-a custom collection commission. Route: original public thread; checked
-October 18, availability unknown. <a
-href="https://www.reddit.com/r/datasets/comments/1x73m26/looking_for_egocentric_video_data_to_train/">Original
-post</a></p>
-<p><strong>Existing programmes:</strong> Avala, DeepReach, Praxis,
-Defined.ai, Kuinbee and OneForma yielded no newly verified material
-terms or allocation changes. OneForma’s 13 named countries still omit
-India, although its form has an Other choice; eligibility must be
-qualified. DataForce Viola Urdu remains contributor-only; Rover was
-unavailable. Kinetic still shows three non-binding interest cards,
-unchanged since October 17; no new funded brief was verified. Robotics
-Center/Opendatabay details remain partial. Initial 30-day backfill is
-complete; full weekly review was October 15, next October 22. No urgent
-verified collection deadline.</p>
+<p>The Upwork job URL and funded escrow were not verified. Use the
+company to request the exact brief/link; <a
+href="https://jupiterailabs.com/">official general business contact</a>
+lists info@jupiterailabs.com and sales@jupiterailabs.com. A separately
+indexed Aarti K. variant adds <strong>15 environment
+categories</strong>; do not assume this applies to the company version
+without confirmation. <a
+href="https://in.linkedin.com/in/aarti-k-a28148281">Indexed variant,
+original profile inaccessible</a></p>
+<p><strong>Vxible Consulting Group · newly discovered older
+business-partner intake.</strong> Its readable company feed shows an
+<strong>approximately one-month-old</strong> invitation for vendors with
+teams to collect <strong>egocentric video plus narration</strong>, with
+QC and scalable execution. Route:
+<strong>yogendra@vxibleconsultinggroup.com</strong>, requesting team
+size and experience. Geography/languages, tasks/environments,
+volume/duration, hardware, quantitative QA, delivery format,
+budget/payment unit, settlement, rights and deadline: <strong>Not
+disclosed</strong>. Jaipur headquarters does not prove India collection
+eligibility. First seen/checked October 19; current allocation unknown.
+This is vendor language, separate from its employment advertisements. <a
+href="https://in.linkedin.com/company/vxibleconsultinggroup">Company
+feed</a></p>
+<p><strong>Egocentric Video · newly discovered partner-platform route;
+operator identity not established.</strong> The Chinese-language site
+explicitly invites regional operators to organize collection teams,
+devices, field QA and batch delivery. It distinguishes those partners
+from individual collectors and data buyers. Its <a
+href="https://egocentric.video/partnership">partnership form</a>
+includes a become-a-partner option; no form was submitted. Publication
+date unknown; checked October 19. Geography, tasks, assigned hours,
+required hardware/QA, price/payment unit, settlement, rights and
+deadline: <strong>Not disclosed</strong>. The homepage’s sample sensor
+values and dashboard counters are not a commissioned specification or
+verified production volume. Legal contracting entity and international
+eligibility remain unresolved. <a
+href="https://egocentric.video/">Platform</a></p>
+<p><strong>Vision Lab · newly discovered industrial partnership
+prospect, not a collection-vendor order.</strong> The company-authored
+YC page invites manufacturers, robotics labs and frontier teams to
+discuss industrial first-person data paired with process/SOP knowledge.
+Route: <strong>founders@thevisionlab.ai</strong>. Agencies are not
+explicitly named; vendor eligibility, geography, assigned tasks/volume,
+capture hardware/QA, budget/payment unit and deadline: <strong>Not
+disclosed</strong>. Page publication date unknown; checked October 19.
+Its factory-network, customer and benchmark numbers are company claims,
+not qualification evidence for a paid assignment. <a
+href="https://www.ycombinator.com/companies/vision-lab">Founder/company
+page</a></p>
+<p><strong>Standing programmes and community coverage:</strong>
+DeepReach, Praxis, Defined.ai, Avala and Kuinbee yielded no additional
+verified change in commissioned work. OneForma’s agency page still names
+13 countries without India; its Other field is not confirmation of
+eligibility. DataForce Viola Urdu remains contributor-only, Rover
+remains unavailable. Kinetic still shows three non-binding interest
+cards, unchanged since October 17; listing prices are not buyer budgets.
+Robotics Center and Opendatabay supplied no newly verified funded brief.
+No urgent verified collection deadline: Jupiter’s ten days is a duration
+after commencement.</p>
+<p>Searches covered r/robotics, r/datasets, r/computervision and
+r/MachineLearning plus site-wide requests, public LinkedIn/X and
+YC/Hacker News. The already recorded October 16 anonymous ego request
+and Asylic lead are not new opportunities today. Seller advertising and
+ordinary jobs were excluded. The initial 30-day backfill remains
+completed September 24; full enduring-programme review remains October
+15, next October 22.</p>
 </section>
 <section id="data-collection" class="level3">
 <h3>Data collection</h3>
-<p><strong>October 14 catch-up · H2L BodySharing Physical AI.</strong>
-FirstVR’s optical arm sensor reads muscle displacement; a phone/PC
-camera supplies motion information. Force modulation is
-<strong>estimated from muscle state</strong>, not directly measured
-object weight or fingertip force. H2L’s internal Sciurus17 cube/towel
-tasks achieved 95% with 15 minutes of experience data and 99% with 22
-minutes, over 100 trials per condition. Participant composition differs
-between conditions; the minutes describe data duration, not training
-compute time. These narrow company tests do not establish general
-household reliability. The commercial contact offers implementation
-consultation, not a paid external-collector brief. <a
-href="https://h2l.jp/news/bodysharing-physical-ai-ceatec-2026/">Dated
-CEATEC release</a> · <a
-href="https://h2l.jp/bodysharing-physical-ai/">Technical
-evaluation</a></p>
-<p><strong>October 13 catch-up · Rhoda tactile UMI and touch-conditioned
-action.</strong> A handheld gripper records normal/shear contact forces
-alongside visual demonstrations. The company’s DVA extension predicts
-future tactile observations, then maps them to actions. A camera-blocked
-demonstration retrieves textured balls from a mixed box, including
-unfamiliar examples. The post provides no repeated-trial success rate or
-trial count. Sensor demonstrations span a few millinewtons to over 40 N
-and roughly 500 Hz vibration sampling; they are company results, not an
-independent comparison against every sensor. Interpretation: useful
-adjacent collection would require synchronized contact and motion
-evidence, not simply more RGB footage. No supplier intake is announced.
-<a
-href="https://www.rhoda.ai/research/giving-robots-a-sense-of-touch">Technical
-post</a></p>
+<p><strong>October 15 catch-up · RoboCloth.</strong> Authors describe
+500 real cloth materials, each captured in approximately 580 HDR images
+with robot-controlled camera and lighting. Calibrated poses, sparse
+geometry and reflectance observations support neural material
+reconstruction. The abstract states that dataset/calibration/splits are
+released under CC BY 4.0; the complete downloadable assets and licence
+files were not separately audited. This is material appearance data, not
+a cloth-manipulation demonstration corpus. <a
+href="https://arxiv.org/abs/2610.21090">Paper</a></p>
+<p><strong>October 13 catch-up · coastal ground-truth
+collection.</strong> CSIRO, CQUniversity and the Great Barrier Reef
+Foundation are trialling a towed underwater camera with an uncrewed
+surface vessel for murky-water seagrass surveys. Georeferenced imagery
+is processed onboard and transmitted by radio; aerial surveys can
+complement intertidal ground-truthing. The release describes trials,
+with the first full field-performance report expected later in 2026. It
+does not establish an open supplier programme or completed scale
+deployment. <a
+href="https://www.csiro.au/en/news/All/News/2026/October/TUV-Eyes-beneath-the-surface">Institutional
+release</a></p>
+<p>Jupiter’s request makes synchronization, calibration, sensor rate and
+delivery format explicit. Those are procurement requirements for this
+particular brief, not a universal egocentric standard.</p>
 </section>
 <section id="data-annotation-validation" class="level3">
 <h3>Data annotation &amp; validation</h3>
-<p><strong>October 16 · released synthetic-perception pipeline.</strong>
-The University of Patras team’s genai-robot-perception v1.0.0 chains
-USB/RealSense capture, Leonardo image generation, GroundingDINO labels,
-optional manual review, augmentation, train/validation/test splitting
-and YOLO training. It implements a 2024 paper; this is an October 2026
-software deposit, not a new 2026 paper or a demonstrated universal
-accuracy gain. Generated labels still need task-specific review. <a
-href="https://zenodo.org/records/23412037">Versioned software
-record</a></p>
-<p><strong>September 28 catch-up · regional hazard evaluation.</strong>
-BD-HazardVLM annotates 500 Bangladesh road images for hazard type,
-timing, severity, defensive action and reasoning traps. Three tested
-VLMs approximately match a majority-class baseline on binary hazard
-presence, while fine-grained action/timing results are poor.
-Geography-specific evaluation can expose failure hidden by a coarse
-accuracy score. This is a diagnostic study, not evidence about every
-driving model. <a
-href="https://arxiv.org/abs/2610.20627">Benchmark</a></p>
+<p><strong>October 14 catch-up · Orbia.</strong> The benchmark uses 720
+cases and six exploration/revisit protocols to test input preservation,
+persistence of generated content and 3D self-consistency across 27
+models. It combines RGB-D references, anchors and cross-view checks. A
+plausible individual frame is insufficient evidence of a usable
+persistent world. <a
+href="https://arxiv.org/abs/2610.20693">Paper</a></p>
+<p><strong>October 14–15 catch-up · labels for change and
+coverage.</strong> <a href="https://arxiv.org/abs/2610.21306">VLA-Δ</a>
+derives semantic and motion-change supervision for pretraining, then
+executes without an extra inference stage. <a
+href="https://arxiv.org/abs/2610.21007">Mind the Tail</a> selects images
+using sparse-concept coverage to strengthen underrepresented concepts.
+The latter is an image-learning study, not direct proof of robot-task
+improvements from a particular vendor’s data.</p>
+<p>Searches covering Scale, Mercor, Surge, Labelbox, Snorkel, Sama,
+iMerit, Invisible and Centific mainly returned older releases, general
+services and non-robotics work; no additional fresh robotics supplier
+tender was verified. Coverage is partial. Vision Lab’s industrial
+SOP/annotation model is described in the opportunity section as a
+prospect, not a confirmed buyer.</p>
 </section>
 <section id="embedded-ai-systems" class="level3">
 <h3>Embedded AI systems</h3>
-<p><strong>October 14 catch-up · inference scheduling on
-Jetson.</strong> PICES chooses both an action chunk and its execution
-horizon using sensitivity to sampled perturbations. The authors report
-up to 2.3× faster wall-clock policy inference on Orin/Thor relative to
-fixed-horizon baselines, with improved success on tested tasks. That is
-not a 2.3× speedup for an entire production workflow. <a
-href="https://arxiv.org/abs/2610.19656">Paper</a></p>
-<p><strong>Newly discovered · Plim’s published hardware.</strong> The
-product page specifies Jetson Thor, ROS2, edge-plus-cloud processing,
-stereo RGB/depth, fisheye RGB and a wheeled base. It lists a two-hour
-battery runtime with self-docking. Its 24/7 assistance language does not
-mean 24 hours on one charge. Original page date is not displayed;
-checked October 18. <a
-href="https://plim.com/meet-plim">Specifications</a></p>
+<p><strong>October 9 catch-up, revised listing · EV-JEPA.</strong> A
+single trained V-JEPA supports variable width and split execution across
+devices, including narrow-to-wide processing. Authors report accuracy
+close to separately trained baselines; the result concerns
+representation inference, not measured production robot latency on every
+device. <a href="https://arxiv.org/abs/2610.14324">Paper</a></p>
+<p><strong>October 14 catch-up · CF-Prune.</strong> Training-free
+future-token pruning retains dense computation during precision phases.
+At 35% pruning, authors report 1.19–1.27× average inference speedups;
+more aggressive results are simulation-specific. Policy inference speed
+is not total job throughput. <a
+href="https://arxiv.org/abs/2610.19957">Paper</a></p>
+<p>NVIDIA/Jetson, Qualcomm, AMD and Hailo checks did not verify an
+additional fresh onboard-chip release. Previously covered announcements
+are not counted again; original regional hardware coverage remains
+incomplete.</p>
 </section>
 <section id="robotics-humanoids" class="level3">
 <h3>Robotics &amp; humanoids</h3>
-<p><strong>Reported October 17; primary pages undated · Devanthro
-becomes Plim Robotics.</strong> The company confirms the rebrand. Its
-household robot combines proposed autonomous assistance with remote
-step-in operation by family, friends or caregivers. Public pages invite
-interest but do not disclose price, delivery date, task success or
-intervention frequency. Those omissions prevent interpreting the reveal
-as proven household autonomy. <a
-href="https://www.devanthro.com/devanthro-is-now-plim-robotics/">Company
-announcement</a> · <a href="https://plim.com/meet-plim">Product</a> · <a
-href="https://www.humanoidsdaily.com/news/devanthro-plim-robotics-home-robot-teleoperation">Dated
-reporting</a></p>
-<p><strong>October 17 · UT Austin HCRL introduces Roboto
-Origin.</strong> The lab describes a student-built open-source humanoid
-ready for research and links a build video. The short announcement does
-not link a repository or licence, so the release’s completeness and
-reuse terms remain to be checked. <a
-href="https://sites.utexas.edu/hcrl/2026/10/17/from-airplanes-to-open-source-humanoids-diy-at-hcrl/">Lab
-announcement</a></p>
-<p><strong>October 15 catch-up · greenhouse sim-to-real.</strong>
-PSA-PPO transfers from Isaac Lab to UR10e without real policy
-fine-tuning. The paper distinguishes 94.7% reaching over 150 controlled
-targets from 86.1% complete harvest success over 144 greenhouse
-attempts. Reaching a crop and completing the job are different outcomes.
-<a href="https://arxiv.org/abs/2610.22337">Paper</a></p>
+<p><strong>October 18–21 event · FANUC PACK Expo
+demonstrations.</strong> The official programme describes
+spoken-instruction robot operation, vision/barcode package verification,
+coordinated picking/label verification/packing/palletizing, and
+food-grade handling. These are an announced demonstration lineup, not
+independently measured customer throughput or a new general-purpose
+autonomy benchmark. Publication date is not displayed; checked October
+19. <a
+href="https://www.fanucamerica.com/events/pack-expo-2026">Official
+event/application page</a></p>
+<p><strong>October 15 catch-up · active observation.</strong> <a
+href="https://arxiv.org/abs/2610.21783">ACT3D</a> learns when to move
+the viewpoint to answer a spatial question; <a
+href="https://arxiv.org/abs/2610.21999">VP-EVT</a> explicitly plans to
+preserve visibility of a followed person. Their
+rendered-environment/benchmark results do not establish general
+real-world tracking reliability.</p>
+<p>Weekend Digit 5 charging coverage repeats the October 15 announcement
+already covered on October 16. Atlas assembly-time reporting was
+discovered, but its original video could not be fetched; no new
+quantitative manufacturing claim is adopted here.</p>
+</section>
+<section id="world-models-sim-to-real" class="level3">
+<h3>World models &amp; sim-to-real</h3>
+<p><strong>October 12–15 catch-up · learning dynamics and actions
+together.</strong> <a href="https://arxiv.org/abs/2610.21095">OneWM</a>
+tests reciprocal benefits between action generation and
+action-conditioned world prediction using a shared architecture. <a
+href="https://arxiv.org/abs/2610.16443">RAP-WAM</a> uses predictive
+rehearsal and action perturbations to direct supervision. Its reported
+89% macro-average across 15 real tasks must not be conflated with 15.62%
+success on its different 42-task RoboDojo setting.</p>
+<p><a href="https://arxiv.org/abs/2610.20731">WorldCast</a> tests
+multi-step visual state prediction; <a
+href="https://arxiv.org/abs/2610.22341">3DCodeVerse</a> creates
+executable, checkable 3D code; <a
+href="https://arxiv.org/abs/2610.22356">DK-VLM</a> puts estimated
+geometry directly into attention. These tackle different evaluation
+problems and should not be ranked on a shared headline score. Google’s
+Argon examples were covered October 16 and are not repeated as fresh
+news.</p>
 </section>
 <section id="india-sea-spotlight" class="level3">
 <h3>India &amp; SEA spotlight</h3>
-<p><strong>October 13 catch-up · YYForce / Novotel and Mercure Singapore
-on Stevens.</strong> The agreement spans the 772-room precinct. Initial
-delivery, cleaning, logistics and concierge robots require lift/network
-integration and route mapping; the release explicitly says deployment
-has <strong>not begun</strong>. A separate proposed humanoid phase uses
-selected housekeeping and banquet workflows under permitted observation
-and agreed data-use terms. Roughly 10% lower costs are a pre-deployment
-model, not achieved savings. This is a named operating-site partnership,
-not an open data-vendor tender. <a
-href="https://www.globenewswire.com/news-release/2026/10/13/3380142/0/en/yyforce-brings-humanoid-robots-to-hospitality-in-landmark-partnership-with-novotel-mercure-singapore-on-stevens.html">Original
-announcement and annexes</a></p>
-<p>No additional India-specific development was verified in this pass.
-The Bangladesh benchmark above is a South Asia research item, not an
-India deployment. Regional and institutional coverage remains
-partial.</p>
+<p>Jupiter’s Indian offices and Vxible’s Jaipur address do not establish
+India eligibility for their collection requests. Searches across
+regional startups, IIT/IISc, India and Singapore sources did not verify
+another fresh India/SEA financing or institutional robotics announcement
+in this pass. Regional coverage remains partial, not evidence of no
+activity. FAIRINO’s reported plans for Southeast Asia are covered below;
+no local orders are inferred.</p>
 </section>
 <section id="china-spotlight" class="level3">
 <h3>China spotlight</h3>
-<p><strong>Newly discovered · Unitree UniUni.</strong> The official
-desktop application page describes H2/G1 multi-robot choreography on
-Windows/macOS: 2D/3D trajectory editing, timelines, point-cloud maps,
-motion libraries, monitoring and emergency stops. Natural-language
-instructions generate trajectories and select actions for operator
-refinement. This is a fleet-performance authoring tool; it does not by
-itself demonstrate general multi-robot industrial autonomy. Page
-publication date unknown, checked October 18; public search recovered
-the original site’s text after direct extraction was empty. <a
-href="https://uniuni.unitree.com/">Official product page</a></p>
-<p>The reported Winverse financing below is dated October 12 and remains
-unfinalized. No extra China funding claim is promoted from an
-unsupported headline.</p>
+<p><strong>October 14 event, reported October 17 · FAIRINO /
+Schmalz.</strong> Gasgoo reports a global cooperation agreement focused
+on cobot handling applications, standardized solutions and coordinated
+sales, with further China/SEA expansion planned. This is a reported
+ecosystem agreement, not a quantified deployment or data-procurement
+order. The direct original company agreement was not recovered;
+unsupported shipment forecasts are omitted. <a
+href="https://autonews.gasgoo.com/articles/icv/fairino-and-schmalz-sign-global-ecosystem-strategic-partnership-agreement-2111351395692728321">Dated
+reporting</a></p>
+<p>The new Egocentric Video partner route is described above with an
+unresolved contracting identity. China company, native-language and
+paywalled coverage is incomplete; no funding rumour is treated as a
+closed round.</p>
 </section>
 <section id="twitter-x-signal" class="level3">
 <h3>Twitter / X signal</h3>
-<p><strong>Coverage gap today.</strong> Logged-in Chrome was
-unavailable; only the in-app browser and app panels were exposed. Dated
-public fallback searches covered DrJimFan, tonyzzhao, physical_int,
-adcock_brett, svlevine, chelseabfinn, pabbeel, kkitani, JitendraMalikCV,
-Figure_robot, 1x_tech and ericjang11, but results were uninformative.
-Direct PI/DeepMind/Hugging Face/MIT and company/lab pages supplemented
-research. No new X claim is inferred from an unsuccessful search;
-yesterday’s ASPIRE and supervised-play posts are not repeated.</p>
+<p>Only the in-app browser and app panels were exposed; no logged-in
+Chrome browser was available. Dated public searches covered DrJimFan,
+tonyzzhao, physical_int, adcock_brett, svlevine, chelseabfinn, pabbeel,
+kkitani, JitendraMalikCV, Figure_robot, 1x_tech and ericjang11. Results
+were uninformative support pages. <strong>No new substantive X signal
+was verified; this is a coverage gap, not a complete timeline
+sweep.</strong> Direct PI, DeepMind, NVIDIA, Hugging Face, MIT and
+original paper checks supplied fallback research. Monday source review
+adds the new company/partner sources, but no unverified X handle.</p>
 </section>
 <section id="research-papers-worth-a-look" class="level3">
 <h3>Research papers worth a look</h3>
-<p><strong>13 newly added preprints</strong>, first submitted September
-28–October 15, recovered from the accessible October 16 listings. All
-are catch-up discoveries; revised entries retain their original
-submission date. Results below are author-reported, not reproduced.
-Original abstracts were read; full-paper and code audits were not
-performed.</p>
+<p><strong>13 additional preprints</strong>, original submissions
+October 9–15, recovered from the accessible October 16 listings.
+Original abstracts and submission histories were read; results were not
+reproduced, and full-paper/code audits were not performed.</p>
 <table>
 <colgroup>
 <col style="width: 33%" />
@@ -1276,146 +1311,143 @@ performed.</p>
 <tr>
 <th>Original date</th>
 <th>Paper</th>
-<th>Contribution and practical limit</th>
+<th>Contribution and limit</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>2026-09-28</td>
-<td><a href="https://arxiv.org/abs/2610.20627">BD-HazardVLM: Probing
-Vision-Language Models for Latent Defensive-Driving Hazards in
-Bangladesh Road Scenes</a></td>
-<td>500 Bangladesh road images expose weak fine-grained hazard reasoning
-despite near-baseline binary accuracy; only three VLMs tested.</td>
-</tr>
-<tr>
-<td>2026-10-15</td>
-<td><a href="https://arxiv.org/abs/2610.21086">RoPE-Flow: Monocular
-Vision-based Robot Pose Estimation via 2D Graph-Conditioned 3D Flow
-Matching</a></td>
-<td>Monocular camera-to-robot pose estimation uses keypoint graphs and
-flow matching; adds a cross-scene benchmark, not a universal calibration
-guarantee.</td>
-</tr>
-<tr>
-<td>2026-10-11</td>
-<td><a href="https://arxiv.org/abs/2610.15305">RM-WAM: Reliable
-Memory-Augmented World Action Models for Long-Horizon Robot
-Manipulation</a></td>
-<td>Selectively gates short-term visual and latent-event memory to avoid
-stale history in long-horizon world-action prediction; no broad
-deployment claim.</td>
-</tr>
-<tr>
-<td>2026-10-13</td>
-<td><a href="https://arxiv.org/abs/2610.19089">DexMimic: A Generalist
-Dexterous Hand-Object Tracking Policy via Value-Guided Reset
-Allocation</a></td>
-<td>Generalist hand-object tracking allocates resets to difficult phases
-and useful states; includes real hardware validation but not arbitrary
-dexterity.</td>
+<td>2026-10-14</td>
+<td><a href="https://arxiv.org/abs/2610.20693">Orbia: Do Generated
+Videos Form a Consistent 3D World?</a></td>
+<td>720 cases evaluate persistent 3D consistency across 27 world models;
+visual plausibility alone is insufficient.</td>
 </tr>
 <tr>
 <td>2026-10-14</td>
-<td><a href="https://arxiv.org/abs/2610.19656">Accelerating VLA
-Inference with Perturbation Informed Execution</a></td>
-<td>PICES adapts action execution horizons without training; up to 2.3×
-inference-time speedup on Orin/Thor in tested settings, not total
-workflow throughput.</td>
+<td><a href="https://arxiv.org/abs/2610.20731">WorldCast: Exploring
+Intelligent Visual Generation in World State Prediction</a></td>
+<td>320 manually designed cases test multi-step visual state prediction
+across 12 models; scores are not robot success rates.</td>
 </tr>
 <tr>
 <td>2026-10-14</td>
-<td><a href="https://arxiv.org/abs/2610.19815">Learning from
-Demonstrations meets Symbolic Control - A Supervisory Control
-Architecture for Formal Certification of Learned Motion</a></td>
-<td>A symbolic supervisor backs up learned motion using robot dynamics;
-guarantees depend on the modeled system and constraints, not a product
-safety certification.</td>
+<td><a href="https://arxiv.org/abs/2610.21007">Mind the Tail: Data
+Selection Through Sparse Concepts</a></td>
+<td>Sparse-concept coverage guides image selection toward reliable tail
+concepts; robot-policy transfer is not tested here.</td>
+</tr>
+<tr>
+<td>2026-10-15</td>
+<td><a href="https://arxiv.org/abs/2610.21090">RoboCloth: A Large-Scale
+Real Cloth Material Dataset for Neural Reflectance
+Reconstruction</a></td>
+<td>500 cloth materials with roughly 580 calibrated HDR captures each;
+reflectance data rather than manipulation trajectories.</td>
+</tr>
+<tr>
+<td>2026-10-15</td>
+<td><a href="https://arxiv.org/abs/2610.21095">Can World and Action
+Modeling Benefit Each Other under Unified Causal Training?</a></td>
+<td>OneWM jointly learns actions and their visual consequences; reports
+reciprocal benefits on benchmarks and limited real tasks.</td>
+</tr>
+<tr>
+<td>2026-10-15</td>
+<td><a href="https://arxiv.org/abs/2610.21306">VLA-Δ: Learning Physical
+State Transition for Vision-Language-Action Models</a></td>
+<td>VLA-Δ uses semantic and visual state-change supervision during
+training without an added inference stage.</td>
+</tr>
+<tr>
+<td>2026-10-15</td>
+<td><a href="https://arxiv.org/abs/2610.21783">Learning to Think and
+Explore in 3D World</a></td>
+<td>ACT3D learns question-conditioned active views on six 3D benchmarks;
+does not establish physical deployment reliability.</td>
+</tr>
+<tr>
+<td>2026-10-15</td>
+<td><a href="https://arxiv.org/abs/2610.22341">3DCodeVerse: Exploring 3D
+Worlds as Code</a></td>
+<td>Executable 3D code corpus and verification harness support editable
+scene generation; preference wins are not physics validation.</td>
+</tr>
+<tr>
+<td>2026-10-15</td>
+<td><a href="https://arxiv.org/abs/2610.22356">DK-VLM: Geometry as
+Position for Spatial Reasoning in Vision-Language Models</a></td>
+<td>DK-VLM uses geometric attention and reference-frame supervision for
+spatial reasoning; results are benchmark-specific.</td>
 </tr>
 <tr>
 <td>2026-10-14</td>
-<td><a href="https://arxiv.org/abs/2610.20866">SHRED: Self-Play for
-Heterogeneous Road-Users without Expert Demonstrations</a></td>
-<td>Procedural self-play trains vehicles, pedestrians and cyclists
-without logged demonstrations; evaluated on driving simulation
-benchmarks, not public-road deployment.</td>
+<td><a href="https://arxiv.org/abs/2610.19957">Complementary Future
+Token Pruning for World Action Models</a></td>
+<td>CF-Prune retains dense computation during precision phases; reported
+inference gains do not imply equivalent workflow speedup.</td>
+</tr>
+<tr>
+<td>2026-10-12</td>
+<td><a href="https://arxiv.org/abs/2610.16443">RAP-WAM: Learning
+World-Action Models through Predictive Rehearsal and Action
+Perturbations</a></td>
+<td>RAP-WAM guides learning with rehearsal and action perturbations;
+real-task and RoboDojo success measure different task sets.</td>
+</tr>
+<tr>
+<td>2026-10-09</td>
+<td><a href="https://arxiv.org/abs/2610.14324">EV-JEPA: Elastic V-JEPA
+for Any Device and Cross-Device Inference</a></td>
+<td>EV-JEPA supports variable-width and split-device representation
+inference; hardware-specific production latency remains unverified.</td>
 </tr>
 <tr>
 <td>2026-10-15</td>
-<td><a href="https://arxiv.org/abs/2610.21630">Local Temporal Contrasts
-on Human Motion Data Induce a Latent Geometry</a></td>
-<td>Temporal contrastive representations preserve motion-sequence
-structure and improve truncated-sequence discrimination; evidence is a
-five-step motion task.</td>
-</tr>
-<tr>
-<td>2026-10-15</td>
-<td><a href="https://arxiv.org/abs/2610.21140">Manifold Generative
-Annealing for Contact Constraint-aware Impedance Control with
-Reinforcement Learning Prior</a></td>
-<td>RL priors guide online motion/impedance optimization under changing
-contact conditions; tested on scanning, insertion and pushing, not
-unrestricted safety.</td>
-</tr>
-<tr>
-<td>2026-10-15</td>
-<td><a href="https://arxiv.org/abs/2610.21239">CLIS-MPPI: Closed-Loop
-Model Predictive Path Integral Control With Initial-State Sampling Under
-Execution Delay</a></td>
-<td>Models planning delay as uncertainty in the execution state; five
-UR5e narrow-passage runs had no collision, a small study rather than a
-safety guarantee.</td>
-</tr>
-<tr>
-<td>2026-10-15</td>
-<td><a href="https://arxiv.org/abs/2610.21619">Training-Free
-Target-Aware Refinement of 3D Gaussian Language Map</a></td>
-<td>Training-free target refinement improves language maps and includes
-legged-robot navigation; results remain benchmark/task-specific.</td>
-</tr>
-<tr>
-<td>2026-10-15</td>
-<td><a href="https://arxiv.org/abs/2610.21984">GRID-Planner:
-Graph-Structured Relational Reward Shaping for Diffusion
-Planning</a></td>
-<td>Relational reward shaping improves diffusion planning on
-nuPlan/interPlan; reported collision reduction concerns benchmark
-rollouts.</td>
-</tr>
-<tr>
-<td>2026-10-15</td>
-<td><a href="https://arxiv.org/abs/2610.22337">Sim-to-Real Reinforcement
-Learning for Path-Safe Target Reaching in Robotic Harvesting of
-Hydroponic Lettuce</a></td>
-<td>Isaac Lab policy transfers to UR10e; 94.7% controlled target
-reaching and 86.1% full greenhouse harvest success measure different
-outcomes.</td>
+<td><a href="https://arxiv.org/abs/2610.21999">VP-EVT: Active Visibility
+Preservation for Embodied Visual Tracking</a></td>
+<td>VP-EVT plans visibility preservation for visual following; benchmark
+gains should not be generalized to unrestricted environments.</td>
 </tr>
 </tbody>
 </table>
+<p>The library adds <strong>20 records: 13 preprints and seven company,
+technical or institutional records</strong>, reaching
+<strong>1,022</strong>. All 1,002 earlier entries are preserved.</p>
 </section>
 <section id="money-moves" class="level3">
 <h3>Money &amp; moves</h3>
-<p><strong>October 12 catch-up · reported Winverse AI seed
-round.</strong> Bloomberg reporting, summarized by Investing.com, says
-DeepSeek agreed to lead a round of tens of millions of dollars at an
-approximately $400M post-money valuation. The report says the
-transaction is <strong>not finalized</strong>, and terms may change.
-$400M is the reported valuation, not the amount raised. Founder Hu Han
-previously led Tencent vision-language and embodied-model work. No
-company/investor closing confirmation was recovered. <a
-href="https://www.investing.com/news/stock-market-news/deepseek-backs-extencent-scientists-robotics-startup-winverse-ai--bloomberg-93CH-4944424">Reported
-deal</a></p>
-<p><strong>Coverage and method:</strong> Required Reddit communities and
-site-wide requests, public LinkedIn/X, YC/Hacker News, direct supplier
-routes and collection/marketplace boards were checked. Original Reddit
-posts support the existence of the requests, not buyer authority or
-payment reliability. Parallel search lacked credit; public-web and
-direct-page fallbacks supplied research. Defined.ai and OneForma agency
-pages were recovered through public-web fallback; Rover remained
-unavailable, YC’s launch index was thin, and marketplace/social access
-was partial. Institutional, India/SEA and China coverage is incomplete.
-No outreach, applications, signups or project commitments were made.</p>
+<p><strong>October 13 catch-up · Symbotic acquires cellumation.</strong>
+The company confirms acquisition of the Bremen sortation business;
+cellumation retains its name, headquarters and founders, serving other
+customers as well as supplying Symbotic systems. The transaction price
+is not disclosed. Expected density/throughput gains are company claims,
+not independently measured results in this briefing. <a
+href="https://www.symbotic.com/news/symbotic-announces-acquisition-of-cellumation-advancing-next-generation-sortation-technology-for-the-global-supply-chain/">Original
+release</a></p>
+<p><strong>October 14 catch-up · EIB / Fugro.</strong> A signed
+<strong>€150M lending agreement</strong>, not equity funding, supports
+remote survey operations, underwater robotics R&amp;D and up to 25 new
+remotely operated surface vessels. This is a phased programme ceiling,
+not evidence that 25 vessels are already delivered. It illustrates
+adjacent data-collection demand but does not invite outside egocentric
+vendors. <a
+href="https://www.eib.org/en/press/all/2026-335-eib-boosts-sustainable-development-of-geo-data-experts-fugro">EIB
+release</a></p>
+</section>
+<section id="coverage-and-sources" class="level3">
+<h3>Coverage and sources</h3>
+<p>Primary and dated secondary sources are linked inline; source-access
+and check records are retained locally. Parallel search lacked credit;
+built-in web and direct-page reads supplied the fallback. OneForma
+agency and Defined.ai required public-web fallback. Rover/jobs pages,
+some social originals, X and YC’s launch index were unavailable or thin.
+Egocentric Video’s form was readable directly after web-tool failure; no
+form was submitted. CSIRO and Gasgoo were recovered with direct reads
+after intermittent web timeouts. Institutional, regional and
+native-language coverage remains incomplete.</p>
+<p>Newly discovered partner routes and public requests are not verified
+contracts. No outreach, applications, signups or project commitments
+were made. Private qualification is kept outside the public site.</p>
 </section>
 </section>
   </main>

@@ -8,6 +8,19 @@ Accounts, researchers, and companies found during daily runs that are worth addi
 
 
 
+## Monday source review and daily checks · October 19, 2026
+
+New public sources, first seen/checked October 19; no new verified X handle:
+
+- [Jupiter AI Labs company feed](https://ca.linkedin.com/company/jupiter-ai-labs): explicit agency request with stereo/IMU/MCAP specifications; exact post date unresolved and current funded allocation unverified. [Official business site](https://jupiterailabs.com/) provides a general contact route.
+- [Vxible Consulting Group](https://in.linkedin.com/company/vxibleconsultinggroup): older ego-plus-narration vendor-team invitation; exact date/current assignment unresolved.
+- [Egocentric Video](https://egocentric.video/) and [partner form](https://egocentric.video/partnership): undated regional-operator intake; contracting identity and actual buyer allocation unresolved.
+- [Vision Lab YC company page](https://www.ycombinator.com/companies/vision-lab): undated industrial data partnership prospect. Manufacturers/labs invited; agency intake or commissioned order not established.
+
+Required daily sweep covered Reddit r/robotics, r/datasets, r/computervision, r/MachineLearning and site-wide; public LinkedIn/X and YC/HN; DeepReach, Praxis, Defined.ai, Avala, Kuinbee; DataForce/OneForma and robotics marketplaces. Previous Asylic/anonymous ego requests deduplicated. Direct Defined.ai/OneForma errors recovered by web fallback; Rover/jobs unavailable. DataForce Viola remains individual participation. Kinetic three non-binding interest cards unchanged; Robotics Center readable and Opendatabay thin. No additional verified allocated work or urgent calendar deadline.
+
+Only in-app browser/app panels exposed, no logged-in Chrome. Twelve-handle X fallback yielded uninformative results; no complete timeline sweep claimed. Parallel lacked credit; primary/web fallback used. Social, original-post, India/SEA/China and some institutional/project-board coverage remains partial. Initial 30-day backfill completed September 24; full weekly programme review October 15, next October 22. No outreach, applications, signups or commitments. Requirements and missing terms: [October 19 briefing](days/2026-10-19.html).
+
 ## Daily source checks · October 18, 2026
 
 - Required Reddit r/robotics,r/datasets,r/computervision,r/MachineLearning and site-wide searches completed. Original [Asylic agency request](https://www.reddit.com/r/B2BForHire/comments/1x6hymv/hiring_skilled_workers_and_vendor_partners_for_ai/) datedOctober 15 and [anonymous ego-dataset request](https://www.reddit.com/r/datasets/comments/1x73m26/looking_for_egocentric_video_data_to_train/) datedOctober 16 read. Corporate mandate/current allocations unverified; Asylic regional rates are indicative accepted-hour rates, India not listed. Cross-posts deduplicated.

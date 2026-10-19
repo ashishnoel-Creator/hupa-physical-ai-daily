@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-19",
+      "slug": "2026-10-19",
+      "title": "Monday, October 19, 2026",
+      "tldr": [
+        "**A concrete agency specification:** Jupiter AI Labs requests 1,000 accepted hours of commercial stereo egocentric video across Africa, LATAM and Eastern Europe. It asks agencies to propose an accepted-hour price; current allocation and funded milestones remain unverified. Company request",
+        "**Useful data needs more than footage.** RoboCloth adds calibrated material capture; Orbia evaluates persistent 3D consistency; VLA-Δ supervises physical state changes. These are dated research catch-up, not October 19 releases.",
+        "**Industrial robotics gains infrastructure and financing:** Symbotic confirms its cellumation acquisition, while the EIB signs €150M of lending for Fugro's remote survey fleet. Neither is an external data-collection tender. Symbotic, October 13 · EIB, October 14"
+      ]
+    },
+    {
       "date": "2026-10-18",
       "slug": "2026-10-18",
       "title": "Sunday, October 18, 2026",
@@ -982,6 +992,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1002,
-  "updated_at": "2026-10-18T03:22:26Z"
+  "papers_count": 1022,
+  "updated_at": "2026-10-19T01:40:33Z"
 }
