@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-21",
+      "slug": "2026-10-21",
+      "title": "Wednesday, October 21, 2026",
+      "tldr": [
+        "**India collection-partner prospect:** Aktoria's company-authored operations role explicitly describes onboarding and running egocentric collection partners across India. This is procurement intelligence, with no public agency rate or commissioned allocation. Original role",
+        "**NVIDIA opens Flora's annotation models, with a commercial-use limit.** The suite supplies captions and reward labels; NVIDIA reports large cost savings. The Captioner card restricts use to non-commercial R&D, so open weights do not establish permission for a paid annotation service. Project · Model card",
+        "**Capital and real-world infrastructure expand:** Eka announces a $150M Series A; Schaeffler opens a Taicang factory combining component assembly, robot training and data acquisition. Neither announcement is an external collection order. Eka · Schaeffler"
+      ]
+    },
+    {
       "date": "2026-10-19",
       "slug": "2026-10-19",
       "title": "Monday, October 19, 2026",
@@ -992,6 +1002,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1022,
-  "updated_at": "2026-10-19T01:40:33Z"
+  "papers_count": 1074,
+  "updated_at": "2026-10-21T06:18:05Z"
 }

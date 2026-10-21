@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HuPa Physical AI Daily — Signal Digest</title>
+<meta name="description" content="HuPa daily intelligence digest on Physical AI: data, annotation, embedded systems, robotics, humanoids. Signal only.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1A2D5C;        /* deep indigo - primary */
+  --ink-2: #4A4438;      /* warm body text */
+  --mute: #7A7466;       /* warm muted */
+  --mute-2: #9A958C;     /* lighter muted */
+  --paper: #F8F3E9;      /* warm cream background */
+  --paper-2: #F0EBDF;    /* warmer card */
+  --paper-3: #EAE2D0;    /* slightly stronger */
+  --hair: rgba(26, 45, 92, 0.12);
+  --hair-strong: rgba(26, 45, 92, 0.22);
+  --amber: #F4A300;      /* HuPa saffron */
+  --amber-soft: rgba(244, 163, 0, 0.12);
+  --amber-strong: rgba(244, 163, 0, 0.22);
+  --green: #0F5132;
+  --red: #B7402A;
+
+  --sidebar-w: 232px;
+  --header-h: 56px;
+  --content-w: 820px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  background: var(--paper);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink-2);
+  font-family: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16.5px;
+  line-height: 1.7;
+  font-feature-settings: "kern" 1, "liga" 1, "ss01" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Progress bar */
+.progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: transparent;
+  z-index: 200;
+}
+.progress-bar {
+  height: 100%;
+  background: var(--amber);
+  width: 0;
+  transition: width 0.08s linear;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-w);
+  right: 0;
+  height: var(--header-h);
+  background: rgba(248, 243, 233, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--hair);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 36px;
+}
+.header-meta {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mute);
+}
+.header-meta b {
+  color: var(--ink);
+  font-weight: 600;
+}
+.header-meta i {
+  color: var(--amber);
+  font-style: normal;
+  padding: 0 4px;
+}
+.pdf-btn {
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--ink);
+  padding: 9px 16px;
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 0;
+  text-decoration: none;
+}
+.pdf-btn:hover {
+  background: var(--amber);
+  color: var(--ink);
+  border-color: var(--amber);
+}
+.pdf-btn.outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--hair-strong);
+}
+.pdf-btn.outline:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.pdf-btn svg {
+  width: 13px; height: 13px;
+  stroke-width: 1.6;
+}
+.header-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Layout */
+.layout {
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 28px 22px 28px 28px;
+  border-right: 1px solid var(--hair);
+  overflow-y: auto;
+  background: var(--paper);
+}
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-track { background: transparent; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--hair-strong); border-radius: 2px; }
+
+.brand-mark {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.18em;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.brand-mark span {
+  color: var(--amber);
+  padding: 0 2px;
+}
+.brand-sub {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--mute);
+  margin-bottom: 36px;
+}
+
+/* Site nav (rendered from manifest.json by _sidebar.js) */
+.sitenav { margin-bottom: 24px; }
+.sitenav-block { margin-bottom: 16px; }
+.sitenav-label {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--mute);
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--hair);
+}
+.sitenav-label .count {
+  font-weight: 500;
+  color: var(--mute-2);
+  margin-left: 4px;
+}
+.sitenav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.sitenav-list > li { margin-bottom: 3px; }
+.sitenav-list a {
+  display: block;
+  color: var(--ink-2);
+  text-decoration: none;
+  padding: 4px 8px;
+  border-left: 2px solid transparent;
+  transition: all 0.12s ease;
+}
+.sitenav-list a:hover { background: var(--paper-2); color: var(--ink); }
+.sitenav-list a.active {
+  background: var(--amber-soft);
+  color: var(--ink);
+  border-left-color: var(--amber);
+  font-weight: 500;
+}
+.sitenav-list .count {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px;
+  color: var(--mute-2);
+  margin-left: 4px;
+}
+.sitenav-list details { margin: 0; }
+.sitenav-list summary {
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 12.5px;
+  color: var(--ink);
+  font-weight: 500;
+  list-style: none;
+  user-select: none;
+  border-left: 2px solid transparent;
+}
+.sitenav-list summary::-webkit-details-marker { display: none; }
+.sitenav-list summary::before {
+  content: '▸';
+  color: var(--mute-2);
+  font-size: 9px;
+  margin-right: 6px;
+  transition: transform 0.12s ease;
+  display: inline-block;
+}
+.sitenav-list details[open] > summary::before { transform: rotate(90deg); }
+.sitenav-list summary:hover { background: var(--paper-2); }
+.sitenav-list ul.sub {
+  list-style: none;
+  padding: 2px 0 4px 14px;
+  margin: 0;
+  border-left: 1px solid var(--hair);
+  margin-left: 12px;
+}
+.sitenav-list ul.sub a { font-size: 12.5px; padding: 3px 8px; }
+.day-item .day-date {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 11.5px;
+}
+.sitenav-list li.muted span {
+  display: block;
+  padding: 4px 8px;
+  color: var(--mute);
+  font-size: 12.5px;
+}
+.sitenav-list li.muted small { color: var(--mute-2); font-size: 10.5px; }
+
+#sitenavSearch {
+  width: 100%;
+  font-family: 'Geist', sans-serif;
+  font-size: 12.5px;
+  padding: 6px 8px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--hair-strong);
+  border-radius: 0;
+  outline: none;
+}
+#sitenavSearch:focus { border-color: var(--ink); }
+.search-results { margin-top: 8px; max-height: 280px; overflow-y: auto; }
+.search-hit {
+  display: block;
+  padding: 6px 8px;
+  margin-bottom: 4px;
+  text-decoration: none;
+  color: var(--ink-2);
+  border-left: 2px solid var(--hair);
+  background: var(--paper-2);
+  transition: all 0.1s ease;
+}
+.search-hit:hover { border-left-color: var(--amber); background: var(--paper-3); }
+.search-hit .hit-date {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10.5px;
+  color: var(--mute);
+  margin-bottom: 2px;
+}
+.search-hit .hit-snippet { font-size: 12px; line-height: 1.35; color: var(--ink-2); }
+.search-empty { padding: 6px 8px; color: var(--mute); font-size: 12px; }
+.sitenav-error { padding: 8px; color: var(--red); font-size: 12px; }
+
+.toc-label {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--mute);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--hair);
+}
+
+.toc nav ul {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.toc > nav > ul > li {
+  margin-bottom: 1px;
+}
+
+.toc a {
+  display: block;
+  font-family: 'Geist', sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: var(--ink-2);
+  text-decoration: none;
+  padding: 6px 8px 6px 10px;
+  border-left: 2px solid transparent;
+  border-bottom: none;
+  transition: all 0.12s ease;
+  line-height: 1.35;
+}
+.toc a:hover {
+  color: var(--ink);
+  background: var(--paper-2);
+}
+.toc a.active {
+  color: var(--ink);
+  border-left-color: var(--amber);
+  background: var(--amber-soft);
+  font-weight: 500;
+}
+
+/* Sub-list — collapsed by default, expand only under active parent */
+.toc > nav > ul > li > ul {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.28s ease, margin 0.28s ease;
+  margin: 0;
+  padding-left: 14px;
+  border-left: 1px solid var(--hair);
+  margin-left: 6px;
+}
+.toc > nav > ul > li.active > ul,
+.toc > nav > ul > li:hover > ul {
+  max-height: 800px;
+  margin-top: 2px;
+  margin-bottom: 8px;
+}
+.toc ul ul a {
+  font-size: 12px;
+  color: var(--mute);
+  padding: 4px 8px 4px 10px;
+  font-weight: 400;
+}
+.toc ul ul a:hover {
+  color: var(--ink-2);
+  background: transparent;
+}
+.toc ul ul a.active {
+  color: var(--ink);
+  background: transparent;
+  border-left-color: var(--amber);
+  font-weight: 500;
+}
+
+/* Main */
+.main-wrap {
+  padding-top: var(--header-h);
+}
+.main {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 56px 40px 120px;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin: 0 0 24px;
+}
+h1 + p {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 11.5px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mute);
+  line-height: 1.9;
+  margin-bottom: 8px;
+}
+h1 + p strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+h2 {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 72px 0 24px;
+  padding-top: 36px;
+  border-top: 1px solid var(--hair);
+  scroll-margin-top: 80px;
+}
+
+h3 {
+  font-family: 'Geist', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 44px 0 14px;
+  scroll-margin-top: 80px;
+}
+
+h4 {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin: 28px 0 10px;
+}
+
+p {
+  margin-bottom: 18px;
+  color: var(--ink-2);
+}
+
+p > strong:first-child {
+  color: var(--ink);
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+}
+
+strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+em {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink);
+  font-size: 1.08em;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--amber);
+  transition: all 0.12s;
+  padding-bottom: 1px;
+}
+a:hover {
+  color: var(--amber);
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 24px;
+  margin: 0 0 22px;
+}
+ul li, ol li {
+  margin-bottom: 8px;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+ul li::marker {
+  color: var(--amber);
+}
+ol li::marker {
+  color: var(--amber);
+  font-family: 'Geist Mono', monospace;
+  font-weight: 500;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 28px 0 32px;
+  font-family: 'Geist', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.5;
+  background: var(--paper);
+  border: 1px solid var(--hair-strong);
+}
+thead {
+  background: var(--paper-2);
+  border-bottom: 1.5px solid var(--ink);
+}
+th {
+  text-align: left;
+  padding: 11px 13px;
+  color: var(--ink);
+  font-family: 'Geist Mono', monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 10.5px;
+  vertical-align: bottom;
+}
+td {
+  padding: 11px 13px;
+  border-bottom: 1px solid var(--hair);
+  vertical-align: top;
+  color: var(--ink-2);
+}
+td strong { color: var(--ink); }
+td a {
+  border-bottom-color: var(--amber);
+}
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: var(--paper-2); }
+
+/* Code */
+code {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.88em;
+  background: var(--paper-2);
+  padding: 1px 6px;
+  border: 1px solid var(--hair);
+  color: var(--ink);
+}
+pre {
+  background: var(--paper-2);
+  border: 1px solid var(--hair);
+  border-left: 3px solid var(--amber);
+  padding: 18px 22px;
+  overflow-x: auto;
+  margin: 24px 0;
+  font-size: 12px;
+  line-height: 1.7;
+  font-family: 'Geist Mono', ui-monospace, monospace;
+}
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--ink-2);
+  font-size: inherit;
+}
+
+/* Blockquote */
+blockquote {
+  border-left: 3px solid var(--amber);
+  padding: 4px 0 4px 18px;
+  margin: 22px 0;
+  color: var(--mute);
+}
+blockquote em {
+  color: var(--ink-2);
+}
+
+/* HR — restrained */
+hr {
+  border: none;
+  border-top: 1px solid var(--hair);
+  margin: 44px 0;
+  position: relative;
+}
+hr::before {
+  content: '✦';
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+  background: var(--paper);
+  color: var(--mute-2);
+  font-size: 12px;
+  padding: 0 12px;
+}
+
+/* Tighter spacing for first section */
+section.level1 > h1 {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+section.level2:first-of-type > h2 {
+  margin-top: 28px;
+  padding-top: 0;
+  border-top: none;
+}
+section.level2 > section.level3:first-of-type > h3 {
+  margin-top: 24px;
+}
+
+/* Mobile-only elements hidden on desktop */
+.mobile-toc-trigger,
+.mobile-toc-scrim,
+.sidebar-actions { display: none; }
+
+/* Responsive — tablet down */
+@media (max-width: 980px) {
+  /* Hide the desktop top bar entirely on mobile — let the content breathe */
+  .header { display: none; }
+  .main-wrap { padding-top: 0; }
+  .layout { grid-template-columns: 1fr; }
+
+  body { font-size: 17px; line-height: 1.7; -webkit-text-size-adjust: 100%; }
+  .main { padding: 36px 22px 110px; max-width: 100%; }
+
+  h1 { font-size: 36px; line-height: 1.08; }
+  h1 + p { font-size: 11px; line-height: 1.8; margin-bottom: 6px; }
+  h2 { font-size: 26px; margin-top: 56px; padding-top: 28px; }
+  h3 { font-size: 19px; margin-top: 40px; }
+
+  /* Sidebar morphs into bottom sheet */
+  .sidebar {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    max-height: 82vh;
+    border-right: none;
+    border-top: 2px solid var(--ink);
+    box-shadow: 0 -12px 44px rgba(26, 45, 92, 0.28);
+    transform: translateY(100%);
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 10px 22px 32px;
+    z-index: 200;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .sidebar.open { transform: translateY(0); }
+  .sidebar::before {
+    content: '';
+    display: block;
+    width: 44px;
+    height: 4px;
+    background: var(--hair-strong);
+    border-radius: 2px;
+    margin: 0 auto 14px;
+  }
+  .brand-mark { font-size: 18px; margin-bottom: 2px; }
+  .brand-sub { margin-bottom: 16px; font-size: 9.5px; }
+
+  /* PDF action shows inside the bottom sheet on mobile */
+  .sidebar-actions {
+    display: flex;
+    margin: 0 0 18px;
+    padding: 0 0 16px;
+    border-bottom: 1px solid var(--hair);
+  }
+  .sidebar-actions .pdf-btn {
+    display: inline-flex;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    padding: 12px 18px;
+    font-family: 'Geist Mono', ui-monospace, monospace;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    border-radius: 0;
+  }
+  .sidebar-actions .pdf-btn svg {
+    width: 14px;
+    height: 14px;
+    stroke-width: 1.6;
+  }
+
+  /* Floating contents trigger — bottom-right pill */
+  .mobile-toc-trigger {
+    display: inline-flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    left: auto;
+    transform: none;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    padding: 13px 20px;
+    font-family: 'Geist Mono', ui-monospace, monospace;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 150;
+    box-shadow: 0 10px 32px rgba(26, 45, 92, 0.38), 0 2px 8px rgba(26, 45, 92, 0.18);
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    transition: opacity 0.2s ease, transform 0.2s ease, background 0.15s ease, color 0.15s ease;
+  }
+  .mobile-toc-trigger:active {
+    background: var(--amber);
+    color: var(--ink);
+  }
+  .mobile-toc-trigger svg {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+    stroke-width: 1.6;
+  }
+  .mobile-toc-trigger.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+  }
+
+  /* Scrim */
+  .mobile-toc-scrim {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 45, 92, 0.48);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 180;
+    transition: opacity 0.32s ease;
+  }
+  .mobile-toc-scrim.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Horizontally-scrollable tables on small screens */
+  .main table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 13.5px;
+  }
+  .main table tbody td,
+  .main table thead th {
+    min-width: 130px;
+    padding: 11px 12px;
+  }
+
+  /* Code blocks can scroll */
+  pre { font-size: 12px; padding: 14px 18px; }
+}
+
+@media (max-width: 540px) {
+  body { font-size: 16.5px; line-height: 1.68; }
+  h1 { font-size: 30px; line-height: 1.1; }
+  h1 + p { font-size: 10.5px; line-height: 1.7; }
+  h2 { font-size: 23px; margin-top: 46px; padding-top: 22px; }
+  h3 { font-size: 18px; margin-top: 34px; }
+  h4 { font-size: 10px; }
+  .main { padding: 28px 18px 110px; }
+  .main table { font-size: 12.5px; }
+  .main th, .main td { padding: 9px 10px; }
+  .main pre { font-size: 11.5px; padding: 12px 14px; }
+  ul, ol { padding-left: 22px; }
+
+  .mobile-toc-trigger {
+    padding: 11px 16px;
+    font-size: 10.5px;
+    bottom: 16px;
+    right: 16px;
+  }
+  .mobile-toc-trigger svg { width: 13px; height: 13px; }
+}
+
+/* Print → PDF */
+@media print {
+  @page {
+    size: A4;
+    margin: 18mm 16mm 18mm 16mm;
+  }
+  html { scroll-behavior: auto; }
+  body {
+    background: #FFFFFF;
+    color: #1A2D5C;
+    font-family: 'Geist', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.5;
+  }
+  ::selection { background: transparent; }
+  .progress, .header, .sidebar { display: none !important; }
+  .layout { display: block; }
+  .main-wrap { padding-top: 0; }
+  .main {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  h1 {
+    font-size: 24pt;
+    color: #1A2D5C;
+    margin: 0 0 12pt;
+    page-break-after: avoid;
+  }
+  h1 + p {
+    font-size: 8pt;
+    color: #7A7466;
+    margin-bottom: 18pt;
+  }
+  h1 + p strong { color: #1A2D5C; }
+  h2 {
+    font-size: 16pt;
+    color: #1A2D5C;
+    margin: 22pt 0 10pt;
+    padding-top: 14pt;
+    page-break-before: always;
+    page-break-after: avoid;
+    border-top: 1px solid #D8D4CA;
+  }
+  section.level2:first-of-type > h2 {
+    page-break-before: avoid;
+  }
+  h3 {
+    font-size: 12pt;
+    color: #1A2D5C;
+    margin: 16pt 0 8pt;
+    page-break-after: avoid;
+  }
+  h4 {
+    font-size: 9pt;
+    color: #B8810C;
+    font-family: 'Geist Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 12pt 0 6pt;
+    page-break-after: avoid;
+  }
+  p {
+    margin-bottom: 9pt;
+    color: #4A4438;
+    orphans: 3;
+    widows: 3;
+  }
+  p > strong:first-child {
+    color: #1A2D5C;
+  }
+  strong { color: #1A2D5C; }
+  em { color: #1A2D5C; font-family: 'Instrument Serif', serif; }
+  a {
+    color: #1A2D5C;
+    border-bottom: 1px solid #F4A300;
+    text-decoration: none;
+  }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 7.5pt;
+    color: #999;
+    font-family: 'Geist Mono', monospace;
+    word-break: break-all;
+    border-bottom: none;
+  }
+  a[href^="#"]::after { content: ""; }
+  table {
+    font-size: 8.5pt;
+    background: #FFF;
+    border: 1px solid #C8C0B0;
+    page-break-inside: avoid;
+    margin: 12pt 0;
+  }
+  thead {
+    background: #F4ECDA;
+    border-bottom: 1.5px solid #1A2D5C;
+  }
+  th {
+    color: #1A2D5C;
+    font-size: 8pt;
+    padding: 6pt 8pt;
+  }
+  td {
+    border-bottom: 1px solid #E0DCD0;
+    color: #4A4438;
+    padding: 6pt 8pt;
+  }
+  tbody tr:hover { background: none; }
+  td strong { color: #1A2D5C; }
+  code {
+    background: #F4ECDA;
+    color: #1A2D5C;
+    border: 1px solid #D8D0BC;
+    font-size: 0.88em;
+  }
+  pre {
+    background: #FAF6EC;
+    border: 1px solid #D8D0BC;
+    border-left: 2pt solid #F4A300;
+    padding: 9pt 11pt;
+    font-size: 8pt;
+    page-break-inside: avoid;
+    margin: 9pt 0;
+  }
+  pre code { color: #4A4438; }
+  ul li, ol li { margin-bottom: 4pt; color: #4A4438; }
+  ul li::marker, ol li::marker { color: #F4A300; }
+  hr {
+    border-top: 1px solid #D8D4CA;
+    margin: 14pt 0;
+  }
+  hr::before {
+    background: #FFF;
+    color: #999;
+  }
+  blockquote {
+    border-left: 2pt solid #F4A300;
+    color: #7A7466;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+
+<div class="header">
+  <div class="header-meta"><b>HU<i>·</i>PA</b> &nbsp; Physical AI Daily</div>
+  <div class="header-nav">
+    <a class="pdf-btn" href="index.html" title="Latest brief">Latest brief</a>
+    <a class="pdf-btn outline" href="papers.html" title="Open Papers DB">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2.5 3.5h11v9h-11z"/><path d="M2.5 6.5h11M5.5 3.5v9M10 3.5v9"/></svg>
+      Papers DB
+    </a>
+    <button class="pdf-btn outline" onclick="window.print()" title="Save as PDF via browser print dialog">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4 1.5h6L13.5 5v9.5h-9.5z"/><path d="M9.5 1.5V5h4"/><path d="M5.5 8.5h5M5.5 11h5"/></svg>
+      Export PDF
+    </button>
+  </div>
+</div>
+
+<button class="mobile-toc-trigger" id="mobileTocTrigger" aria-label="Open contents menu">
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2.5 4h11M2.5 8h11M2.5 12h11" stroke-linecap="round"/></svg>
+  Contents
+</button>
+<div class="mobile-toc-scrim" id="mobileTocScrim" aria-hidden="true"></div>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div id="sitenav" class="sitenav"></div>
+
+    <div class="toc">
+      <div class="toc-label">On this page</div>
+      <nav><ul id="tocList"></ul></nav>
+    </div>
+  </aside>
+
+  <div class="main-wrap">
+  <main class="main">
+<section id="wednesday-october-21-2026" class="level2">
+<h2>Wednesday, October 21, 2026</h2>
+<section id="tldr" class="level3">
+<h3>TL;DR</h3>
+<ul>
+<li><strong>India collection-partner prospect:</strong> Aktoria’s
+company-authored operations role explicitly describes onboarding and
+running egocentric collection partners across India. This is procurement
+intelligence, with no public agency rate or commissioned allocation. <a
+href="https://www.ycombinator.com/companies/aktoria-robotics/jobs/eES62Ab-egocentric-operations-lead">Original
+role</a></li>
+<li><strong>NVIDIA opens Flora’s annotation models, with a
+commercial-use limit.</strong> The suite supplies captions and reward
+labels; NVIDIA reports large cost savings. The Captioner card restricts
+use to non-commercial R&amp;D, so open weights do not establish
+permission for a paid annotation service. <a
+href="https://research.nvidia.com/labs/gear/flora/">Project</a> · <a
+href="https://huggingface.co/nvidia/Flora-Captioner">Model card</a></li>
+<li><strong>Capital and real-world infrastructure expand:</strong> Eka
+announces a $150M Series A; Schaeffler opens a Taicang factory combining
+component assembly, robot training and data acquisition. Neither
+announcement is an external collection order. <a
+href="https://ekarobotics.com/blog/eka-robotics-raises-150m-to-build-superhuman-intelligence-for-the-physical-world">Eka</a>
+· <a
+href="https://www.schaeffler.com/en/media/press-releases/press-releases-detail.jsp?id=88222851">Schaeffler</a></li>
+</ul>
+<p>Checked October 21 IST. This edition catches up after the successful
+October 19 briefing, including October 20 developments. October 20 is a
+missing daily input. Research includes a 72-hour discovery overlap,
+prior-edition/library deduplication and explicitly dated older finds.
+September’s <a href="../monthly/2026-09.html">completed monthly
+recap</a> is preserved.</p>
+</section>
+<section id="data-collection-opportunities" class="level3">
+<h3>Data collection opportunities</h3>
+<p><strong>Aktoria Robotics · newly discovered procurement signal,
+availability unknown.</strong> The company-authored YC role describes an
+India collection-partner operation. It is an employment listing that
+reveals the operating model, rather than a vendor application or funded
+statement of work. Publication date: <strong>Not disclosed</strong>.
+First seen/last checked: <strong>October 21</strong>. The direct role is
+readable, but current partner allocation is unverified. <a
+href="https://www.ycombinator.com/companies/aktoria-robotics/jobs/eES62Ab-egocentric-operations-lead">Original
+source</a></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Public evidence / missing terms</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Collection</td>
+<td>Egocentric worker video; partner onboarding, weekly hours, same-day
+uploads, quality/diversity and consent management</td>
+</tr>
+<tr>
+<td>Geography</td>
+<td>Operations across India; the employee role is based in Delhi NCR
+with travel</td>
+</tr>
+<tr>
+<td>Hardware / operations</td>
+<td>Camera shipping, deposits and repairs are responsibilities; exact
+camera, resolution/FPS, sensor specification, ownership and deposit
+amount: Not disclosed</td>
+</tr>
+<tr>
+<td>Volume / QA</td>
+<td>Numerical hours, task/environment list, acceptance thresholds,
+labels and delivery schema: Not disclosed</td>
+</tr>
+<tr>
+<td>Commercial</td>
+<td>Agency budget/rate, payment unit, settlement, rejection/rework
+rules, rights/exclusivity and deadline: Not disclosed. Employee
+compensation is not a vendor budget</td>
+</tr>
+<tr>
+<td>Business route</td>
+<td>The <a
+href="https://www.ycombinator.com/companies/aktoria-robotics">company’s
+YC page</a> gives <strong>founders@aktoria.com</strong>; agency
+eligibility and a current project brief require confirmation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NVIDIA Flora · sourcing evidence, no new supplier
+intake.</strong> The Captioner model card explicitly describes a mix of
+vendor-licensed datasets, public data and internal collection, including
+human hand-object video. Suppliers, purchasing dates, geography, new
+tasks/volumes, capture/QA requirements, rate/payment unit and deadline
+are <strong>Not disclosed</strong>. Card release date: <strong>October
+15</strong>; suite announcement: <strong>October 20</strong>; checked
+October 21. No dedicated supplier route is provided in this release.
+This establishes use of licensed vendor data, not an open procurement
+programme. <a
+href="https://huggingface.co/nvidia/Flora-Captioner">Primary
+card</a></p>
+<p><strong>Duplicates and standing routes:</strong> Annolance’s narrated
+household POV request is already in the September 30 register. Its
+original public post was rechecked; the $5/approved-hour vendor quote is
+not a new lead, confirmed allocation or evidence of workable margins. <a
+href="https://www.linkedin.com/posts/veenus-jaiswal-3ab0b2279_egocentric-pov-video-collection-project-activity-7508056862131625984-iWvn">Rechecked
+original post</a>. DeepReach, Praxis, Defined.ai, Avala and Kuinbee
+yielded no newly verified commissioned brief. OneForma’s agency route
+still does not list India among its named countries; an Other field does
+not establish eligibility. DataForce Viola Urdu Hyderabad remains
+individual participation, not an agency contract. Kinetic still displays
+three non-binding buyer-interest cards; asking prices and interest are
+not funded orders. Robotics Center and Opendatabay supplied no newly
+verified allocation.</p>
+<p>Required searches covered r/robotics, r/datasets, r/computervision
+and r/MachineLearning, site-wide requests, public LinkedIn/X, YC/Hacker
+News and project boards. RoboReview below is tooling, not a collection
+commission. No urgent verified collection deadline was found. Initial
+30-day discovery remains completed September 24; the full
+enduring-programme review is due October 22. No outreach, applications,
+signups or commitments were made.</p>
+</section>
+<section id="data-collection" class="level3">
+<h3>Data collection</h3>
+<p><strong>October 19 catch-up · Ropedia W0 / Xp-Data.</strong> The
+authors describe <strong>10,000 hours of human egocentric data and 3,000
+hours of robot data</strong>, with camera poses, projected skeletons,
+manual keypoint correction and systematic QA. Human pretraining improves
+their cross-embodiment evaluations. This is evidence for synchronized
+geometry and corrected annotations alongside footage, not proof that
+those hours were externally bought or that all assets are openly
+downloadable. <a href="https://arxiv.org/abs/2610.26855">Paper</a></p>
+<p><strong>October 20 · lower-cost capture and operator design.</strong>
+A <a href="https://arxiv.org/abs/2610.27622">head-camera UMI glove</a>
+uses printed fiducials and an electronics-free glove to recover pose and
+jaw labels from the same moving-camera frames. Authors report a $122
+capture camera and $22 glove; those are prototype component costs, not a
+production collection budget. <a
+href="https://arxiv.org/abs/2610.27998">LocoPilot</a> instead records
+synchronized on-robot base/arm actions with single-operator bilateral
+teleoperation. <a href="https://arxiv.org/abs/2610.27907">PointHand’s
+operator study</a> finds that what novices see during teleoperation
+changes subsequent policy learning; its evaluation is simulated.</p>
+<p><strong>October 18–20 catch-up · broader collection
+modalities.</strong> <a
+href="https://arxiv.org/abs/2610.25534">AQUAACT</a> pairs underwater
+images with joystick and inertial data, separating <strong>1.9 real
+hours from 17.9 simulated hours</strong>. <a
+href="https://arxiv.org/abs/2610.27794">Multi-view latent action
+pretraining</a> studies synchronized views for recovering action
+information. <a href="https://arxiv.org/abs/2610.27877">Gaze2HOI</a> and
+<a href="https://arxiv.org/abs/2610.27946">EgoACT</a> tackle intention
+and action disentanglement in first-person video. These suggest distinct
+dataset requirements, not interchangeable video-hour specifications.</p>
+</section>
+<section id="data-annotation-validation" class="level3">
+<h3>Data annotation &amp; validation</h3>
+<p><strong>October 20 announcement; Captioner card dates October 15 ·
+Flora.</strong> NVIDIA releases Captioner, TempSeg and Rewarder models
+for its robotics data engine. Its project reports <strong>200,000 hours
+labelled per day on 512 GB300 GPUs</strong> and roughly <strong>125×
+lower cost than GPT-6 Astra</strong> under its comparison. These are
+NVIDIA measurements, not a quote for a small collection business; the
+published metric table contains wins and losses. Captioner’s
+<strong>non-commercial R&amp;D restriction</strong> is explicit. <a
+href="https://research.nvidia.com/labs/gear/flora/">Project and
+benchmarks</a> · <a
+href="https://huggingface.co/collections/nvidia/flora">Released
+suite</a> · <a
+href="https://huggingface.co/nvidia/Flora-Captioner">Captioner terms and
+intended use</a></p>
+<p><strong>October 20 community release · RoboReview.</strong> The
+repository describes V-JEPA-assisted factory-video labelling followed by
+human correction, JSONL export and retraining. Its author reports a
+small shirt-packing experiment and review-time savings; one worker/task
+does not validate broader industrial performance. The repository lists
+AGPL-3.0. It is a software experiment, not a buyer request. <a
+href="https://github.com/abhishek0093/roboreview">Original
+repository</a> · <a
+href="https://www.reddit.com/r/robotics/comments/1xalost/built_an_open_source_ecosystem_to_label_factory/">Author’s
+Reddit post</a></p>
+<p><strong>October 19–20 · reward quality needs its own tests.</strong>
+<a href="https://arxiv.org/abs/2610.26663">RoboValue</a> covers task
+state, progress, recovery and consistency over 15 simulated and 20 real
+tasks; good outcome scores can hide weak recovery judgments. <a
+href="https://arxiv.org/abs/2610.27782">RoboJudge</a> evaluates
+generated embodied video against human ratings. <a
+href="https://arxiv.org/abs/2610.27861">RoboCasa-Shift</a>, <a
+href="https://arxiv.org/abs/2610.27277">failure attribution</a> and <a
+href="https://arxiv.org/abs/2610.27485">HATCH</a> address distribution
+shifts, corruption causes and instrumented manipulation evidence
+respectively. HATCH is a proposed benchmark protocol, not an external
+certification.</p>
+</section>
+<section id="embedded-ai-systems" class="level3">
+<h3>Embedded AI systems</h3>
+<p><strong>October 19 · AMD argues for end-to-end timing.</strong> Its
+executive writeup emphasizes tail latency, jitter, data movement and
+deterministic control alongside model inference. This is an architecture
+argument, not a new processor launch or independently tested performance
+result. <a
+href="https://newsroom.amd.com/news/ai-that-answers-ai-that-acts/">AMD</a></p>
+<p><strong>October 19–20 · practical perception and execution.</strong>
+A <a href="https://arxiv.org/abs/2610.27199">Jetson AGX Orin depth
+comparison</a> evaluates nine model families on ten selected Middlebury
+scenes; its stereo advantage should not be generalized to every capture
+environment. <a href="https://arxiv.org/abs/2610.28019">PACT-VLA</a>
+chooses an action chunk using a fresher observation before execution. <a
+href="https://arxiv.org/abs/2610.28122">DirectWAM</a> distils future
+prediction around downstream action accuracy. Their latency/control
+gains are specific to the evaluated systems.</p>
+<p><a href="https://arxiv.org/abs/2610.28624">Industrial ReMEmbR</a>
+splits encoding on robot-side Jetsons from on-premises memory retrieval
+and language decoding. Its design avoids uploading raw frames and masks
+detected people; that design alone does not establish privacy compliance
+in an actual deployment. Qualcomm/PickNik coverage resurfaced, but no
+new closing confirmation was verified; the older acquisition agreement
+is not counted as a fresh completed transaction.</p>
+</section>
+<section id="robotics-humanoids" class="level3">
+<h3>Robotics &amp; humanoids</h3>
+<p><strong>October 20 · Schaeffler’s factory-to-training loop.</strong>
+The company confirms a <strong>7,500 m² Taicang facility</strong> with
+component assembly, a training/data centre and digital twins. Six
+humanoids operate across five assembly stations; training includes
+inspection, handling, packaging and line-side replenishment. Customers
+and partners can train/test there, but no paid external collection
+programme is announced. These are company-reported operating details,
+not independently measured uptime or throughput. <a
+href="https://www.schaeffler.com/en/media/press-releases/press-releases-detail.jsp?id=88222851">Primary
+release</a></p>
+<p><strong>October 19–20 · dexterity remains difficult.</strong> <a
+href="https://arxiv.org/abs/2610.26765">HandsOn</a> combines 18,000
+human demonstrations with 66 simulated tasks across five arms and six
+hands; the best evaluated trained multi-task policy reaches 29.1% on
+Core-50. <a href="https://arxiv.org/abs/2610.25459">BiDex-100</a>,
+submitted October 18, adds 106 simulated tasks and 8,080
+success-validated demonstrations. Neither benchmark score is a field
+deployment success rate.</p>
+<p><a href="https://arxiv.org/abs/2610.28480">SuperMimic</a> reports
+major training-compute savings for humanoid motion tracking through a
+differentiable world model and demonstrates physical G1 transfer. <a
+href="https://arxiv.org/abs/2610.25736">Fleet experience learning</a>
+uses shared successful executions to improve policies after failures
+without new expert corrective actions in its tested tasks. <a
+href="https://arxiv.org/abs/2610.23826">Self-Building Labs</a>, October
+16 catch-up, demonstrates laboratory configuration and a real
+quantum-dot synthesis workflow. None establishes unconstrained
+self-improving autonomy.</p>
+</section>
+<section id="world-models-sim-to-real" class="level3">
+<h3>World models &amp; sim-to-real</h3>
+<p><strong>October 20 · Cosmos3-H-Dreams.</strong> NVIDIA describes an
+action-conditioned surgical world model using synchronized clinical
+video and CMR Versius kinematics, plus separately trained distilled
+students for lower latency. Its 10 Hz training alignment is distinct
+from runtime performance. The supported capture/tool conditions are
+narrow; the authors explicitly separate visual realism from
+biomechanical accuracy. Released checkpoints do not imply that clinical
+training footage or its rights are open. <a
+href="https://huggingface.co/blog/nvidia/cosmos3-h-dreams">Technical
+release</a></p>
+<p><strong>October 19–20 · controllability and contact matter.</strong>
+<a href="https://arxiv.org/abs/2610.27387">Action Influence
+Maximization</a> finds that a small actively collected set can improve
+simulated world-model controllability beyond much larger expert-only
+data. <a href="https://arxiv.org/abs/2610.28613">Physical Canvas</a>
+combines vision and tactile observations; its four-task real-world study
+links more consistent simulated outcomes to policy improvement. <a
+href="https://arxiv.org/abs/2610.27995">HuTact</a> and <a
+href="https://arxiv.org/abs/2610.28519">Touch-JEPA</a> use human
+hand-object video to reduce tactile-supervision requirements, not
+eliminate the need for grounded tactile measurements in all
+settings.</p>
+<p><a href="https://arxiv.org/abs/2610.28585">SceneRig</a> iterates
+scene reconstruction inside a physics simulator; <a
+href="https://arxiv.org/abs/2610.28631">AEON</a> combines video
+generation with persistent 4D geometry; <a
+href="https://arxiv.org/abs/2610.28626">UniWALM</a> jointly generates
+language, actions and video, including a textual memory loop. These
+pursue different forms of consistency. No shared headline metric
+demonstrates that one solves physical simulation generally.</p>
+</section>
+<section id="india-sea-spotlight" class="level3">
+<h3>India &amp; SEA spotlight</h3>
+<p>Aktoria’s India partner operations are the clearest newly discovered
+local business signal; see the precise limits above. Separately, an
+<strong>October 20 interview</strong> with TDK Ventures’ president
+describes interest in Indian AI hardware, robotics, photonics and
+advanced packaging. This is investment intent, not a newly closed
+robotics round or supplier mandate. <a
+href="https://www.financialexpress.com/business/industry-tdk-ventures-to-deepen-india-bets-in-ai-hardware-robotics-packaging-4365659/">Original
+interview</a></p>
+<p>IIT/IISc and Singapore/SEA searches did not yield another
+sufficiently verified material announcement in this pass. Institutional
+and local-language coverage remains partial.</p>
+</section>
+<section id="china-spotlight" class="level3">
+<h3>China spotlight</h3>
+<p>Schaeffler’s Taicang facility is primary-confirmed above.
+<strong>October 20 reporting</strong> also puts Neolix’s Series E at
+approximately <strong>$400M</strong>, led by Boyu Capital. The report
+discusses overseas service infrastructure and training-data
+capabilities; the original company financing announcement was not
+recovered. Treat the round as attributed reporting, and do not infer
+outside collection buying from its scale. <a
+href="https://technode.global/2026/10/20/neolix-400m-series-e-boyu-capital/">TNGlobal</a></p>
+<p>HandsOn and Ropedia add concrete research evidence about dexterity
+and human/robot data mixtures. Native-language company and funding
+coverage remains incomplete.</p>
+</section>
+<section id="twitter-x-signal" class="level3">
+<h3>Twitter / X signal</h3>
+<p>Logged-in Chrome was available today. A dated combined search checked
+DrJimFan, tonyzzhao, physical_int, adcock_brett, svlevine, chelseabfinn,
+pabbeel, kkitani, JitendraMalikCV, Figure_robot, 1x_tech and ericjang11;
+this is a targeted sweep, not every account’s complete timeline.</p>
+<ul>
+<li><strong>October 20:</strong> <a
+href="https://x.com/DrJimFan/status/2112597587987689912">Jim Fan’s Flora
+announcement</a> led to the official project and model card above. The
+model card’s restriction and October 15 release field are retained
+despite the later announcement.</li>
+<li><strong>October 21:</strong> <a
+href="https://x.com/svlevine/status/2112762529701405127">Sergey
+Levine</a> highlights Advantage Guidance. The <a
+href="https://arxiv.org/abs/2610.19783">paper</a> was originally
+submitted <strong>October 14</strong>: advantage-conditioned supervised
+training plus contrastive sampling guidance, tested on 26 sparse-reward,
+long-horizon tasks. This is older research newly amplified on X, not a
+new PI product release.</li>
+<li><a href="https://x.com/svlevine/status/2112763450338550023">Levine’s
+offline-empowerment post</a> was readable, but its underlying project
+was not recovered in this pass; no additional quantitative claim is
+adopted.</li>
+</ul>
+</section>
+<section id="research-papers-worth-a-look" class="level3">
+<h3>Research papers worth a look</h3>
+<p>The following <strong>41 newly indexed preprints</strong> have
+original abstracts and submission histories checked. October 14–20 dates
+are retained, including older catch-up. Results are author-reported;
+full-paper/code reproduction and downloadable-dataset licence audits
+were not performed. Selected implications are discussed above, with the
+remaining contributions summarized below.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Original date</th>
+<th>Paper</th>
+<th>Contribution and limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-10-19</td>
+<td><a href="https://arxiv.org/abs/2610.27039">Embodied Playground: A
+Long-Horizon Agentic Robotics Benchmark for Physical, Strategic, and
+Spatial Reasoning</a></td>
+<td>Embodied Playground evaluates long-horizon physical, strategic and
+spatial reasoning; benchmark competence is not unrestricted
+deployment.</td>
+</tr>
+<tr>
+<td>2026-10-19</td>
+<td><a href="https://arxiv.org/abs/2610.27040">ACE-Brain-0.6: Scaling
+Spatial Grounding for Physical Foundation Models</a></td>
+<td>ACE-Brain-0.6 scales verifiable spatial grounding with 1.5M samples;
+comparative gains vary by benchmark.</td>
+</tr>
+<tr>
+<td>2026-10-19</td>
+<td><a href="https://arxiv.org/abs/2610.27199">Which Depth Estimator for
+Jetson AGX Orin? A 2026 Benchmark of Monocular and Stereo
+Methods</a></td>
+<td>Nine depth-model families on ten selected Middlebury scenes and
+Jetson AGX Orin; conclusions are scene and configuration dependent.</td>
+</tr>
+<tr>
+<td>2026-10-19</td>
+<td><a href="https://arxiv.org/abs/2610.27277">What Would Removing This
+Corruption Change? Failure Attribution for Vision-Language-Action
+Models</a></td>
+<td>Interventions attribute VLA failures to visual corruption; causal
+diagnosis is narrower than a general robustness guarantee.</td>
+</tr>
+<tr>
+<td>2026-10-19</td>
+<td><a href="https://arxiv.org/abs/2610.27387">Training Controllable
+World Models via Action Influence Maximization</a></td>
+<td>Action Influence Maximization improves world-model controllability
+with targeted exploration; demonstrated in simulation.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.27485">HATCH: Hardware-Attested
+Task Chains for Verifiable Manipulation</a></td>
+<td>HATCH proposes instrumented task chains, sensor checks and uncut
+evidence; it is not an independent certification scheme.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.27618">JARVIS: From Visual
+Manuals to Autonomous Robotic Assembly</a></td>
+<td>JARVIS turns visual manuals into assembly tasks with a large
+synthetic LEGO corpus; long-horizon execution remains difficult.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.27622">A Head Camera Is (Almost)
+All You Need: An Electronics-Free UMI Glove Labelled and Observed by One
+Moving Camera</a></td>
+<td>A moving head camera and fiducial glove recover pose/jaw labels;
+small controlled trials and prototype costs limit generalization.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.27794">Multi-View Latent Action
+Pretraining for Cross-Embodiment Robot Learning from Videos</a></td>
+<td>Synchronized multi-view video supports latent action pretraining and
+cross-embodiment transfer in the tested settings.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.27861">RoboCasa-Shift:
+Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in
+Long-Horizon Household Manipulation</a></td>
+<td>RoboCasa-Shift uses matched rollouts and stage-level diagnostics to
+expose failures hidden by aggregate success rates.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.27907">What Novice Operators See
+Changes What the Policy Learns: A User Study of Keypoint Hand Visual
+Representation for Teleoperated Demonstration</a></td>
+<td>PointHand studies how hand rendering changes novice demonstrations
+and learned policies; the trials are simulated.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.27995">Learning Tactile-Aware
+Hand Representations from Human Hand-Object Interaction Data</a></td>
+<td>HuTact pretrains with human hand-object video to reduce tactile
+labels; grounded tactile data is still used downstream.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.27998">LocoPilot:
+Single-Operator Bilateral Teleoperation for Loco-Manipulation Policy
+Learning</a></td>
+<td>LocoPilot records synchronized on-robot base/arm actions with one
+operator and force feedback; specific hardware implementation.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.28019">PACT-VLA: Speculative
+Action-Chunk Verification with Pre-Commit Observations</a></td>
+<td>PACT-VLA selects complete action chunks using fresher pre-commit
+observations; timing gains depend on evaluated hardware.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.28122">De-Diffusing WAMs:
+Action-Sufficient Direct Prediction for Robot Control</a></td>
+<td>DirectWAM distils futures around downstream action accuracy,
+reducing iterative inference; results are model/task specific.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.28480">SuperMimic: Scaling
+Humanoid Whole-Body Control with One Differentiable World Model</a></td>
+<td>SuperMimic uses a differentiable world model for efficient humanoid
+motion tracking, with G1 transfer demonstrations.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.28585">SceneRig: An Agentic
+System for Simulation-Ready 3D Scene Reconstruction from Single
+Images</a></td>
+<td>SceneRig validates image-derived scenes in a simulator; physical
+stability is assessed within its evaluation scope.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.28613">Physical Canvas: A Vision
+Tactile World Model For Robot Policy Evaluation And Learning</a></td>
+<td>Physical Canvas combines vision and tactile feedback;
+policy-evaluation and improvement evidence covers four real tasks.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.28624">Industrial ReMEmbR:
+Scaling Spatiotemporal Memory to Robot Fleets</a></td>
+<td>Industrial ReMEmbR caches edge encodings for fleet memory; masking
+and avoiding raw upload do not themselves prove privacy compliance.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.28626">UniWALM: Unified World
+Action Language Model for Embodied Robot Control</a></td>
+<td>UniWALM jointly models language, video and actions with textual
+memory; improvements concern the tested memory-dependent tasks.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.27782">RoboJudge: Multimodal
+Language Models as Judges for Embodied Video Generation</a></td>
+<td>RoboJudge uses human ratings to assess embodied video; agreement
+with ratings is not direct proof of physical correctness.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.27877">Gaze2HOI: Gaze-Aware
+Intention Disambiguation for Egocentric Hand-Object Interaction
+Forecasting</a></td>
+<td>Gaze2HOI uses gaze to disambiguate intentions in egocentric
+hand-object forecasting; gaze is an additional capture modality.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.27946">Decoupling Action from
+Egocentric Observation for World Simulation</a></td>
+<td>EgoACT studies separating actions from egocentric observations for
+world simulation; evaluated against its action benchmark.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.28519">Touch-JEPA: Tactile
+Representation Learning from Hand-Object Video with Limited Tactile
+Supervision</a></td>
+<td>Touch-JEPA combines hand-object video pretraining with limited
+tactile grounding; it does not remove all tactile supervision.</td>
+</tr>
+<tr>
+<td>2026-10-20</td>
+<td><a href="https://arxiv.org/abs/2610.28631">AEON: Unifying Video and
+3D World Models</a></td>
+<td>AEON connects video latents to renderable 4D geometry;
+visual/temporal consistency does not establish contact accuracy.</td>
+</tr>
+<tr>
+<td>2026-10-19</td>
+<td><a href="https://arxiv.org/abs/2610.26765">HandsOn: A Large-Scale
+Simulation Benchmark for Generalizable Dexterous Manipulation</a></td>
+<td>HandsOn: 18,000 demonstrations and 66 simulated dexterous tasks
+across five arms and six hands; best trained Core-50 result 29.1%.</td>
+</tr>
+<tr>
+<td>2026-10-19</td>
+<td><a href="https://arxiv.org/abs/2610.26663">RoboValue: A Fine-Grained
+Sim-and-Real Benchmark for Unified Evaluation of Robotic Value
+Models</a></td>
+<td>RoboValue evaluates state, progress, recovery and consistency across
+15 simulation and 20 real tasks.</td>
+</tr>
+<tr>
+<td>2026-10-19</td>
+<td><a href="https://arxiv.org/abs/2610.26848">Where is Physical RSI
+capability from? An Observational Scaling Law of LLM-as-policy</a></td>
+<td>PhysRSI-eval separates first-attempt performance, efficiency,
+success, budget and improvement across 18 tasks.</td>
+</tr>
+<tr>
+<td>2026-10-19</td>
+<td><a href="https://arxiv.org/abs/2610.26855">Ropedia W0: Scaling
+Loco-Manipulation World Models across Embodiments with Human
+Experience</a></td>
+<td>Ropedia W0 describes 10k human ego hours and 3k robot hours with
+poses, corrected skeletons and QA; outside purchasing is not
+established.</td>
+</tr>
+<tr>
+<td>2026-10-19</td>
+<td><a href="https://arxiv.org/abs/2610.26641">EgoRayFormer: Ray-Space
+Stereo Refinement for Egocentric 3D Human Pose Estimation</a></td>
+<td>EgoRayFormer constrains stereo fisheye pose refinement in ray space;
+device-relative and oracle-root protocols must be distinguished.</td>
+</tr>
+<tr>
+<td>2026-10-18</td>
+<td><a href="https://arxiv.org/abs/2610.25534">AQUAACT: A Joystick-Level
+Underwater Teleoperation Dataset and Closed-Loop Benchmark</a></td>
+<td>AQUAACT pairs video, joystick and inertial data: 1.9 real hours and
+17.9 simulated hours; seven simulated policies remain below 20%
+success.</td>
+</tr>
+<tr>
+<td>2026-10-18</td>
+<td><a href="https://arxiv.org/abs/2610.25459">BiDex-100: A
+Comprehensive Benchmark for Bimanual Dexterous Manipulation Across 100+
+Simulation Tasks</a></td>
+<td>BiDex-100 provides 106 simulated tasks and 8,080 success-validated
+teleoperated demonstrations across two embodiments.</td>
+</tr>
+<tr>
+<td>2026-10-19</td>
+<td><a href="https://arxiv.org/abs/2610.26174">PhantomTac: Hijacking
+Robotic Tactile Systems with Deploy-and-forget Tags</a></td>
+<td>PhantomTac identifies magnetic-tactile spoofing in controlled robot
+tests and proposes multimodal-consistency defenses.</td>
+</tr>
+<tr>
+<td>2026-10-19</td>
+<td><a href="https://arxiv.org/abs/2610.25981">FR-VLA: Implicit Force
+Reasoning VLA for Contact-Rich Manipulation</a></td>
+<td>FR-VLA gates force information according to visual-language context;
+evaluated on five contact-rich tasks and two platforms.</td>
+</tr>
+<tr>
+<td>2026-10-19</td>
+<td><a href="https://arxiv.org/abs/2610.25687">Revealing and Bridging
+the Physical Executability Gap in Vision-Language Navigation</a></td>
+<td>VeSTA tests strict-contact executability in navigation; permissive
+simulators can conceal physically infeasible behavior.</td>
+</tr>
+<tr>
+<td>2026-10-16</td>
+<td><a href="https://arxiv.org/abs/2610.23769">Not All Actions
+Contribute Equally: Learning Precise Progress Estimation from Imprecise
+Demonstrations</a></td>
+<td>PRIME estimates progress across imperfect demonstrations without
+assuming every action advances the task.</td>
+</tr>
+<tr>
+<td>2026-10-16</td>
+<td><a href="https://arxiv.org/abs/2610.23372">Beyond Success Rate:
+Interventional Evaluation of Memory in Vision-Language-Action
+Systems</a></td>
+<td>IMEP intervenes on remembered facts and controls for perturbations;
+aggregate success alone cannot establish meaningful memory use.</td>
+</tr>
+<tr>
+<td>2026-10-16</td>
+<td><a href="https://arxiv.org/abs/2610.23826">Self-Building
+Labs</a></td>
+<td>Self-Building Labs configures laboratory layouts, skills and
+workflows; real quantum-dot synthesis validates a bounded
+demonstration.</td>
+</tr>
+<tr>
+<td>2026-10-19</td>
+<td><a href="https://arxiv.org/abs/2610.25736">Learning from Fleet
+Experience: A Collective Learning Paradigm for Robots</a></td>
+<td>Fleet experience learning retrieves successful trajectory segments
+after failures; tested on five tasks without new expert
+corrections.</td>
+</tr>
+<tr>
+<td>2026-10-19</td>
+<td><a href="https://arxiv.org/abs/2610.26979">Latent Projection for
+Latent Planning</a></td>
+<td>Latent Projection changes planning costs using estimated
+uncertainty; strongest gains are in the evaluated 2D navigation
+tasks.</td>
+</tr>
+<tr>
+<td>2026-10-14</td>
+<td><a href="https://arxiv.org/abs/2610.19783">Reinforcement Learning
+via Advantage Guidance</a></td>
+<td>Advantage Guidance combines supervised advantage conditioning with
+contrastive sampling; tested on 26 sparse-reward long-horizon
+tasks.</td>
+</tr>
+</tbody>
+</table>
+<p>The library adds <strong>52 records: 41 preprints and 11
+technical/company/industry records</strong>, reaching
+<strong>1,074</strong>, while preserving all 1,022 earlier entries.</p>
+</section>
+<section id="money-moves" class="level3">
+<h3>Money &amp; moves</h3>
+<p><strong>October 20 · Eka Robotics raises $150M Series A.</strong> The
+company names a16z and F-Prime as leads. Its stated strategy emphasizes
+vision-force-action models trained with simulation and reinforcement
+learning, with funding for further development and deployment. Do not
+read this as a commitment to purchase egocentric demonstrations. <a
+href="https://ekarobotics.com/blog/eka-robotics-raises-150m-to-build-superhuman-intelligence-for-the-physical-world">Company
+announcement</a></p>
+<p><strong>October 20 · Reliable Robotics adds $115M of
+capital.</strong> Its company release includes a <strong>$25M Silicon
+Valley Bank term loan</strong>, so the entire amount is not equity. The
+extension brings the announced Series D financing package to $275M and
+supports aircraft, production and engineering expansion. FAA
+certification remains in progress; pre-certification activity is not
+full commercial certification. <a
+href="https://www.streetinsider.com/Business%2BWire/Reliable%2BRobotics%2BSecures%2B%24115M%2Bin%2BNew%2BCapital/27207622.html">Company
+release via Business Wire syndication</a></p>
+<p>Neolix’s reported financing is covered in China; TDK’s India
+intentions are not counted as closed funding.</p>
+</section>
+<section id="coverage-and-sources" class="level3">
+<h3>Coverage and sources</h3>
+<p>Primary sources and dated reporting are linked inline. Parallel
+search lacked credit; web search, direct source reads and logged-in X
+provided fallback coverage. The four arXiv new lists and the recent
+robotics archive were checked to recover the gap. Social search is
+incomplete; original company dates and current allocations are often
+undisclosed. Defined.ai and OneForma agency pages required web fallback;
+OneForma jobs/Rover were inaccessible, YC’s generic launch feed was
+thin, and Opendatabay detail was limited. Flora’s project page required
+a direct fetch after web-tool failure. Some institutional and regional
+sources remain uncovered. Inaccessible checks do not establish zero
+demand.</p>
+<p>Private business qualification remains in the local buyer register.
+September’s recap is complete and is neither recreated nor resent. No
+prospect outreach or private LinkedIn sync occurred.</p>
+</section>
+</section>
+  </main>
+  </div>
+</div>
+
+<script>
+// Load sidebar JS with depth-aware path
+(function(){
+  var depth = /\/(days|monthly)\//.test(location.pathname) ? '../' : './';
+  var s = document.createElement('script');
+  s.src = depth + '_sidebar.js';
+  s.defer = true;
+  document.body.appendChild(s);
+})();
+</script>
+<script>
+// Build TOC from h2/h3 inside main
+(function() {
+  const tocList = document.getElementById('tocList');
+  const main = document.querySelector('.main');
+  const headings = main.querySelectorAll('section.level2 > h2, section.level3 > h3');
+  let currentH2Item = null;
+  let currentH2SubList = null;
+
+  headings.forEach(h => {
+    const parent = h.parentElement;
+    const id = parent.id;
+    if (!id) return;
+    let text = h.textContent.trim();
+    const isH2 = h.tagName === 'H2';
+
+    const link = document.createElement('a');
+    link.href = '#' + id;
+    link.textContent = text;
+    link.dataset.target = id;
+
+    const li = document.createElement('li');
+    li.appendChild(link);
+
+    if (isH2) {
+      tocList.appendChild(li);
+      currentH2Item = li;
+      currentH2SubList = null; // lazy-create only if H3 follows
+    } else if (currentH2Item) {
+      if (!currentH2SubList) {
+        currentH2SubList = document.createElement('ul');
+        currentH2Item.appendChild(currentH2SubList);
+      }
+      currentH2SubList.appendChild(li);
+    }
+  });
+})();
+
+// Reading progress
+(function() {
+  const bar = document.getElementById('progressBar');
+  function update() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = Math.min(100, progress) + '%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
+
+// Active section highlighting
+(function() {
+  const tocLinks = document.querySelectorAll('#tocList a');
+  const linkMap = {};
+  tocLinks.forEach(a => { linkMap[a.dataset.target] = a; });
+
+  // Map link → its parent h2 LI (so we can expand the right group)
+  const parentH2LiMap = {};
+  document.querySelectorAll('#tocList > li').forEach(h2Li => {
+    const h2Link = h2Li.querySelector(':scope > a');
+    if (!h2Link) return;
+    parentH2LiMap[h2Link.dataset.target] = h2Li;
+    h2Li.querySelectorAll(':scope > ul a').forEach(subA => {
+      parentH2LiMap[subA.dataset.target] = h2Li;
+    });
+  });
+
+  const sections = document.querySelectorAll('.main section.level2, .main section.level3');
+  if (!sections.length) return;
+
+  function clearActive() {
+    document.querySelectorAll('#tocList a.active').forEach(a => a.classList.remove('active'));
+    document.querySelectorAll('#tocList > li.active').forEach(li => li.classList.remove('active'));
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    // Pick the topmost intersecting entry
+    let topEntry = null;
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (!topEntry || entry.boundingClientRect.top < topEntry.boundingClientRect.top) {
+          topEntry = entry;
+        }
+      }
+    });
+    if (!topEntry) return;
+    const id = topEntry.target.id;
+    if (!linkMap[id]) return;
+
+    clearActive();
+    linkMap[id].classList.add('active');
+    const parentH2 = parentH2LiMap[id];
+    if (parentH2) {
+      parentH2.classList.add('active');
+      // Also mark the H2 link active if a child is active
+      const h2Link = parentH2.querySelector(':scope > a');
+      if (h2Link && h2Link.dataset.target !== id) {
+        // Keep H2 visually de-emphasized while child is active — just expand
+      }
+    }
+  }, {
+    rootMargin: '-80px 0px -65% 0px',
+    threshold: 0
+  });
+
+  sections.forEach(s => { if (s.id) observer.observe(s); });
+})();
+
+// Smooth TOC click
+document.querySelectorAll('#tocList a').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const id = a.dataset.target;
+    const target = document.getElementById(id);
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - 68;
+      window.scrollTo({ top, behavior: 'smooth' });
+      history.replaceState(null, '', '#' + id);
+    }
+  });
+});
+
+// Mobile TOC sheet open/close
+(function() {
+  const trigger = document.getElementById('mobileTocTrigger');
+  const scrim = document.getElementById('mobileTocScrim');
+  const sheet = document.querySelector('.sidebar');
+  if (!trigger || !sheet || !scrim) return;
+
+  function openSheet() {
+    sheet.classList.add('open');
+    scrim.classList.add('open');
+    trigger.classList.add('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeSheet() {
+    sheet.classList.remove('open');
+    scrim.classList.remove('open');
+    trigger.classList.remove('hidden');
+    document.body.style.overflow = '';
+  }
+
+  trigger.addEventListener('click', openSheet);
+  scrim.addEventListener('click', closeSheet);
+
+  // Close on TOC link click (after scroll kicks off)
+  document.querySelectorAll('#tocList a').forEach(a => {
+    a.addEventListener('click', () => {
+      if (sheet.classList.contains('open')) {
+        setTimeout(closeSheet, 240);
+      }
+    });
+  });
+
+  // Escape closes
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && sheet.classList.contains('open')) closeSheet();
+  });
+})();
+</script>
+
+</body>
+</html>

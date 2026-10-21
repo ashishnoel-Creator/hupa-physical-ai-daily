@@ -2,6 +2,15 @@
 
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
+## Daily source checks · October 21, 2026
+
+- [Aktoria's company-authored egocentric operations role](https://www.ycombinator.com/companies/aktoria-robotics/jobs/eES62Ab-egocentric-operations-lead) explicitly describes collection partners across India. Newly discovered, undated, current allocation unknown; procurement intelligence rather than a vendor application. [Company page](https://www.ycombinator.com/companies/aktoria-robotics) provides founders@aktoria.com. Detailed public requirements and missing terms are in [today's briefing](days/2026-10-21.html).
+- [Flora Captioner card](https://huggingface.co/nvidia/Flora-Captioner) says training includes vendor-licensed data, but supplies no new procurement route. Non-commercial R&D restriction retained. [Project](https://research.nvidia.com/labs/gear/flora/) recovered by direct read after web failure.
+- Reddit r/robotics, r/datasets, r/computervision, r/MachineLearning and site-wide searches checked. [RoboReview author post](https://www.reddit.com/r/robotics/comments/1xalost/built_an_open_source_ecosystem_to_label_factory/) followed to its repository: annotation tooling, not a collection commission. No newly verified agency request from Reddit. Annolance's narrated POV request deduplicated against September30, original rechecked; no proven new allocation.
+- Public LinkedIn/X and YC/HN checked. Logged-in Chrome's combined twelve-handle dated X search worked; Flora and Advantage Guidance followed to primary technical evidence. Offline-empowerment author's post read, underlying project unavailable. No complete timeline audit claimed; no additional standing X handle added outside Monday review.
+- DeepReach, Praxis, Avala and Kuinbee readable; Defined.ai and OneForma agency required web fallback. No additional verified commissioned brief. OneForma jobs/Rover unavailable; named agency country list still omits India. DataForce Viola Urdu Hyderabad still individual-only: October sessions, up to2.5h, $55 per successful participant session. Kinetic still three non-binding interest cards; Robotics Center readable, Opendatabay thin. Egocentric Video timed out in this pass; access failure is not closure.
+- Parallel credit unavailable; web/direct fallback used. New arXiv lists and recent robotics archive recovered October19–20 plus explicitly dated older papers. Institutional, social, India/SEA and China native-language coverage remains partial. Initial30day discovery completed September24; full programme review October15, next October22. No outreach, applications, signups or commitments. September recap preserved.
+
 
 
 
