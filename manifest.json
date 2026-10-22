@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-22",
+      "slug": "2026-10-22",
+      "title": "Thursday, October 22, 2026",
+      "tldr": [
+        "**NVIDIA expands the data-to-deployment stack.** Human 1M combines three-view human video and hand tracking, with full access limited to Cosmos Coalition partners. Isaac Lab 3.0 is generally available; Isaac OS adds a runtime. October 21 announcement.",
+        "**Industrial data infrastructure keeps expanding.** Generative Bionics plans a 5,000m² Italian data factory for Q4 2027, using AMD infrastructure and physical-to-simulation training. This is a future facility, with no public collection tender. Company release, October 21.",
+        "**No new verified collection-partner commission.** The weekly review confirms existing supplier routes; a newly discovered Wiingy Mexico role pays individual local representatives commission on accepted footage, with agency eligibility unestablished. The research batch below contains 28 original October 20–21 preprints."
+      ]
+    },
+    {
       "date": "2026-10-21",
       "slug": "2026-10-21",
       "title": "Wednesday, October 21, 2026",
@@ -1002,6 +1012,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1074,
-  "updated_at": "2026-10-21T06:18:05Z"
+  "papers_count": 1113,
+  "updated_at": "2026-10-22T05:33:05Z"
 }

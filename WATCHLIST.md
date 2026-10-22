@@ -2,6 +2,16 @@
 
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
+
+## Daily checks and weekly programme review · October 22, 2026
+
+- Required Reddit r/robotics,r/datasets,r/computervision,r/MachineLearning and site-wide, public LinkedIn/X,YC/HN checked. Newly discovered Wiingy Mexico individual commission/referral programme and anonymous workplace POV request classified separately from agency procurement. BARG,Dhvani,Vxible,Annolance and existing requests deduplicated. No new verified allocated agency contract or urgent confirmed deadline.
+- Full enduring review completed: Avala,DeepReach,Praxis,Defined.ai,Kuinbee,OneForma agency,DataForce Viola and marketplaces. No verified material new assignment/eligibility terms. Defined.ai/OneForma direct errors recovered via web; OneForma13countries omitIndia. Kinetic3non-binding cards unchanged sinceOctober17. RoboticsCenter readable,Opendatabay thin,Rover404/jobs unavailable,egocentric.video timeout. Failures are access gaps, not closures. Programme terms/routes in [today's briefing](days/2026-10-22.html).
+- Initial30daybackfill completedSeptember24; next weekly reviewOctober29, daily change checks continue. No standing X account additions outside Monday review.
+- Chrome logged-in combined12handle Latest search worked, partial scroll. Unitree originalOctober21 post read; SuperMimic amplification duplicatesOctober21 paper. No complete timeline coverage claimed. Parallel lacks credit; primary/web fallback used. Four arXiv lists checked and28October20–21original abstracts read. Social, institutional and India/SEA/China coverage partial; linked Human1M/GR00T/product-page detail incomplete.
+- No outreach, applications, signups, commitments or private LinkedIn sync. September recap preserved.
+
+
 ## Daily source checks · October 21, 2026
 
 - [Aktoria's company-authored egocentric operations role](https://www.ycombinator.com/companies/aktoria-robotics/jobs/eES62Ab-egocentric-operations-lead) explicitly describes collection partners across India. Newly discovered, undated, current allocation unknown; procurement intelligence rather than a vendor application. [Company page](https://www.ycombinator.com/companies/aktoria-robotics) provides founders@aktoria.com. Detailed public requirements and missing terms are in [today's briefing](days/2026-10-21.html).
