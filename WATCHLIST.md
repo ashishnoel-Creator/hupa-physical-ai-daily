@@ -3,6 +3,16 @@
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
 
+## Daily source checks · October 23, 2026
+
+- [Nori data operations role](https://www.ycombinator.com/companies/noril1/jobs/njoB5k2-data-operations-lead): newly discovered, undated company-authored collection/vendor-management signal. Job compensation and location are not supplier terms; no vendor application verified.
+- [Lattice 4D announcement](https://huggingface.co/blog/LatticeAdmin/sample-4d-dataset), October 21: explicit research/collection collaboration invitation, also seller material. Paid collector eligibility, scope and licence unverified. [Singapore challenge](https://nrp.gov.sg/SGEAIchallenge/): manufacturing team competition; S$88K prizes are not procurement spend and registration deadline is unannounced.
+- [Dream Labs technical release](https://dreamlabs.ai/research/dream-1/): recovered October 19 launch/funding as catch-up; prospective data demand, no supplier call. Detailed public facts and gaps appear in [today's briefing](days/2026-10-23.html).
+- Reddit r/robotics, r/datasets, r/computervision, r/MachineLearning and site-wide requests, public LinkedIn/X, YC/HN searched. No additional new verified allocated agency order or urgent deadline. No new standing X account added outside Monday review.
+- Daily official checks: Avala, DeepReach, Praxis, Defined.ai, Kuinbee, OneForma, DataForce and robotics marketplaces. No verified material change in allocated work. OneForma named countries omit India; Kinetic has three non-binding interest cards. DataForce Bengali Viola title/instructions disagree on city, unresolved. Enduring review completed October 22; next October 29. Initial discovery backfill completed September 24 remains complete.
+- Parallel credit unavailable; web/primary fallback used. Chrome not exposed to browser control, public twelve-handle X fallback partial. Defined.ai/OneForma agency recovered via web; Rover/jobs and egocentric.video unavailable; Opendatabay/YC launch index thin; Lattice dataset card unavailable. Access failures do not prove closures. Social, institutional and regional coverage incomplete. Four arXiv category lists checked, 32 new original abstracts read; one already-covered Cosmos release deduplicated.
+- No outreach, applications, signups, commitments or private LinkedIn sync. September recap preserved.
+
 ## Daily checks and weekly programme review · October 22, 2026
 
 - Required Reddit r/robotics,r/datasets,r/computervision,r/MachineLearning and site-wide, public LinkedIn/X,YC/HN checked. Newly discovered Wiingy Mexico individual commission/referral programme and anonymous workplace POV request classified separately from agency procurement. BARG,Dhvani,Vxible,Annolance and existing requests deduplicated. No new verified allocated agency contract or urgent confirmed deadline.

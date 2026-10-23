@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-23",
+      "slug": "2026-10-23",
+      "title": "Friday, October 23, 2026",
+      "tldr": [
+        "**Catch-up, October 19: Dream Labs raised $90M and opened Dream API.** Human-video learning and robot-specific fine-tuning make this a relevant potential buyer to watch, but the launch establishes neither an external data tender nor a guaranteed need for an agency. Company financing release.",
+        "**Tactile data is becoming easier to capture in a standard format.** Robotiq's new 2FC combines touch, grip state and synchronized physical-event labels; shipping is planned for Q1 2027. This is hardware availability guidance, not evidence of paid collection work. Product specifications.",
+        "**New opportunity intelligence:** Nori describes managing external collection vendors, Lattice invites collection collaboration, and Singapore has a manufacturing robotics challenge. These are three different routes with different commercial status; no new allocated collection commission or urgent confirmed registration deadline was verified. Details below."
+      ]
+    },
+    {
       "date": "2026-10-22",
       "slug": "2026-10-22",
       "title": "Thursday, October 22, 2026",
@@ -1012,6 +1022,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1113,
-  "updated_at": "2026-10-22T05:33:05Z"
+  "papers_count": 1159,
+  "updated_at": "2026-10-23T02:56:38Z"
 }
