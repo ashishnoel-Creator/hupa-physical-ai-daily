@@ -3,6 +3,16 @@
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
 
+## Daily source checks · October 24, 2026
+
+- [Rilith company page](https://in.linkedin.com/company/rilith-technologies) and linked [India partner form](https://forms.gle/Sydx4Tq9BX4uwsho7): newly discovered older agency invitation, exact post date unresolved. Read-only form confirms agency option; no assignment/rate verified. Public terms in [today's briefing](days/2026-10-24.html).
+- [DataForce Bengali Viola](https://dataforcecommunity.transperfect.com/study/viola-voice-collection-bengali-pune): dedicated page confirms Pune, resolving yesterday's mixed-city extract; individual session/referral programme, not established agency procurement. AMAKH's older Americas call deduplicated against October 9.
+- Daily checks: Avala, DeepReach, Praxis, Defined.ai, Kuinbee, OneForma agency, DataForce board/individual project, Kinetic Blocks and Robotics Center. No other new allocated order verified. Kinetic still three non-binding interest cards. Full enduring review October 22, next October 29; initial 30-day backfill completed September 24.
+- Reddit r/robotics, r/datasets, r/computervision, r/MachineLearning plus site-wide, public LinkedIn/X and YC/HN searched. Nova-Wanderland is an open technical resource and feedback request, not paid collection demand. Twelve priority X handles searched through dated public fallback; browser inventory lacked Chrome and native-app discovery timed out. No new standing account added outside Monday review.
+- Four arXiv category lists and 23 original abstracts read. TUM/NEURA, Enact, CoreWeave, Formic and iNGage primary announcements checked. Labelbox October 14 funding recovered as catch-up, Gamma's original Gasgoo report dated October 21. Regional and frontier-lab coverage partial.
+- Parallel credit unavailable; direct/web fallback used. Defined.ai/OneForma agency recovered; Rover/jobs, egocentric.video and Jupiter inaccessible, Opendatabay/YC launches thin. Nova dataset raw card recovered when standard page failed. Rilith form read via direct public retrieval after web-tool failure. Failures do not establish closures.
+- No outreach, applications, signups, commitments or private LinkedIn sync. September recap preserved.
+
 ## Daily source checks · October 23, 2026
 
 - [Nori data operations role](https://www.ycombinator.com/companies/noril1/jobs/njoB5k2-data-operations-lead): newly discovered, undated company-authored collection/vendor-management signal. Job compensation and location are not supplier terms; no vendor application verified.
