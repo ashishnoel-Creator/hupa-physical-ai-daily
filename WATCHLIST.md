@@ -3,6 +3,16 @@
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
 
+## Daily source checks · October 25, 2026
+
+- [VisionCapture contributor specification](https://visioncapture.in/contributors) and [company identity](https://www.linkedin.com/company/visioncaptureai/) verified in rendered browser. Existing October10 lead, now explicit country/device evidence; no confirmed vendor rate or allocated work. Public terms in [today's edition](days/2026-10-25.html).
+- [Maxinsights October22 release](https://www.businesswire.com/news/home/20261022672609/en/) newly discovered: staffing/direct-management signal, not open vendor intake. General company site does not establish a supplier application.
+- Avala,DeepReach,Praxis,Defined.ai,OneForma agency,DataForceboard,RoboticsCenter checked. Defined.ai/OneForma recovered via web fallback. KineticBlocks/Kuinbee direct timeouts; Kuinbee public marketplace recovered. Rover/jobs and BengaliViola detail unavailable. EgocentricVideo/Jupiter recovered without changed commissioned requirements. Opendatabay/YC launches thin. No closures inferred.
+- Reddit r/robotics,r/datasets,r/computervision,r/MachineLearning plus site-wide, public LinkedIn/X and HN searched. Individual POV recruitment missing country list, survey requests and seller replies excluded from qualified agency leads. BBC original blocked. Full enduring review October22, next October29; initial30daybackfill completedSeptember24.
+- Four arXiv lists and twelve original abstract/history pages read; older revisions clearly dated. NVIDIA model availability and Advantech camera-integration release checked. Gasgoo MOBO launch is attributed reporting. HarvestPraxis primary inaccessible, technical claims withheld; October25 Malaysia trial report recovered before finalisation, original permit not recovered.
+- Parallel credit unavailable; native browser discovery blocked by locked Mac. Dated public fallback covered twelve required X handles, with sparse/stale results. Frontier-lab, social and regional coverage incomplete; DeepMind direct extraction was garbled, not a successful content read. No new standing accounts added outside Monday review.
+- No outreach, applications, signups, commitments or private LinkedIn sync. September recap preserved.
+
 ## Daily source checks · October 24, 2026
 
 - [Rilith company page](https://in.linkedin.com/company/rilith-technologies) and linked [India partner form](https://forms.gle/Sydx4Tq9BX4uwsho7): newly discovered older agency invitation, exact post date unresolved. Read-only form confirms agency option; no assignment/rate verified. Public terms in [today's briefing](days/2026-10-24.html).
