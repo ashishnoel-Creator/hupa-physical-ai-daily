@@ -3,6 +3,20 @@
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
 
+## Daily source checks · October 26, 2026
+
+- [Kinetic Blocks](https://kineticblocks.com/) recovered:955cataloguehours,20datasets,7environments claimed; three non-binding cards unchanged. [Partner page](https://kineticblocks.com/partners) explicitly invites collection partners. Updated existing channel, not a new awarded project. [Seller specification](https://kineticblocks.com/sellers) separates supported formats from coming-soon sync/action/stereo checks; budgeted requests and interest cards remain distinct.
+- Required daily programme checks: Avala,DeepReach,Praxis,Defined.ai,Kuinbee,OneFormaagency,DataForceboard/BengaliPune,RoboticsCenter. Defined.ai/OneFormaagency web fallback successful. Kinetic/Kuinbee/Bengali recovered after yesterday's failures. Bengali terms unchanged; not agency intake. Rover/jobs inaccessible; Opendatabay/YC launches thin. EgocentricVideo/Jupiter no new assigned scope.
+- Reddit r/robotics,r/datasets,r/computervision,r/MachineLearning plus sitewide,publicLI/X,HN searched. Yugm/Salma/Karthik older calls deduplicated; individual recruitment,surveys,sellerposts not qualified as new buyers. No new verified commission or urgent deadline. Full enduring reviewOctober22,nextOctober29; initial30daybackfill completeSeptember24.
+- Four arXiv lists and43 original abstract/history pages checked. OriginaldatesOctober22–23 retained. AGIBOT direct release recovered after web timeout, HFcard readable. Agility/Omron/Stryker/Gecko primary releases and AstrAlive attributed funding report reviewed as datedcatch-up. Omron globalbody indexed but liveextract incomplete; Europeanannouncement confirms agreement/expectedclose.
+- Parallelinsufficientcredit; lockedMac/no usableChrome prevented logged-inX. Datedpublicfallback searched12requiredhandles and was uninformative. Frontierlab,regional,institutional/social coverage partial. No outreach/applications/signups/commitments/privateLinkedInsync. Septemberrecap preserved.
+
+## Monday source registry review · October 26, 2026
+
+- Added [@AGIBOTofficial](https://x.com/AGIBOTofficial), linked by the [official Release4 announcement](https://www.agibot.com/article/231/detail/129.html). Monitor dataset/model releases, annotated failure cases and explicit outside-partner requests. Account identity linked by company; timeline access not verified today. Do not treat robot shipments or dataset releases as vendor procurement.
+- Added the [Kinetic collection-partner page](https://kineticblocks.com/partners) as a change-detection subroute of the existing company, not a duplicate lead. Check partner eligibility, paid briefs and dataset QA scope; named partners do not establish available work.
+- Added [DexPort](https://arxiv.org/abs/2610.32969) and [WorldMirror](https://arxiv.org/abs/2610.31834) research/project release watchpoints: portable command-labelled capture and demo-to-digital-twin conversion. Monitor code/hardware availability and reproducibility; no buying intent inferred.
+
 ## Daily source checks · October 25, 2026
 
 - [VisionCapture contributor specification](https://visioncapture.in/contributors) and [company identity](https://www.linkedin.com/company/visioncaptureai/) verified in rendered browser. Existing October10 lead, now explicit country/device evidence; no confirmed vendor rate or allocated work. Public terms in [today's edition](days/2026-10-25.html).

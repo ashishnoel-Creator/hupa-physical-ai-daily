@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-26",
+      "slug": "2026-10-26",
+      "title": "Monday, October 26, 2026",
+      "tldr": [
+        "**A collection-business channel has expanded:** Kinetic Blocks now reports 955 catalogue hours and 20 datasets, while its partner page explicitly invites collection partners. The three public interest cards are not verified funded commissions.",
+        "**Better demonstrations, richer labels:** DexPort records dexterous hand commands without a robot arm; KiRoSe segments demonstrations from kinematics; EgoForesight learns from noisy egocentric actions. These are October 22–23 preprints, not commercial orders.",
+        "**Missed announcements recovered with dates:** AGIBOT's October 22 reasoning dataset, Agility's October 22 IGX Thor commitment, and older Omron, Stryker and Gecko deals are covered below with transaction limits."
+      ]
+    },
+    {
       "date": "2026-10-25",
       "slug": "2026-10-25",
       "title": "Sunday, October 25, 2026",
@@ -1042,6 +1052,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1209,
-  "updated_at": "2026-10-25T14:14:38Z"
+  "papers_count": 1259,
+  "updated_at": "2026-10-26T03:54:21Z"
 }
