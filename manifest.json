@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-27",
+      "slug": "2026-10-27",
+      "title": "Tuesday, October 27, 2026",
+      "tldr": [
+        "**Newly discovered vendor request:** Vanikara invites egocentric collection teams and suppliers of existing POV footage. Its public contact matches its website; allocated volume, rates and buyer mandate remain unverified. Annolance's stereo workplace brief is a distinct variant of an existing lead. Vanikara · Annolance indexed activity",
+        "**More commercial evidence:** GXO adds two planned Digit sites, while Agility reports three additional paid manufacturing programmes. Singapore's Ailytics raises $7.4M for industrial vision; Strive's investor announces a $3M manufacturing-robotics round. GXO/Agility · Ailytics",
+        "**Capture quality needs a downstream test:** HuGe and RynnVLA-Latent scale learning from heterogeneous video; DEX-PHD and FLORE capture contact-rich demonstrations. Several new benchmarks show why plausible video, successful completion and useful training data are different measurements. HuGe · DEX-PHD · Learning utility"
+      ]
+    },
+    {
       "date": "2026-10-26",
       "slug": "2026-10-26",
       "title": "Monday, October 26, 2026",
@@ -1052,6 +1062,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1259,
-  "updated_at": "2026-10-26T03:54:21Z"
+  "papers_count": 1311,
+  "updated_at": "2026-10-27T05:49:22Z"
 }
