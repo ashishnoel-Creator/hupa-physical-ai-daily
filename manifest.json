@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-28",
+      "slug": "2026-10-28",
+      "title": "Wednesday, October 28, 2026",
+      "tldr": [
+        "**Newly discovered collection routes:** ForHuman explicitly invites capture teams; MAVY has an India household-video vendor call with an advertised ceiling of $3.50 per approved hour. SenServ adds an India-inclusive selfie-vendor request and adjacent image/QA briefs. These are invitations, not verified allocations. ForHuman · MAVY original",
+        "**Machenta launches with $40M seed funding and a different data thesis:** simulation-trained models prompted by one demonstration, without task-specific retraining. The launch supplies demonstrations, not an independently measured general-purpose reliability benchmark. Technical launch · Lead investor",
+        "**Collection quality gets more specific:** OpenJaws addresses metric localization; CARD preserves contact; SOMA measures ego body-motion understanding; a physical-arm study shows why raw demonstration counts can mislead. OpenJaws · CARD · SOMA · Scaling study"
+      ]
+    },
+    {
       "date": "2026-10-27",
       "slug": "2026-10-27",
       "title": "Tuesday, October 27, 2026",
@@ -1062,6 +1072,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1311,
-  "updated_at": "2026-10-27T05:49:22Z"
+  "papers_count": 1349,
+  "updated_at": "2026-10-28T05:58:23Z"
 }
