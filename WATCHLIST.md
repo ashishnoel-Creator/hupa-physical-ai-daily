@@ -3,6 +3,15 @@
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
 
+## Daily checks and weekly programme review · October 29, 2026
+
+- SadiGroup's original public posts disclose three newly discovered business requests: European lawnmower field-partner expression of interest; Chilean Spanish recording vendors; Italian transcription/QA teams. Relative source ages only, no verified allocated work or exact deadline. Original links/specifications and missing terms in [today's briefing](days/2026-10-29.html). Older indexed language-project snippets were not promoted over current originals.
+- Full weekly review completed for Avala, DeepReach, Praxis, Defined.ai, OneForma agency, Kuinbee, DataForce and robotics marketplaces. Existing routes remain distinguishable from assigned orders. OneForma's 13-country list omits India. Rover remains closed as recorded October28; agency intake separate. Kinetic still three non-binding interest cards; no new budgeted request verified. Next full review November5; daily change checks continue. Initial30day discovery completed September24, not repeated.
+- Required four Reddit communities and site-wide searches, public LinkedIn/X, YC/HN and boards checked. October12 and October16 anonymous requests deduplicated. No new verified India-eligible ego commission or urgent deadline. Provider/index views remain incomplete; OneForma jobs and egocentric.video timeout, Jupiter retrieval failure, Opendatabay/YC thin.
+- Four arXiv lists checked; still dated October28. Read21 original abstracts/metadata;19 October26–27 catch-up additions, two conflicts withheld. Genie4 originalOctober27, ABB archiveOctober15 and MuL originaldatelineOctober20 preserved. NRC, MIT, Rendezvous originals read; A3 detailed report member-gated. China financing attributed, original documents unavailable.
+- Chrome logged-in Latest/Top search covered12 priority handles sinceOctober27; visible unrelated discussion did not qualify as news. Top included extraneous conversation material; partial targeted results only. Parallel lacked credit, web/direct fallback used. Institutional/regional/social gaps remain. No outreach/applications/signups/commitments/private LinkedIn sync. September recap preserved.
+
+
 ## Daily source checks · October 28, 2026
 
 - [ForHuman](https://www.forhuman.in/) capture-team intake and [GaloreX](https://galorex.ai/) vendor network/general partner route newly verified. MAVY India household collection (October 7 original) and Saudi OTS images (October 15) are new variants within an existing company. SenServ original October 9–26 vendor/contributor posts recovered. Exact tasks, dates, routes and missing terms appear in [today's briefing](days/2026-10-28.html). Invitations are not assigned work.

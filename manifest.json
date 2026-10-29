@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-10-29",
+      "slug": "2026-10-29",
+      "title": "Thursday, October 29, 2026",
+      "tldr": [
+        "**Three newly discovered business requests:** SadiGroup seeks European lawnmower field partners, Chilean speech-collection vendors and Italian transcription/QA teams. The original company posts disclose useful volumes and payment units; none establishes an awarded contract or India eligibility.",
+        "**World-model catch-up, October 27:** Genie 4 adds live steering and native audio, but remains a trusted-tester preview with spatial, physics and persistence limitations. Its humanoid example is simulated.",
+        "**More useful data, not just more hours:** newly indexed work covers human-video transfer, synchronized ego/exo tennis and capture-rig calibration. Nineteen additional October 26–27 preprints are catalogued below; they are catch-up from the still-visible October 28 listing."
+      ]
+    },
+    {
       "date": "2026-10-28",
       "slug": "2026-10-28",
       "title": "Wednesday, October 28, 2026",
@@ -1072,6 +1082,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1349,
-  "updated_at": "2026-10-28T05:58:23Z"
+  "papers_count": 1375,
+  "updated_at": "2026-10-29T04:45:37Z"
 }
