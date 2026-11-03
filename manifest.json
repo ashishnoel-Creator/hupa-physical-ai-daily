@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-11-03",
+      "slug": "2026-11-03",
+      "title": "Tuesday, November 3, 2026",
+      "tldr": [
+        "**Collection specifications are getting more demanding.** Chef Robotics describes a production training pipeline built around actions, depth changes and measured food weight. Newly discovered OM-1 pairs human manipulation with tactile, force and tracked hand data. Both are technical signals, not advertised collection contracts.",
+        "**Two opportunities to qualify, with different eligibility:** DataForce Elgon offers India contributors **$4 per accepted ego-video hour**; agency participation is not disclosed. An indexed DataPlus team invitation seeks Slovenian annotation expertise, but the original post and current allocation could not be verified. No new verified commissioned ego allocation was found.",
+        "**Funding and deployment catch-up:** a16z confirms Tutor Intelligence's Series B; Forbes reports **$75M**. Agility's expected gross capital is now approximately **$465M**, with closing still expected on November 4. These are different transaction stages."
+      ]
+    },
+    {
       "date": "2026-10-29",
       "slug": "2026-10-29",
       "title": "Thursday, October 29, 2026",
@@ -1052,6 +1062,12 @@
   ],
   "monthly_reviews": [
     {
+      "date": "2026-10",
+      "slug": "2026-10",
+      "title": "October 2026 review",
+      "summary": "October's archive shows a shift from collecting more video toward collecting experience that can be aligned, evaluated and used in deployed systems. Human demonstrations increasingly carry hand, contact, depth and timing information; roboti"
+    },
+    {
       "date": "2026-09",
       "slug": "2026-09",
       "title": "September 2026 review",
@@ -1082,6 +1098,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1375,
-  "updated_at": "2026-10-29T04:45:37Z"
+  "papers_count": 1397,
+  "updated_at": "2026-11-03T07:15:46Z"
 }
