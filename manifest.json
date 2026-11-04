@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-11-04",
+      "slug": "2026-11-04",
+      "title": "Wednesday, November 4, 2026",
+      "tldr": [
+        "**Encord has a direct collection-supplier intake.** Its official route seeks raw ego, teleoperation, UMI, motion and tactile data worldwide. Newly discovered today; no allocated order or public rate. Partner programme",
+        "**Handheld collection is the research story:** AIRoA-0 reports 16,151 hours without robot training data, while GUILD asks which demonstrations to collect next. These are author-reported results, not collection contracts. AIRoA-0 · GUILD",
+        "**Stretch Gen 2 targets operational reliability.** Boston Dynamics says it used over 100,000 operating hours to redesign failure-prone components and maintenance. November 3 release"
+      ]
+    },
+    {
       "date": "2026-11-03",
       "slug": "2026-11-03",
       "title": "Tuesday, November 3, 2026",
@@ -1098,6 +1108,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1397,
-  "updated_at": "2026-11-03T07:15:46Z"
+  "papers_count": 1430,
+  "updated_at": "2026-11-04T05:35:30Z"
 }
