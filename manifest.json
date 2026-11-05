@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-11-05",
+      "slug": "2026-11-05",
+      "title": "Thursday, November 5, 2026",
+      "tldr": [
+        "**A new buyer-prospect signal:** LiberAI explicitly describes externally collected **VendorEgo** footage in its training corpus. Its public business contact is **bd@liberai.com**; a current supplier brief, India eligibility and budget remain unconfirmed. Technical report · Business contact",
+        "**Agility’s merger has closed.** The November 4 company announcement moves the transaction beyond shareholder approval. Nasdaq trading is expected November 5; this morning’s briefing does not claim trading has begun. Closing announcement",
+        "**Physical evaluation remains a separate job from model ranking.** Newly catalogued RoboColosseum reports weak agreement across embodiments and major ranking changes after fine-tuning. On its five G1 tasks, no tested policy completes a task despite measurable partial progress. November 2 paper"
+      ]
+    },
+    {
       "date": "2026-11-04",
       "slug": "2026-11-04",
       "title": "Wednesday, November 4, 2026",
@@ -1108,6 +1118,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1430,
-  "updated_at": "2026-11-04T05:35:30Z"
+  "papers_count": 1451,
+  "updated_at": "2026-11-05T03:22:46Z"
 }
