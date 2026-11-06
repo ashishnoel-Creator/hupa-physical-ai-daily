@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-11-06",
+      "slug": "2026-11-06",
+      "title": "Friday, November 6, 2026",
+      "tldr": [
+        "**A newly discovered commercial POV vendor route:** Softechub's linked application is live. Its country list omits India; rates, allocation and exact publication date are unresolved. Vendor form",
+        "**Serve is commercialising its fleet infrastructure and data.** Connectivity, curation and sidewalk-data products launched November 5; Bedrock is a connectivity customer. Company announcement",
+        "**Ego annotation gets a priced API:** Perceptron lists $9 per video-hour for subtask timelines, or $29 with 3D hands and per-hand labels. This is an annotation service price, not a collection payment. November 4 release, recovered today"
+      ]
+    },
+    {
       "date": "2026-11-05",
       "slug": "2026-11-05",
       "title": "Thursday, November 5, 2026",
@@ -1118,6 +1128,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1451,
-  "updated_at": "2026-11-05T03:22:46Z"
+  "papers_count": 1503,
+  "updated_at": "2026-11-06T06:43:40Z"
 }
