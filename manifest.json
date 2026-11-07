@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-11-07",
+      "slug": "2026-11-07",
+      "title": "Saturday, November 7, 2026",
+      "tldr": [
+        "**Physicl raised $10 million and introduced Studio** for targeted synthetic training data. Its current product page says private beta; synthetic accuracy and real-robot transfer remain separate tests. November 6 company release",
+        "**Factory operations are becoming training loops.** Embodied AI unveiled teleoperated-to-autonomous AIR; Aptiv announced production-line partnerships with TARS and Shanghai Electric. These are deployment signals, not open data-vendor commissions. AIR · Aptiv",
+        "**Ego evaluation needs realistic inputs.** Newly catalogued research shows a large gap between annotated active-object boxes and detector outputs; EgoGeneralist connects metric human motion and video. Both papers were submitted November 5. Action recognition · EgoGeneralist"
+      ]
+    },
+    {
       "date": "2026-11-06",
       "slug": "2026-11-06",
       "title": "Friday, November 6, 2026",
@@ -1128,6 +1138,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1503,
-  "updated_at": "2026-11-06T06:43:40Z"
+  "papers_count": 1528,
+  "updated_at": "2026-11-07T04:27:31Z"
 }
