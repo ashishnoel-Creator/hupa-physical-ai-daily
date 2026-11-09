@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-11-09",
+      "slug": "2026-11-09",
+      "title": "Monday, November 9, 2026",
+      "tldr": [
+        "**Newly discovered vendor requests:** Digituala seeks a **200–500-hour ego + wrist-camera pilot**; Teanbris advertises narrated smartphone video at **$7/hour for vendors**. Allocation and several commercial terms remain unverified. Digituala · Teanbris",
+        "**Deadline tomorrow, November 10:** MeitY–nasscom's Physical AI & Edge AI Open Call leads to a November 20 Bengaluru demo day. This is a startup pitch/networking route, not a collection commission. Organizer notice",
+        "**Technical catch-up:** NVIDIA's November 5 Cosmos 3 checkpoints and Ai2's November 6 ToyBlocks release expand controllable simulation. Today's research intake also strengthens the case for synchronized views, contact labels and human corrections. NVIDIA · Ai2"
+      ]
+    },
+    {
       "date": "2026-11-08",
       "slug": "2026-11-08",
       "title": "Sunday, November 8, 2026",
@@ -1148,6 +1158,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1536,
-  "updated_at": "2026-11-08T03:56:59Z"
+  "papers_count": 1563,
+  "updated_at": "2026-11-09T10:36:56Z"
 }
