@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-11-10",
+      "slug": "2026-11-10",
+      "title": "Tuesday, November 10, 2026",
+      "tldr": [
+        "**Deadline today:** MeitY–nasscom still lists November 10 registration for its November 20 Bengaluru Physical AI / Edge AI demo day. Closing time and collection-services pitch eligibility remain undisclosed. Organizer",
+        "**GR00T 2 and human data:** NVIDIA reports 95% success after five demonstrations per task in its 50-task evaluation. Research",
+        "**Newly discovered sourcing:** INRAXO explicitly seeks existing egocentric datasets. A separate marketplace listing attributed to FocusData seeks workplace owners and collection managers, but buyer authority and payment terms need verification. INRAXO · WorkIsThere listing"
+      ]
+    },
+    {
       "date": "2026-11-09",
       "slug": "2026-11-09",
       "title": "Monday, November 9, 2026",
@@ -1158,6 +1168,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1563,
-  "updated_at": "2026-11-09T10:36:56Z"
+  "papers_count": 1572,
+  "updated_at": "2026-11-10T03:41:53Z"
 }
