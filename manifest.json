@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-11-12",
+      "slug": "2026-11-12",
+      "title": "Thursday, November 12, 2026",
+      "tldr": [
+        "**New vendor intake:** ClusterNeuron seeks global commercial ego-data partners, with separate UMI/robot-teleoperation requests. Its linked form is readable; allocated work and commercial terms remain unverified. Company requests · Vendor form",
+        "**Factory evidence, with limits:** Gemini Robotics 2.5 reports 96% automotive-kitting success in a Mercedes-Benz proof-of-concept. NTT reports 73.1%→92.3% success in a small-robot shelf-loading test using pre-action failure prediction. DeepMind, November 10 · NTT, November 11",
+        "**Manufacturing and test infrastructure attract capital:** Path Robotics announced $300M, Nidus $30M and Nominal $240M. These are financing/deployment signals, not collection purchase orders. Path · Nidus · Nominal"
+      ]
+    },
+    {
       "date": "2026-11-10",
       "slug": "2026-11-10",
       "title": "Tuesday, November 10, 2026",
@@ -1168,6 +1178,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1572,
-  "updated_at": "2026-11-10T03:41:53Z"
+  "papers_count": 1608,
+  "updated_at": "2026-11-12T04:46:04Z"
 }
