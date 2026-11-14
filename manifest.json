@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-11-14",
+      "slug": "2026-11-14",
+      "title": "Saturday, November 14, 2026",
+      "tldr": [
+        "**Runway Praxis-1 is publicly available:** November 11 announcement, newly recovered today; open weights and adaptation code under Apache 2.0. Official release",
+        "**Agile Robots closed $500M at an $8.5B valuation** on November 12, led by SoftBank Group with NVIDIA and Hitachi participation. Company",
+        "**A dated workplace-collection request surfaced on Reddit**, naming FocusData and seeking business owners and project teams. This updates an existing unverified lead; company authority, allocation and payment remain unconfirmed. November 13 post"
+      ]
+    },
+    {
       "date": "2026-11-12",
       "slug": "2026-11-12",
       "title": "Thursday, November 12, 2026",
@@ -1178,6 +1188,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1608,
-  "updated_at": "2026-11-12T04:46:04Z"
+  "papers_count": 1622,
+  "updated_at": "2026-11-14T15:46:37Z"
 }

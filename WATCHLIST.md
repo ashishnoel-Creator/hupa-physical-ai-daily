@@ -510,3 +510,12 @@ Initial30-day opportunity discovery remains completed September24. No prospect o
 - [ROSCon India](https://rosconindia.in/) early-bird November12 deadline; networking event, not procurement. MeitY–nasscom November10 registration deadline passed, no verified extension. Parallel insufficient credit; web/direct fallback used.
 
 Full weekly review completed November12; next November19. Initial30-day discovery remains completed September24. No outreach, applications, signups or project commitments.
+
+
+## Daily source check · November 14, 2026
+
+November13 gap recovered after November12 edition. New dated Reddit source for existing FocusData-attributed commercial ego lead: https://www.reddit.com/r/POVDataCollection/comments/1xv3qry/hiring_commercial_egocentric_video_collection/ . Explicit business/team request, author/company relationship and allocation unverified; linked portal inaccessible. Toloka physical-AI partner link resolves general buyer-oriented contact form, not a specified commission. Read-only only.
+
+Required four Reddit feeds403; community/sitewide queries partial. Public LinkedIn discovery returned existing E-Solutions/Genillect invitations. Twelve priority X handles searched publicly, uninformative; native browser unavailable because Mac locked. YC launch index thin, HN front page inspected without qualified new request. DeepReach/Praxis/Avala/Encord readable; Defined.ai/DataForce recovered on retry. OneForma jobs readable, agency failed. Robotics Center and Kinetic request mechanics readable; Kinetic main timed out. No newly verified funded collection commission. Full weekly review remainsNovember12, nextNovember19; initial30day backfill completeSeptember24.
+
+Current robotics/CV arXiv feeds showedNovember13; LG/AI failed. Eleven original abstracts read and three primary company/institutional writeups added. Runway release datedNovember11 (notNovember12 media coverage), AgileNovember12, AkaraNovember11. India/China discovery partial. No new X account promoted. No outreach, applications, signups or commitments.
