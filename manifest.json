@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-11-17",
+      "slug": "2026-11-17",
+      "title": "Tuesday, November 17, 2026",
+      "tldr": [
+        "**Toloka explicitly invites companies and capture teams** to license ego video, synchronized UMI capture and teleoperation data. A dedicated official page improves on the general inquiry route found November 14; allocated work, rates and India eligibility remain unconfirmed. Partner route",
+        "**Mosaico raised €7.5M** for infrastructure that turns sensor recordings into searchable, training-ready assets. The November 16 investor announcement is a data-tooling signal, not a collection purchase order. United Ventures",
+        "**Measured touch and simulation-based training both deserve attention:** TouchTwin grounds replay in actual tactile recordings, while PEAR reports real-robot transfer after simulation-only reinforcement learning. These November 13 papers are newly recovered catch-up, with bounded experiments. TouchTwin · PEAR"
+      ]
+    },
+    {
       "date": "2026-11-14",
       "slug": "2026-11-14",
       "title": "Saturday, November 14, 2026",
@@ -1188,6 +1198,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1622,
-  "updated_at": "2026-11-14T15:46:37Z"
+  "papers_count": 1643,
+  "updated_at": "2026-11-17T05:26:32Z"
 }
