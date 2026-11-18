@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-11-18",
+      "slug": "2026-11-18",
+      "title": "Wednesday, November 18, 2026",
+      "tldr": [
+        "**Genesis AI raised $500M at a $3.5B post-money valuation.** Data acquisition and training are explicit uses of funds; no outside vendor intake is announced. Company release, November 17",
+        "**Newly discovered household-video vendor request:** an unverified Reddit account advertises **$4 per approved hour**, iPhone 11 or newer and twice-monthly payments. The principal, eligible countries and acceptance rules remain unknown. Original request",
+        "**Research is moving toward calibrated, reusable capture:** WinDEX describes 1,000 hours of stereo-inertial hand annotations; Ropedia Xperience 2 combines spatial scans and human behavior. These are research releases, not purchase orders. WinDEX, November 16 · Ropedia, November 12; revised November 16"
+      ]
+    },
+    {
       "date": "2026-11-17",
       "slug": "2026-11-17",
       "title": "Tuesday, November 17, 2026",
@@ -1198,6 +1208,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1643,
-  "updated_at": "2026-11-17T05:26:32Z"
+  "papers_count": 1665,
+  "updated_at": "2026-11-18T04:13:49Z"
 }
