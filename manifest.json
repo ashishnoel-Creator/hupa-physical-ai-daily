@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-11-19",
+      "slug": "2026-11-19",
+      "title": "Thursday, November 19, 2026",
+      "tldr": [
+        "**Partner shortlist: Humyn’s “certified network” intake is newly verified, and Wiingy explicitly seeks managed collection teams in four LATAM countries.** Neither establishes an allocated contract. FaceAtlas's original agency invitation still advertises **November 20**, tomorrow, including India. Humyn · Wiingy · FaceAtlas",
+        "**Humyn Labs announced $47M: $26M equity and $21M venture debt.** The company is expanding capture, enrichment and deployment-readiness infrastructure in Brazil, South Korea and India. November 18 release",
+        "**Ego data's value increasingly depends on contact, action and quality labels.** Ego2X, SHAPE and Grana describe concrete ways to turn human demonstrations into robot supervision; their results remain bounded research evidence. Ego2X · SHAPE · Grana"
+      ]
+    },
+    {
       "date": "2026-11-18",
       "slug": "2026-11-18",
       "title": "Wednesday, November 18, 2026",
@@ -1208,6 +1218,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1665,
-  "updated_at": "2026-11-18T04:13:49Z"
+  "papers_count": 1700,
+  "updated_at": "2026-11-19T08:34:01Z"
 }
