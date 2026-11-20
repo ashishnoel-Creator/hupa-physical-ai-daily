@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-11-20",
+      "slug": "2026-11-20",
+      "title": "Friday, November 20, 2026",
+      "tldr": [
+        "**New collection-partner leads:** Serpa CS explicitly invites residential ego vendors at an advertised **\\$4.50/hour**; Preload seeks skilled-workflow partners for ego + tactile + EMG capture. Neither is a confirmed allocation. Serpa original · Preload founder launch",
+        "**Deadline today:** Macgence's FaceAtlas agency invitation still advertises **November 20**. Exact cutoff and remaining allocation are undisclosed. Original",
+        "**November 18 catch-up: BrightAI raised \\$97M**, led by Smith Point with customer GE Vernova participating. Its infrastructure platform combines edge sensors, inspection robots and wearable copilots. Company release, syndicated"
+      ]
+    },
+    {
       "date": "2026-11-19",
       "slug": "2026-11-19",
       "title": "Thursday, November 19, 2026",
@@ -1218,6 +1228,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1700,
-  "updated_at": "2026-11-19T08:34:01Z"
+  "papers_count": 1741,
+  "updated_at": "2026-11-20T03:19:43Z"
 }
