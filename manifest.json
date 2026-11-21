@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-11-21",
+      "slug": "2026-11-21",
+      "title": "Saturday, November 21, 2026",
+      "tldr": [
+        "**Newly qualified collection requests:** Dhvani has a narrated household-ego vendor brief; Genillect seeks approximately 15,000 iPhone images and SEA video-sourcing partners. Requirements and unresolved terms are below. Dhvani originals · Genillect originals",
+        "**Richer human capture:** Awaken-Human reports about **50,000 hours of stereo ego plus whole-body motion**; HumanCOIN reports **12,500 hours** across video, exertion and cognition-related sensor tiers. These are research claims, not open collection orders. Awaken-HI · HumanCOIN",
+        "**Dated funding catch-up:** Botsync **US\\$11M**, MegaRobo **nearly US\\$200M**, Promise Robotics **CAD40M**. The financing supports factory orchestration, laboratory automation and homebuilding infrastructure respectively. Botsync · MegaRobo · Promise"
+      ]
+    },
+    {
       "date": "2026-11-20",
       "slug": "2026-11-20",
       "title": "Friday, November 20, 2026",
@@ -1228,6 +1238,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1741,
-  "updated_at": "2026-11-20T03:19:43Z"
+  "papers_count": 1799,
+  "updated_at": "2026-11-21T05:14:29Z"
 }
