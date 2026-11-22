@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-11-22",
+      "slug": "2026-11-22",
+      "title": "Sunday, November 22, 2026",
+      "tldr": [
+        "**Two adjacent partner requests:** Fixensy is inviting image-recruitment partners and Northern Mexican Spanish recording/transcription teams. These are newly discovered older calls; rates and current allocation are unconfirmed. Company originals",
+        "**Collection QA can dominate the apparent result:** a GO1 logging study reports about **99%** terrain classification with leaky window splits but **38%** when recordings are held out. Preserve recording/session identity when designing evaluation splits. November 19 paper",
+        "**Dated world-model catch-up:** Google's November 18 Project Genie release brings Genie 4 editing and audio to eligible subscribers. Its separate Genie 3 mode gains longer generation. Neither announcement establishes a validated robot simulator. Original"
+      ]
+    },
+    {
       "date": "2026-11-21",
       "slug": "2026-11-21",
       "title": "Saturday, November 21, 2026",
@@ -1238,6 +1248,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1799,
-  "updated_at": "2026-11-21T05:14:29Z"
+  "papers_count": 1811,
+  "updated_at": "2026-11-22T04:41:20Z"
 }

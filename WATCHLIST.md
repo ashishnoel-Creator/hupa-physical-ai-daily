@@ -3,6 +3,17 @@
 Accounts, researchers, and companies found during daily runs that are worth adding to the standing monitor list in the task file (§4-A handles, §4-B companies). Reviewed and merged into the runbook periodically. Newest at top. Anyone already in §4-A / §4-B is skipped.
 
 
+
+## Daily source checks · November 22, 2026
+
+- Newly qualified older [Fixensy company calls](https://uk.linkedin.com/company/fixensy): face-image recruiting agencies/local partners and Northern Mexican Spanish recording/transcription vendors. Relative ages only; exact dates, offered rates and allocations unresolved. Public specifications in [today's briefing](days/2026-11-22.html); private qualification details in the buyer register. Monitor this new company route for acceptance economics and changes, not as a confirmed end-buyer order.
+- DeepReach, Praxis, Defined.ai, Avala, Toloka, Encord, Kuinbee, OneForma agency/jobs, DataForce and robotics marketplaces rechecked. No material new collection terms. Kinetic supplier count 360+ to 370+ is supply-side growth; three interest cards unchanged and non-binding. Weekly review remains November19, next November26; initial30day backfill complete September24.
+- Four required Reddit communities plus site-wide requests, public LinkedIn/X, YC/HN searched. November21 MyTron ego/teleoperation post is seller marketing, excluded. Uncorroborated indexed requests were withheld pending original-source verification. Dhvani/Genillect reposts deduplicated. FaceAtlas November20 deadline passed, no extension verified.
+- Four arXiv category lists and nine additional original abstracts checked; November18–19 paper dates retained. Google Project Genie November18, Qualcomm November19 explanation of September products and Weston Singapore November11 event report added as dated catch-up. Prior1,799 library records checked; twelve additions built and validated. No new funding promoted from recycled stories.
+- Parallel insufficient credit; web/direct fallback used. Reddit direct feeds403. Native Chrome X Latest and LinkedIn profile attempts displayed blank content; no original read. Dated public fallback for twelve priority X handles returned no material originals. Partial LinkedIn429/comment-form access; Rilith/MAVY403, egocentric.video timeout, YC/Opendatabay thin. No closure inferred. Regional/frontier-lab coverage partial.
+- October recap remains complete. No outreach, applications, signups, commitments or private LinkedIn sync.
+
+
 ## Daily checks and weekly programme review · October 29, 2026
 
 - SadiGroup's original public posts disclose three newly discovered business requests: European lawnmower field-partner expression of interest; Chilean Spanish recording vendors; Italian transcription/QA teams. Relative source ages only, no verified allocated work or exact deadline. Original links/specifications and missing terms in [today's briefing](days/2026-10-29.html). Older indexed language-project snippets were not promoted over current originals.
