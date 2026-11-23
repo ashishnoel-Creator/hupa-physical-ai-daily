@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-11-23",
+      "slug": "2026-11-23",
+      "title": "Monday, November 23, 2026",
+      "tldr": [
+        "**India vendor intake:** FA Nexus seeks partners for eight-language scripted healthcare audio, commencing November 23. Qualification proof and QC approval are required; rates and remaining allocation are undisclosed. This is an adjacent audio opportunity, not an egocentric commission. Original request",
+        "**A concrete capture reference:** RoboCap-10k describes **10,000 curated hours in 11 countries**, captured with one standardized six-camera, dual-IMU hat and supplied with metric trajectories and task captions. The research release is not a supplier invitation. November 20 paper",
+        "**Measure what vision cannot see:** TouchBench pairs ego video with **137 tactile channels**; video-only models score near chance on hidden-property questions. EgoLAM separately shows why hand and camera motion need distinct supervision. TouchBench · EgoLAM"
+      ]
+    },
+    {
       "date": "2026-11-22",
       "slug": "2026-11-22",
       "title": "Sunday, November 22, 2026",
@@ -1248,6 +1258,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1811,
-  "updated_at": "2026-11-22T04:41:20Z"
+  "papers_count": 1847,
+  "updated_at": "2026-11-23T06:00:43Z"
 }
