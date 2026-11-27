@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-11-27",
+      "slug": "2026-11-27",
+      "title": "Friday, November 27, 2026",
+      "tldr": [
+        "**Collection status has changed:** DataForce's Elgon India project is completed. A newly indexed request seeks local businesses for **5,000 valid hours of six-camera egocentric data** across Japan, the Middle East, South America and Africa, but its original post, contracting entity and present allocation remain unverified. Elgon status · Indexed Joyce Liang activity",
+        "**Touch is becoming part of the collection specification:** Lute's November 25 announcement describes portable tactile capture and $20M combined financing. EgoMyo pairs ego video and wrist EMG with measured hand contact and force, a useful reference for specifying multimodal collections. Neither is an open collection tender. Lute · EgoMyo",
+        "**Robot learning is expanding beyond policy weights:** Embo announced $110M for a world-model approach; SenseNova's full RoboRSI release combines model training with tool improvement. Their evidence and release maturity differ. Embo, November 23 · RoboRSI, November 25"
+      ]
+    },
+    {
       "date": "2026-11-23",
       "slug": "2026-11-23",
       "title": "Monday, November 23, 2026",
@@ -1258,6 +1268,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1847,
-  "updated_at": "2026-11-23T06:00:43Z"
+  "papers_count": 1910,
+  "updated_at": "2026-11-27T13:49:38Z"
 }
