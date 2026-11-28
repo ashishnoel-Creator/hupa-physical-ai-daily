@@ -1,6 +1,16 @@
 {
   "days": [
     {
+      "date": "2026-11-28",
+      "slug": "2026-11-28",
+      "title": "Saturday, November 28, 2026",
+      "tldr": [
+        "**A same-day licensing deadline:** GroPlex's original company post advertises **November 28** for existing industrial ego datasets. The request explicitly includes vendors and collection partners; cutoff time and buyer mandate remain unverified. Original request",
+        "**Training infrastructure is expanding:** NEURA's Aragón agreement proposes a robot gym with Costa Group; PaXini's Wuhan factory reportedly opened yesterday. These are infrastructure signals, with different maturity and evidence, not disclosed collection commissions. NEURA, November 27 · Wuhan event report, November 27",
+        "**Recovery data needs its own evaluation:** FailPoint-X finds that learning from human takeovers can improve failure recovery while hurting performance from normal starts. A collection that looks useful on its own training scenario can have a wider tradeoff. November 25 preprint"
+      ]
+    },
+    {
       "date": "2026-11-27",
       "slug": "2026-11-27",
       "title": "Friday, November 27, 2026",
@@ -1268,6 +1278,6 @@
       "summary": "May was the month the captured-hours pitch stopped working. NVIDIA's DreamDojo and the PointWorld paper both showed strong manipulation from a few hundred hours plus the right world model, Genesis AI shipped a $200 capture glove, and Scale "
     }
   ],
-  "papers_count": 1910,
-  "updated_at": "2026-11-27T13:49:38Z"
+  "papers_count": 1943,
+  "updated_at": "2026-11-28T05:33:48Z"
 }
